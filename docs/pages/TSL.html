@@ -11944,7 +11944,7 @@ material.colorNode = texture( spriteSheet, uvNode );
 					<h3 class="name name-method" id="uniformFlow" translate="no">.<a href="#uniformFlow">uniformFlow</a><span class="signature">( node : <span class="param-type"><a href="Node.html">Node</a></span> )</span><span class="type-signature"> : <a href="ContextNode.html">ContextNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for defining a uniformFlow context value for a given node.</p>
+							<p>用于为给定节点定义 uniformFlow 上下文值的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11953,7 +11953,7 @@ material.colorNode = texture( spriteSheet, uvNode );
 										<strong translate="no">node</strong>
 									</td>
 									<td class="description last">
-										<p>The node whose dependencies should all execute within a uniform control-flow path.</p>
+										<p>其依赖项都应在统一控制流路径内执行的节点。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11962,7 +11962,7 @@ material.colorNode = texture( spriteSheet, uvNode );
 					<h3 class="name name-method" id="uniformGroup" translate="no">.<a href="#uniformGroup">uniformGroup</a><span class="signature">( name : <span class="param-type">string</span> )</span><span class="type-signature"> : <a href="UniformGroupNode.html">UniformGroupNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a uniform group node with the given name.</p>
+							<p>用于创建具有给定名称的 uniform 组节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11971,7 +11971,7 @@ material.colorNode = texture( spriteSheet, uvNode );
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The name of the uniform group node.</p>
+										<p>uniform 组节点的名称。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11980,7 +11980,7 @@ material.colorNode = texture( spriteSheet, uvNode );
 					<h3 class="name name-method" id="uniformTexture" translate="no">.<a href="#uniformTexture">uniformTexture</a><span class="signature">( value : <span class="param-type"><a href="Texture.html">Texture</a></span> )</span><span class="type-signature"> : <a href="TextureNode.html">TextureNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a uniform texture node.</p>
+							<p>用于创建 uniform 纹理节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11989,7 +11989,7 @@ material.colorNode = texture( spriteSheet, uvNode );
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>The texture.</p>
+										<p>纹理。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11998,7 +11998,7 @@ material.colorNode = texture( spriteSheet, uvNode );
 					<h3 class="name name-method" id="unpackHalf2x16" translate="no">.<a href="#unpackHalf2x16">unpackHalf2x16</a><span class="signature">( value : <span class="param-type"><a href="Node.html">Node</a>.&lt;uint></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Unpacks a 32-bit unsigned integer into two 16-bit values, interpreted as 16-bit floating-point numbers. Returns a vec2 with both values.</p>
+							<p>将一个 32 位无符号整数解包为两个 16 位数值，并将其解释为 16 位浮点数。返回包含这两个值的 <code>vec2</code>。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12007,7 +12007,7 @@ material.colorNode = texture( spriteSheet, uvNode );
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>The unsigned integer to be unpacked</p>
+										<p>要解包的无符号整数。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12016,8 +12016,8 @@ material.colorNode = texture( spriteSheet, uvNode );
 					<h3 class="name name-method" id="unpackNormal" translate="no">.<a href="#unpackNormal">unpackNormal</a><span class="signature">( xy : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec2></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec3></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Unpacks a tangent space normal, reconstructing the Z component by projecting the X,Y coordinates onto the hemisphere.
-The X,Y coordinates are expected to be in the [-1, 1] range.</p>
+							<p>解包切线空间法线，并通过将 X、Y 坐标投影到半球上来重建 Z 分量。
+X、Y 坐标应位于 <code>[-1, 1]</code> 范围内。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12026,19 +12026,19 @@ The X,Y coordinates are expected to be in the [-1, 1] range.</p>
 										<strong translate="no">xy</strong>
 									</td>
 									<td class="description last">
-										<p>The X,Y coordinates of the normal.</p>
+										<p>法线的 X、Y 坐标。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The resulting normal.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 解包后的法线。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="unpackRGBToNormal" translate="no">.<a href="#unpackRGBToNormal">unpackRGBToNormal</a><span class="signature">( node : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec3></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Unpacks a color value into a normal vector.</p>
+							<p>将颜色值解包为法线向量。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12047,19 +12047,19 @@ The X,Y coordinates are expected to be in the [-1, 1] range.</p>
 										<strong translate="no">node</strong>
 									</td>
 									<td class="description last">
-										<p>The color to unpack.</p>
+										<p>要解包的颜色。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The direction.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 法线方向。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="unpackSnorm2x16" translate="no">.<a href="#unpackSnorm2x16">unpackSnorm2x16</a><span class="signature">( value : <span class="param-type"><a href="Node.html">Node</a>.&lt;uint></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Unpacks a 32-bit unsigned integer into two 16-bit values, interpreted as normalized signed integers. Returns a vec2 with both values.</p>
+							<p>将一个 32 位无符号整数解包为两个 16 位数值，并将其解释为归一化有符号整数。返回包含这两个值的 <code>vec2</code>。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12068,7 +12068,7 @@ The X,Y coordinates are expected to be in the [-1, 1] range.</p>
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>The unsigned integer to be unpacked</p>
+										<p>要解包的无符号整数。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12077,7 +12077,7 @@ The X,Y coordinates are expected to be in the [-1, 1] range.</p>
 					<h3 class="name name-method" id="unpackUnorm2x16" translate="no">.<a href="#unpackUnorm2x16">unpackUnorm2x16</a><span class="signature">( value : <span class="param-type"><a href="Node.html">Node</a>.&lt;uint></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Unpacks a 32-bit unsigned integer into two 16-bit values, interpreted as normalized unsigned integers. Returns a vec2 with both values.</p>
+							<p>将一个 32 位无符号整数解包为两个 16 位数值，并将其解释为归一化无符号整数。返回包含这两个值的 <code>vec2</code>。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12086,7 +12086,7 @@ The X,Y coordinates are expected to be in the [-1, 1] range.</p>
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>The unsigned integer to be unpacked</p>
+										<p>要解包的无符号整数。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12095,11 +12095,8 @@ The X,Y coordinates are expected to be in the [-1, 1] range.</p>
 					<h3 class="name name-method" id="unpremultiplyAlpha" translate="no">.<a href="#unpremultiplyAlpha">unpremultiplyAlpha</a><span class="signature">( color : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec4></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec4></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Unpremultiplies the RGB channels of a color by its alpha channel.</p>
-<p>This function is useful for converting a premultiplied alpha color
-back into a non-premultiplied alpha format, where the RGB values are
-divided by the alpha value. Unpremultiplied alpha is often used in graphics
-rendering for certain operations, such as compositing and image processing.</p>
+							<p>将颜色的 RGB 通道按其 alpha 通道进行反预乘。</p>
+<p>该函数可用于把预乘 alpha 颜色转换回非预乘 alpha 格式，此时 RGB 值会除以 alpha 值。非预乘 alpha 常用于图形渲染中的某些操作，例如合成和图像处理。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12108,19 +12105,19 @@ rendering for certain operations, such as compositing and image processing.</p>
 										<strong translate="no">color</strong>
 									</td>
 									<td class="description last">
-										<p>The input color with premultiplied alpha.</p>
+										<p>带预乘 alpha 的输入颜色。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The color with non-premultiplied alpha.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 非预乘 alpha 的颜色。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="userData" translate="no">.<a href="#userData">userData</a><span class="signature">( name : <span class="param-type">string</span>, inputType : <span class="param-type">string</span>, userData : <span class="param-type">Object</span> )</span><span class="type-signature"> : <a href="UserDataNode.html">UserDataNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a user data node.</p>
+							<p>用于创建用户数据节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12129,7 +12126,7 @@ rendering for certain operations, such as compositing and image processing.</p>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The property name that should be referenced by the node.</p>
+										<p>节点应引用的属性名。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12137,7 +12134,7 @@ rendering for certain operations, such as compositing and image processing.</p>
 										<strong translate="no">inputType</strong>
 									</td>
 									<td class="description last">
-										<p>The node data type of the reference.</p>
+										<p>引用的数据节点类型。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12145,7 +12142,7 @@ rendering for certain operations, such as compositing and image processing.</p>
 										<strong translate="no">userData</strong>
 									</td>
 									<td class="description last">
-										<p>A reference to the <code>userData</code> object. If not provided, the <code>userData</code> property of the 3D object that uses the node material is evaluated.</p>
+										<p>对 <code>userData</code> 对象的引用。若未提供，则会读取使用该节点材质的 3D 对象上的 <code>userData</code> 属性。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12154,7 +12151,7 @@ rendering for certain operations, such as compositing and image processing.</p>
 					<h3 class="name name-method" id="uv" translate="no">.<a href="#uv">uv</a><span class="signature">( index : <span class="param-type">number</span> )</span><span class="type-signature"> : <a href="AttributeNode.html">AttributeNode</a>.&lt;vec2></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating an uv attribute node with the given index.</p>
+							<p>用于创建指定索引 UV 属性节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12163,20 +12160,20 @@ rendering for certain operations, such as compositing and image processing.</p>
 										<strong translate="no">index</strong>
 									</td>
 									<td class="description last">
-										<p>The uv index.</p>
-										<p>Default is <code>0</code>.</p>
+										<p>UV 索引。</p>
+										<p>默认值为 <code>0</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The uv attribute node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> UV 属性节点。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="varying" translate="no">.<a href="#varying">varying</a><span class="signature">( node : <span class="param-type"><a href="Node.html">Node</a></span>, name : <span class="param-type">string</span> )</span><span class="type-signature"> : <a href="VaryingNode.html">VaryingNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a varying node.</p>
+							<p>用于创建 varying 节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12185,7 +12182,7 @@ rendering for certain operations, such as compositing and image processing.</p>
 										<strong translate="no">node</strong>
 									</td>
 									<td class="description last">
-										<p>The node for which a varying should be created.</p>
+										<p>要为其创建 varying 的节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12193,7 +12190,7 @@ rendering for certain operations, such as compositing and image processing.</p>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The name of the varying in the shader.</p>
+										<p>着色器中 varying 的名称。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12202,7 +12199,7 @@ rendering for certain operations, such as compositing and image processing.</p>
 					<h3 class="name name-method" id="varyingProperty" translate="no">.<a href="#varyingProperty">varyingProperty</a><span class="signature">( type : <span class="param-type">string</span>, name : <span class="param-type">string</span>, placeholderNode : <span class="param-type"><a href="Node.html">Node</a></span> )</span><span class="type-signature"> : <a href="PropertyNode.html">PropertyNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a varying property node.</p>
+							<p>用于创建 varying 属性节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12219,8 +12216,8 @@ rendering for certain operations, such as compositing and image processing.</p>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The name of the varying in the shader.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>着色器中 varying 的名称。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12228,8 +12225,8 @@ rendering for certain operations, such as compositing and image processing.</p>
 										<strong translate="no">placeholderNode</strong>
 									</td>
 									<td class="description last">
-										<p>The placeholder node if not assigned.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>未赋值时使用的占位节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12238,7 +12235,7 @@ rendering for certain operations, such as compositing and image processing.</p>
 					<h3 class="name name-method" id="vertexColor" translate="no">.<a href="#vertexColor">vertexColor</a><span class="signature">( index : <span class="param-type">number</span> )</span><span class="type-signature"> : <a href="VertexColorNode.html">VertexColorNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a reference node.</p>
+							<p>用于创建顶点颜色节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12247,8 +12244,8 @@ rendering for certain operations, such as compositing and image processing.</p>
 										<strong translate="no">index</strong>
 									</td>
 									<td class="description last">
-										<p>The attribute index.</p>
-										<p>Default is <code>0</code>.</p>
+										<p>属性索引。</p>
+										<p>默认值为 <code>0</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12257,7 +12254,7 @@ rendering for certain operations, such as compositing and image processing.</p>
 					<h3 class="name name-method" id="vertexStage" translate="no">.<a href="#vertexStage">vertexStage</a><span class="signature">( node : <span class="param-type"><a href="Node.html">Node</a></span> )</span><span class="type-signature"> : <a href="VaryingNode.html">VaryingNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Computes a node in the vertex stage.</p>
+							<p>在顶点阶段计算一个节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12266,7 +12263,7 @@ rendering for certain operations, such as compositing and image processing.</p>
 										<strong translate="no">node</strong>
 									</td>
 									<td class="description last">
-										<p>The node which should be executed in the vertex stage.</p>
+										<p>应在顶点阶段执行的节点。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12275,9 +12272,7 @@ rendering for certain operations, such as compositing and image processing.</p>
 					<h3 class="name name-method" id="vibrance" translate="no">.<a href="#vibrance">vibrance</a><span class="signature">( color : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3></span>, adjustment : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec3></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Selectively enhance the intensity of less saturated RGB colors. Can result
-in a more natural and visually appealing image with enhanced color depth
-compared to ColorAdjustment#saturation.</p>
+							<p>有选择地增强低饱和度 RGB 颜色的强度。与 <code>ColorAdjustment#saturation</code> 相比，它通常能得到颜色层次更丰富、视觉上更自然的图像。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12286,7 +12281,7 @@ compared to ColorAdjustment#saturation.</p>
 										<strong translate="no">color</strong>
 									</td>
 									<td class="description last">
-										<p>The input color.</p>
+										<p>输入颜色。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12294,20 +12289,20 @@ compared to ColorAdjustment#saturation.</p>
 										<strong translate="no">adjustment</strong>
 									</td>
 									<td class="description last">
-										<p>Controls the intensity of the vibrance effect.</p>
-										<p>Default is <code>0</code>.</p>
+										<p>控制自然饱和度效果的强度。</p>
+										<p>默认值为 <code>0</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The updated color.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 更新后的颜色。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="viewZToLogarithmicDepth" translate="no">.<a href="#viewZToLogarithmicDepth">viewZToLogarithmicDepth</a><span class="signature">( viewZ : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>, near : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>, far : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;float></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for converting a viewZ value to a logarithmic depth value.</p>
+							<p>用于将 viewZ 值转换为对数深度值的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12316,7 +12311,7 @@ compared to ColorAdjustment#saturation.</p>
 										<strong translate="no">viewZ</strong>
 									</td>
 									<td class="description last">
-										<p>The viewZ node.</p>
+										<p>viewZ 节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12341,7 +12336,7 @@ compared to ColorAdjustment#saturation.</p>
 					<h3 class="name name-method" id="viewZToOrthographicDepth" translate="no">.<a href="#viewZToOrthographicDepth">viewZToOrthographicDepth</a><span class="signature">( viewZ : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>, near : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>, far : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;float></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for converting a viewZ value to an orthographic depth value.</p>
+							<p>用于将 viewZ 值转换为正交深度值的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12350,7 +12345,7 @@ compared to ColorAdjustment#saturation.</p>
 										<strong translate="no">viewZ</strong>
 									</td>
 									<td class="description last">
-										<p>The viewZ node.</p>
+										<p>viewZ 节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12375,8 +12370,8 @@ compared to ColorAdjustment#saturation.</p>
 					<h3 class="name name-method" id="viewZToPerspectiveDepth" translate="no">.<a href="#viewZToPerspectiveDepth">viewZToPerspectiveDepth</a><span class="signature">( viewZ : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>, near : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>, far : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;float></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for converting a viewZ value to a perspective depth value.</p>
-<p>Note: {link https://twitter.com/gonnavis/status/1377183786949959682}.</p>
+							<p>用于将 viewZ 值转换为透视深度值的 TSL 函数。</p>
+<p>注：{link https://twitter.com/gonnavis/status/1377183786949959682}。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12385,7 +12380,7 @@ compared to ColorAdjustment#saturation.</p>
 										<strong translate="no">viewZ</strong>
 									</td>
 									<td class="description last">
-										<p>The viewZ node.</p>
+										<p>viewZ 节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12410,7 +12405,7 @@ compared to ColorAdjustment#saturation.</p>
 					<h3 class="name name-method" id="viewZToReversedOrthographicDepth" translate="no">.<a href="#viewZToReversedOrthographicDepth">viewZToReversedOrthographicDepth</a><span class="signature">( viewZ : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>, near : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>, far : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;float></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for converting a viewZ value to a reversed orthographic depth value.</p>
+							<p>用于将 viewZ 值转换为反向正交深度值的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12419,7 +12414,7 @@ compared to ColorAdjustment#saturation.</p>
 										<strong translate="no">viewZ</strong>
 									</td>
 									<td class="description last">
-										<p>The viewZ node.</p>
+										<p>viewZ 节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12444,7 +12439,7 @@ compared to ColorAdjustment#saturation.</p>
 					<h3 class="name name-method" id="viewZToReversedPerspectiveDepth" translate="no">.<a href="#viewZToReversedPerspectiveDepth">viewZToReversedPerspectiveDepth</a><span class="signature">( viewZ : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>, near : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>, far : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;float></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for converting a viewZ value to a reversed perspective depth value.</p>
+							<p>用于将 viewZ 值转换为反向透视深度值的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12453,7 +12448,7 @@ compared to ColorAdjustment#saturation.</p>
 										<strong translate="no">viewZ</strong>
 									</td>
 									<td class="description last">
-										<p>The viewZ node.</p>
+										<p>viewZ 节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12478,7 +12473,7 @@ compared to ColorAdjustment#saturation.</p>
 					<h3 class="name name-method" id="viewportDepthTexture" translate="no">.<a href="#viewportDepthTexture">viewportDepthTexture</a><span class="signature">( uvNode : <span class="param-type"><a href="Node.html">Node</a></span>, levelNode : <span class="param-type"><a href="Node.html">Node</a></span>, depthTexture : <span class="param-type"><a href="DepthTexture.html">DepthTexture</a></span> )</span><span class="type-signature"> : <a href="ViewportDepthTextureNode.html">ViewportDepthTextureNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for a viewport depth texture node.</p>
+							<p>用于创建视口深度纹理节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12487,8 +12482,8 @@ compared to ColorAdjustment#saturation.</p>
 										<strong translate="no">uvNode</strong>
 									</td>
 									<td class="description last">
-										<p>The uv node.</p>
-										<p>Default is <code>screenUV</code>.</p>
+										<p>UV 节点。</p>
+										<p>默认值为 <code>screenUV</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12496,8 +12491,8 @@ compared to ColorAdjustment#saturation.</p>
 										<strong translate="no">levelNode</strong>
 									</td>
 									<td class="description last">
-										<p>The level node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>级别节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12505,8 +12500,8 @@ compared to ColorAdjustment#saturation.</p>
 										<strong translate="no">depthTexture</strong>
 									</td>
 									<td class="description last">
-										<p>A depth texture. If not provided, a depth texture is created automatically.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>深度纹理。若未提供，将自动创建深度纹理。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12515,7 +12510,7 @@ compared to ColorAdjustment#saturation.</p>
 					<h3 class="name name-method" id="viewportMipTexture" translate="no">.<a href="#viewportMipTexture">viewportMipTexture</a><span class="signature">( uvNode : <span class="param-type"><a href="Node.html">Node</a></span>, levelNode : <span class="param-type"><a href="Node.html">Node</a></span>, framebufferTexture : <span class="param-type"><a href="Texture.html">Texture</a></span> )</span><span class="type-signature"> : <a href="ViewportTextureNode.html">ViewportTextureNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a viewport texture node with enabled mipmap generation.</p>
+							<p>用于创建启用 mipmap 生成功能的视口纹理节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12524,8 +12519,8 @@ compared to ColorAdjustment#saturation.</p>
 										<strong translate="no">uvNode</strong>
 									</td>
 									<td class="description last">
-										<p>The uv node.</p>
-										<p>Default is <code>screenUV</code>.</p>
+										<p>UV 节点。</p>
+										<p>默认值为 <code>screenUV</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12533,8 +12528,8 @@ compared to ColorAdjustment#saturation.</p>
 										<strong translate="no">levelNode</strong>
 									</td>
 									<td class="description last">
-										<p>The level node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>级别节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12542,8 +12537,8 @@ compared to ColorAdjustment#saturation.</p>
 										<strong translate="no">framebufferTexture</strong>
 									</td>
 									<td class="description last">
-										<p>A framebuffer texture holding the viewport data. If not provided, a framebuffer texture is created automatically.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>保存视口数据的帧缓冲纹理。若未提供，将自动创建帧缓冲纹理。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12552,9 +12547,9 @@ compared to ColorAdjustment#saturation.</p>
 					<h3 class="name name-method" id="viewportOpaqueMipTexture" translate="no">.<a href="#viewportOpaqueMipTexture">viewportOpaqueMipTexture</a><span class="signature">( uv : <span class="param-type"><a href="Node.html">Node</a></span>, level : <span class="param-type"><a href="Node.html">Node</a></span> )</span><span class="type-signature"> : <a href="ViewportTextureNode.html">ViewportTextureNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a viewport texture node with enabled mipmap generation.
-The texture should only contain the opaque rendering objects.</p>
-<p>This should be used just in transparent or transmissive materials.</p>
+							<p>用于创建启用 mipmap 生成功能的视口纹理节点的 TSL 函数。
+该纹理应只包含不透明渲染对象。</p>
+<p>该函数仅应在透明或透射材质中使用。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12563,8 +12558,8 @@ The texture should only contain the opaque rendering objects.</p>
 										<strong translate="no">uv</strong>
 									</td>
 									<td class="description last">
-										<p>The uv node.</p>
-										<p>Default is <code>screenUV</code>.</p>
+										<p>UV 节点。</p>
+										<p>默认值为 <code>screenUV</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12572,8 +12567,8 @@ The texture should only contain the opaque rendering objects.</p>
 										<strong translate="no">level</strong>
 									</td>
 									<td class="description last">
-										<p>The level node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>级别节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12582,11 +12577,7 @@ The texture should only contain the opaque rendering objects.</p>
 					<h3 class="name name-method" id="viewportSafeUV" translate="no">.<a href="#viewportSafeUV">viewportSafeUV</a><span class="signature">( uv : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec2></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec2></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>A special version of a screen uv function that involves a depth comparison
-when computing the final uvs. The function mitigates visual errors when
-using viewport texture nodes for refraction purposes. Without this function
-objects in front of a refractive surface might appear on the refractive surface
-which is incorrect.</p>
+							<p>一种特殊的屏幕 UV 函数版本，在计算最终 UV 时会进行深度比较。该函数可在使用视口纹理节点进行折射时减轻视觉错误。若不使用此函数，折射表面前方的物体可能会错误地显示在折射表面上。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12595,19 +12586,19 @@ which is incorrect.</p>
 										<strong translate="no">uv</strong>
 									</td>
 									<td class="description last">
-										<p>Optional uv coordinates. By default <code>screenUV</code> is used.</p>
+										<p>可选的 UV 坐标。默认使用 <code>screenUV</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The update uv coordinates.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 更新后的 UV 坐标。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="viewportSharedTexture" translate="no">.<a href="#viewportSharedTexture">viewportSharedTexture</a><span class="signature">( uvNode : <span class="param-type"><a href="Node.html">Node</a></span>, levelNode : <span class="param-type"><a href="Node.html">Node</a></span> )</span><span class="type-signature"> : <a href="ViewportSharedTextureNode.html">ViewportSharedTextureNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a shared viewport texture node.</p>
+							<p>用于创建共享视口纹理节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12616,8 +12607,8 @@ which is incorrect.</p>
 										<strong translate="no">uvNode</strong>
 									</td>
 									<td class="description last">
-										<p>The uv node.</p>
-										<p>Default is <code>screenUV</code>.</p>
+										<p>UV 节点。</p>
+										<p>默认值为 <code>screenUV</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12625,8 +12616,8 @@ which is incorrect.</p>
 										<strong translate="no">levelNode</strong>
 									</td>
 									<td class="description last">
-										<p>The level node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>级别节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12635,7 +12626,7 @@ which is incorrect.</p>
 					<h3 class="name name-method" id="viewportTexture" translate="no">.<a href="#viewportTexture">viewportTexture</a><span class="signature">( uvNode : <span class="param-type"><a href="Node.html">Node</a></span>, levelNode : <span class="param-type"><a href="Node.html">Node</a></span>, framebufferTexture : <span class="param-type"><a href="Texture.html">Texture</a></span> )</span><span class="type-signature"> : <a href="ViewportTextureNode.html">ViewportTextureNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a viewport texture node.</p>
+							<p>用于创建视口纹理节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12644,8 +12635,8 @@ which is incorrect.</p>
 										<strong translate="no">uvNode</strong>
 									</td>
 									<td class="description last">
-										<p>The uv node.</p>
-										<p>Default is <code>screenUV</code>.</p>
+										<p>UV 节点。</p>
+										<p>默认值为 <code>screenUV</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12653,8 +12644,8 @@ which is incorrect.</p>
 										<strong translate="no">levelNode</strong>
 									</td>
 									<td class="description last">
-										<p>The level node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>级别节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12662,8 +12653,8 @@ which is incorrect.</p>
 										<strong translate="no">framebufferTexture</strong>
 									</td>
 									<td class="description last">
-										<p>A framebuffer texture holding the viewport data. If not provided, a framebuffer texture is created automatically.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>保存视口数据的帧缓冲纹理。若未提供，将自动创建帧缓冲纹理。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12672,7 +12663,7 @@ which is incorrect.</p>
 					<h3 class="name name-method" id="vignette" translate="no">.<a href="#vignette">vignette</a><span class="signature">( color : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3></span>, intensity : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>, smoothness : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>, coord : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec2></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec3></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Applies vignette effect to darken the edges of the screen.</p>
+							<p>应用暗角效果，使屏幕边缘变暗。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12681,7 +12672,7 @@ which is incorrect.</p>
 										<strong translate="no">color</strong>
 									</td>
 									<td class="description last">
-										<p>The input color.</p>
+										<p>输入颜色。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12689,8 +12680,8 @@ which is incorrect.</p>
 										<strong translate="no">intensity</strong>
 									</td>
 									<td class="description last">
-										<p>The intensity of the vignette (0-1).</p>
-										<p>Default is <code>0.4</code>.</p>
+										<p>暗角强度（0-1）。</p>
+										<p>默认值为 <code>0.4</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12698,8 +12689,8 @@ which is incorrect.</p>
 										<strong translate="no">smoothness</strong>
 									</td>
 									<td class="description last">
-										<p>The smoothness of the vignette falloff.</p>
-										<p>Default is <code>0.5</code>.</p>
+										<p>暗角过渡平滑度。</p>
+										<p>默认值为 <code>0.5</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12707,23 +12698,21 @@ which is incorrect.</p>
 										<strong translate="no">coord</strong>
 									</td>
 									<td class="description last">
-										<p>The UV coordinates to use for vignette calculation.</p>
-										<p>Default is <code>uv()</code>.</p>
+										<p>用于暗角计算的 UV 坐标。</p>
+										<p>默认值为 <code>uv()</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The color with vignette applied.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 应用暗角后的颜色。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="vogelDiskSample" translate="no">.<a href="#vogelDiskSample">vogelDiskSample</a><span class="signature">( sampleIndex : <span class="param-type"><a href="Node.html">Node</a>.&lt;int></span>, samplesCount : <span class="param-type"><a href="Node.html">Node</a>.&lt;int></span>, phi : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec2></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Vogel disk sampling for uniform circular distribution.</p>
-<p>This function generates sample points distributed uniformly on a disk using the golden angle,
-resulting in an efficient low-discrepancy sequence for sampling. The rotation parameter (phi)
-allows randomizing the pattern per-pixel when combined with IGN.</p>
+							<p>用于均匀圆形分布的 Vogel 圆盘采样。</p>
+<p>该函数使用黄金角在圆盘上生成均匀分布的采样点，从而得到高效的低差异采样序列。旋转参数（phi）与 IGN 结合时可实现逐像素随机化采样模式。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12732,7 +12721,7 @@ allows randomizing the pattern per-pixel when combined with IGN.</p>
 										<strong translate="no">sampleIndex</strong>
 									</td>
 									<td class="description last">
-										<p>The index of the current sample (0-based).</p>
+										<p>当前采样的索引（从 0 开始）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12740,7 +12729,7 @@ allows randomizing the pattern per-pixel when combined with IGN.</p>
 										<strong translate="no">samplesCount</strong>
 									</td>
 									<td class="description last">
-										<p>The total number of samples.</p>
+										<p>采样总数。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12748,19 +12737,19 @@ allows randomizing the pattern per-pixel when combined with IGN.</p>
 										<strong translate="no">phi</strong>
 									</td>
 									<td class="description last">
-										<p>Rotation angle in radians (typically from IGN * 2π).</p>
+										<p>弧度制旋转角（通常为 IGN * 2π）。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A 2D point on the unit disk.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 单位圆盘上的二维点。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="wgsl" translate="no">.<a href="#wgsl">wgsl</a><span class="signature">( src : <span class="param-type">string</span>, includes : <span class="param-type">Array.&lt;<a href="Node.html">Node</a>></span> )</span><span class="type-signature"> : <a href="CodeNode.html">CodeNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a WGSL code node.</p>
+							<p>用于创建 WGSL 代码节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12769,7 +12758,7 @@ allows randomizing the pattern per-pixel when combined with IGN.</p>
 										<strong translate="no">src</strong>
 									</td>
 									<td class="description last">
-										<p>The native code.</p>
+										<p>原生代码。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12777,7 +12766,7 @@ allows randomizing the pattern per-pixel when combined with IGN.</p>
 										<strong translate="no">includes</strong>
 									</td>
 									<td class="description last">
-										<p>An array of includes.</p>
+										<p>include 数组。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12786,8 +12775,8 @@ allows randomizing the pattern per-pixel when combined with IGN.</p>
 					<h3 class="name name-method" id="workgroupArray" translate="no">.<a href="#workgroupArray">workgroupArray</a><span class="signature">( type : <span class="param-type">string</span>, count : <span class="param-type">number</span> )</span><span class="type-signature"> : <a href="WorkgroupInfoNode.html">WorkgroupInfoNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a workgroup info node.
-Creates a new 'workgroup' scoped array buffer.</p>
+							<p>用于创建工作组信息节点的 TSL 函数。
+创建新的 <code>workgroup</code> 作用域数组缓冲区。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12796,7 +12785,7 @@ Creates a new 'workgroup' scoped array buffer.</p>
 										<strong translate="no">type</strong>
 									</td>
 									<td class="description last">
-										<p>The data type of a 'workgroup' scoped buffer element.</p>
+										<p><code>workgroup</code> 作用域缓冲区元素的数据类型。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12804,8 +12793,8 @@ Creates a new 'workgroup' scoped array buffer.</p>
 										<strong translate="no">count</strong>
 									</td>
 									<td class="description last">
-										<p>The number of elements in the buffer.</p>
-										<p>Default is <code>0</code>.</p>
+										<p>缓冲区中的元素数量。</p>
+										<p>默认值为 <code>0</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12814,15 +12803,13 @@ Creates a new 'workgroup' scoped array buffer.</p>
 					<h3 class="name name-method" id="workgroupBarrier" translate="no">.<a href="#workgroupBarrier">workgroupBarrier</a><span class="signature">()</span><span class="type-signature"> : <a href="BarrierNode.html">BarrierNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a workgroup barrier. All compute shader
-invocations must wait for each invocation within a workgroup to
-complete before the barrier can be surpassed.</p>
+							<p>用于创建工作组屏障的 TSL 函数。所有计算着色器调用都必须等待同一工作组内的每个调用完成后，才能越过该屏障。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="workingToColorSpace" translate="no">.<a href="#workingToColorSpace">workingToColorSpace</a><span class="signature">( node : <span class="param-type"><a href="Node.html">Node</a></span>, targetColorSpace : <span class="param-type">string</span> )</span><span class="type-signature"> : <a href="ColorSpaceNode.html">ColorSpaceNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for converting a given color node from the current working color space to the given color space.</p>
+							<p>用于将给定颜色节点从当前工作色彩空间转换到目标色彩空间的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12831,7 +12818,7 @@ complete before the barrier can be surpassed.</p>
 										<strong translate="no">node</strong>
 									</td>
 									<td class="description last">
-										<p>Represents the node to convert.</p>
+										<p>待转换的节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12839,7 +12826,7 @@ complete before the barrier can be surpassed.</p>
 										<strong translate="no">targetColorSpace</strong>
 									</td>
 									<td class="description last">
-										<p>The target color space.</p>
+										<p>目标色彩空间。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -12848,7 +12835,7 @@ complete before the barrier can be surpassed.</p>
 					<h3 class="name name-method" id="xor" translate="no">.<a href="#xor">xor</a><span class="signature">( a : <span class="param-type"><a href="Node.html">Node</a></span>, b : <span class="param-type"><a href="Node.html">Node</a></span> )</span><span class="type-signature"> : <a href="OperatorNode.html">OperatorNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Performs logical XOR on two nodes.</p>
+							<p>对两个节点执行逻辑 XOR（异或）运算。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -12857,7 +12844,7 @@ complete before the barrier can be surpassed.</p>
 										<strong translate="no">a</strong>
 									</td>
 									<td class="description last">
-										<p>The first input.</p>
+										<p>第一个输入。</p>
 									</td>
 								</tr>
 								<tr>
@@ -12865,17 +12852,17 @@ complete before the barrier can be surpassed.</p>
 										<strong translate="no">b</strong>
 									</td>
 									<td class="description last">
-										<p>The second input.</p>
+										<p>第二个输入。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-				<h2 class="subsection-title">Type Definitions</h2>
+				<h2 class="subsection-title">类型定义</h2>
 				<div class="member">
 					<h3 class="name" id="ConstantsInterpolationSamplingMode" translate="no">.<a href="#ConstantsInterpolationSamplingMode">ConstantsInterpolationSamplingMode</a> </h3>
 					<div class="description">
-						<p>Represents the different interpolation sampling modes.</p>
+						<p>表示不同的插值采样模式。</p>
 					</div>
 <table class="props">
 	<tbody>
@@ -12886,7 +12873,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">string</span>
 				</td>
 			<td class="description last">
-				<p>Normal sampling mode.</p>
+				<p>普通采样模式。</p>
 			</td>
 		</tr>
 		<tr>
@@ -12896,7 +12883,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">string</span>
 				</td>
 			<td class="description last">
-				<p>Centroid sampling mode.</p>
+				<p>质心采样模式。</p>
 			</td>
 		</tr>
 		<tr>
@@ -12906,7 +12893,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">string</span>
 				</td>
 			<td class="description last">
-				<p>Sample-specific sampling mode.</p>
+				<p>逐采样点模式。</p>
 			</td>
 		</tr>
 		<tr>
@@ -12916,7 +12903,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">string</span>
 				</td>
 			<td class="description last">
-				<p>Flat interpolation using the first vertex.</p>
+				<p>使用第一个顶点进行平面插值。</p>
 			</td>
 		</tr>
 		<tr>
@@ -12926,7 +12913,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">string</span>
 				</td>
 			<td class="description last">
-				<p>Flat interpolation using either vertex.</p>
+				<p>使用任一顶点进行平面插值。</p>
 			</td>
 		</tr>
 	</tbody>
@@ -12935,7 +12922,7 @@ complete before the barrier can be surpassed.</p>
 				<div class="member">
 					<h3 class="name" id="ConstantsInterpolationSamplingType" translate="no">.<a href="#ConstantsInterpolationSamplingType">ConstantsInterpolationSamplingType</a> </h3>
 					<div class="description">
-						<p>Represents the different interpolation sampling types.</p>
+						<p>表示不同的插值采样类型。</p>
 					</div>
 <table class="props">
 	<tbody>
@@ -12946,7 +12933,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">string</span>
 				</td>
 			<td class="description last">
-				<p>Perspective-correct interpolation.</p>
+				<p>透视校正插值。</p>
 			</td>
 		</tr>
 		<tr>
@@ -12956,7 +12943,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">string</span>
 				</td>
 			<td class="description last">
-				<p>Linear interpolation.</p>
+				<p>线性插值。</p>
 			</td>
 		</tr>
 		<tr>
@@ -12966,7 +12953,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">string</span>
 				</td>
 			<td class="description last">
-				<p>Flat interpolation.</p>
+				<p>平面插值。</p>
 			</td>
 		</tr>
 	</tbody>
@@ -12975,7 +12962,7 @@ complete before the barrier can be surpassed.</p>
 				<div class="member">
 					<h3 class="name" id="ConstantsMouse" translate="no">.<a href="#ConstantsMouse">ConstantsMouse</a> </h3>
 					<div class="description">
-						<p>This type represents mouse buttons and interaction types in context of controls.</p>
+						<p>该类型用于表示控制器场景中的鼠标按键与交互类型。</p>
 					</div>
 <table class="props">
 	<tbody>
@@ -12986,7 +12973,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The left mouse button.</p>
+				<p>鼠标左键。</p>
 			</td>
 		</tr>
 		<tr>
@@ -12996,7 +12983,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The middle mouse button.</p>
+				<p>鼠标中键。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13006,7 +12993,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The right mouse button.</p>
+				<p>鼠标右键。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13016,7 +13003,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>A rotate interaction.</p>
+				<p>旋转交互。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13026,7 +13013,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>A dolly interaction.</p>
+				<p>推拉交互。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13036,7 +13023,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>A pan interaction.</p>
+				<p>平移交互。</p>
 			</td>
 		</tr>
 	</tbody>
@@ -13045,7 +13032,7 @@ complete before the barrier can be surpassed.</p>
 				<div class="member">
 					<h3 class="name" id="ConstantsTimestampQuery" translate="no">.<a href="#ConstantsTimestampQuery">ConstantsTimestampQuery</a> </h3>
 					<div class="description">
-						<p>This type represents the different timestamp query types.</p>
+						<p>该类型表示不同的时间戳查询类型。</p>
 					</div>
 <table class="props">
 	<tbody>
@@ -13056,7 +13043,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">string</span>
 				</td>
 			<td class="description last">
-				<p>A <code>compute</code> timestamp query.</p>
+				<p><code>compute</code> 时间戳查询。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13066,7 +13053,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">string</span>
 				</td>
 			<td class="description last">
-				<p>A <code>render</code> timestamp query.</p>
+				<p><code>render</code> 时间戳查询。</p>
 			</td>
 		</tr>
 	</tbody>
@@ -13075,7 +13062,7 @@ complete before the barrier can be surpassed.</p>
 				<div class="member">
 					<h3 class="name" id="ConstantsTouch" translate="no">.<a href="#ConstantsTouch">ConstantsTouch</a> </h3>
 					<div class="description">
-						<p>This type represents touch interaction types in context of controls.</p>
+						<p>该类型用于表示控制器场景中的触摸交互类型。</p>
 					</div>
 <table class="props">
 	<tbody>
@@ -13086,7 +13073,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>A rotate interaction.</p>
+				<p>旋转交互。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13096,7 +13083,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>A pan interaction.</p>
+				<p>平移交互。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13106,7 +13093,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The dolly-pan interaction.</p>
+				<p>推拉-平移交互。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13116,7 +13103,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>A dolly-rotate interaction.</p>
+				<p>推拉-旋转交互。</p>
 			</td>
 		</tr>
 	</tbody>
@@ -13125,7 +13112,7 @@ complete before the barrier can be surpassed.</p>
 				<div class="member">
 					<h3 class="name" id="DebugConfig" translate="no">.<a href="#DebugConfig">DebugConfig</a> </h3>
 					<div class="description">
-						<p>Debug configuration.</p>
+						<p>调试配置。</p>
 					</div>
 <table class="props">
 	<tbody>
@@ -13136,7 +13123,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">boolean</span>
 				</td>
 			<td class="description last">
-				<p>Whether shader errors should be checked or not.</p>
+				<p>是否检查着色器错误。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13146,7 +13133,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">function</span>
 				</td>
 			<td class="description last">
-				<p>A callback function that is executed when a shader error happens. Only supported with WebGL 2 right now.</p>
+				<p>着色器报错时执行的回调函数。目前仅支持 WebGL 2。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13156,7 +13143,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">function</span>
 				</td>
 			<td class="description last">
-				<p>Allows the get the raw shader code for the given scene, camera and 3D object.</p>
+				<p>允许获取给定场景、相机和 3D 对象的原始着色器代码。</p>
 			</td>
 		</tr>
 	</tbody>
@@ -13179,8 +13166,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>
 				</td>
 			<td class="description last">
-				<p>Scene depth buffer for view-space edge stopping.</p>
-						<p>Default is <code>null</code>.</p>
+				<p>用于视图空间边缘停止的场景深度缓冲。</p>
+						<p>默认值为 <code>null</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13190,8 +13177,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3></span>
 				</td>
 			<td class="description last">
-				<p>View-space normals for geometric edge stopping.</p>
-						<p>Default is <code>null</code>.</p>
+				<p>用于几何边缘停止的视图空间法线。</p>
+						<p>默认值为 <code>null</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13201,8 +13188,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type"><a href="Node.html">Node</a>.&lt;vec4></span>
 				</td>
 			<td class="description last">
-				<p>Roughness/metalness G-buffer for specular edge stopping.</p>
-						<p>Default is <code>null</code>.</p>
+				<p>用于镜面边缘停止的粗糙度/金属度 G-buffer。</p>
+						<p>默认值为 <code>null</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13212,8 +13199,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type"><a href="Node.html">Node</a>.&lt;vec4></span>
 				</td>
 			<td class="description last">
-				<p>Scene base color (albedo) G-buffer for chromatic edge stopping.</p>
-						<p>Default is <code>null</code>.</p>
+				<p>用于色度边缘停止的场景基色（albedo）G-buffer。</p>
+						<p>默认值为 <code>null</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13223,8 +13210,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type"><a href="Node.html">Node</a>.&lt;vec4></span>
 				</td>
 			<td class="description last">
-				<p>Unfiltered input (e.g. raw SSR/SSGI) for secondary sampling and temporal blend.</p>
-						<p>Default is <code>null</code>.</p>
+				<p>用于二次采样和时间混合的未滤波输入（例如原始 SSR/SSGI）。</p>
+						<p>默认值为 <code>null</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13234,8 +13221,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type"><a href="global.html#DenoiseMode">DenoiseMode</a></span>
 				</td>
 			<td class="description last">
-				<p>Denoising kernel type.</p>
-						<p>Default is <code>'diffuse'</code>.</p>
+				<p>降噪核类型。</p>
+						<p>默认值为 <code>'diffuse'</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13245,9 +13232,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">boolean</span>
 				</td>
 			<td class="description last">
-				<p>When <code>true</code>, temporally blend the spatially-denoised result
-(Karis-style) and write frame weight to alpha for feedback loops. When <code>false</code>, only spatial filtering is applied.</p>
-						<p>Default is <code>true</code>.</p>
+				<p>当为 <code>true</code> 时，对空间降噪结果进行时间混合（Karis 风格），并把帧权重写入 alpha 以用于反馈循环。当为 <code>false</code> 时，仅进行空间滤波。</p>
+						<p>默认值为 <code>true</code>。</p>
 			</td>
 		</tr>
 	</tbody>
@@ -13264,8 +13250,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">boolean</span>
 				</td>
 			<td class="description last">
-				<p>When <code>false</code>, traces a single mirror reflection and softens roughness with a blur pass (first-generation SSR). When <code>true</code>, varies the reflection direction per pixel with stochastic GGX rays (second-generation SSR); higher quality on rough/glossy surfaces but noisier, so it expects a temporal/spatial denoiser downstream.</p>
-						<p>Default is <code>false</code>.</p>
+				<p>当为 <code>false</code> 时，追踪单次镜面反射并通过模糊通道柔化粗糙度（第一代 SSR）。当为 <code>true</code> 时，使用随机 GGX 光线按像素改变反射方向（第二代 SSR）；在粗糙/高光表面质量更高但噪声更大，因此需要后续时间/空间降噪。</p>
+						<p>默认值为 <code>false</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13275,8 +13261,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>
 				</td>
 			<td class="description last">
-				<p>Per-pixel metalness. Drives GGX reflection sampling and, with <code>reflectNonMetals=false</code>, the non-metal early-out.</p>
-						<p>Default is <code>null</code>.</p>
+				<p>逐像素金属度。用于驱动 GGX 反射采样；当 <code>reflectNonMetals=false</code> 时，也用于非金属的提前剔除。</p>
+						<p>默认值为 <code>null</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13286,8 +13272,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>
 				</td>
 			<td class="description last">
-				<p>Per-pixel roughness. Drives GGX sampling and the blur mip selection.</p>
-						<p>Default is <code>null</code>.</p>
+				<p>逐像素粗糙度。用于驱动 GGX 采样与模糊 mip 级别选择。</p>
+						<p>默认值为 <code>null</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13297,8 +13283,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">boolean</span>
 				</td>
 			<td class="description last">
-				<p>Only used when <code>stochastic=false</code>. When <code>false</code>, non-metallic surfaces are discarded for a noticeable performance gain; set <code>true</code> to also reflect dielectrics (e.g. marble, polished wood, plastic).</p>
-						<p>Default is <code>false</code>.</p>
+				<p>仅在 <code>stochastic=false</code> 时使用。为 <code>false</code> 时会剔除非金属表面以显著提升性能；设为 <code>true</code> 可同时反射电介质（如大理石、抛光木材、塑料）。</p>
+						<p>默认值为 <code>false</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13308,8 +13294,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type"><a href="Texture.html">Texture</a></span>
 				</td>
 			<td class="description last">
-				<p>Equirectangular HDR environment map with CPU-side <code>image.data</code> (e.g. from RGBELoader). Not compatible with PMREM / <code>scene.environment</code> cubemaps.</p>
-						<p>Default is <code>null</code>.</p>
+				<p>带 CPU 侧 <code>image.data</code> 的等距柱状 HDR 环境贴图（例如来自 RGBELoader）。不兼容 PMREM / <code>scene.environment</code> 立方体贴图。</p>
+						<p>默认值为 <code>null</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13319,8 +13305,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">boolean</span>
 				</td>
 			<td class="description last">
-				<p>When <code>true</code>, precomputes env-luminance CDF tables and uses MIS for environment misses. Build-time only.</p>
-						<p>Default is <code>false</code>.</p>
+				<p>为 <code>true</code> 时会预计算环境亮度 CDF 表，并在环境未命中时使用 MIS。仅在构建时生效。</p>
+						<p>默认值为 <code>false</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13330,8 +13316,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type"><a href="Node.html">Node</a></span>
 				</td>
 			<td class="description last">
-				<p>Scene diffuse / base color. Defaults to <code>vec3(1)</code> in the shader when omitted.</p>
-						<p>Default is <code>null</code>.</p>
+				<p>场景漫反射/基色。省略时在着色器中默认为 <code>vec3(1)</code>。</p>
+						<p>默认值为 <code>null</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13341,8 +13327,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">boolean</span>
 				</td>
 			<td class="description last">
-				<p>Sub-step binary-search refinement of detected hits. Compile-time constant (baked into the shader at construction).</p>
-						<p>Default is <code>false</code>.</p>
+				<p>对子步命中结果进行二分搜索细化。编译期常量（构造时固化进着色器）。</p>
+						<p>默认值为 <code>false</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13352,8 +13338,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type"><a href="Camera.html">Camera</a></span>
 				</td>
 			<td class="description last">
-				<p>Camera the scene is rendered with. Inferred from the color pass when omitted.</p>
-						<p>Default is <code>null</code>.</p>
+				<p>场景渲染所使用的相机。省略时从 color pass 推断。</p>
+						<p>默认值为 <code>null</code>。</p>
 			</td>
 		</tr>
 	</tbody>
@@ -13362,7 +13348,7 @@ complete before the barrier can be surpassed.</p>
 				<div class="member">
 					<h3 class="name" id="ShadowMapConfig" translate="no">.<a href="#ShadowMapConfig">ShadowMapConfig</a> </h3>
 					<div class="description">
-						<p>Shadow map configuration</p>
+						<p>阴影贴图配置。</p>
 					</div>
 <table class="props">
 	<tbody>
@@ -13373,7 +13359,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">boolean</span>
 				</td>
 			<td class="description last">
-				<p>Whether to globally enable shadows or not.</p>
+				<p>是否全局启用阴影。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13383,7 +13369,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">boolean</span>
 				</td>
 			<td class="description last">
-				<p>Whether to enable light transmission through non-opaque materials.</p>
+				<p>是否启用光线穿过非不透明材质。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13393,7 +13379,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The shadow map type.</p>
+				<p>阴影贴图类型。</p>
 			</td>
 		</tr>
 	</tbody>
@@ -13413,8 +13399,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type"><a href="global.html#TemporalReprojectMode">TemporalReprojectMode</a></span>
 				</td>
 			<td class="description last">
-				<p><code>diffuse</code> for SSGI/scene colour; <code>specular</code> for SSR reflections.</p>
-						<p>Default is <code>'diffuse'</code>.</p>
+				<p><code>diffuse</code> 用于 SSGI/场景颜色；<code>specular</code> 用于 SSR 反射。</p>
+						<p>默认值为 <code>'diffuse'</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13424,7 +13410,7 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">boolean</span>
 				</td>
 			<td class="description last">
-				<p>Parallax hit-point reprojection (specular mode only). Defaults to <code>true</code> in specular mode.</p>
+				<p>视差命中点重投影（仅限 specular 模式）。在 specular 模式下默认值为 <code>true</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -13434,9 +13420,8 @@ complete before the barrier can be surpassed.</p>
 <span class="param-type">boolean</span>
 				</td>
 			<td class="description last">
-				<p>When <code>true</code>, history is stored in this pass (classic temporal resolve). When <code>false</code>,
-use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode#setHistoryTexture</a> to read history from another pass (e.g. denoise output).</p>
-						<p>Default is <code>false</code>.</p>
+				<p>当为 <code>true</code> 时，在当前 pass 中存储历史数据（经典时间重建）。当为 <code>false</code> 时，使用 <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode#setHistoryTexture</a> 从其他 pass（如降噪输出）读取历史。</p>
+						<p>默认值为 <code>false</code>。</p>
 			</td>
 		</tr>
 	</tbody>
@@ -13445,7 +13430,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 				<div class="member">
 					<h3 class="name" id="XRConfig" translate="no">.<a href="#XRConfig">XRConfig</a> </h3>
 					<div class="description">
-						<p>XR configuration.</p>
+						<p>XR 配置。</p>
 					</div>
 <table class="props">
 	<tbody>
@@ -13456,7 +13441,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 <span class="param-type">boolean</span>
 				</td>
 			<td class="description last">
-				<p>Whether to globally enable XR or not.</p>
+				<p>是否全局启用 XR。</p>
 			</td>
 		</tr>
 	</tbody>
@@ -13465,7 +13450,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 					<h3 class="name name-method" id="onAnimationCallback" translate="no">.<a href="#onAnimationCallback">onAnimationCallback</a><span class="signature">( time : <span class="param-type">DOMHighResTimeStamp</span>, frame : <span class="param-type">XRFrame</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Animation loop parameter of <code>renderer.setAnimationLoop()</code>.</p>
+							<p><code>renderer.setAnimationLoop()</code> 的动画循环参数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -13474,7 +13459,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 										<strong translate="no">time</strong>
 									</td>
 									<td class="description last">
-										<p>A timestamp indicating the end time of the previous frame's rendering.</p>
+										<p>表示上一帧渲染结束时间的时间戳。</p>
 									</td>
 								</tr>
 								<tr>
@@ -13482,7 +13467,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 										<strong translate="no">frame</strong>
 									</td>
 									<td class="description last">
-										<p>A reference to the current XR frame. Only relevant when using XR rendering.</p>
+										<p>当前 XR 帧的引用。仅在使用 XR 渲染时相关。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -13491,7 +13476,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 					<h3 class="name name-method" id="onErrorCallback" translate="no">.<a href="#onErrorCallback">onErrorCallback</a><span class="signature">( error : <span class="param-type">Error</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Callback for onError in loaders.</p>
+							<p>加载器中 onError 的回调。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -13500,7 +13485,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 										<strong translate="no">error</strong>
 									</td>
 									<td class="description last">
-										<p>The error which occurred during the loading process.</p>
+										<p>加载过程中发生的错误。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -13509,7 +13494,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 					<h3 class="name name-method" id="onProgressCallback" translate="no">.<a href="#onProgressCallback">onProgressCallback</a><span class="signature">( event : <span class="param-type">ProgressEvent</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Callback for onProgress in loaders.</p>
+							<p>加载器中 onProgress 的回调。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -13518,7 +13503,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 										<strong translate="no">event</strong>
 									</td>
 									<td class="description last">
-										<p>An instance of <code>ProgressEvent</code> that represents the current loading status.</p>
+										<p>表示当前加载状态的 <code>ProgressEvent</code> 实例。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -13527,7 +13512,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 					<h3 class="name name-method" id="renderObjectFunction" translate="no">.<a href="#renderObjectFunction">renderObjectFunction</a><span class="signature">( object : <span class="param-type"><a href="Object3D.html">Object3D</a></span>, scene : <span class="param-type"><a href="Scene.html">Scene</a></span>, camera : <span class="param-type"><a href="Camera.html">Camera</a></span>, geometry : <span class="param-type"><a href="BufferGeometry.html">BufferGeometry</a></span>, material : <span class="param-type"><a href="Material.html">Material</a></span>, group : <span class="param-type">Object</span>, lightsNode : <span class="param-type"><a href="LightsNode.html">LightsNode</a></span>, clippingContext : <span class="param-type"><a href="ClippingContext.html">ClippingContext</a></span>, passId : <span class="param-type">string</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Callback for <a href="Renderer.html#setRenderObjectFunction">Renderer#setRenderObjectFunction</a>.</p>
+							<p><a href="Renderer.html#setRenderObjectFunction">Renderer#setRenderObjectFunction</a> 的回调。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -13536,7 +13521,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 										<strong translate="no">object</strong>
 									</td>
 									<td class="description last">
-										<p>The 3D object.</p>
+										<p>3D 对象。</p>
 									</td>
 								</tr>
 								<tr>
@@ -13544,7 +13529,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 										<strong translate="no">scene</strong>
 									</td>
 									<td class="description last">
-										<p>The scene the 3D object belongs to.</p>
+										<p>3D 对象所属的场景。</p>
 									</td>
 								</tr>
 								<tr>
@@ -13552,7 +13537,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 										<strong translate="no">camera</strong>
 									</td>
 									<td class="description last">
-										<p>The camera the object should be rendered with.</p>
+										<p>用于渲染该对象的相机。</p>
 									</td>
 								</tr>
 								<tr>
@@ -13560,7 +13545,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 										<strong translate="no">geometry</strong>
 									</td>
 									<td class="description last">
-										<p>The object's geometry.</p>
+										<p>对象的几何体。</p>
 									</td>
 								</tr>
 								<tr>
@@ -13568,7 +13553,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 										<strong translate="no">material</strong>
 									</td>
 									<td class="description last">
-										<p>The object's material.</p>
+										<p>对象的材质。</p>
 									</td>
 								</tr>
 								<tr>
@@ -13576,7 +13561,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 										<strong translate="no">group</strong>
 									</td>
 									<td class="description last">
-										<p>Only relevant for objects using multiple materials. This represents a group entry from the respective <code>BufferGeometry</code>.</p>
+										<p>仅对使用多材质的对象相关。表示对应 <code>BufferGeometry</code> 中的 group 条目。</p>
 									</td>
 								</tr>
 								<tr>
@@ -13584,7 +13569,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 										<strong translate="no">lightsNode</strong>
 									</td>
 									<td class="description last">
-										<p>The current lights node.</p>
+										<p>当前光照节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -13592,7 +13577,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 										<strong translate="no">clippingContext</strong>
 									</td>
 									<td class="description last">
-										<p>The clipping context.</p>
+										<p>裁剪上下文。</p>
 									</td>
 								</tr>
 								<tr>
@@ -13600,8 +13585,8 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 										<strong translate="no">passId</strong>
 									</td>
 									<td class="description last">
-										<p>An optional ID for identifying the pass.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>用于标识该 pass 的可选 ID。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -13610,7 +13595,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 					<h3 class="name name-method" id="traverseCallback" translate="no">.<a href="#traverseCallback">traverseCallback</a><span class="signature">( node : <span class="param-type"><a href="Node.html">Node</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Callback for <a href="Node.html#traverse">Node#traverse</a>.</p>
+							<p><a href="Node.html#traverse">Node#traverse</a> 的回调。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -13619,7 +13604,7 @@ use <a href="TemporalReprojectNode.html#setHistoryTexture">TemporalReprojectNode
 										<strong translate="no">node</strong>
 									</td>
 									<td class="description last">
-										<p>The current node.</p>
+										<p>当前节点。</p>
 									</td>
 								</tr>
 							</tbody>
