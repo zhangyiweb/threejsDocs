@@ -1133,81 +1133,81 @@ const computeFn = Fn(() => {
 				<div class="member">
 					<h3 class="name" id="subgroupIndex" translate="no">.<a href="#subgroupIndex">subgroupIndex</a><span class="type-signature"> : <a href="IndexNode.html">IndexNode</a></span> <span class="type-signature">(constant) </span></h3>
 					<div class="description">
-						<p>TSL object that represents the index of the subgroup the current compute invocation belongs to.</p>
+						<p>表示当前计算调用所属子组索引的 TSL 对象。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="subgroupSize" translate="no">.<a href="#subgroupSize">subgroupSize</a><span class="type-signature"> : <a href="ComputeBuiltinNode.html">ComputeBuiltinNode</a>.&lt;uint></span> <span class="type-signature">(constant) </span></h3>
 					<div class="description">
-						<p>A device dependent variable that exposes the size of the current invocation's subgroup.</p>
+						<p>与设备相关的变量，表示当前调用所在子组的大小。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="tangentGeometry" translate="no">.<a href="#tangentGeometry">tangentGeometry</a><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec4></span> <span class="type-signature">(constant) </span></h3>
 					<div class="description">
-						<p>TSL object that represents the tangent attribute of the current rendered object.</p>
+						<p>TSL 对象，表示当前渲染对象的切线（tangent）属性。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="tangentLocal" translate="no">.<a href="#tangentLocal">tangentLocal</a><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec3></span> <span class="type-signature">(constant) </span></h3>
 					<div class="description">
-						<p>TSL object that represents the vertex tangent in local space of the current rendered object.</p>
+						<p>TSL 对象，表示当前渲染对象在局部空间中的顶点切线。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="tangentView" translate="no">.<a href="#tangentView">tangentView</a><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec3></span> <span class="type-signature">(constant) </span></h3>
 					<div class="description">
-						<p>TSL object that represents the vertex tangent in view space of the current rendered object.</p>
+						<p>TSL 对象，表示当前渲染对象在视图空间中的顶点切线。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="tangentViewFrame" translate="no">.<a href="#tangentViewFrame">tangentViewFrame</a><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec3></span> <span class="type-signature">(constant) </span></h3>
 					<div class="description">
-						<p>Tangent vector in view space, computed dynamically from geometry and UV derivatives.
-Useful for normal mapping without precomputed tangents.</p>
+						<p>视图空间中的切线向量，由几何体和 UV 导数动态计算。
+适用于无需预计算切线的法线贴图。</p>
 <p>Reference: http://www.thetenthplanet.de/archives/1180</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="tangentWorld" translate="no">.<a href="#tangentWorld">tangentWorld</a><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec3></span> <span class="type-signature">(constant) </span></h3>
 					<div class="description">
-						<p>TSL object that represents the vertex tangent in world space of the current rendered object.</p>
+						<p>TSL 对象，表示当前渲染对象在世界空间中的顶点切线。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="thickness" translate="no">.<a href="#thickness">thickness</a><span class="type-signature"> : <a href="PropertyNode.html">PropertyNode</a>.&lt;float></span> <span class="type-signature">(constant) </span></h3>
 					<div class="description">
-						<p>TSL object that represents the shader variable <code>Thickness</code>.</p>
+						<p>表示着色器变量 <code>Thickness</code> 的 TSL 对象。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="time" translate="no">.<a href="#time">time</a><span class="type-signature"> : <a href="UniformNode.html">UniformNode</a>.&lt;float></span> <span class="type-signature">(constant) </span></h3>
 					<div class="description">
-						<p>Represents the elapsed time in seconds.</p>
+						<p>表示已流逝的时间（秒）。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="toneMappingExposure" translate="no">.<a href="#toneMappingExposure">toneMappingExposure</a><span class="type-signature"> : <a href="RendererReferenceNode.html">RendererReferenceNode</a>.&lt;vec3></span> <span class="type-signature">(constant) </span></h3>
 					<div class="description">
-						<p>TSL object that represents the global tone mapping exposure of the renderer.</p>
+						<p>表示渲染器全局色调映射曝光值的 TSL 对象。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="transformedClearcoatNormalView" translate="no">.<a href="#transformedClearcoatNormalView">transformedClearcoatNormalView</a><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec3></span> <span class="type-signature">(constant) </span></h3>
 					<div class="description">
-						<p>TSL object that represents the transformed clearcoat vertex normal of the current rendered object in view space.</p>
+						<p>表示当前渲染对象在视图空间中变换后的清漆层顶点法线的 TSL 对象。</p>
 					</div>
 						<dl class="details">
-							<dt class="important tag-deprecated"><strong>Deprecated:</strong> since r178. Use `clearcoatNormalView` instead.</dt>
+							<dt class="important tag-deprecated"><strong>已弃用：</strong> 自 r178 起。请改用 `clearcoatNormalView`。</dt>
 						</dl>
 				</div>
 				<div class="member">
 					<h3 class="name" id="transformedNormalView" translate="no">.<a href="#transformedNormalView">transformedNormalView</a><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec3></span> <span class="type-signature">(constant) </span></h3>
 					<div class="description">
-						<p>TSL object that represents the transformed vertex normal of the current rendered object in view space.</p>
+						<p>表示当前渲染对象在视图空间中变换后的顶点法线的 TSL 对象。</p>
 					</div>
 						<dl class="details">
-							<dt class="important tag-deprecated"><strong>Deprecated:</strong> since r178. Use `normalView` instead.</dt>
+							<dt class="important tag-deprecated"><strong>已弃用：</strong> 自 r178 起。请改用 `normalView`。</dt>
 						</dl>
 				</div>
 				<div class="member">
@@ -1222,7 +1222,7 @@ Useful for normal mapping without precomputed tangents.</p>
 				<div class="member">
 					<h3 class="name" id="transmission" translate="no">.<a href="#transmission">transmission</a><span class="type-signature"> : <a href="PropertyNode.html">PropertyNode</a>.&lt;float></span> <span class="type-signature">(constant) </span></h3>
 					<div class="description">
-						<p>TSL object that represents the shader variable <code>Transmission</code>.</p>
+						<p>表示着色器变量 <code>Transmission</code> 的 TSL 对象。</p>
 					</div>
 				</div>
 				<div class="member">
@@ -10369,7 +10369,7 @@ material.colorNode = texture( spriteSheet, uvNode );
 					<h3 class="name name-method" id="subBuild" translate="no">.<a href="#subBuild">subBuild</a><span class="signature">( node : <span class="param-type"><a href="Node.html">Node</a></span>, name : <span class="param-type">string</span>, type : <span class="param-type">string</span> )</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Creates a new sub-build node.</p>
+							<p>创建新的子构建（sub-build）节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10378,7 +10378,7 @@ material.colorNode = texture( spriteSheet, uvNode );
 										<strong translate="no">node</strong>
 									</td>
 									<td class="description last">
-										<p>The node to be built in the sub-build.</p>
+										<p>要在子构建中构建的节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -10386,7 +10386,7 @@ material.colorNode = texture( spriteSheet, uvNode );
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The name of the sub-build.</p>
+										<p>子构建的名称。</p>
 									</td>
 								</tr>
 								<tr>
@@ -10394,20 +10394,20 @@ material.colorNode = texture( spriteSheet, uvNode );
 										<strong translate="no">type</strong>
 									</td>
 									<td class="description last">
-										<p>The type of the node, if known.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>节点的类型（若已知）。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A node object wrapping the SubBuildNode instance.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 封装 SubBuildNode 实例的节点对象。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupAdd" translate="no">.<a href="#subgroupAdd">subgroupAdd</a><span class="signature">( e : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>A reduction that adds e among all active invocations and returns that result.</p>
+							<p>对所有活跃调用将 e 求和并返回结果的归约操作。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10416,28 +10416,28 @@ material.colorNode = texture( spriteSheet, uvNode );
 										<strong translate="no">e</strong>
 									</td>
 									<td class="description last">
-										<p>The value provided to the reduction by the current invocation.</p>
+										<p>当前调用为归约操作提供的值。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The accumulated result of the reduction operation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 归约操作的累加结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupAll" translate="no">.<a href="#subgroupAll">subgroupAll</a><span class="signature">()</span><span class="type-signature"> : bool</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns true if e is true for all active invocations in the subgroup.</p>
+							<p>若子组中所有活跃调用的 e 均为 true，则返回 true。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The result of the computation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 计算结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupAnd" translate="no">.<a href="#subgroupAnd">subgroupAnd</a><span class="signature">( e : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>A reduction that performs a bitwise and of e among all active invocations and returns that result.</p>
+							<p>对所有活跃调用将 e 执行按位与（AND）并返回结果的归约操作。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10446,29 +10446,28 @@ material.colorNode = texture( spriteSheet, uvNode );
 										<strong translate="no">e</strong>
 									</td>
 									<td class="description last">
-										<p>The value provided to the reduction by the current invocation.</p>
+										<p>当前调用为归约操作提供的值。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The result of the reduction operation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 归约操作的结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupAny" translate="no">.<a href="#subgroupAny">subgroupAny</a><span class="signature">()</span><span class="type-signature"> : bool</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns true if e is true for any active invocation in the subgroup</p>
+							<p>若子组中任意活跃调用的 e 为 true，则返回 true。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The result of the computation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 计算结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupBallot" translate="no">.<a href="#subgroupBallot">subgroupBallot</a><span class="signature">( pred : <span class="param-type">bool</span> )</span><span class="type-signature"> : vec4..&lt;u32></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns a set of bitfields where the bit corresponding to subgroup_invocation_id
-is 1 if pred is true for that active invocation and 0 otherwise.</p>
+							<p>返回一组位域，其中对应 subgroup_invocation_id 的位在 pred 为 true 时为 1，否则为 0。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10514,13 +10513,13 @@ is 1 if pred is true for that active invocation and 0 otherwise.</p>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The broadcast value.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 广播后的值。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupBroadcastFirst" translate="no">.<a href="#subgroupBroadcastFirst">subgroupBroadcastFirst</a><span class="signature">( e : <span class="param-type">number</span>, id : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Broadcasts e from the active invocation with the lowest subgroup_invocation_id in the subgroup to all other active invocations.</p>
+							<p>将子组中 subgroup_invocation_id 最小的活跃调用中的 e 广播到所有其他活跃调用。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10529,7 +10528,7 @@ is 1 if pred is true for that active invocation and 0 otherwise.</p>
 										<strong translate="no">e</strong>
 									</td>
 									<td class="description last">
-										<p>The value to broadcast from the lowest subgroup invocation.</p>
+										<p>从最小 subgroup 调用广播的值。</p>
 									</td>
 								</tr>
 								<tr>
@@ -10543,23 +10542,22 @@ is 1 if pred is true for that active invocation and 0 otherwise.</p>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The broadcast value.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 广播后的值。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupElect" translate="no">.<a href="#subgroupElect">subgroupElect</a><span class="signature">()</span><span class="type-signature"> : bool</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns true if this invocation has the lowest subgroup_invocation_id
-among active invocations in the subgroup.</p>
+							<p>若当前调用在子组活跃调用中具有最小的 subgroup_invocation_id，则返回 true。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The result of the computation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 计算结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupExclusiveAdd" translate="no">.<a href="#subgroupExclusiveAdd">subgroupExclusiveAdd</a><span class="signature">( e : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>An exclusive scan that returns the sum of e for all active invocations with subgroup_invocation_id less than this invocation.</p>
+							<p>排他扫描：返回所有 subgroup_invocation_id 小于当前调用的活跃调用中 e 之和。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10568,13 +10566,13 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">e</strong>
 									</td>
 									<td class="description last">
-										<p>The value provided to the exclusive scan by the current invocation.</p>
+										<p>当前调用为排他扫描提供的值。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The accumulated result of the exclusive scan operation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 排他扫描操作的累加结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupExclusiveMul" translate="no">.<a href="#subgroupExclusiveMul">subgroupExclusiveMul</a><span class="signature">( e : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
@@ -10589,13 +10587,13 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">e</strong>
 									</td>
 									<td class="description last">
-										<p>The value provided to the exclusive scan by the current invocation.</p>
+										<p>当前调用为排他扫描提供的值。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The accumulated result of the exclusive scan operation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 排他扫描操作的累加结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupInclusiveAdd" translate="no">.<a href="#subgroupInclusiveAdd">subgroupInclusiveAdd</a><span class="signature">( e : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
@@ -10610,13 +10608,13 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">e</strong>
 									</td>
 									<td class="description last">
-										<p>The value provided to the inclusive scan by the current invocation.</p>
+										<p>当前调用为包含扫描提供的值。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The accumulated result of the inclusive scan operation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 包含扫描操作的累加结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupInclusiveMul" translate="no">.<a href="#subgroupInclusiveMul">subgroupInclusiveMul</a><span class="signature">( e : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
@@ -10631,19 +10629,19 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">e</strong>
 									</td>
 									<td class="description last">
-										<p>The value provided to the inclusive scan by the current invocation.</p>
+										<p>当前调用为包含扫描提供的值。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The accumulated result of the inclusive scan operation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 包含扫描操作的累加结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupMax" translate="no">.<a href="#subgroupMax">subgroupMax</a><span class="signature">( e : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>A reduction that performs a max of e among all active invocations and returns that result.</p>
+							<p>对所有活跃调用将 e 取最大值并返回结果的归约操作。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10652,19 +10650,19 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">e</strong>
 									</td>
 									<td class="description last">
-										<p>The value provided to the reduction by the current invocation.</p>
+										<p>当前调用为归约操作提供的值。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The result of the reduction operation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 归约操作的结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupMin" translate="no">.<a href="#subgroupMin">subgroupMin</a><span class="signature">( e : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>A reduction that performs a min of e among all active invocations and returns that result.</p>
+							<p>对所有活跃调用将 e 取最小值并返回结果的归约操作。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10673,19 +10671,19 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">e</strong>
 									</td>
 									<td class="description last">
-										<p>The value provided to the reduction by the current invocation.</p>
+										<p>当前调用为归约操作提供的值。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The result of the reduction operation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 归约操作的结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupMul" translate="no">.<a href="#subgroupMul">subgroupMul</a><span class="signature">( e : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>A reduction that multiplies e among all active invocations and returns that result.</p>
+							<p>对所有活跃调用将 e 相乘并返回结果的归约操作。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10694,19 +10692,19 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">e</strong>
 									</td>
 									<td class="description last">
-										<p>The value provided to the reduction by the current invocation.</p>
+										<p>当前调用为归约操作提供的值。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The accumulated result of the reduction operation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 归约操作的累加结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupOr" translate="no">.<a href="#subgroupOr">subgroupOr</a><span class="signature">( e : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>A reduction that performs a bitwise or of e among all active invocations and returns that result.</p>
+							<p>对所有活跃调用将 e 执行按位或（OR）并返回结果的归约操作。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10715,19 +10713,19 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">e</strong>
 									</td>
 									<td class="description last">
-										<p>The value provided to the reduction by the current invocation.</p>
+										<p>当前调用为归约操作提供的值。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The result of the reduction operation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 归约操作的结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupShuffle" translate="no">.<a href="#subgroupShuffle">subgroupShuffle</a><span class="signature">( v : <span class="param-type">number</span>, id : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns v from the active invocation whose subgroup_invocation_id matches id</p>
+							<p>返回 subgroup_invocation_id 与 id 匹配的活跃调用中的 v。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10736,7 +10734,7 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">v</strong>
 									</td>
 									<td class="description last">
-										<p>The value to return from subgroup invocation id^mask.</p>
+										<p>从 subgroup 调用 id^mask 返回的值。</p>
 									</td>
 								</tr>
 								<tr>
@@ -10744,19 +10742,19 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">id</strong>
 									</td>
 									<td class="description last">
-										<p>The subgroup invocation which returns the value v.</p>
+										<p>返回 v 值的 subgroup 调用。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The broadcast value.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 广播后的值。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupShuffleDown" translate="no">.<a href="#subgroupShuffleDown">subgroupShuffleDown</a><span class="signature">( v : <span class="param-type">number</span>, delta : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns v from the active invocation whose subgroup_invocation_id matches subgroup_invocation_id + delta</p>
+							<p>返回 subgroup_invocation_id 与 subgroup_invocation_id + delta 匹配的活跃调用中的 v。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10765,7 +10763,7 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">v</strong>
 									</td>
 									<td class="description last">
-										<p>The value to return from subgroup invocation id^mask.</p>
+										<p>从 subgroup 调用 id^mask 返回的值。</p>
 									</td>
 								</tr>
 								<tr>
@@ -10773,19 +10771,19 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">delta</strong>
 									</td>
 									<td class="description last">
-										<p>A value that offsets the current subgroup invocation.</p>
+										<p>偏移当前 subgroup 调用的值。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The broadcast value.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 广播后的值。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupShuffleUp" translate="no">.<a href="#subgroupShuffleUp">subgroupShuffleUp</a><span class="signature">( v : <span class="param-type">number</span>, delta : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns v from the active invocation whose subgroup_invocation_id matches subgroup_invocation_id - delta</p>
+							<p>返回 subgroup_invocation_id 与 subgroup_invocation_id - delta 匹配的活跃调用中的 v。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10794,7 +10792,7 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">v</strong>
 									</td>
 									<td class="description last">
-										<p>The value to return from subgroup invocation id^mask.</p>
+										<p>从 subgroup 调用 id^mask 返回的值。</p>
 									</td>
 								</tr>
 								<tr>
@@ -10802,19 +10800,19 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">delta</strong>
 									</td>
 									<td class="description last">
-										<p>A value that offsets the current in.</p>
+										<p>偏移当前调用的值。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The broadcast value.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 广播后的值。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupShuffleXor" translate="no">.<a href="#subgroupShuffleXor">subgroupShuffleXor</a><span class="signature">( v : <span class="param-type">number</span>, mask : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns v from the active invocation whose subgroup_invocation_id matches subgroup_invocation_id ^ mask.</p>
+							<p>返回 subgroup_invocation_id 与 subgroup_invocation_id ^ mask 匹配的活跃调用中的 v。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10823,7 +10821,7 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">v</strong>
 									</td>
 									<td class="description last">
-										<p>The value to return from subgroup invocation id^mask.</p>
+										<p>从 subgroup 调用 id^mask 返回的值。</p>
 									</td>
 								</tr>
 								<tr>
@@ -10831,19 +10829,19 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">mask</strong>
 									</td>
 									<td class="description last">
-										<p>A bitmask that determines the target invocation via a XOR operation.</p>
+										<p>通过 XOR 运算确定目标调用的位掩码。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The broadcast value.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 广播后的值。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="subgroupXor" translate="no">.<a href="#subgroupXor">subgroupXor</a><span class="signature">( e : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>A reduction that performs a bitwise xor of e among all active invocations and returns that result.</p>
+							<p>对所有活跃调用将 e 执行按位异或（XOR）并返回结果的归约操作。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10852,19 +10850,19 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">e</strong>
 									</td>
 									<td class="description last">
-										<p>The value provided to the reduction by the current invocation.</p>
+										<p>当前调用为归约操作提供的值。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The result of the reduction operation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 归约操作的结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="taau" translate="no">.<a href="#taau">taau</a><span class="signature">( beautyNode : <span class="param-type"><a href="TextureNode.html">TextureNode</a></span>, depthNode : <span class="param-type"><a href="TextureNode.html">TextureNode</a></span>, velocityNode : <span class="param-type"><a href="TextureNode.html">TextureNode</a></span>, camera : <span class="param-type"><a href="Camera.html">Camera</a></span> )</span><span class="type-signature"> : <a href="TAAUNode.html">TAAUNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a TAAU node for Temporal Anti-Aliasing Upscaling.</p>
+							<p>用于创建 TAAU（时间抗锯齿升采样）节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10873,7 +10871,7 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">beautyNode</strong>
 									</td>
 									<td class="description last">
-										<p>The texture node that represents the input of the effect.</p>
+										<p>表示效果输入的纹理节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -10988,7 +10986,7 @@ among active invocations in the subgroup.</p>
 					<h3 class="name name-method" id="texture3D" translate="no">.<a href="#texture3D">texture3D</a><span class="signature">( value : <span class="param-type"><a href="Data3DTexture.html">Data3DTexture</a></span>, uvNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3></span>, levelNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;int></span> )</span><span class="type-signature"> : <a href="Texture3DNode.html">Texture3DNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a 3D texture node.</p>
+							<p>用于创建 3D 纹理节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -10997,7 +10995,7 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>The 3D texture.</p>
+										<p>3D 纹理。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11005,8 +11003,8 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">uvNode</strong>
 									</td>
 									<td class="description last">
-										<p>The uv node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>UV 节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11014,8 +11012,8 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">levelNode</strong>
 									</td>
 									<td class="description last">
-										<p>The level node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>层级节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11061,7 +11059,7 @@ among active invocations in the subgroup.</p>
 					<h3 class="name name-method" id="texture3DLoad" translate="no">.<a href="#texture3DLoad">texture3DLoad</a><span class="signature">( value : <span class="param-type"><a href="Texture.html">Texture</a> | <a href="TextureNode.html">TextureNode</a></span>, uvNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3></span>, levelNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;int></span>, biasNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span> )</span><span class="type-signature"> : <a href="TextureNode.html">TextureNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a texture node that fetches/loads texels without interpolation.</p>
+							<p>用于创建纹理节点的 TSL 函数，该节点在不插值的情况下获取/加载纹素。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11070,8 +11068,8 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>The texture.</p>
-										<p>Default is <code>EmptyTexture</code>.</p>
+										<p>纹理。</p>
+										<p>默认值为 <code>EmptyTexture</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11079,8 +11077,8 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">uvNode</strong>
 									</td>
 									<td class="description last">
-										<p>The uv node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>UV 节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11088,8 +11086,8 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">levelNode</strong>
 									</td>
 									<td class="description last">
-										<p>The level node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>层级节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11097,8 +11095,8 @@ among active invocations in the subgroup.</p>
 										<strong translate="no">biasNode</strong>
 									</td>
 									<td class="description last">
-										<p>The bias node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>偏置节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11107,15 +11105,13 @@ among active invocations in the subgroup.</p>
 					<h3 class="name name-method" id="textureBarrier" translate="no">.<a href="#textureBarrier">textureBarrier</a><span class="signature">()</span><span class="type-signature"> : <a href="BarrierNode.html">BarrierNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a texture barrier. All invocations must
-wait for each access to variables within the 'texture' address space
-to complete before the barrier can be passed.</p>
+							<p>用于创建纹理屏障的 TSL 函数。所有调用必须先等待对 <code>texture</code> 地址空间中变量的每次访问完成，之后才能通过该屏障。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="textureBase" translate="no">.<a href="#textureBase">textureBase</a><span class="signature">( value : <span class="param-type"><a href="Texture.html">Texture</a></span>, uvNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;(vec2|vec3)></span>, levelNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;int></span>, biasNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span> )</span><span class="type-signature"> : <a href="TextureNode.html">TextureNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a texture node.</p>
+							<p>用于创建纹理节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11124,7 +11120,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>The texture.</p>
+										<p>纹理。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11132,8 +11128,8 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">uvNode</strong>
 									</td>
 									<td class="description last">
-										<p>The uv node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>UV 节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11141,8 +11137,8 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">levelNode</strong>
 									</td>
 									<td class="description last">
-										<p>The level node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>层级节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11150,8 +11146,8 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">biasNode</strong>
 									</td>
 									<td class="description last">
-										<p>The bias node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>偏置节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11160,7 +11156,7 @@ to complete before the barrier can be passed.</p>
 					<h3 class="name name-method" id="textureBicubic" translate="no">.<a href="#textureBicubic">textureBicubic</a><span class="signature">( textureNode : <span class="param-type"><a href="TextureNode.html">TextureNode</a></span>, strength : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Applies mipped bicubic texture filtering to the given texture node.</p>
+							<p>对给定纹理节点应用带 mip 的双三次纹理过滤。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11169,7 +11165,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">textureNode</strong>
 									</td>
 									<td class="description last">
-										<p>The texture node that should be filtered.</p>
+										<p>需要过滤的纹理节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11177,19 +11173,19 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">strength</strong>
 									</td>
 									<td class="description last">
-										<p>Defines the strength of the bicubic filtering.</p>
+										<p>定义双三次过滤的强度。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The filtered texture sample.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong>过滤后的纹理采样结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="textureBicubicLevel" translate="no">.<a href="#textureBicubicLevel">textureBicubicLevel</a><span class="signature">( textureNode : <span class="param-type"><a href="TextureNode.html">TextureNode</a></span>, lodNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Applies mipped bicubic texture filtering to the given texture node.</p>
+							<p>对给定纹理节点应用带 mip 的双三次纹理过滤。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11198,7 +11194,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">textureNode</strong>
 									</td>
 									<td class="description last">
-										<p>The texture node that should be filtered.</p>
+										<p>需要过滤的纹理节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11206,19 +11202,19 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">lodNode</strong>
 									</td>
 									<td class="description last">
-										<p>Defines the LOD to sample from.</p>
+										<p>定义采样的 LOD。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The filtered texture sample.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong>过滤后的纹理采样结果。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="textureLoad" translate="no">.<a href="#textureLoad">textureLoad</a><span class="signature">( value : <span class="param-type"><a href="Texture.html">Texture</a> | <a href="TextureNode.html">TextureNode</a></span>, uvNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;(vec2|vec3)></span>, levelNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;int></span>, biasNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span> )</span><span class="type-signature"> : <a href="TextureNode.html">TextureNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a texture node that fetches/loads texels without interpolation.</p>
+							<p>用于创建纹理节点的 TSL 函数，该节点在不插值的情况下获取/加载纹素。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11227,8 +11223,8 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>The texture.</p>
-										<p>Default is <code>EmptyTexture</code>.</p>
+										<p>纹理。</p>
+										<p>默认值为 <code>EmptyTexture</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11236,8 +11232,8 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">uvNode</strong>
 									</td>
 									<td class="description last">
-										<p>The uv node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>UV 节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11245,8 +11241,8 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">levelNode</strong>
 									</td>
 									<td class="description last">
-										<p>The level node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>层级节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11254,8 +11250,8 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">biasNode</strong>
 									</td>
 									<td class="description last">
-										<p>The bias node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>偏置节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11264,7 +11260,7 @@ to complete before the barrier can be passed.</p>
 					<h3 class="name name-method" id="textureSize" translate="no">.<a href="#textureSize">textureSize</a><span class="signature">( textureNode : <span class="param-type"><a href="TextureNode.html">TextureNode</a></span>, levelNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;int></span> )</span><span class="type-signature"> : <a href="TextureSizeNode.html">TextureSizeNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a texture size node.</p>
+							<p>用于创建纹理尺寸节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11273,7 +11269,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">textureNode</strong>
 									</td>
 									<td class="description last">
-										<p>A texture node which size should be retrieved.</p>
+										<p>需要获取尺寸的纹理节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11281,8 +11277,8 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">levelNode</strong>
 									</td>
 									<td class="description last">
-										<p>A level node which defines the requested mip.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>定义所请求 mip 的层级节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11291,7 +11287,7 @@ to complete before the barrier can be passed.</p>
 					<h3 class="name name-method" id="textureStore" translate="no">.<a href="#textureStore">textureStore</a><span class="signature">( value : <span class="param-type"><a href="StorageTexture.html">StorageTexture</a> | <a href="StorageTextureNode.html">StorageTextureNode</a></span>, uvNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;(vec2|vec3)></span>, storeNode : <span class="param-type"><a href="Node.html">Node</a></span> )</span><span class="type-signature"> : <a href="StorageTextureNode.html">StorageTextureNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TODO: Explain difference to <code>storageTexture()</code>.</p>
+							<p>TODO：说明与 <code>storageTexture()</code> 的区别。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11300,7 +11296,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>The storage texture.</p>
+										<p>存储纹理。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11308,7 +11304,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">uvNode</strong>
 									</td>
 									<td class="description last">
-										<p>The uv node.</p>
+										<p>UV 节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11316,8 +11312,8 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">storeNode</strong>
 									</td>
 									<td class="description last">
-										<p>The value node that should be stored in the texture.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>应存入纹理的值节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11326,7 +11322,7 @@ to complete before the barrier can be passed.</p>
 					<h3 class="name name-method" id="toneMapping" translate="no">.<a href="#toneMapping">toneMapping</a><span class="signature">( mapping : <span class="param-type">number</span>, exposure : <span class="param-type"><a href="Node.html">Node</a>.&lt;float> | number</span>, color : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3> | <a href="Color.html">Color</a></span> )</span><span class="type-signature"> : <a href="ToneMappingNode.html">ToneMappingNode</a>.&lt;vec3></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a tone mapping node.</p>
+							<p>用于创建色调映射节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11335,7 +11331,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">mapping</strong>
 									</td>
 									<td class="description last">
-										<p>The tone mapping type.</p>
+										<p>色调映射类型。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11343,7 +11339,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">exposure</strong>
 									</td>
 									<td class="description last">
-										<p>The tone mapping exposure.</p>
+										<p>色调映射曝光值。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11351,7 +11347,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">color</strong>
 									</td>
 									<td class="description last">
-										<p>The color node to process.</p>
+										<p>要处理的颜色节点。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11360,7 +11356,7 @@ to complete before the barrier can be passed.</p>
 					<h3 class="name name-method" id="toonOutlinePass" translate="no">.<a href="#toonOutlinePass">toonOutlinePass</a><span class="signature">( scene : <span class="param-type"><a href="Scene.html">Scene</a></span>, camera : <span class="param-type"><a href="Camera.html">Camera</a></span>, color : <span class="param-type"><a href="Color.html">Color</a></span>, thickness : <span class="param-type">number</span>, alpha : <span class="param-type">number</span> )</span><span class="type-signature"> : <a href="ToonOutlinePassNode.html">ToonOutlinePassNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a toon outline pass node.</p>
+							<p>用于创建卡通描边 pass 节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11385,7 +11381,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">color</strong>
 									</td>
 									<td class="description last">
-										<p>Defines the outline's color.</p>
+										<p>定义描边颜色。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11393,8 +11389,8 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">thickness</strong>
 									</td>
 									<td class="description last">
-										<p>Defines the outline's thickness.</p>
-										<p>Default is <code>0.003</code>.</p>
+										<p>定义描边粗细。</p>
+										<p>默认值为 <code>0.003</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11402,8 +11398,8 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">alpha</strong>
 									</td>
 									<td class="description last">
-										<p>Defines the outline's alpha.</p>
-										<p>Default is <code>1</code>.</p>
+										<p>定义描边透明度。</p>
+										<p>默认值为 <code>1</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11412,7 +11408,7 @@ to complete before the barrier can be passed.</p>
 					<h3 class="name name-method" id="traa" translate="no">.<a href="#traa">traa</a><span class="signature">( beautyNode : <span class="param-type"><a href="TextureNode.html">TextureNode</a></span>, depthNode : <span class="param-type"><a href="TextureNode.html">TextureNode</a></span>, velocityNode : <span class="param-type"><a href="TextureNode.html">TextureNode</a></span>, camera : <span class="param-type"><a href="Camera.html">Camera</a></span> )</span><span class="type-signature"> : <a href="TRAANode.html">TRAANode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a TRAA node for Temporal Reprojection Anti-Aliasing.</p>
+							<p>用于创建 TRAA（时间重投影抗锯齿）节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11421,7 +11417,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">beautyNode</strong>
 									</td>
 									<td class="description last">
-										<p>The texture node that represents the input of the effect.</p>
+										<p>表示效果输入的纹理节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11429,7 +11425,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">depthNode</strong>
 									</td>
 									<td class="description last">
-										<p>A node that represents the scene's depth.</p>
+										<p>表示场景深度的节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11437,7 +11433,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">velocityNode</strong>
 									</td>
 									<td class="description last">
-										<p>A node that represents the scene's velocity.</p>
+										<p>表示场景速度的节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11445,7 +11441,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">camera</strong>
 									</td>
 									<td class="description last">
-										<p>The camera the scene is rendered with.</p>
+										<p>用于渲染场景的相机。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11454,7 +11450,7 @@ to complete before the barrier can be passed.</p>
 					<h3 class="name name-method" id="transformDirection" translate="no">.<a href="#transformDirection">transformDirection</a><span class="signature">( direction : <span class="param-type"><a href="Node.html">Node</a>.&lt;(vec2|vec3|vec4)></span>, matrix : <span class="param-type"><a href="Node.html">Node</a>.&lt;(mat2|mat3|mat4)></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Transforms the direction of a vector by a matrix and then normalizes the result.</p>
+							<p>通过矩阵变换向量方向，然后对结果进行归一化。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11463,7 +11459,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">direction</strong>
 									</td>
 									<td class="description last">
-										<p>The direction vector.</p>
+										<p>方向向量。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11471,7 +11467,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">matrix</strong>
 									</td>
 									<td class="description last">
-										<p>The transformation matrix.</p>
+										<p>变换矩阵。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11480,7 +11476,7 @@ to complete before the barrier can be passed.</p>
 					<h3 class="name name-method" id="transformNormal" translate="no">.<a href="#transformNormal">transformNormal</a><span class="signature">( normal : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3></span>, matrix : <span class="param-type"><a href="Node.html">Node</a>.&lt;(mat3|mat4)></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec3></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Transforms the normal by the normal matrix of the given matrix and then normalizes the result.</p>
+							<p>通过给定矩阵的法线矩阵变换法线，然后对结果进行归一化。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11489,7 +11485,7 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">normal</strong>
 									</td>
 									<td class="description last">
-										<p>The normal.</p>
+										<p>法线。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11497,22 +11493,21 @@ to complete before the barrier can be passed.</p>
 										<strong translate="no">matrix</strong>
 									</td>
 									<td class="description last">
-										<p>The matrix.</p>
-										<p>Default is <code>modelWorldMatrix</code>.</p>
+										<p>矩阵。</p>
+										<p>默认值为 <code>modelWorldMatrix</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The transformed normal.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong>变换后的法线。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="transformNormalByInverseViewMatrix" translate="no">.<a href="#transformNormalByInverseViewMatrix">transformNormalByInverseViewMatrix</a><span class="signature">( normal : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3></span>, viewMatrix : <span class="param-type"><a href="Node.html">Node</a>.&lt;(mat3|mat4)></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec3></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Transforms a normal vector by the inverse of the view matrix and then normalizes the result.</p>
-<p>The upper-left 3x3 of the view matrix is assumed to be orthonormal, so post-multiplying
-by the view matrix is equivalent to pre-multiplying by its inverse.</p>
+							<p>通过视图矩阵的逆矩阵变换法线向量，然后对结果进行归一化。</p>
+<p>假定视图矩阵左上角 3×3 部分为正交归一矩阵，因此后乘视图矩阵等价于先乘其逆矩阵。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11521,7 +11516,7 @@ by the view matrix is equivalent to pre-multiplying by its inverse.</p>
 										<strong translate="no">normal</strong>
 									</td>
 									<td class="description last">
-										<p>The normal vector, given in view space.</p>
+										<p>视图空间中的法线向量。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11529,21 +11524,20 @@ by the view matrix is equivalent to pre-multiplying by its inverse.</p>
 										<strong translate="no">viewMatrix</strong>
 									</td>
 									<td class="description last">
-										<p>The view matrix.</p>
+										<p>视图矩阵。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The normal vector in world space.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong>世界空间中的法线向量。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="transformNormalByViewMatrix" translate="no">.<a href="#transformNormalByViewMatrix">transformNormalByViewMatrix</a><span class="signature">( normal : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3></span>, viewMatrix : <span class="param-type"><a href="Node.html">Node</a>.&lt;(mat3|mat4)></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec3></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Transforms a normal vector by the view matrix and then normalizes the result.</p>
-<p>The upper-left 3x3 of the view matrix is assumed to be orthonormal, so the
-normal can be transformed directly without involving the normal matrix.</p>
+							<p>通过视图矩阵变换法线向量，然后对结果进行归一化。</p>
+<p>假定视图矩阵左上角 3×3 部分为正交归一矩阵，因此法线可直接变换，无需使用法线矩阵。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11552,7 +11546,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">normal</strong>
 									</td>
 									<td class="description last">
-										<p>The normal vector, given in world space.</p>
+										<p>世界空间中的法线向量。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11560,19 +11554,19 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">viewMatrix</strong>
 									</td>
 									<td class="description last">
-										<p>The view matrix.</p>
+										<p>视图矩阵。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The normal vector in view space.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong>视图空间中的法线向量。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="transformNormalToView" translate="no">.<a href="#transformNormalToView">transformNormalToView</a><span class="signature">( normal : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3></span>, builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec3></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Transforms the given normal from local to view space.</p>
+							<p>将给定法线从局部空间变换到视图空间。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11581,7 +11575,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">normal</strong>
 									</td>
 									<td class="description last">
-										<p>The normal.</p>
+										<p>法线。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11589,19 +11583,19 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The transformed normal.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong>变换后的法线。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="transition" translate="no">.<a href="#transition">transition</a><span class="signature">( nodeA : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec4></span>, nodeB : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec4></span>, mixTextureNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec4></span>, mixRatio : <span class="param-type"><a href="Node.html">Node</a>.&lt;float> | number</span>, threshold : <span class="param-type"><a href="Node.html">Node</a>.&lt;float> | number</span>, useTexture : <span class="param-type"><a href="Node.html">Node</a>.&lt;float> | number</span> )</span><span class="type-signature"> : <a href="TransitionNode.html">TransitionNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a transition node for post processing.</p>
+							<p>用于创建后期处理过渡节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11610,7 +11604,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">nodeA</strong>
 									</td>
 									<td class="description last">
-										<p>A texture node that represents the beauty pass of the first scene.</p>
+										<p>表示第一个场景美化 pass 的纹理节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11618,7 +11612,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">nodeB</strong>
 									</td>
 									<td class="description last">
-										<p>A texture node that represents the beauty pass of the second scene.</p>
+										<p>表示第二个场景美化 pass 的纹理节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11626,7 +11620,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">mixTextureNode</strong>
 									</td>
 									<td class="description last">
-										<p>A texture that defines how the transition effect should look like.</p>
+										<p>定义过渡效果外观的纹理。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11634,7 +11628,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">mixRatio</strong>
 									</td>
 									<td class="description last">
-										<p>The interpolation factor that controls the mix.</p>
+										<p>控制混合的插值因子。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11642,7 +11636,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">threshold</strong>
 									</td>
 									<td class="description last">
-										<p>Can be used to tweak the linear interpolation.</p>
+										<p>可用于调整线性插值。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11650,7 +11644,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">useTexture</strong>
 									</td>
 									<td class="description last">
-										<p>Whether <code>mixTextureNode</code> should influence the transition or not.</p>
+										<p><code>mixTextureNode</code> 是否影响过渡效果。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11659,7 +11653,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 					<h3 class="name name-method" id="transpose" translate="no">.<a href="#transpose">transpose</a><span class="signature">( x : <span class="param-type"><a href="Node.html">Node</a>.&lt;(mat2|mat3|mat4)></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the transpose of a matrix.</p>
+							<p>返回矩阵的转置。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11668,7 +11662,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">x</strong>
 									</td>
 									<td class="description last">
-										<p>The parameter.</p>
+										<p>参数。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11677,7 +11671,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 					<h3 class="name name-method" id="triNoise3D" translate="no">.<a href="#triNoise3D">triNoise3D</a><span class="signature">( position : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3></span>, speed : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>, time : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;float></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Generates a noise value from the given position, speed and time parameters.</p>
+							<p>根据给定的位置、速度和时间参数生成噪声值。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11686,7 +11680,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">position</strong>
 									</td>
 									<td class="description last">
-										<p>The position.</p>
+										<p>位置。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11694,7 +11688,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">speed</strong>
 									</td>
 									<td class="description last">
-										<p>The speed.</p>
+										<p>速度。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11702,19 +11696,19 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">time</strong>
 									</td>
 									<td class="description last">
-										<p>The time.</p>
+										<p>时间。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The generated noise.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong>生成的噪声值。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="triplanarTexture" translate="no">.<a href="#triplanarTexture">triplanarTexture</a><span class="signature">( textureXNode : <span class="param-type"><a href="Node.html">Node</a></span>, textureYNode : <span class="param-type"><a href="Node.html">Node</a></span>, textureZNode : <span class="param-type"><a href="Node.html">Node</a></span>, scaleNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>, positionNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3></span>, normalNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec4></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a triplanar textures node.</p>
+							<p>用于创建三平面纹理节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11723,7 +11717,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">textureXNode</strong>
 									</td>
 									<td class="description last">
-										<p>First texture node.</p>
+										<p>第一个纹理节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11731,8 +11725,8 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">textureYNode</strong>
 									</td>
 									<td class="description last">
-										<p>Second texture node. When not set, the shader will sample from <code>textureXNode</code> instead.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>第二个纹理节点。若未设置，着色器将从 <code>textureXNode</code> 采样。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11740,8 +11734,8 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">textureZNode</strong>
 									</td>
 									<td class="description last">
-										<p>Third texture node. When not set, the shader will sample from <code>textureXNode</code> instead.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>第三个纹理节点。若未设置，着色器将从 <code>textureXNode</code> 采样。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11749,8 +11743,8 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">scaleNode</strong>
 									</td>
 									<td class="description last">
-										<p>The scale node.</p>
-										<p>Default is <code>float(1)</code>.</p>
+										<p>缩放节点。</p>
+										<p>默认值为 <code>float(1)</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11758,8 +11752,8 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">positionNode</strong>
 									</td>
 									<td class="description last">
-										<p>Vertex positions in local space.</p>
-										<p>Default is <code>positionLocal</code>.</p>
+										<p>局部空间中的顶点位置。</p>
+										<p>默认值为 <code>positionLocal</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11767,8 +11761,8 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">normalNode</strong>
 									</td>
 									<td class="description last">
-										<p>Normals in local space.</p>
-										<p>Default is <code>normalLocal</code>.</p>
+										<p>局部空间中的法线。</p>
+										<p>默认值为 <code>normalLocal</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11777,8 +11771,8 @@ normal can be transformed directly without involving the normal matrix.</p>
 					<h3 class="name name-method" id="triplanarTextures" translate="no">.<a href="#triplanarTextures">triplanarTextures</a><span class="signature">( textureXNode : <span class="param-type"><a href="Node.html">Node</a></span>, textureYNode : <span class="param-type"><a href="Node.html">Node</a></span>, textureZNode : <span class="param-type"><a href="Node.html">Node</a></span>, scaleNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;float></span>, positionNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3></span>, normalNode : <span class="param-type"><a href="Node.html">Node</a>.&lt;vec3></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a>.&lt;vec4></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a triplanar textures node.</p>
-<p>Can be used for triplanar texture mapping.</p>
+							<p>用于创建三平面纹理节点的 TSL 函数。</p>
+<p>可用于三平面纹理映射。</p>
 <pre><code class="language-js">material.colorNode = triplanarTexture( texture( diffuseMap ) );
 </code></pre>
 						</div>
@@ -11789,7 +11783,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">textureXNode</strong>
 									</td>
 									<td class="description last">
-										<p>First texture node.</p>
+										<p>第一个纹理节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11797,8 +11791,8 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">textureYNode</strong>
 									</td>
 									<td class="description last">
-										<p>Second texture node. When not set, the shader will sample from <code>textureXNode</code> instead.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>第二个纹理节点。若未设置，着色器将从 <code>textureXNode</code> 采样。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11806,8 +11800,8 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">textureZNode</strong>
 									</td>
 									<td class="description last">
-										<p>Third texture node. When not set, the shader will sample from <code>textureXNode</code> instead.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>第三个纹理节点。若未设置，着色器将从 <code>textureXNode</code> 采样。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11815,8 +11809,8 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">scaleNode</strong>
 									</td>
 									<td class="description last">
-										<p>The scale node.</p>
-										<p>Default is <code>float(1)</code>.</p>
+										<p>缩放节点。</p>
+										<p>默认值为 <code>float(1)</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11824,8 +11818,8 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">positionNode</strong>
 									</td>
 									<td class="description last">
-										<p>Vertex positions in local space.</p>
-										<p>Default is <code>positionLocal</code>.</p>
+										<p>局部空间中的顶点位置。</p>
+										<p>默认值为 <code>positionLocal</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11833,8 +11827,8 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">normalNode</strong>
 									</td>
 									<td class="description last">
-										<p>Normals in local space.</p>
-										<p>Default is <code>normalLocal</code>.</p>
+										<p>局部空间中的法线。</p>
+										<p>默认值为 <code>normalLocal</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11861,7 +11855,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 					<h3 class="name name-method" id="uintBitsToFloat" translate="no">.<a href="#uintBitsToFloat">uintBitsToFloat</a><span class="signature">( value : <span class="param-type"><a href="Node.html">Node</a>.&lt;uint></span> )</span><span class="type-signature"> : <a href="BitcastNode.html">BitcastNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Bitcast an unsigned integer or a vector of unsigned integers to a corresponding float type with the same element size.</p>
+							<p>将无符号整数或无符号整数向量按位转换为具有相同元素大小的对应浮点类型。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11870,7 +11864,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>The unsigned integer or vector of unsigned integers to bitcast.</p>
+										<p>要按位转换的无符号整数或无符号整数向量。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11879,7 +11873,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 					<h3 class="name name-method" id="uniform" translate="no">.<a href="#uniform">uniform</a><span class="signature">( value : <span class="param-type"><a href="global.html#any">any</a> | string</span>, type : <span class="param-type">string</span> )</span><span class="type-signature"> : <a href="UniformNode.html">UniformNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a uniform node.</p>
+							<p>用于创建 uniform 节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11888,7 +11882,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>The value of this uniform or your type. Usually a JS primitive or three.js object (vector, matrix, color, texture).</p>
+										<p>该 uniform 的值或类型。通常为 JS 基本类型或 three.js 对象（向量、矩阵、颜色、纹理）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11896,7 +11890,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">type</strong>
 									</td>
 									<td class="description last">
-										<p>The node type. If no explicit type is defined, the node tries to derive the type from its value.</p>
+										<p>节点类型。若未显式指定类型，节点会尝试从其值推导类型。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11905,7 +11899,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 					<h3 class="name name-method" id="uniformArray" translate="no">.<a href="#uniformArray">uniformArray</a><span class="signature">( values : <span class="param-type">Array.&lt;<a href="global.html#any">any</a>></span>, nodeType : <span class="param-type">string</span> )</span><span class="type-signature"> : <a href="UniformArrayNode.html">UniformArrayNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating an uniform array node.</p>
+							<p>用于创建 uniform 数组节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11914,7 +11908,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">values</strong>
 									</td>
 									<td class="description last">
-										<p>Array-like data.</p>
+										<p>类数组数据。</p>
 									</td>
 								</tr>
 								<tr>
@@ -11922,7 +11916,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">nodeType</strong>
 									</td>
 									<td class="description last">
-										<p>The data type of the array elements.</p>
+										<p>数组元素的数据类型。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -11931,7 +11925,7 @@ normal can be transformed directly without involving the normal matrix.</p>
 					<h3 class="name name-method" id="uniformCubeTexture" translate="no">.<a href="#uniformCubeTexture">uniformCubeTexture</a><span class="signature">( value : <span class="param-type"><a href="CubeTexture.html">CubeTexture</a></span> )</span><span class="type-signature"> : <a href="CubeTextureNode.html">CubeTextureNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for creating a uniform cube texture node.</p>
+							<p>用于创建立方体纹理 uniform 节点的 TSL 函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -11940,8 +11934,8 @@ normal can be transformed directly without involving the normal matrix.</p>
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>The cube texture.</p>
-										<p>Default is <code>EmptyTexture</code>.</p>
+										<p>立方体纹理。</p>
+										<p>默认值为 <code>EmptyTexture</code>。</p>
 									</td>
 								</tr>
 							</tbody>
