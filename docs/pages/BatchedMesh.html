@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>BatchedMesh - Three.js Docs</title>
+	<title>BatchedMesh - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,12 +13,11 @@
 	<h1 translate="no">BatchedMesh</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A special version of a mesh with multi draw batch rendering support. Use
-this class if you have to render a large number of objects with the same
-material but with different geometries or world transformations. The usage of
-<code>BatchedMesh</code> will help you to reduce the number of draw calls and thus improve the overall
-rendering performance in your application.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>一种支持多绘制批处理渲染的特殊网格版本。当你需要渲染大量
+材质相同、但几何体或世界变换不同的对象时，请使用此类。使用
+<code>BatchedMesh</code> 有助于减少绘制调用次数，从而提升应用的整体
+渲染性能。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const box = new THREE.BoxGeometry( 1, 1, 1 );
 const sphere = new THREE.SphereGeometry( 1, 12, 12 );
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
@@ -41,11 +40,11 @@ scene.add( batchedMesh );
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="BatchedMesh" translate="no">new <a href="#BatchedMesh">BatchedMesh</a><span class="signature">( maxInstanceCount : <span class="param-type">number</span>, maxVertexCount : <span class="param-type">number</span>, maxIndexCount : <span class="param-type">number</span>, material : <span class="param-type"><a href="Material.html">Material</a> | Array.&lt;<a href="Material.html">Material</a>></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new batched mesh.</p>
+							<p>构造一个新的批处理网格。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -54,7 +53,7 @@ scene.add( batchedMesh );
 										<strong translate="no">maxInstanceCount</strong>
 									</td>
 									<td class="description last">
-										<p>The maximum number of individual instances planned to be added and rendered.</p>
+										<p>计划添加并渲染的独立实例的最大数量。</p>
 									</td>
 								</tr>
 								<tr>
@@ -62,7 +61,7 @@ scene.add( batchedMesh );
 										<strong translate="no">maxVertexCount</strong>
 									</td>
 									<td class="description last">
-										<p>The maximum number of vertices to be used by all unique geometries.</p>
+										<p>所有唯一几何体将使用的最大顶点数。</p>
 									</td>
 								</tr>
 								<tr>
@@ -70,8 +69,8 @@ scene.add( batchedMesh );
 										<strong translate="no">maxIndexCount</strong>
 									</td>
 									<td class="description last">
-										<p>The maximum number of indices to be used by all unique geometries</p>
-										<p>Default is <code>maxVertexCount*2</code>.</p>
+										<p>所有唯一几何体将使用的最大索引数。</p>
+										<p>默认值为 <code>maxVertexCount*2</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -79,90 +78,89 @@ scene.add( batchedMesh );
 										<strong translate="no">material</strong>
 									</td>
 									<td class="description last">
-										<p>The mesh material.</p>
+										<p>网格材质。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="boundingBox" translate="no">.<a href="#boundingBox">boundingBox</a><span class="type-signature"> : <a href="Box3.html">Box3</a></span> </h3>
 					<div class="description">
-						<p>The bounding box of the batched mesh. Can be computed via <a href="BatchedMesh.html#computeBoundingBox">BatchedMesh#computeBoundingBox</a>.</p>
-						<p>Default is <code>null</code>.</p>
+						<p>批处理网格的包围盒。可通过 <a href="BatchedMesh.html#computeBoundingBox">BatchedMesh#computeBoundingBox</a> 计算。</p>
+						<p>默认值为 <code>null</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="boundingSphere" translate="no">.<a href="#boundingSphere">boundingSphere</a><span class="type-signature"> : <a href="Sphere.html">Sphere</a></span> </h3>
 					<div class="description">
-						<p>The bounding sphere of the batched mesh. Can be computed via <a href="BatchedMesh.html#computeBoundingSphere">BatchedMesh#computeBoundingSphere</a>.</p>
-						<p>Default is <code>null</code>.</p>
+						<p>批处理网格的包围球。可通过 <a href="BatchedMesh.html#computeBoundingSphere">BatchedMesh#computeBoundingSphere</a> 计算。</p>
+						<p>默认值为 <code>null</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="customSort" translate="no">.<a href="#customSort">customSort</a><span class="type-signature"> : function</span> </h3>
 					<div class="description">
-						<p>Takes a sort a function that is run before render. The function takes a list of instances to
-sort and a camera. The objects in the list include a &quot;z&quot; field to perform a depth-ordered
-sort with.</p>
-						<p>Default is <code>null</code>.</p>
+						<p>接收一个在渲染前运行的排序函数。该函数接收待排序的实例列表
+以及一个相机。列表中的对象包含一个 &quot;z&quot; 字段，可用于按深度排序。</p>
+						<p>默认值为 <code>null</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="instanceCount" translate="no">.<a href="#instanceCount">instanceCount</a><span class="type-signature"> : number</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>The instance count.</p>
+						<p>实例数量。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="isBatchedMesh" translate="no">.<a href="#isBatchedMesh">isBatchedMesh</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="maxInstanceCount" translate="no">.<a href="#maxInstanceCount">maxInstanceCount</a><span class="type-signature"> : number</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>The maximum number of individual instances that can be stored in the batch.</p>
+						<p>批处理中可存储的独立实例的最大数量。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="perObjectFrustumCulled" translate="no">.<a href="#perObjectFrustumCulled">perObjectFrustumCulled</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>When set ot <code>true</code>, the individual objects of a batch are frustum culled.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>设为 <code>true</code> 时，批处理中的各个对象会进行视锥体裁剪。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="sortObjects" translate="no">.<a href="#sortObjects">sortObjects</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>When set to <code>true</code>, the individual objects of a batch are sorted to improve overdraw-related artifacts.
-If the material is marked as &quot;transparent&quot; objects are rendered back to front and if not then they are
-rendered front to back.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>设为 <code>true</code> 时，批处理中的各个对象会被排序，以改善过度绘制相关伪影。
+若材质标记为 &quot;transparent&quot;，则对象从后往前渲染；否则
+从前往后渲染。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="unusedIndexCount" translate="no">.<a href="#unusedIndexCount">unusedIndexCount</a><span class="type-signature"> : number</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>The number of unused indices.</p>
+						<p>未使用的索引数量。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="unusedVertexCount" translate="no">.<a href="#unusedVertexCount">unusedVertexCount</a><span class="type-signature"> : number</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>The number of unused vertices.</p>
+						<p>未使用的顶点数量。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="addGeometry" translate="no">.<a href="#addGeometry">addGeometry</a><span class="signature">( geometry : <span class="param-type"><a href="BufferGeometry.html">BufferGeometry</a></span>, reservedVertexCount : <span class="param-type">number</span>, reservedIndexCount : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Adds the given geometry to the batch and returns the associated
-geometry id referring to it to be used in other functions.</p>
+							<p>将给定几何体添加到批处理中，并返回与之关联的
+几何体 ID，供其他函数使用。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -171,7 +169,7 @@ geometry id referring to it to be used in other functions.</p>
 										<strong translate="no">geometry</strong>
 									</td>
 									<td class="description last">
-										<p>The geometry to add.</p>
+										<p>要添加的几何体。</p>
 									</td>
 								</tr>
 								<tr>
@@ -179,11 +177,10 @@ geometry id referring to it to be used in other functions.</p>
 										<strong translate="no">reservedVertexCount</strong>
 									</td>
 									<td class="description last">
-										<p>Optional parameter specifying the amount of
-vertex buffer space to reserve for the added geometry. This is necessary if it is planned
-to set a new geometry at this index at a later time that is larger than the original geometry.
-Defaults to the length of the given geometry vertex buffer.</p>
-										<p>Default is <code>-1</code>.</p>
+										<p>可选参数，指定为所添加几何体预留的
+顶点缓冲区空间量。若计划稍后在该索引处设置一个比原始几何体更大的新几何体，则需要此参数。
+默认为给定几何体顶点缓冲区的长度。</p>
+										<p>默认值为 <code>-1</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -191,24 +188,23 @@ Defaults to the length of the given geometry vertex buffer.</p>
 										<strong translate="no">reservedIndexCount</strong>
 									</td>
 									<td class="description last">
-										<p>Optional parameter specifying the amount of index
-buffer space to reserve for the added geometry. This is necessary if it is planned to set a
-new geometry at this index at a later time that is larger than the original geometry. Defaults to
-the length of the given geometry index buffer.</p>
-										<p>Default is <code>-1</code>.</p>
+										<p>可选参数，指定为所添加几何体预留的
+索引缓冲区空间量。若计划稍后在该索引处设置一个比原始几何体更大的新几何体，则需要此参数。默认为
+给定几何体索引缓冲区的长度。</p>
+										<p>默认值为 <code>-1</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The geometry ID.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 几何体 ID。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="addInstance" translate="no">.<a href="#addInstance">addInstance</a><span class="signature">( geometryId : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Adds a new instance to the batch using the geometry of the given ID and returns
-a new id referring to the new instance to be used by other functions.</p>
+							<p>使用给定 ID 的几何体向批处理添加一个新实例，并返回
+一个引用该新实例的新 ID，供其他函数使用。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -217,36 +213,36 @@ a new id referring to the new instance to be used by other functions.</p>
 										<strong translate="no">geometryId</strong>
 									</td>
 									<td class="description last">
-										<p>The ID of a previously added geometry via <a href="BatchedMesh.html#addGeometry">BatchedMesh#addGeometry</a>.</p>
+										<p>先前通过 <a href="BatchedMesh.html#addGeometry">BatchedMesh#addGeometry</a> 添加的几何体的 ID。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The instance ID.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 实例 ID。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="computeBoundingBox" translate="no">.<a href="#computeBoundingBox">computeBoundingBox</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Computes the bounding box, updating <a href="BatchedMesh.html#boundingBox">BatchedMesh#boundingBox</a>.
-Bounding boxes aren't computed by default. They need to be explicitly computed,
-otherwise they are <code>null</code>.</p>
+							<p>计算包围盒，并更新 <a href="BatchedMesh.html#boundingBox">BatchedMesh#boundingBox</a>。
+包围盒默认不会计算，需要显式调用计算，
+否则其为 <code>null</code>。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="computeBoundingSphere" translate="no">.<a href="#computeBoundingSphere">computeBoundingSphere</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Computes the bounding sphere, updating <a href="BatchedMesh.html#boundingSphere">BatchedMesh#boundingSphere</a>.
-Bounding spheres aren't computed by default. They need to be explicitly computed,
-otherwise they are <code>null</code>.</p>
+							<p>计算包围球，并更新 <a href="BatchedMesh.html#boundingSphere">BatchedMesh#boundingSphere</a>。
+包围球默认不会计算，需要显式调用计算，
+否则其为 <code>null</code>。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="deleteGeometry" translate="no">.<a href="#deleteGeometry">deleteGeometry</a><span class="signature">( geometryId : <span class="param-type">number</span> )</span><span class="type-signature"> : <a href="BatchedMesh.html">BatchedMesh</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Deletes the geometry defined by the given ID from this batch. Any instances referencing
-this geometry will also be removed as a side effect.</p>
+							<p>从该批处理中删除由给定 ID 定义的几何体。引用
+此几何体的所有实例也会作为副作用被移除。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -255,19 +251,19 @@ this geometry will also be removed as a side effect.</p>
 										<strong translate="no">geometryId</strong>
 									</td>
 									<td class="description last">
-										<p>The ID of the geometry to remove from the batch.</p>
+										<p>要从批处理中移除的几何体的 ID。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this batched mesh.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对该批处理网格的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="deleteInstance" translate="no">.<a href="#deleteInstance">deleteInstance</a><span class="signature">( instanceId : <span class="param-type">number</span> )</span><span class="type-signature"> : <a href="BatchedMesh.html">BatchedMesh</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Deletes an existing instance from the batch using the given ID.</p>
+							<p>使用给定 ID 从批处理中删除一个已有实例。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -276,26 +272,26 @@ this geometry will also be removed as a side effect.</p>
 										<strong translate="no">instanceId</strong>
 									</td>
 									<td class="description last">
-										<p>The ID of the instance to remove from the batch.</p>
+										<p>要从批处理中移除的实例的 ID。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this batched mesh.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对该批处理网格的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="dispose" translate="no">.<a href="#dispose">dispose</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Frees the GPU-related resources allocated by this instance. Call this
-method whenever this instance is no longer used in your app.</p>
+							<p>释放该实例分配的 GPU 相关资源。当应用中
+不再使用该实例时，请调用此方法。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="getBoundingBoxAt" translate="no">.<a href="#getBoundingBoxAt">getBoundingBoxAt</a><span class="signature">( geometryId : <span class="param-type">number</span>, target : <span class="param-type"><a href="Box3.html">Box3</a></span> )</span><span class="type-signature"> : <a href="Box3.html">Box3</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the bounding box for the given geometry.</p>
+							<p>返回给定几何体的包围盒。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -304,7 +300,7 @@ method whenever this instance is no longer used in your app.</p>
 										<strong translate="no">geometryId</strong>
 									</td>
 									<td class="description last">
-										<p>The ID of the geometry to return the bounding box for.</p>
+										<p>要返回包围盒的几何体的 ID。</p>
 									</td>
 								</tr>
 								<tr>
@@ -312,19 +308,19 @@ method whenever this instance is no longer used in your app.</p>
 										<strong translate="no">target</strong>
 									</td>
 									<td class="description last">
-										<p>The target object that is used to store the method's result.</p>
+										<p>用于存储方法结果的目标对象。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The geometry's bounding box. Returns <code>null</code> if no geometry has been found for the given ID.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 该几何体的包围盒。若未找到给定 ID 的几何体，则返回 <code>null</code>。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getBoundingSphereAt" translate="no">.<a href="#getBoundingSphereAt">getBoundingSphereAt</a><span class="signature">( geometryId : <span class="param-type">number</span>, target : <span class="param-type"><a href="Sphere.html">Sphere</a></span> )</span><span class="type-signature"> : <a href="Sphere.html">Sphere</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the bounding sphere for the given geometry.</p>
+							<p>返回给定几何体的包围球。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -333,7 +329,7 @@ method whenever this instance is no longer used in your app.</p>
 										<strong translate="no">geometryId</strong>
 									</td>
 									<td class="description last">
-										<p>The ID of the geometry to return the bounding sphere for.</p>
+										<p>要返回包围球的几何体的 ID。</p>
 									</td>
 								</tr>
 								<tr>
@@ -341,19 +337,19 @@ method whenever this instance is no longer used in your app.</p>
 										<strong translate="no">target</strong>
 									</td>
 									<td class="description last">
-										<p>The target object that is used to store the method's result.</p>
+										<p>用于存储方法结果的目标对象。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The geometry's bounding sphere. Returns <code>null</code> if no geometry has been found for the given ID.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 该几何体的包围球。若未找到给定 ID 的几何体，则返回 <code>null</code>。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getColorAt" translate="no">.<a href="#getColorAt">getColorAt</a><span class="signature">( instanceId : <span class="param-type">number</span>, color : <span class="param-type"><a href="Color.html">Color</a> | <a href="Vector4.html">Vector4</a></span> )</span><span class="type-signature"> : <a href="Color.html">Color</a> | <a href="Vector4.html">Vector4</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the color of the defined instance.</p>
+							<p>返回指定实例的颜色。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -362,7 +358,7 @@ method whenever this instance is no longer used in your app.</p>
 										<strong translate="no">instanceId</strong>
 									</td>
 									<td class="description last">
-										<p>The ID of an instance to get the color of.</p>
+										<p>要获取颜色的实例的 ID。</p>
 									</td>
 								</tr>
 								<tr>
@@ -370,19 +366,19 @@ method whenever this instance is no longer used in your app.</p>
 										<strong translate="no">color</strong>
 									</td>
 									<td class="description last">
-										<p>The target object that is used to store the method's result.</p>
+										<p>用于存储方法结果的目标对象。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The instance's color.  Use a <code>Vector4</code> to also retrieve alpha.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 该实例的颜色。使用 <code>Vector4</code> 还可获取 alpha。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getGeometryIdAt" translate="no">.<a href="#getGeometryIdAt">getGeometryIdAt</a><span class="signature">( instanceId : <span class="param-type">number</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the geometry ID of the defined instance.</p>
+							<p>返回指定实例的几何体 ID。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -391,20 +387,20 @@ method whenever this instance is no longer used in your app.</p>
 										<strong translate="no">instanceId</strong>
 									</td>
 									<td class="description last">
-										<p>The ID of an instance to get the geometry ID of.</p>
+										<p>要获取几何体 ID 的实例的 ID。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The instance's geometry ID.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 该实例的几何体 ID。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getGeometryRangeAt" translate="no">.<a href="#getGeometryRangeAt">getGeometryRangeAt</a><span class="signature">( geometryId : <span class="param-type">number</span>, target : <span class="param-type">Object</span> )</span><span class="type-signature"> : Object</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Get the range representing the subset of triangles related to the attached geometry,
-indicating the starting offset and count, or <code>null</code> if invalid.</p>
+							<p>获取表示所附加几何体相关三角形子集的范围，
+指示起始偏移和数量；若无效则返回 <code>null</code>。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -413,7 +409,7 @@ indicating the starting offset and count, or <code>null</code> if invalid.</p>
 										<strong translate="no">geometryId</strong>
 									</td>
 									<td class="description last">
-										<p>The id of the geometry to get the range of.</p>
+										<p>要获取范围的几何体的 ID。</p>
 									</td>
 								</tr>
 								<tr>
@@ -421,19 +417,19 @@ indicating the starting offset and count, or <code>null</code> if invalid.</p>
 										<strong translate="no">target</strong>
 									</td>
 									<td class="description last">
-										<p>The target object that is used to store the method's result.</p>
+										<p>用于存储方法结果的目标对象。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The result object with range data.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 包含范围数据的结果对象。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getMatrixAt" translate="no">.<a href="#getMatrixAt">getMatrixAt</a><span class="signature">( instanceId : <span class="param-type">number</span>, matrix : <span class="param-type"><a href="Matrix4.html">Matrix4</a></span> )</span><span class="type-signature"> : <a href="Matrix4.html">Matrix4</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the local transformation matrix of the defined instance.</p>
+							<p>返回指定实例的本地变换矩阵。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -442,7 +438,7 @@ indicating the starting offset and count, or <code>null</code> if invalid.</p>
 										<strong translate="no">instanceId</strong>
 									</td>
 									<td class="description last">
-										<p>The ID of an instance to get the matrix of.</p>
+										<p>要获取矩阵的实例的 ID。</p>
 									</td>
 								</tr>
 								<tr>
@@ -450,19 +446,19 @@ indicating the starting offset and count, or <code>null</code> if invalid.</p>
 										<strong translate="no">matrix</strong>
 									</td>
 									<td class="description last">
-										<p>The target object that is used to store the method's result.</p>
+										<p>用于存储方法结果的目标对象。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The instance's local transformation matrix.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 该实例的本地变换矩阵。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getVisibleAt" translate="no">.<a href="#getVisibleAt">getVisibleAt</a><span class="signature">( instanceId : <span class="param-type">number</span> )</span><span class="type-signature"> : boolean</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the visibility state of the defined instance.</p>
+							<p>返回指定实例的可见性状态。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -471,29 +467,29 @@ indicating the starting offset and count, or <code>null</code> if invalid.</p>
 										<strong translate="no">instanceId</strong>
 									</td>
 									<td class="description last">
-										<p>The ID of an instance to get the visibility state of.</p>
+										<p>要获取可见性状态的实例的 ID。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> Whether the instance is visible or not.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 该实例是否可见。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="optimize" translate="no">.<a href="#optimize">optimize</a><span class="signature">()</span><span class="type-signature"> : <a href="BatchedMesh.html">BatchedMesh</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Repacks the sub geometries in BatchedMesh to remove any unused space remaining from
-previously deleted geometry, freeing up space to add new geometry.</p>
+							<p>重新打包 BatchedMesh 中的子几何体，以移除先前删除几何体后留下的
+未使用空间，从而释放空间以添加新几何体。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this batched mesh.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对该批处理网格的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setColorAt" translate="no">.<a href="#setColorAt">setColorAt</a><span class="signature">( instanceId : <span class="param-type">number</span>, color : <span class="param-type"><a href="Color.html">Color</a> | <a href="Vector4.html">Vector4</a></span> )</span><span class="type-signature"> : <a href="BatchedMesh.html">BatchedMesh</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the given color to the defined instance.</p>
+							<p>将给定颜色设置到指定实例。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -502,7 +498,7 @@ previously deleted geometry, freeing up space to add new geometry.</p>
 										<strong translate="no">instanceId</strong>
 									</td>
 									<td class="description last">
-										<p>The ID of an instance to set the color of.</p>
+										<p>要设置颜色的实例的 ID。</p>
 									</td>
 								</tr>
 								<tr>
@@ -510,20 +506,20 @@ previously deleted geometry, freeing up space to add new geometry.</p>
 										<strong translate="no">color</strong>
 									</td>
 									<td class="description last">
-										<p>The color to set the instance to. Use a <code>Vector4</code> to also define alpha.</p>
+										<p>要设置到该实例的颜色。使用 <code>Vector4</code> 还可定义 alpha。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this batched mesh.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对该批处理网格的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setCustomSort" translate="no">.<a href="#setCustomSort">setCustomSort</a><span class="signature">( func : <span class="param-type">function</span> )</span><span class="type-signature"> : <a href="BatchedMesh.html">BatchedMesh</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Takes a sort a function that is run before render. The function takes a list of instances to
-sort and a camera. The objects in the list include a &quot;z&quot; field to perform a depth-ordered sort with.</p>
+							<p>接收一个在渲染前运行的排序函数。该函数接收待排序的实例列表
+以及一个相机。列表中的对象包含一个 &quot;z&quot; 字段，可用于按深度排序。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -532,21 +528,20 @@ sort and a camera. The objects in the list include a &quot;z&quot; field to perf
 										<strong translate="no">func</strong>
 									</td>
 									<td class="description last">
-										<p>The custom sort function.</p>
+										<p>自定义排序函数。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this batched mesh.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对该批处理网格的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setGeometryAt" translate="no">.<a href="#setGeometryAt">setGeometryAt</a><span class="signature">( geometryId : <span class="param-type">number</span>, geometry : <span class="param-type"><a href="BufferGeometry.html">BufferGeometry</a></span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Replaces the geometry at the given ID with the provided geometry. Throws an error if there
-is not enough space reserved for geometry. Calling this will change all instances that are
-rendering that geometry.</p>
+							<p>用提供的几何体替换给定 ID 处的几何体。若没有为几何体预留足够空间，
+则抛出错误。调用此方法将更改所有正在渲染该几何体的实例。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -555,7 +550,7 @@ rendering that geometry.</p>
 										<strong translate="no">geometryId</strong>
 									</td>
 									<td class="description last">
-										<p>The ID of the geometry that should be replaced with the given geometry.</p>
+										<p>应被给定几何体替换的几何体的 ID。</p>
 									</td>
 								</tr>
 								<tr>
@@ -563,19 +558,19 @@ rendering that geometry.</p>
 										<strong translate="no">geometry</strong>
 									</td>
 									<td class="description last">
-										<p>The new geometry.</p>
+										<p>新的几何体。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The geometry ID.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 几何体 ID。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setGeometryIdAt" translate="no">.<a href="#setGeometryIdAt">setGeometryIdAt</a><span class="signature">( instanceId : <span class="param-type">number</span>, geometryId : <span class="param-type">number</span> )</span><span class="type-signature"> : <a href="BatchedMesh.html">BatchedMesh</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the geometry ID of the instance at the given index.</p>
+							<p>设置给定索引处实例的几何体 ID。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -584,7 +579,7 @@ rendering that geometry.</p>
 										<strong translate="no">instanceId</strong>
 									</td>
 									<td class="description last">
-										<p>The ID of the instance to set the geometry ID of.</p>
+										<p>要设置几何体 ID 的实例的 ID。</p>
 									</td>
 								</tr>
 								<tr>
@@ -592,21 +587,21 @@ rendering that geometry.</p>
 										<strong translate="no">geometryId</strong>
 									</td>
 									<td class="description last">
-										<p>The geometry ID to be use by the instance.</p>
+										<p>该实例将使用的几何体 ID。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this batched mesh.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对该批处理网格的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setGeometrySize" translate="no">.<a href="#setGeometrySize">setGeometrySize</a><span class="signature">( maxVertexCount : <span class="param-type">number</span>, maxIndexCount : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Resizes the available space in the batch's vertex and index buffer attributes to the provided sizes.
-If the provided arguments shrink the geometry buffers but there is not enough unused space at the
-end of the geometry attributes then an error is thrown.</p>
+							<p>将批处理的顶点和索引缓冲区属性的可用空间调整为所提供的大小。
+若所提供参数会缩小几何体缓冲区，但几何体属性末尾没有足够的未使用空间，
+则抛出错误。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -615,7 +610,7 @@ end of the geometry attributes then an error is thrown.</p>
 										<strong translate="no">maxVertexCount</strong>
 									</td>
 									<td class="description last">
-										<p>The maximum number of vertices to be used by all unique geometries to resize to.</p>
+										<p>所有唯一几何体将使用的最大顶点数（调整到的目标值）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -623,7 +618,7 @@ end of the geometry attributes then an error is thrown.</p>
 										<strong translate="no">maxIndexCount</strong>
 									</td>
 									<td class="description last">
-										<p>The maximum number of indices to be used by all unique geometries to resize to.</p>
+										<p>所有唯一几何体将使用的最大索引数（调整到的目标值）。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -632,9 +627,9 @@ end of the geometry attributes then an error is thrown.</p>
 					<h3 class="name name-method" id="setInstanceCount" translate="no">.<a href="#setInstanceCount">setInstanceCount</a><span class="signature">( maxInstanceCount : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Resizes the necessary buffers to support the provided number of instances.
-If the provided arguments shrink the number of instances but there are not enough
-unused Ids at the end of the list then an error is thrown.</p>
+							<p>调整必要的缓冲区以支持所提供的实例数量。
+若所提供参数会缩小实例数量，但列表末尾没有足够的
+未使用 ID，则抛出错误。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -643,7 +638,7 @@ unused Ids at the end of the list then an error is thrown.</p>
 										<strong translate="no">maxInstanceCount</strong>
 									</td>
 									<td class="description last">
-										<p>The max number of individual instances that can be added and rendered by the batch.</p>
+										<p>批处理可添加并渲染的独立实例的最大数量。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -652,8 +647,8 @@ unused Ids at the end of the list then an error is thrown.</p>
 					<h3 class="name name-method" id="setMatrixAt" translate="no">.<a href="#setMatrixAt">setMatrixAt</a><span class="signature">( instanceId : <span class="param-type">number</span>, matrix : <span class="param-type"><a href="Matrix4.html">Matrix4</a></span> )</span><span class="type-signature"> : <a href="BatchedMesh.html">BatchedMesh</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the given local transformation matrix to the defined instance.
-Negatively scaled matrices are not supported.</p>
+							<p>将给定本地变换矩阵设置到指定实例。
+不支持负缩放矩阵。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -662,7 +657,7 @@ Negatively scaled matrices are not supported.</p>
 										<strong translate="no">instanceId</strong>
 									</td>
 									<td class="description last">
-										<p>The ID of an instance to set the matrix of.</p>
+										<p>要设置矩阵的实例的 ID。</p>
 									</td>
 								</tr>
 								<tr>
@@ -670,19 +665,19 @@ Negatively scaled matrices are not supported.</p>
 										<strong translate="no">matrix</strong>
 									</td>
 									<td class="description last">
-										<p>A 4x4 matrix representing the local transformation of a single instance.</p>
+										<p>表示单个实例本地变换的 4x4 矩阵。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this batched mesh.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对该批处理网格的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setVisibleAt" translate="no">.<a href="#setVisibleAt">setVisibleAt</a><span class="signature">( instanceId : <span class="param-type">number</span>, visible : <span class="param-type">boolean</span> )</span><span class="type-signature"> : <a href="BatchedMesh.html">BatchedMesh</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the visibility of the instance.</p>
+							<p>设置实例的可见性。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -691,7 +686,7 @@ Negatively scaled matrices are not supported.</p>
 										<strong translate="no">instanceId</strong>
 									</td>
 									<td class="description last">
-										<p>The id of the instance to set the visibility of.</p>
+										<p>要设置可见性的实例的 ID。</p>
 									</td>
 								</tr>
 								<tr>
@@ -699,19 +694,19 @@ Negatively scaled matrices are not supported.</p>
 										<strong translate="no">visible</strong>
 									</td>
 									<td class="description last">
-										<p>Whether the instance is visible or not.</p>
+										<p>该实例是否可见。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this batched mesh.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对该批处理网格的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="validateGeometryId" translate="no">.<a href="#validateGeometryId">validateGeometryId</a><span class="signature">( geometryId : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Validates the geometry defined by the given ID.</p>
+							<p>验证由给定 ID 定义的几何体。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -720,7 +715,7 @@ Negatively scaled matrices are not supported.</p>
 										<strong translate="no">geometryId</strong>
 									</td>
 									<td class="description last">
-										<p>The geometry to validate.</p>
+										<p>要验证的几何体。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -729,7 +724,7 @@ Negatively scaled matrices are not supported.</p>
 					<h3 class="name name-method" id="validateInstanceId" translate="no">.<a href="#validateInstanceId">validateInstanceId</a><span class="signature">( instanceId : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Validates the instance defined by the given ID.</p>
+							<p>验证由给定 ID 定义的实例。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -738,13 +733,13 @@ Negatively scaled matrices are not supported.</p>
 										<strong translate="no">instanceId</strong>
 									</td>
 									<td class="description last">
-										<p>The instance to validate.</p>
+										<p>要验证的实例。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/objects/BatchedMesh.js" translate="no" target="_blank" rel="noopener">src/objects/BatchedMesh.js</a>
 				</p>
