@@ -2,22 +2,22 @@
 
 ### new BitonicSort( renderer : Renderer, dataBuffer : StorageBufferNode, options : Object )
 
-Constructs a new light probe helper.
+构造一个新的双调排序器。
 
 **renderer**
 
-The current scene's renderer.
+当前场景的渲染器。
 
 **dataBuffer**
 
-The data buffer to sort.
+待排序的数据缓冲区。
 
 **options**
 
-Options that modify the bitonic sort.
+用于调整双调排序的选项。
 
-Default is `{}`.
+默认值为 `{}`。
 
-## Source
+## 源码
 
 [examples/jsm/gpgpu/BitonicSort.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/gpgpu/BitonicSort.js)

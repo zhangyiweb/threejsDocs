@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>DecoratedTorusKnot4b - Three.js Docs</title>
+	<title>DecoratedTorusKnot4b - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,18 +13,18 @@
 	<h1 translate="no">DecoratedTorusKnot4b</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A Decorated Torus Knot 4b.</p></div>
+				<div class="class-description"><p>装饰环面结 4b。</p></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">DecoratedTorusKnot4b</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">DecoratedTorusKnot4b</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { DecoratedTorusKnot4b } from 'three/addons/curves/CurveExtras.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="DecoratedTorusKnot4b" translate="no">new <a href="#DecoratedTorusKnot4b">DecoratedTorusKnot4b</a><span class="signature">( scale : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new Decorated Torus Knot 4b.</p>
+							<p>构造一个新的装饰环面结 4b。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -33,27 +33,27 @@
 										<strong translate="no">scale</strong>
 									</td>
 									<td class="description last">
-										<p>The curve's scale.</p>
-										<p>Default is <code>1</code>.</p>
+										<p>曲线的缩放比例。</p>
+										<p>默认值为 <code>1</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="scale" translate="no">.<a href="#scale">scale</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The curve's scale.</p>
-						<p>Default is <code>40</code>.</p>
+						<p>曲线的缩放比例。</p>
+						<p>默认值为 <code>40</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="getPoint" translate="no">.<a href="#getPoint">getPoint</a><span class="signature">( t : <span class="param-type">number</span>, optionalTarget : <span class="param-type"><a href="Vector3.html">Vector3</a></span> )</span><span class="type-signature"> : <a href="Vector3.html">Vector3</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>This method returns a vector in 3D space for the given interpolation factor.</p>
+							<p>此方法根据给定的插值因子返回三维空间中的一个向量。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -62,7 +62,7 @@
 										<strong translate="no">t</strong>
 									</td>
 									<td class="description last">
-										<p>A interpolation factor representing a position on the curve. Must be in the range <code>[0,1]</code>.</p>
+										<p>表示曲线上位置的插值因子，必须在 <code>[0,1]</code> 范围内。</p>
 									</td>
 								</tr>
 								<tr>
@@ -70,19 +70,19 @@
 										<strong translate="no">optionalTarget</strong>
 									</td>
 									<td class="description last">
-										<p>The optional target vector the result is written to.</p>
+										<p>可选的目标向量，结果将写入其中。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Curve.html#getPoint">Curve#getPoint</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Curve.html#getPoint">Curve#getPoint</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The position on the curve.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 曲线上的位置。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/curves/CurveExtras.js" translate="no" target="_blank" rel="noopener">examples/jsm/curves/CurveExtras.js</a>
 				</p>

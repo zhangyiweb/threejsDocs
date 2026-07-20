@@ -2,11 +2,11 @@
 
 # HTMLMesh
 
-This class can be used to render a DOM element onto a canvas and use it as a texture for a plane mesh.
+该类可将 DOM 元素渲染到画布上，并将其用作平面网格的纹理。
 
-A typical use case for this class is to render the GUI of `lil-gui` as a texture so it is compatible for VR.
+典型用例是将 `lil-gui` 的 GUI 渲染为纹理，以便在 VR 中兼容使用。
 
-## Code Example
+## 代码示例
 
 ```js
 const gui = new GUI( { width: 300 } ); // create lil-gui instance
@@ -14,30 +14,30 @@ const mesh = new HTMLMesh( gui.domElement );
 scene.add( mesh );
 ```
 
-## Import
+## 导入
 
-HTMLMesh is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+HTMLMesh 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { HTMLMesh } from 'three/addons/interactive/HTMLMesh.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new HTMLMesh( dom : HTMLElement )
 
-Constructs a new HTML mesh.
+构造一个新的 HTML 网格。
 
 **dom**
 
-The DOM element to display as a plane mesh.
+要作为平面网格显示的 DOM 元素。
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance and removes all event listeners. Call this method whenever this instance is no longer used in your app.
+释放该实例分配的 GPU 相关资源，并移除所有事件监听器。当应用中不再使用该实例时，请调用此方法。
 
-## Source
+## 源码
 
 [examples/jsm/interactive/HTMLMesh.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/interactive/HTMLMesh.js)

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>CSM - Three.js Docs</title>
+	<title>CSM - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -12,20 +12,20 @@
 	<h1 translate="no">CSM</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>An implementation of Cascade Shadow Maps (CSM).</p>
-<p>This module can only be used with <a href="WebGLRenderer.html">WebGLRenderer</a>. When using <a href="WebGPURenderer.html">WebGPURenderer</a>,
-use <a href="CSMShadowNode.html">CSMShadowNode</a> instead.</p></div>
+				<div class="class-description"><p>级联阴影贴图（Cascade Shadow Maps，CSM）的一种实现。</p>
+<p>此模块只能与 <a href="WebGLRenderer.html">WebGLRenderer</a> 一起使用。使用 <a href="WebGPURenderer.html">WebGPURenderer</a> 时，
+请改用 <a href="CSMShadowNode.html">CSMShadowNode</a>。</p></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">CSM</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">CSM</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { CSM } from 'three/addons/csm/CSM.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="CSM" translate="no">new <a href="#CSM">CSM</a><span class="signature">( data : <span class="param-type"><a href="CSM.html#~Data">CSM~Data</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new CSM instance.</p>
+							<p>构造一个新的 CSM 实例。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -34,164 +34,163 @@ use <a href="CSMShadowNode.html">CSMShadowNode</a> instead.</p></div>
 										<strong translate="no">data</strong>
 									</td>
 									<td class="description last">
-										<p>The CSM data.</p>
+										<p>CSM 数据。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Classes</h2>
+				<h2 class="subsection-title">类</h2>
 				<dl>
 					<dt><a href="CSM.html">CSM</a></dt>
 					<dd></dd>
 				</dl>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="breaks" translate="no">.<a href="#breaks">breaks</a><span class="type-signature"> : Array.&lt;number></span> </h3>
 					<div class="description">
-						<p>An array of numbers in the range <code>[0,1]</code> the defines how the
-mainCSM frustum should be split up.</p>
+						<p>取值范围为 <code>[0,1]</code> 的数字数组，用于定义如何分割
+主 CSM 视锥体。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="camera" translate="no">.<a href="#camera">camera</a><span class="type-signature"> : <a href="Camera.html">Camera</a></span> </h3>
 					<div class="description">
-						<p>The scene's camera.</p>
+						<p>场景的相机。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="cascades" translate="no">.<a href="#cascades">cascades</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The number of cascades.</p>
-						<p>Default is <code>3</code>.</p>
+						<p>级联数量。</p>
+						<p>默认值为 <code>3</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="customSplitsCallback" translate="no">.<a href="#customSplitsCallback">customSplitsCallback</a><span class="type-signature"> : function</span> </h3>
 					<div class="description">
-						<p>Custom split callback when using <code>mode='custom'</code>.</p>
+						<p>使用 <code>mode='custom'</code> 时的自定义分割回调。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="fade" translate="no">.<a href="#fade">fade</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Whether to fade between cascades or not.</p>
-						<p>Default is <code>false</code>.</p>
+						<p>是否在级联之间进行淡入淡出过渡。</p>
+						<p>默认值为 <code>false</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="frustums" translate="no">.<a href="#frustums">frustums</a><span class="type-signature"> : Array.&lt;<a href="CSMFrustum.html">CSMFrustum</a>></span> </h3>
 					<div class="description">
-						<p>An array of frustums representing the cascades.</p>
+						<p>表示各级联的视锥体数组。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="lightDirection" translate="no">.<a href="#lightDirection">lightDirection</a><span class="type-signature"> : <a href="Vector3.html">Vector3</a></span> </h3>
 					<div class="description">
-						<p>The light direction.</p>
+						<p>光照方向。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="lightFar" translate="no">.<a href="#lightFar">lightFar</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The light far value.</p>
-						<p>Default is <code>2000</code>.</p>
+						<p>灯光的远裁剪面值。</p>
+						<p>默认值为 <code>2000</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="lightIntensity" translate="no">.<a href="#lightIntensity">lightIntensity</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The light intensity.</p>
-						<p>Default is <code>3</code>.</p>
+						<p>灯光强度。</p>
+						<p>默认值为 <code>3</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="lightMargin" translate="no">.<a href="#lightMargin">lightMargin</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The light margin.</p>
-						<p>Default is <code>200</code>.</p>
+						<p>灯光边距。</p>
+						<p>默认值为 <code>200</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="lightNear" translate="no">.<a href="#lightNear">lightNear</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The light near value.</p>
-						<p>Default is <code>1</code>.</p>
+						<p>灯光的近裁剪面值。</p>
+						<p>默认值为 <code>1</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="lights" translate="no">.<a href="#lights">lights</a><span class="type-signature"> : Array.&lt;<a href="DirectionalLight.html">DirectionalLight</a>></span> </h3>
 					<div class="description">
-						<p>An array of directional lights which cast the shadows for
-the different cascades. There is one directional light for each
-cascade.</p>
+						<p>为不同级联投射阴影的平行光数组。
+每个级联对应一盏平行光。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="mainFrustum" translate="no">.<a href="#mainFrustum">mainFrustum</a><span class="type-signature"> : <a href="CSMFrustum.html">CSMFrustum</a></span> </h3>
 					<div class="description">
-						<p>The main frustum.</p>
+						<p>主视锥体。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="maxFar" translate="no">.<a href="#maxFar">maxFar</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The maximum far value.</p>
-						<p>Default is <code>100000</code>.</p>
+						<p>最大远裁剪面值。</p>
+						<p>默认值为 <code>100000</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="mode" translate="no">.<a href="#mode">mode</a><span class="type-signature"> : 'practical' | 'uniform' | 'logarithmic' | 'custom'</span> </h3>
 					<div class="description">
-						<p>The frustum split mode.</p>
-						<p>Default is <code>'practical'</code>.</p>
+						<p>视锥体分割模式。</p>
+						<p>默认值为 <code>'practical'</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="parent" translate="no">.<a href="#parent">parent</a><span class="type-signature"> : <a href="Object3D.html">Object3D</a></span> </h3>
 					<div class="description">
-						<p>The parent object, usually the scene.</p>
+						<p>父对象，通常为场景。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="shaders" translate="no">.<a href="#shaders">shaders</a><span class="type-signature"> : Map.&lt;<a href="Material.html">Material</a>, Object></span> </h3>
 					<div class="description">
-						<p>A Map holding enhanced material shaders.</p>
+						<p>保存增强后材质着色器的 Map。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="shadowBias" translate="no">.<a href="#shadowBias">shadowBias</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The shadow bias.</p>
-						<p>Default is <code>0.000001</code>.</p>
+						<p>阴影偏移。</p>
+						<p>默认值为 <code>0.000001</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="shadowMapSize" translate="no">.<a href="#shadowMapSize">shadowMapSize</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The shadow map size.</p>
-						<p>Default is <code>2048</code>.</p>
+						<p>阴影贴图尺寸。</p>
+						<p>默认值为 <code>2048</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="dispose" translate="no">.<a href="#dispose">dispose</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Frees the GPU-related resources allocated by this instance. Call this
-method whenever this instance is no longer used in your app.</p>
+							<p>释放此实例分配的 GPU 相关资源。当应用中
+不再使用此实例时，请调用此方法。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="remove" translate="no">.<a href="#remove">remove</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Applications must call this method when they remove the CSM usage from their scene.</p>
+							<p>当应用从场景中移除 CSM 时，必须调用此方法。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="setupMaterial" translate="no">.<a href="#setupMaterial">setupMaterial</a><span class="signature">( material : <span class="param-type"><a href="Material.html">Material</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Applications must call this method for all materials that should be affected by CSM.</p>
+							<p>对于所有应受 CSM 影响的材质，应用都必须调用此方法。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -200,7 +199,7 @@ method whenever this instance is no longer used in your app.</p>
 										<strong translate="no">material</strong>
 									</td>
 									<td class="description last">
-										<p>The material to setup for CSM support.</p>
+										<p>要配置为支持 CSM 的材质。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -209,21 +208,21 @@ method whenever this instance is no longer used in your app.</p>
 					<h3 class="name name-method" id="update" translate="no">.<a href="#update">update</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Updates the CSM. This method must be called in your animation loop before
-calling <code>renderer.render()</code>.</p>
+							<p>更新 CSM。必须在动画循环中、调用
+<code>renderer.render()</code> 之前调用此方法。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="updateFrustums" translate="no">.<a href="#updateFrustums">updateFrustums</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Applications must call this method every time they change camera or CSM settings.</p>
+							<p>每当更改相机或 CSM 设置时，应用都必须调用此方法。</p>
 						</div>
 					</div>
-				<h2 class="subsection-title">Type Definitions</h2>
+				<h2 class="subsection-title">类型定义</h2>
 				<div class="member">
 					<h3 class="name" id="~Data" translate="no">.<a href="#~Data">Data</a> </h3>
 					<div class="description">
-						<p>Constructor data of <code>CSM</code>.</p>
+						<p><code>CSM</code> 的构造函数数据。</p>
 					</div>
 <table class="props">
 	<tbody>
@@ -234,7 +233,7 @@ calling <code>renderer.render()</code>.</p>
 <span class="param-type"><a href="Camera.html">Camera</a></span>
 				</td>
 			<td class="description last">
-				<p>The scene's camera.</p>
+				<p>场景的相机。</p>
 			</td>
 		</tr>
 		<tr>
@@ -244,7 +243,7 @@ calling <code>renderer.render()</code>.</p>
 <span class="param-type"><a href="Object3D.html">Object3D</a></span>
 				</td>
 			<td class="description last">
-				<p>The parent object, usually the scene.</p>
+				<p>父对象，通常为场景。</p>
 			</td>
 		</tr>
 		<tr>
@@ -254,8 +253,8 @@ calling <code>renderer.render()</code>.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The number of cascades.</p>
-						<p>Default is <code>3</code>.</p>
+				<p>级联数量。</p>
+						<p>默认值为 <code>3</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -265,8 +264,8 @@ calling <code>renderer.render()</code>.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The maximum far value.</p>
-						<p>Default is <code>100000</code>.</p>
+				<p>最大远裁剪面值。</p>
+						<p>默认值为 <code>100000</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -282,8 +281,8 @@ calling <code>renderer.render()</code>.</p>
 <span class="param-type">'custom'</span>
 				</td>
 			<td class="description last">
-				<p>The frustum split mode.</p>
-						<p>Default is <code>'practical'</code>.</p>
+				<p>视锥体分割模式。</p>
+						<p>默认值为 <code>'practical'</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -293,7 +292,7 @@ calling <code>renderer.render()</code>.</p>
 <span class="param-type">function</span>
 				</td>
 			<td class="description last">
-				<p>Custom split callback when using <code>mode='custom'</code>.</p>
+				<p>使用 <code>mode='custom'</code> 时的自定义分割回调。</p>
 			</td>
 		</tr>
 		<tr>
@@ -303,8 +302,8 @@ calling <code>renderer.render()</code>.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The shadow map size.</p>
-						<p>Default is <code>2048</code>.</p>
+				<p>阴影贴图尺寸。</p>
+						<p>默认值为 <code>2048</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -314,8 +313,8 @@ calling <code>renderer.render()</code>.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The shadow bias.</p>
-						<p>Default is <code>0.000001</code>.</p>
+				<p>阴影偏移。</p>
+						<p>默认值为 <code>0.000001</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -325,7 +324,7 @@ calling <code>renderer.render()</code>.</p>
 <span class="param-type"><a href="Vector3.html">Vector3</a></span>
 				</td>
 			<td class="description last">
-				<p>The light direction.</p>
+				<p>光照方向。</p>
 			</td>
 		</tr>
 		<tr>
@@ -335,8 +334,8 @@ calling <code>renderer.render()</code>.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The light intensity.</p>
-						<p>Default is <code>3</code>.</p>
+				<p>灯光强度。</p>
+						<p>默认值为 <code>3</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -346,8 +345,8 @@ calling <code>renderer.render()</code>.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The light near value.</p>
-						<p>Default is <code>1</code>.</p>
+				<p>灯光的近裁剪面值。</p>
+						<p>默认值为 <code>1</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -357,8 +356,8 @@ calling <code>renderer.render()</code>.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The light far value.</p>
-						<p>Default is <code>2000</code>.</p>
+				<p>灯光的远裁剪面值。</p>
+						<p>默认值为 <code>2000</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -368,14 +367,14 @@ calling <code>renderer.render()</code>.</p>
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The light margin.</p>
-						<p>Default is <code>200</code>.</p>
+				<p>灯光边距。</p>
+						<p>默认值为 <code>200</code>。</p>
 			</td>
 		</tr>
 	</tbody>
 </table>
 				</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/csm/CSM.js" translate="no" target="_blank" rel="noopener">examples/jsm/csm/CSM.js</a>
 				</p>

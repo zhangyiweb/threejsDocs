@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>TextGeometry - Three.js Docs</title>
+	<title>TextGeometry - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,12 +13,10 @@
 	<h1 translate="no">TextGeometry</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A class for generating text as a single geometry. It is constructed by providing a string of text, and a set of
-parameters consisting of a loaded font and extrude settings.</p>
-<p>See the <a href="FontLoader.html">FontLoader</a> page for additional details.</p>
-<p><code>TextGeometry</code> uses <a href="http://gero3.github.io/facetype.js/" target="_blank" rel="noopener">typeface.json</a> generated fonts.
-Some existing fonts can be found located in <code>/examples/fonts</code>.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>用于将文本生成为单一几何体的类。通过提供文本字符串以及一组参数（包括已加载的字体和拉伸设置）来构造。</p>
+<p>更多详情请参阅 <a href="FontLoader.html">FontLoader</a> 页面。</p>
+<p><code>TextGeometry</code> 使用 <a href="http://gero3.github.io/facetype.js/" target="_blank" rel="noopener">typeface.json</a> 生成的字体。部分现有字体位于 <code>/examples/fonts</code>。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const loader = new FontLoader();
 const font = await loader.loadAsync( 'fonts/helvetiker_regular.typeface.json' );
 const geometry = new TextGeometry( 'Hello three.js!', {
@@ -30,15 +28,15 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 </code></pre></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">TextGeometry</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">TextGeometry</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="TextGeometry" translate="no">new <a href="#TextGeometry">TextGeometry</a><span class="signature">( text : <span class="param-type">string</span>, parameters : <span class="param-type"><a href="TextGeometry.html#~Options">TextGeometry~Options</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new text geometry.</p>
+							<p>构造一个新的文本几何体。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -47,7 +45,7 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 										<strong translate="no">text</strong>
 									</td>
 									<td class="description last">
-										<p>The text that should be transformed into a geometry.</p>
+										<p>应转换为几何体的文本。</p>
 									</td>
 								</tr>
 								<tr>
@@ -55,18 +53,18 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 										<strong translate="no">parameters</strong>
 									</td>
 									<td class="description last">
-										<p>The text settings.</p>
+										<p>文本设置。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Type Definitions</h2>
+				<h2 class="subsection-title">类型定义</h2>
 				<div class="member">
 					<h3 class="name" id="~Options" translate="no">.<a href="#~Options">Options</a> </h3>
 					<div class="description">
-						<p>Represents the <code>options</code> type of the geometry's constructor.</p>
+						<p>表示该几何体构造函数的 <code>options</code> 类型。</p>
 					</div>
 <table class="props">
 	<tbody>
@@ -77,7 +75,7 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 <span class="param-type"><a href="Font.html">Font</a></span>
 				</td>
 			<td class="description last">
-				<p>The font.</p>
+				<p>字体。</p>
 			</td>
 		</tr>
 		<tr>
@@ -87,8 +85,8 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The text size.</p>
-						<p>Default is <code>100</code>.</p>
+				<p>文字大小。</p>
+						<p>默认值为 <code>100</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -98,8 +96,8 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>Depth to extrude the shape.</p>
-						<p>Default is <code>50</code>.</p>
+				<p>拉伸形状的深度。</p>
+						<p>默认值为 <code>50</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -109,8 +107,8 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>Number of points on the curves.</p>
-						<p>Default is <code>12</code>.</p>
+				<p>曲线上的点数。</p>
+						<p>默认值为 <code>12</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -120,8 +118,8 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>Number of points used for subdividing segments along the depth of the extruded spline.</p>
-						<p>Default is <code>1</code>.</p>
+				<p>沿拉伸样条深度方向细分分段所用的点数。</p>
+						<p>默认值为 <code>1</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -131,8 +129,8 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 <span class="param-type">boolean</span>
 				</td>
 			<td class="description last">
-				<p>Whether to beveling to the shape or not.</p>
-						<p>Default is <code>false</code>.</p>
+				<p>是否对形状进行斜角处理。</p>
+						<p>默认值为 <code>false</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -142,8 +140,8 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>How deep into the original shape the bevel goes.</p>
-						<p>Default is <code>10</code>.</p>
+				<p>斜角切入原始形状的深度。</p>
+						<p>默认值为 <code>10</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -153,8 +151,8 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>Distance from the shape outline that the bevel extends.</p>
-						<p>Default is <code>8</code>.</p>
+				<p>斜角从形状轮廓向外延伸的距离。</p>
+						<p>默认值为 <code>8</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -164,8 +162,8 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>Distance from the shape outline that the bevel starts.</p>
-						<p>Default is <code>0</code>.</p>
+				<p>斜角从形状轮廓开始的距离。</p>
+						<p>默认值为 <code>0</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -175,8 +173,8 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>Number of bevel layers.</p>
-						<p>Default is <code>3</code>.</p>
+				<p>斜角层数。</p>
+						<p>默认值为 <code>3</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -186,8 +184,8 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 <span class="param-type">string</span>
 				</td>
 			<td class="description last">
-				<p>Char direction: ltr(left to right), rtl(right to left) &amp; tb(top bottom).</p>
-						<p>Default is <code>'ltr'</code>.</p>
+				<p>字符方向：ltr（从左到右）、rtl（从右到左）和 tb（从上到下）。</p>
+						<p>默认值为 <code>'ltr'</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -197,8 +195,8 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 <span class="param-type"><a href="Curve.html">Curve</a></span>
 				</td>
 			<td class="description last">
-				<p>A 3D spline path along which the shape should be extruded. Bevels not supported for path extrusion.</p>
-						<p>Default is <code>null</code>.</p>
+				<p>形状应沿其拉伸的三维样条路径。路径拉伸不支持斜角。</p>
+						<p>默认值为 <code>null</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -208,13 +206,13 @@ const geometry = new TextGeometry( 'Hello three.js!', {
 <span class="param-type">Object</span>
 				</td>
 			<td class="description last">
-				<p>An object that provides UV generator functions for custom UV generation.</p>
+				<p>提供 UV 生成函数以进行自定义 UV 生成的对象。</p>
 			</td>
 		</tr>
 	</tbody>
 </table>
 				</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/geometries/TextGeometry.js" translate="no" target="_blank" rel="noopener">examples/jsm/geometries/TextGeometry.js</a>
 				</p>
