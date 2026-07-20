@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>Source - Three.js Docs</title>
+	<title>Source - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -12,17 +12,17 @@
 	<h1 translate="no">Source</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>Represents the data source of a texture.</p>
-<p>The main purpose of this class is to decouple the data definition from the texture
-definition so the same data can be used with multiple texture instances.</p></div>
+				<div class="class-description"><p>表示纹理的数据源。</p>
+<p>此类的主要目的是将数据定义与纹理定义解耦，
+以便相同的数据可被多个纹理实例使用。</p></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="Source" translate="no">new <a href="#Source">Source</a><span class="signature">( data : <span class="param-type"><a href="global.html#any">any</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new video texture.</p>
+							<p>构造一个新的数据源。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -31,71 +31,70 @@ definition so the same data can be used with multiple texture instances.</p></di
 										<strong translate="no">data</strong>
 									</td>
 									<td class="description last">
-										<p>The data definition of a texture.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>纹理的数据定义。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="data" translate="no">.<a href="#data">data</a><span class="type-signature"> : <a href="global.html#any">any</a></span> </h3>
 					<div class="description">
-						<p>The data definition of a texture.</p>
+						<p>纹理的数据定义。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="dataReady" translate="no">.<a href="#dataReady">dataReady</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>This property is only relevant when <a href="Source.html#needsUpdate">Source#needsUpdate</a> is set to <code>true</code> and
-provides more control on how texture data should be processed. When <code>dataReady</code> is set
-to <code>false</code>, the engine performs the memory allocation (if necessary) but does not transfer
-the data into the GPU memory.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此属性仅在 <a href="Source.html#needsUpdate">Source#needsUpdate</a> 设为 <code>true</code> 时相关，
+可更精细地控制纹理数据的处理方式。当 <code>dataReady</code> 设为
+<code>false</code> 时，引擎会执行内存分配（如有必要），但不会将
+数据传输到 GPU 内存。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="id" translate="no">.<a href="#id">id</a><span class="type-signature"> : number</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>The ID of the source.</p>
+						<p>数据源的 ID。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="isSource" translate="no">.<a href="#isSource">isSource</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="needsUpdate" translate="no">.<a href="#needsUpdate">needsUpdate</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>When the property is set to <code>true</code>, the engine allocates the memory
-for the texture (if necessary) and triggers the actual texture upload
-to the GPU next time the source is used.</p>
-						<p>Default is <code>false</code>.</p>
+						<p>当该属性设为 <code>true</code> 时，引擎会为纹理分配内存
+（如有必要），并在下次使用该数据源时触发实际的纹理上传到 GPU。</p>
+						<p>默认值为 <code>false</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="uuid" translate="no">.<a href="#uuid">uuid</a><span class="type-signature"> : string</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>The UUID of the source.</p>
+						<p>数据源的 UUID。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="version" translate="no">.<a href="#version">version</a><span class="type-signature"> : number</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This starts at <code>0</code> and counts how many times <a href="Source.html#needsUpdate">Source#needsUpdate</a> is set to <code>true</code>.</p>
-						<p>Default is <code>0</code>.</p>
+						<p>从 <code>0</code> 开始，统计 <a href="Source.html#needsUpdate">Source#needsUpdate</a> 被设为 <code>true</code> 的次数。</p>
+						<p>默认值为 <code>0</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="getSize" translate="no">.<a href="#getSize">getSize</a><span class="signature">( target : <span class="param-type"><a href="Vector2.html">Vector2</a> | <a href="Vector3.html">Vector3</a></span> )</span><span class="type-signature"> : <a href="Vector2.html">Vector2</a> | <a href="Vector3.html">Vector3</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the dimensions of the source into the given target vector.</p>
+							<p>将数据源的尺寸写入给定的目标向量并返回。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -104,19 +103,19 @@ to the GPU next time the source is used.</p>
 										<strong translate="no">target</strong>
 									</td>
 									<td class="description last">
-										<p>The target object the result is written into.</p>
+										<p>用于写入结果的目标对象。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The dimensions of the source.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 数据源的尺寸。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="toJSON" translate="no">.<a href="#toJSON">toJSON</a><span class="signature">( meta : <span class="param-type">Object | string</span> )</span><span class="type-signature"> : Object</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Serializes the source into JSON.</p>
+							<p>将数据源序列化为 JSON。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -125,13 +124,13 @@ to the GPU next time the source is used.</p>
 										<strong translate="no">meta</strong>
 									</td>
 									<td class="description last">
-										<p>An optional value holding meta information about the serialization.</p>
+										<p>可选值，保存有关序列化的元信息。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-see">See:</dt>
+							<dt class="tag-see">参见：</dt>
 							<dd class="tag-see">
 								<ul>
 									<li><a href="ObjectLoader.html#parse">ObjectLoader#parse</a></li>
@@ -139,10 +138,10 @@ to the GPU next time the source is used.</p>
 							</dd>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A JSON object representing the serialized source.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 表示序列化数据源的 JSON 对象。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/textures/Source.js" translate="no" target="_blank" rel="noopener">src/textures/Source.js</a>
 				</p>

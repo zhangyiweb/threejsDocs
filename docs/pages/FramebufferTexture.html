@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>FramebufferTexture - Three.js Docs</title>
+	<title>FramebufferTexture - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,10 +13,9 @@
 	<h1 translate="no">FramebufferTexture</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>This class can only be used in combination with <code>copyFramebufferToTexture()</code> methods
-of renderers. It extracts the contents of the current bound framebuffer and provides it
-as a texture for further usage.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>此类只能与渲染器的 <code>copyFramebufferToTexture()</code> 方法配合使用。
+它会提取当前绑定帧缓冲的内容，并作为纹理提供给后续使用。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const pixelRatio = window.devicePixelRatio;
 const textureSize = 128 * pixelRatio;
 const frameTexture = new FramebufferTexture( textureSize, textureSize );
@@ -31,11 +30,11 @@ renderer.copyFramebufferToTexture( frameTexture, vector );
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="FramebufferTexture" translate="no">new <a href="#FramebufferTexture">FramebufferTexture</a><span class="signature">( width : <span class="param-type">number</span>, height : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new framebuffer texture.</p>
+							<p>构造一个新的帧缓冲纹理。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -44,7 +43,7 @@ renderer.copyFramebufferToTexture( frameTexture, vector );
 										<strong translate="no">width</strong>
 									</td>
 									<td class="description last">
-										<p>The width of the texture.</p>
+										<p>纹理的宽度。</p>
 									</td>
 								</tr>
 								<tr>
@@ -52,55 +51,55 @@ renderer.copyFramebufferToTexture( frameTexture, vector );
 										<strong translate="no">height</strong>
 									</td>
 									<td class="description last">
-										<p>The height of the texture.</p>
+										<p>纹理的高度。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="generateMipmaps" translate="no">.<a href="#generateMipmaps">generateMipmaps</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Whether to generate mipmaps (if possible) for a texture.</p>
-<p>Overwritten and set to <code>false</code> by default.</p>
-						<p>Default is <code>false</code>.</p>
+						<p>是否为纹理生成 mipmap（若可能）。</p>
+<p>已覆盖，默认设置为 <code>false</code>。</p>
+						<p>默认值为 <code>false</code>。</p>
 					</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Texture.html#generateMipmaps">Texture#generateMipmaps</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Texture.html#generateMipmaps">Texture#generateMipmaps</a></dt>
 						</dl>
 				</div>
 				<div class="member">
 					<h3 class="name" id="isFramebufferTexture" translate="no">.<a href="#isFramebufferTexture">isFramebufferTexture</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="magFilter" translate="no">.<a href="#magFilter">magFilter</a><span class="type-signature"> : <a href="global.html#NearestFilter">NearestFilter</a> | <a href="global.html#NearestMipmapNearestFilter">NearestMipmapNearestFilter</a> | <a href="global.html#NearestMipmapLinearFilter">NearestMipmapLinearFilter</a> | <a href="global.html#LinearFilter">LinearFilter</a> | <a href="global.html#LinearMipmapNearestFilter">LinearMipmapNearestFilter</a> | <a href="global.html#LinearMipmapLinearFilter">LinearMipmapLinearFilter</a></span> </h3>
 					<div class="description">
-						<p>How the texture is sampled when a texel covers more than one pixel.</p>
-<p>Overwritten and set to <code>NearestFilter</code> by default to disable filtering.</p>
-						<p>Default is <code>NearestFilter</code>.</p>
+						<p>当一个纹素覆盖多个像素时，纹理的采样方式。</p>
+<p>已覆盖，默认设置为 <code>NearestFilter</code> 以禁用过滤。</p>
+						<p>默认值为 <code>NearestFilter</code>。</p>
 					</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Texture.html#magFilter">Texture#magFilter</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Texture.html#magFilter">Texture#magFilter</a></dt>
 						</dl>
 				</div>
 				<div class="member">
 					<h3 class="name" id="minFilter" translate="no">.<a href="#minFilter">minFilter</a><span class="type-signature"> : <a href="global.html#NearestFilter">NearestFilter</a> | <a href="global.html#NearestMipmapNearestFilter">NearestMipmapNearestFilter</a> | <a href="global.html#NearestMipmapLinearFilter">NearestMipmapLinearFilter</a> | <a href="global.html#LinearFilter">LinearFilter</a> | <a href="global.html#LinearMipmapNearestFilter">LinearMipmapNearestFilter</a> | <a href="global.html#LinearMipmapLinearFilter">LinearMipmapLinearFilter</a></span> </h3>
 					<div class="description">
-						<p>How the texture is sampled when a texel covers less than one pixel.</p>
-<p>Overwritten and set to <code>NearestFilter</code> by default to disable filtering.</p>
-						<p>Default is <code>NearestFilter</code>.</p>
+						<p>当一个纹素覆盖不到一个像素时，纹理的采样方式。</p>
+<p>已覆盖，默认设置为 <code>NearestFilter</code> 以禁用过滤。</p>
+						<p>默认值为 <code>NearestFilter</code>。</p>
 					</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Texture.html#minFilter">Texture#minFilter</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Texture.html#minFilter">Texture#minFilter</a></dt>
 						</dl>
 				</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/textures/FramebufferTexture.js" translate="no" target="_blank" rel="noopener">src/textures/FramebufferTexture.js</a>
 				</p>
