@@ -1,43 +1,43 @@
 # GeometryCompressionUtils
 
-## Import
+## 导入
 
-GeometryCompressionUtils is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+GeometryCompressionUtils 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import * as GeometryCompressionUtils from 'three/addons/utils/GeometryCompressionUtils.js';
 ```
 
-## Methods
+## 方法
 
 ### .compressNormals( geometry : BufferGeometry, encodeMethod : 'DEFAULT' | 'OCT1Byte' | 'OCT2Byte' | 'ANGLES' ) (inner)
 
-Compressed the given geometry's `normal` attribute by the selected encode method.
+按所选编码方法压缩给定几何体的 `normal` 属性。
 
 **geometry**
 
-The geometry whose normals should be compressed.
+要压缩法线的几何体。
 
 **encodeMethod**
 
-The compression method.
+压缩方法。
 
 ### .compressPositions( geometry : BufferGeometry ) (inner)
 
-Compressed the given geometry's `position` attribute.
+压缩给定几何体的 `position` 属性。
 
 **geometry**
 
-The geometry whose position values should be compressed.
+要压缩位置值的几何体。
 
 ### .compressUvs( geometry : BufferGeometry ) (inner)
 
-Compressed the given geometry's `uv` attribute.
+压缩给定几何体的 `uv` 属性。
 
 **geometry**
 
-The geometry whose texture coordinates should be compressed.
+要压缩纹理坐标的几何体。
 
-## Source
+## 源码
 
 [examples/jsm/utils/GeometryCompressionUtils.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/utils/GeometryCompressionUtils.js)

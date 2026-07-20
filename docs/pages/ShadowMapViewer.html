@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>ShadowMapViewer - Three.js Docs</title>
+	<title>ShadowMapViewer - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -12,12 +12,12 @@
 	<h1 translate="no">ShadowMapViewer</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>This is a helper for visualising a given light's shadow map.
-It works for shadow casting lights: DirectionalLight and SpotLight.
-It renders out the shadow map and displays it on a HUD.</p>
-<p>This module can only be used with <a href="WebGLRenderer.html">WebGLRenderer</a>. When using <a href="WebGPURenderer.html">WebGPURenderer</a>,
-import the class from <code>ShadowMapViewerGPU.js</code>.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>这是用于可视化给定光源阴影贴图的辅助工具。
+适用于投射阴影的光源：DirectionalLight 和 SpotLight。
+它会渲染阴影贴图并在 HUD 上显示。</p>
+<p>此模块只能与 <a href="WebGLRenderer.html">WebGLRenderer</a> 配合使用。使用 <a href="WebGPURenderer.html">WebGPURenderer</a> 时，
+请从 <code>ShadowMapViewerGPU.js</code> 导入该类。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const lightShadowMapViewer = new ShadowMapViewer( light );
 lightShadowMapViewer.position.x = 10;
 lightShadowMapViewer.position.y = SCREEN_HEIGHT - ( SHADOW_MAP_HEIGHT / 4 ) - 10;
@@ -27,15 +27,15 @@ lightShadowMapViewer.update();
 </code></pre></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">ShadowMapViewer</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">ShadowMapViewer</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { ShadowMapViewer } from 'three/addons/utils/ShadowMapViewer.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="ShadowMapViewer" translate="no">new <a href="#ShadowMapViewer">ShadowMapViewer</a><span class="signature">( light : <span class="param-type"><a href="Light.html">Light</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new shadow map viewer.</p>
+							<p>构造一个新的阴影贴图查看器。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -44,42 +44,42 @@ lightShadowMapViewer.update();
 										<strong translate="no">light</strong>
 									</td>
 									<td class="description last">
-										<p>The shadow casting light.</p>
+										<p>投射阴影的光源。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="enabled" translate="no">.<a href="#enabled">enabled</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Whether to display the shadow map viewer or not.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>是否显示阴影贴图查看器。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="position" translate="no">.<a href="#position">position</a><span class="type-signature"> : Object</span> </h3>
 					<div class="description">
-						<p>The position of the viewer. When changing this property, make sure
-to call <a href="ShadowMapViewer.html#update">ShadowMapViewer#update</a>.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>查看器的位置。更改此属性时，请确保
+调用 <a href="ShadowMapViewer.html#update">ShadowMapViewer#update</a>。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="size" translate="no">.<a href="#size">size</a><span class="type-signature"> : Object</span> </h3>
 					<div class="description">
-						<p>The size of the viewer. When changing this property, make sure
-to call <a href="ShadowMapViewer.html#update">ShadowMapViewer#update</a>.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>查看器的大小。更改此属性时，请确保
+调用 <a href="ShadowMapViewer.html#update">ShadowMapViewer#update</a>。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="render" translate="no">.<a href="#render">render</a><span class="signature">( renderer : <span class="param-type"><a href="WebGLRenderer.html">WebGLRenderer</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Renders the viewer. This method must be called in the app's animation loop.</p>
+							<p>渲染查看器。必须在应用的动画循环中调用此方法。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -88,7 +88,7 @@ to call <a href="ShadowMapViewer.html#update">ShadowMapViewer#update</a>.</p>
 										<strong translate="no">renderer</strong>
 									</td>
 									<td class="description last">
-										<p>The renderer.</p>
+										<p>渲染器。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -97,17 +97,16 @@ to call <a href="ShadowMapViewer.html#update">ShadowMapViewer#update</a>.</p>
 					<h3 class="name name-method" id="update" translate="no">.<a href="#update">update</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Updates the viewer.</p>
+							<p>更新查看器。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="updateForWindowResize" translate="no">.<a href="#updateForWindowResize">updateForWindowResize</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Resizes the viewer. This method should be called whenever the app's
-window is resized.</p>
+							<p>调整查看器大小。每当应用窗口大小改变时都应调用此方法。</p>
 						</div>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/utils/ShadowMapViewer.js" translate="no" target="_blank" rel="noopener">examples/jsm/utils/ShadowMapViewer.js</a>
 				</p>

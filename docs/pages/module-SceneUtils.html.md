@@ -1,115 +1,115 @@
 # SceneUtils
 
-## Import
+## 导入
 
-SceneUtils is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+SceneUtils 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import * as SceneUtils from 'three/addons/utils/SceneUtils.js';
 ```
 
-## Methods
+## 方法
 
 ### .createMeshesFromInstancedMesh( instancedMesh : InstancedMesh ) : Group (inner)
 
-This function creates a mesh for each instance of the given instanced mesh and adds it to a group. Each mesh will honor the current 3D transformation of its corresponding instance.
+此函数为给定实例化网格的每个实例创建一个网格，并将其添加到组中。每个网格将遵循其对应实例当前的 3D 变换。
 
 **instancedMesh**
 
-The instanced mesh.
+实例化网格。
 
-**Returns:** A group of meshes.
+**返回值：** 网格组。
 
 ### .createMeshesFromMultiMaterialMesh( mesh : Mesh ) : Group (inner)
 
-This function creates a mesh for each geometry-group of the given multi-material mesh and adds it to a group.
+此函数为给定多材质网格的每个几何体组创建一个网格，并将其添加到组中。
 
 **mesh**
 
-The multi-material mesh.
+多材质网格。
 
-**Returns:** A group of meshes.
+**返回值：** 网格组。
 
 ### .createMultiMaterialObject( geometry : BufferGeometry, materials : Array.<Material> ) : Group (inner)
 
-This function represents an alternative way to create 3D objects with multiple materials. Normally, [BufferGeometry#groups](BufferGeometry.html#groups) are used which might introduce issues e.g. when exporting the object to a 3D format. This function accepts a geometry and an array of materials and creates for each material a mesh that is added to a group.
+此函数提供了一种创建多材质 3D 对象的替代方式。通常使用 [BufferGeometry#groups](BufferGeometry.html#groups)，但这可能在将对象导出为 3D 格式时引入问题。此函数接受一个几何体和一个材质数组，为每个材质创建一个网格并添加到组中。
 
 **geometry**
 
-The geometry.
+几何体。
 
 **materials**
 
-An array of materials.
+材质数组。
 
-**Returns:** A group representing a multi-material object.
+**返回值：** 表示多材质对象的组。
 
 ### .reduceVertices( object : Object3D, func : function, initialValue : any ) : any (inner)
 
-Executes a reducer function for each vertex of the given 3D object. `reduceVertices()` returns a single value: the function's accumulated result.
+对给定 3D 对象的每个顶点执行归约函数。`reduceVertices()` 返回单个值：函数的累积结果。
 
 **object**
 
-The 3D object that should be processed. It must have a geometry with a `position` attribute.
+要处理的 3D 对象。必须具有带有 `position` 属性的几何体。
 
 **func**
 
-The reducer function. First argument is the current value, second argument the current vertex.
+归约函数。第一个参数是当前值，第二个参数是当前顶点。
 
 **initialValue**
 
-The initial value.
+初始值。
 
-**Returns:** The result.
+**返回值：** 结果。
 
 ### .sortInstancedMesh( mesh : InstancedMesh, compareFn : function ) (inner)
 
-Sorts the instances of the given instanced mesh.
+对给定实例化网格的实例进行排序。
 
 **mesh**
 
-The instanced mesh to sort.
+要排序的实例化网格。
 
 **compareFn**
 
-A custom compare function for the sort.
+用于排序的自定义比较函数。
 
 ### .traverseAncestorsGenerator( object : Object3D ) : Object3D (generator, inner)
 
-Generator based alternative to [Object3D#traverseAncestors](Object3D.html#traverseAncestors).
+基于生成器的 [Object3D#traverseAncestors](Object3D.html#traverseAncestors) 替代方案。
 
 **object**
 
-Object to traverse.
+要遍历的对象。
 
-##### Yields:
+##### 产出：
 
-Objects that passed the filter condition.
+通过筛选条件的对象。
 
 ### .traverseGenerator( object : Object3D ) : Object3D (generator, inner)
 
-Generator based alternative to [Object3D#traverse](Object3D.html#traverse).
+基于生成器的 [Object3D#traverse](Object3D.html#traverse) 替代方案。
 
 **object**
 
-Object to traverse.
+要遍历的对象。
 
-##### Yields:
+##### 产出：
 
-Objects that passed the filter condition.
+通过筛选条件的对象。
 
 ### .traverseVisibleGenerator( object : Object3D ) : Object3D (generator, inner)
 
-Generator based alternative to [Object3D#traverseVisible](Object3D.html#traverseVisible).
+基于生成器的 [Object3D#traverseVisible](Object3D.html#traverseVisible) 替代方案。
 
 **object**
 
-Object to traverse.
+要遍历的对象。
 
-##### Yields:
+##### 产出：
 
-Objects that passed the filter condition.
+通过筛选条件的对象。
 
-## Source
+## 源码
 
 [examples/jsm/utils/SceneUtils.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/utils/SceneUtils.js)

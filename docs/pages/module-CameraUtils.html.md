@@ -1,41 +1,41 @@
 # CameraUtils
 
-## Import
+## 导入
 
-CameraUtils is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+CameraUtils 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import * as CameraUtils from 'three/addons/utils/CameraUtils.js';
 ```
 
-## Methods
+## 方法
 
 ### .frameCorners( camera : PerspectiveCamera, bottomLeftCorner : Vector3, bottomRightCorner : Vector3, topLeftCorner : Vector3, estimateViewFrustum : boolean ) (inner)
 
-Set projection matrix and the orientation of a perspective camera to exactly frame the corners of an arbitrary rectangle. NOTE: This function ignores the standard parameters; do not call `updateProjectionMatrix()` after this.
+设置透视相机的投影矩阵和朝向，以精确框住任意矩形的四个角。注意：此函数会忽略标准参数；调用后请勿再调用 `updateProjectionMatrix()`。
 
 **camera**
 
-The camera.
+相机。
 
 **bottomLeftCorner**
 
-The bottom-left corner point.
+左下角点。
 
 **bottomRightCorner**
 
-The bottom-right corner point.
+右下角点。
 
 **topLeftCorner**
 
-The top-left corner point.
+左上角点。
 
 **estimateViewFrustum**
 
-If set to `true`, the function tries to estimate the camera's FOV.
+若设为 `true`，该函数会尝试估算相机的 FOV。
 
-Default is `false`.
+默认值为 `false`。
 
-## Source
+## 源码
 
 [examples/jsm/utils/CameraUtils.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/utils/CameraUtils.js)

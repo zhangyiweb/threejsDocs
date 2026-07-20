@@ -1,152 +1,152 @@
 # SkeletonUtils
 
-## Import
+## 导入
 
-SkeletonUtils is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+SkeletonUtils 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import * as SkeletonUtils from 'three/addons/utils/SkeletonUtils.js';
 ```
 
-## Methods
+## 方法
 
 ### .clone( source : Object3D ) : Object3D (inner)
 
-Clones the given 3D object and its descendants, ensuring that any `SkinnedMesh` instances are correctly associated with their bones. Bones are also cloned, and must be descendants of the object passed to this method. Other data, like geometries and materials, are reused by reference.
+克隆给定的 3D 对象及其后代，确保任何 `SkinnedMesh` 实例与其骨骼正确关联。骨骼也会被克隆，且必须是传入此方法的 3D 对象的后代。其他数据（如几何体和材质）通过引用复用。
 
 **source**
 
-The 3D object to clone.
+要克隆的 3D 对象。
 
-**Returns:** The cloned 3D object.
+**返回值：** 克隆后的 3D 对象。
 
 ### .retarget( target : Object3D | Skeleton, source : Object3D | Skeleton, options : module:SkeletonUtils~RetargetOptions ) (inner)
 
-Retargets the skeleton from the given source to the target.
+将给定源的骨骼重定向到目标。
 
-Both `target` and `source` can be a 3D object with a skeleton property (e.g. a skinned mesh) or a [Skeleton](Skeleton.html) directly.
+`target` 和 `source` 都可以是带有 skeleton 属性的 3D 对象（例如蒙皮网格），也可以直接是 [Skeleton](Skeleton.html)。
 
 **target**
 
-The target object.
+目标对象。
 
 **source**
 
-The source object.
+源对象。
 
 **options**
 
-The options.
+选项。
 
 ### .retargetClip( target : Object3D, source : Object3D | Skeleton, clip : AnimationClip, options : module:SkeletonUtils~RetargetOptions ) : AnimationClip (inner)
 
-Retargets the animation clip of the source to the target 3D object.
+将源的动画剪辑重定向到目标 3D 对象。
 
-The `source` can be a 3D object with a skeleton property (e.g. a skinned mesh) or a [Skeleton](Skeleton.html) directly.
+`source` 可以是带有 skeleton 属性的 3D 对象（例如蒙皮网格），也可以直接是 [Skeleton](Skeleton.html)。
 
 **target**
 
-The target 3D object. Must have a `skeleton` property.
+目标 3D 对象。必须具有 `skeleton` 属性。
 
 **source**
 
-The source object.
+源对象。
 
 **clip**
 
-The animation clip.
+动画剪辑。
 
 **options**
 
-The options.
+选项。
 
-**Returns:** The retargeted animation clip.
+**返回值：** 重定向后的动画剪辑。
 
-## Type Definitions
+## 类型定义
 
 ### .RetargetOptions
 
-Retarget options of `SkeletonUtils`.
+`SkeletonUtils` 的重定向选项。
 
 **useFirstFramePosition**  
 boolean
 
-Whether to use the position of the first frame or not.
+是否使用第一帧的位置。
 
-Default is `false`.
+默认值为 `false`。
 
 **fps**  
 number
 
-The FPS of the clip.
+剪辑的帧率。
 
 **names**  
 Object.<string, string>
 
-A dictionary for mapping target to source bone names.
+用于映射目标到源骨骼名称的字典。
 
 **getBoneName**  
 function
 
-A function for mapping bone names. Alternative to `names`.
+用于映射骨骼名称的函数。`names` 的替代方案。
 
 **trim**  
 Array.<number>
 
-Whether to trim the clip or not. If set the array should hold two values for the start and end.
+是否裁剪剪辑。如果设置，数组应包含起始和结束两个值。
 
 **preserveBoneMatrix**  
 boolean
 
-Whether to preserve bone matrices or not.
+是否保留骨骼矩阵。
 
-Default is `true`.
+默认值为 `true`。
 
 **preserveBonePositions**  
 boolean
 
-Whether to preserve bone positions or not.
+是否保留骨骼位置。
 
-Default is `true`.
+默认值为 `true`。
 
 **useTargetMatrix**  
 boolean
 
-Whether to use the target matrix or not.
+是否使用目标矩阵。
 
-Default is `false`.
+默认值为 `false`。
 
 **hip**  
 string
 
-The name of the source's hip bone.
+源对象髋部骨骼的名称。
 
-Default is `'hip'`.
+默认值为 `'hip'`。
 
 **hipInfluence**  
 [Vector3](Vector3.html)
 
-The hip influence.
+髋部影响。
 
-Default is `(1,1,1)`.
+默认值为 `(1,1,1)`。
 
 **scale**  
 number
 
-The scale.
+缩放。
 
-Default is `1`.
+默认值为 `1`。
 
 **localOffsets**  
 Object.<string, [Matrix4](Matrix4.html)\>
 
-Per-bone local offset matrices, keyed by bone name.
+按骨骼名称索引的每骨骼局部偏移矩阵。
 
 **hipPosition**  
 [Vector3](Vector3.html)
 
-An additional position offset applied to the hip bone.
+应用于髋部骨骼的额外位置偏移。
 
-## Source
+## 源码
 
 [examples/jsm/utils/SkeletonUtils.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/utils/SkeletonUtils.js)

@@ -1,74 +1,74 @@
 # SceneOptimizer
 
-This class can be used to optimized scenes by converting individual meshes into [BatchedMesh](BatchedMesh.html). This component is an experimental attempt to implement auto-batching in three.js.
+此类可用于优化场景，将独立网格转换为 [BatchedMesh](BatchedMesh.html)。该组件是 three.js 中实现自动批处理的实验性尝试。
 
-## Import
+## 导入
 
-SceneOptimizer is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+SceneOptimizer 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { SceneOptimizer } from 'three/addons/utils/SceneOptimizer.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new SceneOptimizer( scene : Scene, options : SceneOptimizer~Options )
 
-Constructs a new scene optimizer.
+构造一个新的场景优化器。
 
 **scene**
 
-The scene to optimize.
+要优化的场景。
 
 **options**
 
-The configuration options.
+配置选项。
 
-## Methods
+## 方法
 
 ### .disposeMeshes( meshesToRemove : Set.<Mesh> )
 
-Removes the given array of meshes from the scene.
+从场景中移除给定的网格数组。
 
 **meshesToRemove**
 
-The meshes to remove.
+要移除的网格。
 
 ### .removeEmptyNodes( object : Object3D )
 
-Removes empty nodes from all descendants of the given 3D object.
+从给定 3D 对象的所有后代中移除空节点。
 
 **object**
 
-The 3D object to process.
+要处理的 3D 对象。
 
 ### .toBatchedMesh() : Scene
 
-Performs the auto-baching by identifying groups of meshes in the scene that can be represented as a single [BatchedMesh](BatchedMesh.html). The method modifies the scene by adding instances of `BatchedMesh` and removing the now redundant individual meshes.
+通过识别场景中可表示为单个 [BatchedMesh](BatchedMesh.html) 的网格组来执行自动批处理。该方法会修改场景，添加 `BatchedMesh` 实例并移除现已冗余的独立网格。
 
-**Returns:** The optimized scene.
+**返回值：** 优化后的场景。
 
 ### .toInstancingMesh() : Scene (abstract)
 
-Performs the auto-instancing by identifying groups of meshes in the scene that can be represented as a single [InstancedMesh](InstancedMesh.html). The method modifies the scene by adding instances of `InstancedMesh` and removing the now redundant individual meshes.
+通过识别场景中可表示为单个 [InstancedMesh](InstancedMesh.html) 的网格组来执行自动实例化。该方法会修改场景，添加 `InstancedMesh` 实例并移除现已冗余的独立网格。
 
-This method is not yet implemented.
+此方法尚未实现。
 
-**Returns:** The optimized scene.
+**返回值：** 优化后的场景。
 
-## Type Definitions
+## 类型定义
 
 ### .Options
 
-Constructor options of `SceneOptimizer`.
+`SceneOptimizer` 的构造函数选项。
 
 **debug**  
 boolean
 
-Whether to enable debug mode or not.
+是否启用调试模式。
 
-Default is `false`.
+默认值为 `false`。
 
-## Source
+## 源码
 
 [examples/jsm/utils/SceneOptimizer.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/utils/SceneOptimizer.js)

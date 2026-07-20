@@ -1,39 +1,39 @@
 # WebGPUTextureUtils
 
-## Import
+## 导入
 
-WebGPUTextureUtils is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+WebGPUTextureUtils 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import * as WebGPUTextureUtils from 'three/addons/utils/WebGPUTextureUtils.js';
 ```
 
-## Static Methods
+## 静态方法
 
 ### .decompress( blitTexture : CompressedTexture, maxTextureSize : number, renderer : WebGPURenderer ) : Promise.<CanvasTexture> (async)
 
-Returns an uncompressed version of the given compressed texture.
+返回给定压缩纹理的未压缩版本。
 
-This module can only be used with [WebGPURenderer](WebGPURenderer.html). When using [WebGLRenderer](WebGLRenderer.html), import the function from [WebGLTextureUtils](WebGLTextureUtils.html).
+此模块只能与 [WebGPURenderer](WebGPURenderer.html) 一起使用。使用 [WebGLRenderer](WebGLRenderer.html) 时，请从 [WebGLTextureUtils](WebGLTextureUtils.html) 导入该函数。
 
 **blitTexture**
 
-The compressed texture.
+压缩纹理。
 
 **maxTextureSize**
 
-The maximum size of the uncompressed texture.
+未压缩纹理的最大尺寸。
 
-Default is `Infinity`.
+默认值为 `Infinity`。
 
 **renderer**
 
-A reference to a renderer.
+渲染器的引用。
 
-Default is `null`.
+默认值为 `null`。
 
-**Returns:** A Promise that resolved with the uncompressed texture.
+**返回值：** 解析为未压缩纹理的 Promise。
 
-## Source
+## 源码
 
 [examples/jsm/utils/WebGPUTextureUtils.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/utils/WebGPUTextureUtils.js)

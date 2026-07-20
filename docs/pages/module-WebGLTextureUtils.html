@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>WebGLTextureUtils - Three.js Docs</title>
+	<title>WebGLTextureUtils - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -14,18 +14,17 @@
 			<header>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">WebGLTextureUtils</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">WebGLTextureUtils</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import * as WebGLTextureUtils from 'three/addons/utils/WebGLTextureUtils.js';</code></pre>
 				<div class="container-overview">
 				</div>
-				<h2 class="subsection-title">Static Methods</h2>
+				<h2 class="subsection-title">静态方法</h2>
 					<h3 class="name name-method" id=".decompress" translate="no">.<a href="#.decompress">decompress</a><span class="signature">( texture : <span class="param-type"><a href="CompressedTexture.html">CompressedTexture</a></span>, maxTextureSize : <span class="param-type">number</span>, renderer : <span class="param-type"><a href="WebGLRenderer.html">WebGLRenderer</a></span> )</span><span class="type-signature"> : <a href="CanvasTexture.html">CanvasTexture</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns an uncompressed version of the given compressed texture.</p>
-<p>This module can only be used with <a href="WebGLRenderer.html">WebGLRenderer</a>. When using <a href="WebGPURenderer.html">WebGPURenderer</a>,
-import the function from <a href="WebGPUTextureUtils.html">WebGPUTextureUtils</a>.</p>
+							<p>返回给定压缩纹理的未压缩版本。</p>
+<p>此模块只能与 <a href="WebGLRenderer.html">WebGLRenderer</a> 一起使用。使用 <a href="WebGPURenderer.html">WebGPURenderer</a> 时，请从 <a href="WebGPUTextureUtils.html">WebGPUTextureUtils</a> 导入该函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -34,7 +33,7 @@ import the function from <a href="WebGPUTextureUtils.html">WebGPUTextureUtils</a
 										<strong translate="no">texture</strong>
 									</td>
 									<td class="description last">
-										<p>The compressed texture.</p>
+										<p>压缩纹理。</p>
 									</td>
 								</tr>
 								<tr>
@@ -42,8 +41,8 @@ import the function from <a href="WebGPUTextureUtils.html">WebGPUTextureUtils</a
 										<strong translate="no">maxTextureSize</strong>
 									</td>
 									<td class="description last">
-										<p>The maximum size of the uncompressed texture.</p>
-										<p>Default is <code>Infinity</code>.</p>
+										<p>未压缩纹理的最大尺寸。</p>
+										<p>默认值为 <code>Infinity</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -51,17 +50,17 @@ import the function from <a href="WebGPUTextureUtils.html">WebGPUTextureUtils</a
 										<strong translate="no">renderer</strong>
 									</td>
 									<td class="description last">
-										<p>A reference to a renderer.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>渲染器的引用。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The uncompressed texture.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 未压缩的纹理。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/utils/WebGLTextureUtils.js" translate="no" target="_blank" rel="noopener">examples/jsm/utils/WebGLTextureUtils.js</a>
 				</p>

@@ -1,39 +1,39 @@
 # WebGLTextureUtils
 
-## Import
+## 导入
 
-WebGLTextureUtils is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+WebGLTextureUtils 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import * as WebGLTextureUtils from 'three/addons/utils/WebGLTextureUtils.js';
 ```
 
-## Static Methods
+## 静态方法
 
 ### .decompress( texture : CompressedTexture, maxTextureSize : number, renderer : WebGLRenderer ) : CanvasTexture
 
-Returns an uncompressed version of the given compressed texture.
+返回给定压缩纹理的未压缩版本。
 
-This module can only be used with [WebGLRenderer](WebGLRenderer.html). When using [WebGPURenderer](WebGPURenderer.html), import the function from [WebGPUTextureUtils](WebGPUTextureUtils.html).
+此模块只能与 [WebGLRenderer](WebGLRenderer.html) 一起使用。使用 [WebGPURenderer](WebGPURenderer.html) 时，请从 [WebGPUTextureUtils](WebGPUTextureUtils.html) 导入该函数。
 
 **texture**
 
-The compressed texture.
+压缩纹理。
 
 **maxTextureSize**
 
-The maximum size of the uncompressed texture.
+未压缩纹理的最大尺寸。
 
-Default is `Infinity`.
+默认值为 `Infinity`。
 
 **renderer**
 
-A reference to a renderer.
+渲染器的引用。
 
-Default is `null`.
+默认值为 `null`。
 
-**Returns:** The uncompressed texture.
+**返回值：** 未压缩的纹理。
 
-## Source
+## 源码
 
 [examples/jsm/utils/WebGLTextureUtils.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/utils/WebGLTextureUtils.js)

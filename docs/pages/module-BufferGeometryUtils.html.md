@@ -1,187 +1,187 @@
 # BufferGeometryUtils
 
-## Import
+## 导入
 
-BufferGeometryUtils is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+BufferGeometryUtils 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import * as BufferGeometryUtils from 'three/addons/utils/BufferGeometryUtils.js';
 ```
 
-## Methods
+## 方法
 
 ### .computeMikkTSpaceTangents( geometry : BufferGeometry, MikkTSpace : Object, negateSign : boolean ) : BufferGeometry (inner)
 
-Computes vertex tangents using the MikkTSpace algorithm. MikkTSpace generates the same tangents consistently, and is used in most modelling tools and normal map bakers. Use MikkTSpace for materials with normal maps, because inconsistent tangents may lead to subtle visual issues in the normal map, particularly around mirrored UV seams.
+使用 MikkTSpace 算法计算顶点切线。MikkTSpace 能稳定生成一致的切线，大多数建模工具和法线贴图烘焙器都会使用它。对于带有法线贴图的材质，应使用 MikkTSpace，因为不一致的切线可能导致法线贴图出现细微的视觉问题，尤其是在镜像 UV 接缝附近。
 
-In comparison to this method, [BufferGeometry#computeTangents](BufferGeometry.html#computeTangents) (a custom algorithm) generates tangents that probably will not match the tangents in other software. The custom algorithm is sufficient for general use with a custom material, and may be faster than MikkTSpace.
+与此方法相比，[BufferGeometry#computeTangents](BufferGeometry.html#computeTangents)（自定义算法）生成的切线很可能与其他软件中的切线不匹配。自定义算法对于配合自定义材质的一般用途已经足够，且可能比 MikkTSpace 更快。
 
-Returns the original BufferGeometry. Indexed geometries will be de-indexed. Requires position, normal, and uv attributes.
+返回原始 BufferGeometry。已索引的几何体将被去索引。需要 position、normal 和 uv 属性。
 
 **geometry**
 
-The geometry to compute tangents for.
+要计算切线的几何体。
 
 **MikkTSpace**
 
-Instance of `examples/jsm/libs/mikktspace.module.js`, or `mikktspace` npm package. Await `MikkTSpace.ready` before use.
+`examples/jsm/libs/mikktspace.module.js` 的实例，或 `mikktspace` npm 包。使用前请等待 `MikkTSpace.ready`。
 
 **negateSign**
 
-Whether to negate the sign component (.w) of each tangent. Required for normal map conventions in some formats, including glTF.
+是否对每个切线的符号分量（.w）取反。某些格式的法线贴图约定需要此参数，包括 glTF。
 
-Default is `true`.
+默认值为 `true`。
 
-**Returns:** The updated geometry.
+**返回值：** 更新后的几何体。
 
 ### .computeMorphedAttributes( object : Mesh | Line | Points ) : Object (inner)
 
-Calculates the morphed attributes of a morphed/skinned BufferGeometry.
+计算变形/蒙皮 BufferGeometry 的变形属性。
 
-Helpful for Raytracing or Decals (i.e. a `DecalGeometry` applied to a morphed Object with a `BufferGeometry` will use the original `BufferGeometry`, not the morphed/skinned one, generating an incorrect result. Using this function to create a shadow `Object3`D the `DecalGeometry` can be correctly generated).
+有助于光线追踪或贴花（例如，将 `DecalGeometry` 应用于带有 `BufferGeometry` 的变形对象时，会使用原始 `BufferGeometry`，而非变形/蒙皮后的几何体，从而产生错误结果。使用此函数创建影子 `Object3`D，即可正确生成 `DecalGeometry`）。
 
 **object**
 
-The 3D object to compute morph attributes for.
+要计算变形属性的 3D 对象。
 
-**Returns:** An object with original position/normal attributes and morphed ones.
+**返回值：** 包含原始 position/normal 属性和变形后属性的对象。
 
 ### .deepCloneAttribute( attribute : BufferAttribute ) : BufferAttribute (inner)
 
-Performs a deep clone of the given buffer attribute.
+对给定的 buffer attribute 执行深克隆。
 
 **attribute**
 
-The attribute to clone.
+要克隆的属性。
 
-**Returns:** The cloned attribute.
+**返回值：** 克隆后的属性。
 
 ### .deinterleaveAttribute( attribute : InterleavedBufferAttribute ) : BufferAttribute (inner)
 
-Returns a new, non-interleaved version of the given attribute.
+返回给定属性的新的非交错版本。
 
 **attribute**
 
-The interleaved attribute.
+交错属性。
 
-**Returns:** The non-interleaved attribute.
+**返回值：** 非交错属性。
 
 ### .deinterleaveGeometry( geometry : BufferGeometry ) (inner)
 
-Deinterleaves all attributes on the given geometry.
+对给定几何体上的所有属性进行去交错。
 
 **geometry**
 
-The geometry to deinterleave.
+要去交错的几何体。
 
 ### .estimateBytesUsed( geometry : BufferGeometry ) : number (inner)
 
-Returns the amount of bytes used by all attributes to represent the geometry.
+返回所有属性表示该几何体所使用的字节数。
 
 **geometry**
 
-The geometry.
+该几何体。
 
-**Returns:** The estimate bytes used.
+**返回值：** 估算使用的字节数。
 
 ### .interleaveAttributes( attributes : Array.<BufferAttribute> ) : Array.<InterleavedBufferAttribute> (inner)
 
-Interleaves a set of attributes and returns a new array of corresponding attributes that share a single [InterleavedBuffer](InterleavedBuffer.html) instance. All attributes must have compatible types.
+交错一组属性，并返回共享单个 [InterleavedBuffer](InterleavedBuffer.html) 实例的对应属性新数组。所有属性必须具有兼容的类型。
 
 **attributes**
 
-The attributes to interleave.
+要交错的属性。
 
-**Returns:** An array of interleaved attributes. If interleave does not succeed, the method returns `null`.
+**返回值：** 交错属性数组。如果交错不成功，该方法返回 `null`。
 
 ### .mergeAttributes( attributes : Array.<BufferAttribute> ) : BufferAttribute (inner)
 
-Merges a set of attributes into a single instance. All attributes must have compatible properties and types. Instances of [InterleavedBufferAttribute](InterleavedBufferAttribute.html) are not supported.
+将一组属性合并为单个实例。所有属性必须具有兼容的属性和类型。不支持 [InterleavedBufferAttribute](InterleavedBufferAttribute.html) 实例。
 
 **attributes**
 
-The attributes to merge.
+要合并的属性。
 
-**Returns:** The merged attribute. Returns `null` if the merge does not succeed.
+**返回值：** 合并后的属性。如果合并不成功，则返回 `null`。
 
 ### .mergeGeometries( geometries : Array.<BufferGeometry>, useGroups : boolean ) : BufferGeometry (inner)
 
-Merges a set of geometries into a single instance. All geometries must have compatible attributes.
+将一组几何体合并为单个实例。所有几何体必须具有兼容的属性。
 
 **geometries**
 
-The geometries to merge.
+要合并的几何体。
 
 **useGroups**
 
-Whether to use groups or not.
+是否使用分组。
 
-Default is `false`.
+默认值为 `false`。
 
-**Returns:** The merged geometry. Returns `null` if the merge does not succeed.
+**返回值：** 合并后的几何体。如果合并不成功，则返回 `null`。
 
 ### .mergeGroups( geometry : BufferGeometry ) : BufferGeometry (inner)
 
-Merges the [BufferGeometry#groups](BufferGeometry.html#groups) for the given geometry.
+合并给定几何体的 [BufferGeometry#groups](BufferGeometry.html#groups)。
 
 **geometry**
 
-The geometry to modify.
+要修改的几何体。
 
-**Returns:**
+**返回值：**
 
-*   The updated geometry
+*   更新后的几何体
 
 ### .mergeVertices( geometry : BufferGeometry, tolerance : number ) : BufferGeometry (inner)
 
-Returns a new geometry with vertices for which all similar vertex attributes (within tolerance) are merged.
+返回一个新几何体，其中所有相似顶点属性（在容差范围内）的顶点已被合并。
 
 **geometry**
 
-The geometry to merge vertices for.
+要合并顶点的几何体。
 
 **tolerance**
 
-The tolerance value.
+容差值。
 
-Default is `1e-4`.
+默认值为 `1e-4`。
 
-**Returns:**
+**返回值：**
 
-*   The new geometry with merged vertices.
+*   合并顶点后的新几何体。
 
 ### .toCreasedNormals( geometry : BufferGeometry, creaseAngle : number ) : BufferGeometry (inner)
 
-Modifies the supplied geometry if it is non-indexed, otherwise creates a new, non-indexed geometry. Returns the geometry with smooth normals everywhere except faces that meet at an angle greater than the crease angle.
+如果提供的几何体是非索引的，则修改它；否则创建一个新的非索引几何体。返回的几何体除夹角大于折痕角的面之外，各处都具有平滑法线。
 
 **geometry**
 
-The geometry to modify.
+要修改的几何体。
 
 **creaseAngle**
 
-The crease angle in radians.
+折痕角（弧度）。
 
-Default is `Math.PI/3`.
+默认值为 `Math.PI/3`。
 
-**Returns:**
+**返回值：**
 
-*   The updated geometry
+*   更新后的几何体
 
 ### .toTrianglesDrawMode( geometry : BufferGeometry, drawMode : number ) : BufferGeometry (inner)
 
-Returns a new indexed geometry based on `TrianglesDrawMode` draw mode. This mode corresponds to the `gl.TRIANGLES` primitive in WebGL.
+基于 `TrianglesDrawMode` 绘制模式返回一个新的索引几何体。此模式对应于 WebGL 中的 `gl.TRIANGLES` 图元。
 
 **geometry**
 
-The geometry to convert.
+要转换的几何体。
 
 **drawMode**
 
-The current draw mode.
+当前的绘制模式。
 
-**Returns:** The new geometry using `TrianglesDrawMode`.
+**返回值：** 使用 `TrianglesDrawMode` 的新几何体。
 
-## Source
+## 源码
 
 [examples/jsm/utils/BufferGeometryUtils.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/utils/BufferGeometryUtils.js)

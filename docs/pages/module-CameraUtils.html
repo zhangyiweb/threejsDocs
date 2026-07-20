@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>CameraUtils - Three.js Docs</title>
+	<title>CameraUtils - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -14,19 +14,18 @@
 			<header>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">CameraUtils</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">CameraUtils</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import * as CameraUtils from 'three/addons/utils/CameraUtils.js';</code></pre>
 				<div class="container-overview">
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="~frameCorners" translate="no">.<a href="#~frameCorners">frameCorners</a><span class="signature">( camera : <span class="param-type"><a href="PerspectiveCamera.html">PerspectiveCamera</a></span>, bottomLeftCorner : <span class="param-type"><a href="Vector3.html">Vector3</a></span>, bottomRightCorner : <span class="param-type"><a href="Vector3.html">Vector3</a></span>, topLeftCorner : <span class="param-type"><a href="Vector3.html">Vector3</a></span>, estimateViewFrustum : <span class="param-type">boolean</span> )</span> <span class="type-signature">(inner) </span></h3>
 					<div class="method">
 						<div class="description">
-							<p>Set projection matrix and the orientation of a perspective camera
-to exactly frame the corners of an arbitrary rectangle.
-NOTE: This function ignores the standard parameters;
-do not call <code>updateProjectionMatrix()</code> after this.</p>
+							<p>设置透视相机的投影矩阵和朝向，以精确框住任意矩形的四个角。
+注意：此函数会忽略标准参数；
+调用后请勿再调用 <code>updateProjectionMatrix()</code>。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -35,7 +34,7 @@ do not call <code>updateProjectionMatrix()</code> after this.</p>
 										<strong translate="no">camera</strong>
 									</td>
 									<td class="description last">
-										<p>The camera.</p>
+										<p>相机。</p>
 									</td>
 								</tr>
 								<tr>
@@ -43,7 +42,7 @@ do not call <code>updateProjectionMatrix()</code> after this.</p>
 										<strong translate="no">bottomLeftCorner</strong>
 									</td>
 									<td class="description last">
-										<p>The bottom-left corner point.</p>
+										<p>左下角点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -51,7 +50,7 @@ do not call <code>updateProjectionMatrix()</code> after this.</p>
 										<strong translate="no">bottomRightCorner</strong>
 									</td>
 									<td class="description last">
-										<p>The bottom-right corner point.</p>
+										<p>右下角点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -59,7 +58,7 @@ do not call <code>updateProjectionMatrix()</code> after this.</p>
 										<strong translate="no">topLeftCorner</strong>
 									</td>
 									<td class="description last">
-										<p>The top-left corner point.</p>
+										<p>左上角点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -67,14 +66,14 @@ do not call <code>updateProjectionMatrix()</code> after this.</p>
 										<strong translate="no">estimateViewFrustum</strong>
 									</td>
 									<td class="description last">
-										<p>If set to <code>true</code>, the function tries to estimate the camera's FOV.</p>
-										<p>Default is <code>false</code>.</p>
+										<p>若设为 <code>true</code>，该函数会尝试估算相机的 FOV。</p>
+										<p>默认值为 <code>false</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/utils/CameraUtils.js" translate="no" target="_blank" rel="noopener">examples/jsm/utils/CameraUtils.js</a>
 				</p>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>GeometryUtils - Three.js Docs</title>
+	<title>GeometryUtils - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -14,17 +14,17 @@
 			<header>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">GeometryUtils</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">GeometryUtils</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import * as GeometryUtils from 'three/addons/utils/GeometryUtils.js';</code></pre>
 				<div class="container-overview">
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="~gosper" translate="no">.<a href="#~gosper">gosper</a><span class="signature">( size : <span class="param-type">number</span> )</span><span class="type-signature"> : Array.&lt;number></span> <span class="type-signature">(inner) </span></h3>
 					<div class="method">
 						<div class="description">
-							<p>Generates a Gosper curve (lying in the XY plane).</p>
-<p>Reference: <a href="https://gist.github.com/nitaku/6521802" target="_blank" rel="noopener">https://gist.github.com/nitaku/6521802</a></p>
+							<p>生成 Gosper 曲线（位于 XY 平面）。</p>
+<p>参考：<a href="https://gist.github.com/nitaku/6521802" target="_blank" rel="noopener">https://gist.github.com/nitaku/6521802</a></p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -33,21 +33,21 @@
 										<strong translate="no">size</strong>
 									</td>
 									<td class="description last">
-										<p>The size of a single gosper island.</p>
-										<p>Default is <code>1</code>.</p>
+										<p>单个 Gosper 岛屿的大小。</p>
+										<p>默认值为 <code>1</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The gosper island points.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> Gosper 岛屿的点。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="~hilbert2D" translate="no">.<a href="#~hilbert2D">hilbert2D</a><span class="signature">( center : <span class="param-type"><a href="Vector3.html">Vector3</a></span>, size : <span class="param-type">number</span>, iterations : <span class="param-type">number</span>, v0 : <span class="param-type">number</span>, v1 : <span class="param-type">number</span>, v2 : <span class="param-type">number</span>, v3 : <span class="param-type">number</span> )</span><span class="type-signature"> : Array.&lt;<a href="Vector3.html">Vector3</a>></span> <span class="type-signature">(inner) </span></h3>
 					<div class="method">
 						<div class="description">
-							<p>Generates 2D-Coordinates along a Hilbert curve.</p>
-<p>Based on work by: <a href="http://www.openprocessing.org/sketch/15493" target="_blank" rel="noopener">http://www.openprocessing.org/sketch/15493</a></p>
+							<p>沿 Hilbert 曲线生成二维坐标。</p>
+<p>基于以下工作：<a href="http://www.openprocessing.org/sketch/15493" target="_blank" rel="noopener">http://www.openprocessing.org/sketch/15493</a></p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -56,7 +56,7 @@
 										<strong translate="no">center</strong>
 									</td>
 									<td class="description last">
-										<p>Center of Hilbert curve.</p>
+										<p>Hilbert 曲线的中心。</p>
 									</td>
 								</tr>
 								<tr>
@@ -64,8 +64,8 @@
 										<strong translate="no">size</strong>
 									</td>
 									<td class="description last">
-										<p>Total width of Hilbert curve.</p>
-										<p>Default is <code>10</code>.</p>
+										<p>Hilbert 曲线的总宽度。</p>
+										<p>默认值为 <code>10</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -73,8 +73,8 @@
 										<strong translate="no">iterations</strong>
 									</td>
 									<td class="description last">
-										<p>Number of subdivisions.</p>
-										<p>Default is <code>10</code>.</p>
+										<p>细分次数。</p>
+										<p>默认值为 <code>10</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -82,8 +82,8 @@
 										<strong translate="no">v0</strong>
 									</td>
 									<td class="description last">
-										<p>Corner index -X, -Z.</p>
-										<p>Default is <code>0</code>.</p>
+										<p>角点索引 -X, -Z。</p>
+										<p>默认值为 <code>0</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -91,8 +91,8 @@
 										<strong translate="no">v1</strong>
 									</td>
 									<td class="description last">
-										<p>Corner index -X, +Z.</p>
-										<p>Default is <code>1</code>.</p>
+										<p>角点索引 -X, +Z。</p>
+										<p>默认值为 <code>1</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -100,8 +100,8 @@
 										<strong translate="no">v2</strong>
 									</td>
 									<td class="description last">
-										<p>Corner index +X, +Z.</p>
-										<p>Default is <code>2</code>.</p>
+										<p>角点索引 +X, +Z。</p>
+										<p>默认值为 <code>2</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -109,21 +109,21 @@
 										<strong translate="no">v3</strong>
 									</td>
 									<td class="description last">
-										<p>Corner index +X, -Z.</p>
-										<p>Default is <code>3</code>.</p>
+										<p>角点索引 +X, -Z。</p>
+										<p>默认值为 <code>3</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The Hilbert curve points.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> Hilbert 曲线的点。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="~hilbert3D" translate="no">.<a href="#~hilbert3D">hilbert3D</a><span class="signature">( center : <span class="param-type"><a href="Vector3.html">Vector3</a></span>, size : <span class="param-type">number</span>, iterations : <span class="param-type">number</span>, v0 : <span class="param-type">number</span>, v1 : <span class="param-type">number</span>, v2 : <span class="param-type">number</span>, v3 : <span class="param-type">number</span>, v4 : <span class="param-type">number</span>, v5 : <span class="param-type">number</span>, v6 : <span class="param-type">number</span>, v7 : <span class="param-type">number</span> )</span><span class="type-signature"> : Array.&lt;<a href="Vector3.html">Vector3</a>></span> <span class="type-signature">(inner) </span></h3>
 					<div class="method">
 						<div class="description">
-							<p>Generates 3D-Coordinates along a Hilbert curve.</p>
-<p>Based on work by: <a href="https://openprocessing.org/user/5654" target="_blank" rel="noopener">https://openprocessing.org/user/5654</a></p>
+							<p>沿 Hilbert 曲线生成三维坐标。</p>
+<p>基于以下工作：<a href="https://openprocessing.org/user/5654" target="_blank" rel="noopener">https://openprocessing.org/user/5654</a></p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -132,7 +132,7 @@
 										<strong translate="no">center</strong>
 									</td>
 									<td class="description last">
-										<p>Center of Hilbert curve.</p>
+										<p>Hilbert 曲线的中心。</p>
 									</td>
 								</tr>
 								<tr>
@@ -140,8 +140,8 @@
 										<strong translate="no">size</strong>
 									</td>
 									<td class="description last">
-										<p>Total width of Hilbert curve.</p>
-										<p>Default is <code>10</code>.</p>
+										<p>Hilbert 曲线的总宽度。</p>
+										<p>默认值为 <code>10</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -149,8 +149,8 @@
 										<strong translate="no">iterations</strong>
 									</td>
 									<td class="description last">
-										<p>Number of subdivisions.</p>
-										<p>Default is <code>1</code>.</p>
+										<p>细分次数。</p>
+										<p>默认值为 <code>1</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -158,8 +158,8 @@
 										<strong translate="no">v0</strong>
 									</td>
 									<td class="description last">
-										<p>Corner index -X, +Y, -Z.</p>
-										<p>Default is <code>0</code>.</p>
+										<p>角点索引 -X, +Y, -Z。</p>
+										<p>默认值为 <code>0</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -167,8 +167,8 @@
 										<strong translate="no">v1</strong>
 									</td>
 									<td class="description last">
-										<p>Corner index -X, +Y, +Z.</p>
-										<p>Default is <code>1</code>.</p>
+										<p>角点索引 -X, +Y, +Z。</p>
+										<p>默认值为 <code>1</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -176,8 +176,8 @@
 										<strong translate="no">v2</strong>
 									</td>
 									<td class="description last">
-										<p>Corner index -X, -Y, +Z.</p>
-										<p>Default is <code>2</code>.</p>
+										<p>角点索引 -X, -Y, +Z。</p>
+										<p>默认值为 <code>2</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -185,8 +185,8 @@
 										<strong translate="no">v3</strong>
 									</td>
 									<td class="description last">
-										<p>Corner index -X, -Y, -Z.</p>
-										<p>Default is <code>3</code>.</p>
+										<p>角点索引 -X, -Y, -Z。</p>
+										<p>默认值为 <code>3</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -194,8 +194,8 @@
 										<strong translate="no">v4</strong>
 									</td>
 									<td class="description last">
-										<p>Corner index +X, -Y, -Z.</p>
-										<p>Default is <code>4</code>.</p>
+										<p>角点索引 +X, -Y, -Z。</p>
+										<p>默认值为 <code>4</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -203,8 +203,8 @@
 										<strong translate="no">v5</strong>
 									</td>
 									<td class="description last">
-										<p>Corner index +X, -Y, +Z.</p>
-										<p>Default is <code>5</code>.</p>
+										<p>角点索引 +X, -Y, +Z。</p>
+										<p>默认值为 <code>5</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -212,8 +212,8 @@
 										<strong translate="no">v6</strong>
 									</td>
 									<td class="description last">
-										<p>Corner index +X, +Y, +Z.</p>
-										<p>Default is <code>6</code>.</p>
+										<p>角点索引 +X, +Y, +Z。</p>
+										<p>默认值为 <code>6</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -221,19 +221,19 @@
 										<strong translate="no">v7</strong>
 									</td>
 									<td class="description last">
-										<p>Corner index +X, +Y, -Z.</p>
-										<p>Default is <code>7</code>.</p>
+										<p>角点索引 +X, +Y, -Z。</p>
+										<p>默认值为 <code>7</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> <ul>
-<li>The Hilbert curve points.</li>
+							<dt class="tag-returns"><strong>返回值：</strong> <ul>
+<li>Hilbert 曲线的点。</li>
 </ul></dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/utils/GeometryUtils.js" translate="no" target="_blank" rel="noopener">examples/jsm/utils/GeometryUtils.js</a>
 				</p>

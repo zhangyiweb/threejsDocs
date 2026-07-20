@@ -1,10 +1,10 @@
 # ShadowMapViewer
 
-This is a helper for visualising a given light's shadow map. It works for shadow casting lights: DirectionalLight and SpotLight. It renders out the shadow map and displays it on a HUD.
+这是用于可视化给定光源阴影贴图的辅助工具。适用于投射阴影的光源：DirectionalLight 和 SpotLight。它会渲染阴影贴图并在 HUD 上显示。
 
-This module can only be used with [WebGLRenderer](WebGLRenderer.html). When using [WebGPURenderer](WebGPURenderer.html), import the class from `ShadowMapViewerGPU.js`.
+此模块只能与 [WebGLRenderer](WebGLRenderer.html) 配合使用。使用 [WebGPURenderer](WebGPURenderer.html) 时，请从 `ShadowMapViewerGPU.js` 导入该类。
 
-## Code Example
+## 代码示例
 
 ```js
 const lightShadowMapViewer = new ShadowMapViewer( light );
@@ -15,62 +15,62 @@ lightShadowMapViewer.size.height = SHADOW_MAP_HEIGHT / 4;
 lightShadowMapViewer.update();
 ```
 
-## Import
+## 导入
 
-ShadowMapViewer is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+ShadowMapViewer 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { ShadowMapViewer } from 'three/addons/utils/ShadowMapViewer.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new ShadowMapViewer( light : Light )
 
-Constructs a new shadow map viewer.
+构造一个新的阴影贴图查看器。
 
 **light**
 
-The shadow casting light.
+投射阴影的光源。
 
-## Properties
+## 属性
 
 ### .enabled : boolean
 
-Whether to display the shadow map viewer or not.
+是否显示阴影贴图查看器。
 
-Default is `true`.
+默认值为 `true`。
 
 ### .position : Object
 
-The position of the viewer. When changing this property, make sure to call [ShadowMapViewer#update](ShadowMapViewer.html#update).
+查看器的位置。更改此属性时，请确保调用 [ShadowMapViewer#update](ShadowMapViewer.html#update)。
 
-Default is `true`.
+默认值为 `true`。
 
 ### .size : Object
 
-The size of the viewer. When changing this property, make sure to call [ShadowMapViewer#update](ShadowMapViewer.html#update).
+查看器的大小。更改此属性时，请确保调用 [ShadowMapViewer#update](ShadowMapViewer.html#update)。
 
-Default is `true`.
+默认值为 `true`。
 
-## Methods
+## 方法
 
 ### .render( renderer : WebGLRenderer )
 
-Renders the viewer. This method must be called in the app's animation loop.
+渲染查看器。必须在应用的动画循环中调用此方法。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 ### .update()
 
-Updates the viewer.
+更新查看器。
 
 ### .updateForWindowResize()
 
-Resizes the viewer. This method should be called whenever the app's window is resized.
+调整查看器大小。每当应用窗口大小改变时都应调用此方法。
 
-## Source
+## 源码
 
 [examples/jsm/utils/ShadowMapViewer.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/utils/ShadowMapViewer.js)

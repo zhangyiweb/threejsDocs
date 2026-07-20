@@ -1,32 +1,32 @@
 # SortUtils
 
-## Import
+## 导入
 
-SortUtils is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+SortUtils 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import * as SortUtils from 'three/addons/utils/SortUtils.js';
 ```
 
-## Static Methods
+## 静态方法
 
 ### .radixSort( arr : Array.<Object>, opt : Object )
 
-Hybrid radix sort from.
+混合基数排序，来源：
 
 *   [https://gist.github.com/sciecode/93ed864dd77c5c8803c6a86698d68dab](https://gist.github.com/sciecode/93ed864dd77c5c8803c6a86698d68dab)
 *   [https://github.com/mrdoob/three.js/pull/27202#issuecomment-1817640271](https://github.com/mrdoob/three.js/pull/27202#issuecomment-1817640271)
 
-Expects unsigned 32b integer values.
+期望无符号 32 位整数值。
 
 **arr**
 
-The array to sort.
+要排序的数组。
 
 **opt**
 
-The options
+选项。
 
-## Source
+## 源码
 
 [examples/jsm/utils/SortUtils.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/utils/SortUtils.js)

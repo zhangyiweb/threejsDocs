@@ -1,95 +1,95 @@
 # WorkerPool
 
-A simple pool for managing Web Workers.
+用于管理 Web Worker 的简单池。
 
-## Import
+## 导入
 
-WorkerPool is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+WorkerPool 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { WorkerPool } from 'three/addons/utils/WorkerPool.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new WorkerPool( pool : number )
 
-Constructs a new Worker pool.
+构造一个新的 Worker 池。
 
 **pool**
 
-The size of the pool.
+池的大小。
 
-Default is `4`.
+默认值为 `4`。
 
-## Classes
+## 类
 
 [WorkerPool](WorkerPool.html)
 
-## Properties
+## 属性
 
 ### .pool : number
 
-The size of the pool.
+池的大小。
 
-Default is `4`.
+默认值为 `4`。
 
 ### .queue : Array.<Object>
 
-A message queue.
+消息队列。
 
 ### .workerCreator : function
 
-A factory function for creating workers.
+用于创建 Worker 的工厂函数。
 
 ### .workerStatus : number
 
-The current worker status.
+当前 Worker 状态。
 
 ### .workers : Array.<Worker>
 
-An array of Workers.
+Worker 数组。
 
 ### .workersResolve : Array.<function()>
 
-An array with resolve functions for messages.
+用于消息 resolve 函数的数组。
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Terminates all Workers of this pool. Call this method whenever this Worker pool is no longer used in your app.
+终止此池中所有 Worker。当应用中不再使用此 Worker 池时请调用此方法。
 
 ### .postMessage( msg : Object, transfer : Array.<ArrayBuffer> ) : Promise
 
-Post a message to an idle Worker. If no Worker is available, the message is pushed into a message queue for later processing.
+向空闲 Worker 发送消息。如果没有可用的 Worker，消息会被推入消息队列以待后续处理。
 
 **msg**
 
-The message.
+消息。
 
 **transfer**
 
-An array with array buffers for data transfer.
+用于数据传输的 ArrayBuffer 数组。
 
-**Returns:** A Promise that resolves when the message has been processed.
+**返回值：** 消息处理完成后 resolve 的 Promise。
 
 ### .setWorkerCreator( workerCreator : function )
 
-Sets a function that is responsible for creating Workers.
+设置负责创建 Worker 的函数。
 
 **workerCreator**
 
-The worker creator function.
+Worker 创建函数。
 
 ### .setWorkerLimit( pool : number )
 
-Sets the Worker limit
+设置 Worker 上限。
 
 **pool**
 
-The size of the pool.
+池的大小。
 
-## Source
+## 源码
 
 [examples/jsm/utils/WorkerPool.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/utils/WorkerPool.js)

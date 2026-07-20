@@ -218,75 +218,75 @@ TSL object that represents the shader variable `EmissiveColor`.
 
 ### .faceDirection : Node.<float> (constant)
 
-TSL object that represents the front facing status as a number instead of a bool. `1` means front facing, `-1` means back facing.
+表示以数字而非布尔值表示正面朝向状态的 TSL 对象。`1` 表示正面朝向，`-1` 表示背面朝向。
 
 ### .frameGroup : UniformGroupNode (constant)
 
-TSL object that represents a shared uniform group node which is updated once per frame.
+表示每帧更新一次的共享 uniform 组节点的 TSL 对象。
 
 ### .frameId : UniformNode.<uint> (constant)
 
-Represents the current frame ID.
+表示当前帧 ID。
 
 ### .frontFacing : FrontFacingNode.<bool> (constant)
 
-TSL object that represents whether a primitive is front or back facing
+表示图元是正面还是背面朝向的 TSL 对象
 
 ### .gapSize : PropertyNode.<float> (constant)
 
-TSL object that represents the shader variable `gapSize`.
+表示着色器变量 `gapSize` 的 TSL 对象。
 
 ### .getSpecularDominantDirection (constant)
 
-Specular dominant direction — smooth surfaces lean toward reflection, rough toward normal.
+镜面主方向 — 光滑表面偏向反射方向，粗糙表面偏向法线方向。
 
 ### .getTemporalVarianceFactor (constant)
 
-Temporal accumulation variance factor in `[0, 1]`. Higher values mean more history confidence.
+时间累积方差因子，范围 `[0, 1]`。值越高表示历史数据置信度越高。
 
 ### .globalId : ComputeBuiltinNode.<uvec3> (constant)
 
-A non-linearized 3-dimensional representation of the current invocation's position within a 3D global grid.
+当前调用在 3D 全局网格中位置的非线性化三维表示。
 
 ### .highpModelNormalViewMatrix : Node.<mat3> (constant)
 
-TSL object that represents the object's model normal view in `highp` precision which is achieved by computing the matrix in JS and not in the shader.
+表示对象模型法线视图（`highp` 精度）的 TSL 对象，通过在 JS 中计算矩阵而非在着色器中计算来实现。
 
 ### .highpModelViewMatrix : Node.<mat4> (constant)
 
-TSL object that represents the object's model view in `highp` precision which is achieved by computing the matrix in JS and not in the shader.
+表示对象模型视图（`highp` 精度）的 TSL 对象，通过在 JS 中计算矩阵而非在着色器中计算来实现。
 
 ### .instanceIndex : IndexNode (constant)
 
-TSL object that represents the index of either a mesh instance or an invocation of a compute shader.
+表示网格实例或计算着色器调用索引的 TSL 对象。
 
 ### .invocationLocalIndex : IndexNode (constant)
 
-TSL object that represents the index of a compute invocation within the scope of a workgroup load.
+表示工作组负载范围内计算调用索引的 TSL 对象。
 
 ### .invocationSubgroupIndex : IndexNode (constant)
 
-TSL object that represents the index of a compute invocation within the scope of a subgroup.
+表示子组范围内计算调用索引的 TSL 对象。
 
 ### .ior : PropertyNode.<float> (constant)
 
-TSL object that represents the shader variable `IOR`.
+表示着色器变量 `IOR` 的 TSL 对象。
 
 ### .iridescence : PropertyNode.<float> (constant)
 
-TSL object that represents the shader variable `Iridescence`.
+表示着色器变量 `Iridescence` 的 TSL 对象。
 
 ### .iridescenceIOR : PropertyNode.<float> (constant)
 
-TSL object that represents the shader variable `IridescenceIOR`.
+表示着色器变量 `IridescenceIOR` 的 TSL 对象。
 
 ### .iridescenceThickness : PropertyNode.<float> (constant)
 
-TSL object that represents the shader variable `IridescenceThickness`.
+表示着色器变量 `IridescenceThickness` 的 TSL 对象。
 
 ### .karisTemporalBlend (constant)
 
-Inverse-luminance temporal blend with optional adaptive trust (Karis-style).
+逆亮度时间混合，可选自适应信任（Karis 风格）。
 
 ### .lobeNormalFalloff (constant)
 
@@ -2545,35 +2545,35 @@ Default is `{}`.
 
 ### .equal( a : Node, b : Node ) : OperatorNode
 
-Checks if two nodes are equal.
+检查两个节点是否相等。
 
 **a**
 
-The first input.
+第一个输入。
 
 **b**
 
-The second input.
+第二个输入。
 
 ### .equirectDirection( uv : Node.<vec2> ) : Node.<vec3>
 
-TSL function for creating an equirect direction node.
+用于创建 equirect 方向节点的 TSL 函数。
 
-Can be used to compute a direction vector from the given equirectangular UV coordinates.
+可用于根据给定的等距矩形 UV 坐标计算方向向量。
 
 **uv**
 
-The equirectangular UV coordinates.
+等距矩形 UV 坐标。
 
-Default is `UV()`.
+默认值为 `UV()`。
 
-**Returns:** The computed direction vector.
+**返回值：** 计算得到的方向向量。
 
 ### .equirectUV( direction : Node.<vec3> ) : Node.<vec2>
 
-TSL function for creating an equirect uv node.
+用于创建 equirect UV 节点的 TSL 函数。
 
-Can be used to compute texture coordinates for projecting an equirectangular texture onto a mesh for using it as the scene's background.
+可用于计算纹理坐标，将等距矩形纹理投影到网格上，用作场景背景。
 
 ```js
 scene.backgroundNode = texture( equirectTexture, equirectUV() );
@@ -2581,239 +2581,239 @@ scene.backgroundNode = texture( equirectTexture, equirectUV() );
 
 **direction**
 
-A direction vector for sampling which is by default `positionWorldDirection`.
+用于采样的方向向量，默认为 `positionWorldDirection`。
 
-Default is `positionWorldDirection`.
+默认值为 `positionWorldDirection`。
 
 ### .exp( x : Node | number ) : Node
 
-Returns the natural exponentiation of the parameter.
+返回参数的自然指数。
 
 **x**
 
-The parameter.
+参数。
 
 ### .exp2( x : Node | number ) : Node
 
-Returns 2 raised to the power of the parameter.
+返回 2 的参数次幂。
 
 **x**
 
-The parameter.
+参数。
 
 ### .exponentialHeightFogFactor( density : Node, height : Node )
 
-Constructs a new height fog factor node. This fog factor requires a Y-up coordinate system.
+构造新的高度雾因子节点。此雾因子需要 Y 轴向上的坐标系。
 
 **density**
 
-Defines the fog density.
+定义雾密度。
 
 **height**
 
-The height threshold in world space. Everything below this y-coordinate is affected by fog.
+世界空间中的高度阈值。低于此 y 坐标的所有内容都会受雾影响。
 
 ### .expression( snippet : string, nodeType : string ) : ExpressionNode
 
-TSL function for creating an expression node.
+用于创建表达式节点的 TSL 函数。
 
 **snippet**
 
-The native code snippet.
+原生代码片段。
 
 **nodeType**
 
-The node type.
+节点类型。
 
-Default is `'void'`.
+默认值为 `'void'`。
 
 ### .faceForward( N : Node.<(vec2|vec3|vec4)>, I : Node.<(vec2|vec3|vec4)>, Nref : Node.<(vec2|vec3|vec4)> ) : Node.<(vec2|vec3|vec4)>
 
-Returns a vector pointing in the same direction as another.
+返回与另一个向量指向相同方向的向量。
 
 **N**
 
-The vector to orient.
+要定向的向量。
 
 **I**
 
-The incident vector.
+入射向量。
 
 **Nref**
 
-The reference vector.
+参考向量。
 
 ### .film( inputNode : Node.<vec4>, intensityNode : Node.<float>, uvNode : Node.<vec2> ) : FilmNode
 
-TSL function for creating a film node for post processing.
+用于创建后期处理胶片节点的 TSL 函数。
 
 **inputNode**
 
-The node that represents the input of the effect.
+表示效果输入的节点。
 
 **intensityNode**
 
-A node that represents the effect's intensity.
+表示效果强度的节点。
 
-Default is `null`.
+默认值为 `null`。
 
 **uvNode**
 
-A node that allows to pass custom (e.g. animated) uv data.
+允许传递自定义（例如动画）uv 数据的节点。
 
-Default is `null`.
+默认值为 `null`。
 
 ### .floatBitsToInt( value : Node.<float> ) : BitcastNode
 
-Bitcasts a float or a vector of floats to a corresponding integer type with the same element size.
+将 float 或 float 向量按位转换为具有相同元素大小的对应整数类型。
 
 **value**
 
-The float or vector of floats to bitcast.
+要按位转换的 float 或 float 向量。
 
 ### .floatBitsToUint( value : Node.<float> ) : BitcastNode
 
-Bitcasts a float or a vector of floats to a corresponding unsigned integer type with the same element size.
+将 float 或 float 向量按位转换为具有相同元素大小的对应无符号整数类型。
 
 **value**
 
-The float or vector of floats to bitcast.
+要按位转换的 float 或 float 向量。
 
 ### .floor( x : Node | number ) : Node
 
-Finds the nearest integer less than or equal to the parameter.
+查找小于或等于参数的最近整数。
 
 **x**
 
-The parameter.
+参数。
 
 ### .fog( color : Node, factor : Node )
 
-This class can be used to configure a fog for the scene. Nodes of this type are assigned to `Scene.fogNode`.
+此类可用于为场景配置雾。此类型的节点被分配给 `Scene.fogNode`。
 
 **color**
 
-Defines the color of the fog.
+定义雾的颜色。
 
 **factor**
 
-Defines how the fog is factored in the scene.
+定义雾在场景中的混合方式。
 
 ### .fract( x : Node | number ) : Node
 
-Computes the fractional part of the parameter.
+计算参数的小数部分。
 
 **x**
 
-The parameter.
+参数。
 
 ### .fsr1( node : Node.<vec4>, sharpness : number | Node.<float>, denoise : boolean | Node.<bool> ) : FSR1Node
 
-TSL function for creating an FSR 1 node for post processing.
+用于创建后期处理 FSR 1 节点的 TSL 函数。
 
 **node**
 
-The node that represents the input of the effect.
+表示效果输入的节点。
 
 **sharpness**
 
-RCAS sharpening strength. 0 = maximum, 2 = none.
+RCAS 锐化强度。0 = 最大，2 = 无。
 
-Default is `0.2`.
+默认值为 `0.2`。
 
 **denoise**
 
-Whether to attenuate RCAS sharpening in noisy areas.
+是否在噪声区域衰减 RCAS 锐化。
 
-Default is `false`.
+默认值为 `false`。
 
 ### .fwidth( x : Node | number ) : Node
 
-Returns the sum of the absolute derivatives in x and y.
+返回 x 和 y 方向绝对导数的和。
 
 **x**
 
-The parameter.
+参数。
 
 ### .fxaa( node : Node.<vec4> ) : FXAANode
 
-TSL function for creating a FXAA node for anti-aliasing via post processing.
+用于创建通过后期处理实现抗锯齿的 FXAA 节点的 TSL 函数。
 
 **node**
 
-The node that represents the input of the effect.
+表示效果输入的节点。
 
 ### .gain( x : Node.<float>, k : Node.<float> ) : Node.<float>
 
-A function that remaps the `[0,1]` interval into the `[0,1]` interval. Expands the sides and compresses the center, and keeps `0.5` mapped to `0.5`. Reference: [https://iquilezles.org/articles/functions/](https://iquilezles.org/articles/functions/).
+将 `[0,1]` 区间重新映射到 `[0,1]` 区间的函数。扩展两端并压缩中心，保持 `0.5` 映射到 `0.5`。参考：[https://iquilezles.org/articles/functions/](https://iquilezles.org/articles/functions/)。
 
 **x**
 
-The value to remap.
+要重新映射的值。
 
 **k**
 
-`k=1` is the identity curve,`k<1` produces the classic `gain()` shape, and `k>1` produces "s" shaped curves.
+`k=1` 是恒等曲线，`k<1` 产生经典的 `gain()` 形状，`k>1` 产生 "s" 形曲线。
 
-**Returns:** The remapped value.
+**返回值：** 重新映射后的值。
 
 ### .gaussianBlur( node : Node.<vec4>, directionNode : Node.<(vec2|float)>, sigma : number, options : Object ) : GaussianBlurNode
 
-TSL function for creating a gaussian blur node for post processing.
+用于创建后期处理高斯模糊节点的 TSL 函数。
 
 **node**
 
-The node that represents the input of the effect.
+表示效果输入的节点。
 
 **directionNode**
 
-Defines the direction and radius of the blur.
+定义模糊的方向和半径。
 
 **sigma**
 
-Controls the kernel of the blur filter. Higher values mean a wider blur radius.
+控制模糊滤镜的核。值越高表示模糊半径越大。
 
 **options**
 
-Additional options for the gaussian blur effect.
+高斯模糊效果的附加选项。
 
-Default is `{}`.
+默认值为 `{}`。
 
 **premultipliedAlpha**
 
-Whether to use premultiplied alpha for the blur effect.
+是否对模糊效果使用预乘 alpha。
 
-Default is `false`.
+默认值为 `false`。
 
 **resolutionScale**
 
-The resolution of the effect. 0.5 means half the resolution of the texture node.
+效果的分辨率。0.5 表示纹理节点分辨率的一半。
 
-Default is `1`.
+默认值为 `1`。
 
 ### .getNormalFromDepth( uv : Node.<vec2>, depthTexture : DepthTexture, projectionMatrixInverse : Node.<mat4> ) : Node.<vec3>
 
-Computes a normal vector based on depth data. Can be used as a fallback when no normal render target is available or if flat surface normals are required.
+根据深度数据计算法线向量。当没有可用的法线渲染目标或需要平面法线时可作为后备方案。
 
 **uv**
 
-The texture coordinate.
+纹理坐标。
 
 **depthTexture**
 
-The depth texture.
+深度纹理。
 
 **projectionMatrixInverse**
 
-The camera's inverse projection matrix.
+相机的逆投影矩阵。
 
-**Returns:** The computed normal vector.
+**返回值：** 计算得到的法线向量。
 
 ### .getParallaxCorrectNormal( normal : Node.<vec3>, cubeSize : Node.<vec3>, cubePos : Node.<vec3> ) : Node.<vec3>
 
-This computes a parallax corrected normal which is used for box-projected cube mapping (BPCEM).
+计算用于盒投影立方体贴图（BPCEM）的视差校正法线。
 
-Reference: [https://devlog-martinsh.blogspot.com/2011/09/box-projected-cube-environment-mapping.html](https://devlog-martinsh.blogspot.com/2011/09/box-projected-cube-environment-mapping.html)
+参考：[https://devlog-martinsh.blogspot.com/2011/09/box-projected-cube-environment-mapping.html](https://devlog-martinsh.blogspot.com/2011/09/box-projected-cube-environment-mapping.html)
 
 ```js
 const uvNode = getParallaxCorrectNormal( reflectVector, vec3( 200, 100, 100 ), vec3( 0, - 50, 0 ) );
@@ -2822,516 +2822,516 @@ material.envNode = pmremTexture( renderTarget.texture, uvNode );
 
 **normal**
 
-The normal to correct.
+要校正的法线。
 
 **cubeSize**
 
-The cube size should reflect the size of the environment (BPCEM is usually applied in closed environments like rooms).
+立方体大小应反映环境的大小（BPCEM 通常应用于房间等封闭环境）。
 
 **cubePos**
 
-The cube position.
+立方体位置。
 
-**Returns:** The parallax corrected normal.
+**返回值：** 视差校正后的法线。
 
 ### .getScreenPosition( viewPosition : Node.<vec3>, projectionMatrix : Node.<mat4> ) : Node.<vec2>
 
-Computes a screen position expressed as uv coordinates based on a fragment's position in view space and the camera's projection matrix
+根据片段在视图空间中的位置和相机的投影矩阵，计算以 uv 坐标表示的屏幕位置
 
 **viewPosition**
 
-The fragments position in view space.
+片段在视图空间中的位置。
 
 **projectionMatrix**
 
-The camera's projection matrix.
+相机的投影矩阵。
 
-**Returns:** The fragment's screen position expressed as uv coordinates.
+**返回值：** 以 uv 坐标表示的片段屏幕位置。
 
 ### .getShadowMaterial( light : Light ) : NodeMaterial
 
-Retrieves or creates a shadow material for the given light source.
+检索或为给定光源创建阴影材质。
 
-This function checks if a shadow material already exists for the provided light. If not, it creates a new `NodeMaterial` configured for shadow rendering and stores it in the `shadowMaterialLib` for future use.
+此函数检查是否已存在所提供光源的阴影材质。如果没有，则创建新的 `NodeMaterial` 用于阴影渲染，并将其存储在 `shadowMaterialLib` 中以供将来使用。
 
 **light**
 
-The light source for which the shadow material is needed. If the light is a point light, a depth node is calculated using the linear shadow distance.
+需要阴影材质的光源。如果是点光源，则使用线性阴影距离计算深度节点。
 
-**Returns:** The shadow material associated with the given light.
+**返回值：** 与给定光源关联的阴影材质。
 
 ### .getShadowRenderObjectFunction( renderer : Renderer, shadow : LightShadow, shadowType : number, useVelocity : boolean ) : shadowRenderObjectFunction
 
-Creates a function to render shadow objects in a scene.
+创建用于在场景中渲染阴影对象的函数。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **shadow**
 
-The light shadow object containing shadow properties.
+包含阴影属性的光源阴影对象。
 
 **shadowType**
 
-The type of shadow map (e.g., BasicShadowMap).
+阴影贴图类型（例如 BasicShadowMap）。
 
 **useVelocity**
 
-Whether to use velocity data for rendering.
+是否使用速度数据进行渲染。
 
-**Returns:** A function that renders shadow objects.
+**返回值：** 渲染阴影对象的函数。
 
 ### .getViewPosition( screenPosition : Node.<vec2>, depth : Node.<float>, projectionMatrixInverse : Node.<mat4> ) : Node.<vec3>
 
-Computes a position in view space based on a fragment's screen position expressed as uv coordinates, the fragments depth value and the camera's inverse projection matrix.
+根据以 uv 坐标表示的片段屏幕位置、片段深度值和相机的逆投影矩阵，计算视图空间中的位置。
 
 **screenPosition**
 
-The fragment's screen position expressed as uv coordinates.
+以 uv 坐标表示的片段屏幕位置。
 
 **depth**
 
-The fragment's depth value.
+片段的深度值。
 
 **projectionMatrixInverse**
 
-The camera's inverse projection matrix.
+相机的逆投影矩阵。
 
-**Returns:** The fragments position in view space.
+**返回值：** 片段在视图空间中的位置。
 
 ### .glsl( src : string, includes : Array.<Node> ) : CodeNode
 
-TSL function for creating a GLSL code node.
+用于创建 GLSL 代码节点的 TSL 函数。
 
 **src**
 
-The native code.
+原生代码。
 
 **includes**
 
-An array of includes.
+include 数组。
 
 ### .godrays( depthNode : TextureNode, camera : Camera, light : DirectionalLight | PointLight ) : GodraysNode
 
-TSL function for creating a Godrays effect.
+用于创建 Godrays 效果的 TSL 函数。
 
 **depthNode**
 
-A texture node that represents the scene's depth.
+表示场景深度的纹理节点。
 
 **camera**
 
-The camera the scene is rendered with.
+用于渲染场景的相机。
 
 **light**
 
-The light the godrays are rendered for.
+渲染 godrays 的光源。
 
 ### .grayscale( color : Node.<vec3> ) : Node.<vec3>
 
-Computes a grayscale value for the given RGB color value.
+计算给定 RGB 颜色值的灰度值。
 
 **color**
 
-The color value to compute the grayscale for.
+要计算灰度的颜色值。
 
-**Returns:** The grayscale color.
+**返回值：** 灰度颜色。
 
 ### .greaterThan( a : Node, b : Node ) : OperatorNode
 
-Checks if the first node is greater than the second.
+检查第一个节点是否大于第二个节点。
 
 **a**
 
-The first input.
+第一个输入。
 
 **b**
 
-The second input.
+第二个输入。
 
 ### .greaterThanEqual( a : Node, b : Node ) : OperatorNode
 
-Checks if the first node is greater than or equal to the second.
+检查第一个节点是否大于或等于第二个节点。
 
 **a**
 
-The first input.
+第一个输入。
 
 **b**
 
-The second input.
+第二个输入。
 
 ### .hardwareClipping() : ClippingNode
 
-TSL function for setting up hardware-based clipping.
+用于设置基于硬件的裁剪的 TSL 函数。
 
 ### .hash( seed : Node.<float> ) : Node.<float>
 
-Generates a hash value in the range `[0, 1]` from the given seed.
+根据给定种子值生成范围 `[0, 1]` 内的哈希值。
 
 **seed**
 
-The seed.
+种子值。
 
-**Returns:** The hash value.
+**返回值：** 哈希值。
 
 ### .hashBlur( textureNode : Node.<vec4>, bluramount : Node.<float>, options : Object ) : Node.<vec4>
 
-Applies a hash blur effect to the given texture node.
+对给定纹理节点应用哈希模糊效果。
 
-The approach of this blur is different compared to Gaussian and box blur since it does not rely on a kernel to apply a convolution. Instead, it reads the base texture multiple times in a random pattern and then averages the samples. A typical artifact of this technique is a slightly noisy appearance of the blur which can be mitigated by increasing the number of iterations (see `repeats` parameter). Compared to Gaussian blur, hash blur requires just a single pass.
+这种模糊方式与 Gaussian 模糊和 box 模糊不同，它不依赖卷积核进行卷积。相反，它以随机模式多次读取基础纹理，然后对采样结果取平均。该技术的典型副作用是模糊结果略带噪点，可通过增加迭代次数（参见 `repeats` 参数）来减轻。与高斯模糊相比，哈希模糊只需单次通道。
 
-Reference: [https://www.shadertoy.com/view/4lXXWn](https://www.shadertoy.com/view/4lXXWn).
+参考：[https://www.shadertoy.com/view/4lXXWn](https://www.shadertoy.com/view/4lXXWn)。
 
 **textureNode**
 
-The texture node that should be blurred.
+需要模糊的纹理节点。
 
 **bluramount**
 
-This node determines the amount of blur.
+该节点决定模糊程度。
 
-Default is `float(0.1)`.
+默认值为 `float(0.1)`。
 
 **options**
 
-Additional options for the hash blur effect.
+哈希模糊效果的附加选项。
 
-Default is `{}`.
+默认值为 `{}`。
 
 **repeats**
 
-The number of iterations for the blur effect.
+模糊效果的迭代次数。
 
-Default is `float(45)`.
+默认值为 `float(45)`。
 
 **premultipliedAlpha**
 
-Whether to use premultiplied alpha for the blur effect.
+是否对模糊效果使用预乘 alpha。
 
-Default is `false`.
+默认值为 `false`。
 
-**Returns:** The blurred texture node.
+**返回值：** 模糊后的纹理节点。
 
 ### .hue( color : Node.<vec3>, adjustment : Node.<float> ) : Node.<vec3>
 
-Updates the hue component of the given RGB color while preserving its luminance and saturation.
+更新给定 RGB 颜色的色相分量，同时保留其亮度和饱和度。
 
 **color**
 
-The input color.
+输入颜色。
 
 **adjustment**
 
-Defines the degree of hue rotation in radians. A positive value rotates the hue clockwise, while a negative value rotates it counterclockwise.
+定义色相旋转的弧度。正值顺时针旋转色相，负值逆时针旋转色相。
 
-Default is `1`.
+默认值为 `1`。
 
-**Returns:** The updated color.
+**返回值：** 更新后的颜色。
 
 ### .increment( a : Node ) : OperatorNode
 
-Increments a node by 1 and returns the previous value.
+将节点加 1 并返回之前的值。
 
 **a**
 
-The node to increment.
+要递增的节点。
 
 ### .incrementBefore( a : Node ) : OperatorNode
 
-Increments a node by 1.
+将节点加 1。
 
 **a**
 
-The node to increment.
+要递增的节点。
 
 ### .inspector( node : Node, name : string, callback : function | null ) : Node
 
-Creates an inspector node to wrap around a given node for inspection purposes.
+创建一个检查器节点，用于包装给定节点以便检查。
 
 **node**
 
-The node to inspect.
+要检查的节点。
 
 **name**
 
-Optional name for the inspector node.
+检查器节点的可选名称。
 
-Default is `''`.
+默认值为 `''`。
 
 **callback**
 
-Optional callback to modify the node during setup.
+在设置期间修改节点的可选回调。
 
-Default is `null`.
+默认值为 `null`。
 
-**Returns:** The inspector node.
+**返回值：** 检查器节点。
 
 ### .instance( count : number, matrices : InstancedBufferAttribute | StorageInstancedBufferAttribute, colors : InstancedBufferAttribute | StorageInstancedBufferAttribute )
 
-TSL function representing the standard instancing vertex shader setup. Transforms positionLocal and normalLocal, and assigns varying color in-place.
+表示标准实例化顶点着色器设置的 TSL 函数。变换 positionLocal 和 normalLocal，并就地赋值 varying color。
 
 **count**
 
-The instance count.
+实例数量。
 
 **matrices**
 
-The instanced transformation matrices.
+实例化变换矩阵。
 
 **colors**
 
-The optional instanced colors.
+可选的实例化颜色。
 
-Default is `null`.
+默认值为 `null`。
 
 ### .instancedArray( count : number | TypedArray, type : string | Struct ) : StorageBufferNode
 
-TSL function for creating a storage buffer node with a configured `StorageInstancedBufferAttribute`.
+用于创建已配置 `StorageInstancedBufferAttribute` 的存储缓冲区节点的 TSL 函数。
 
 **count**
 
-The data count. It is also valid to pass a typed array as an argument.
+数据数量。也可以传入 typed array 作为参数。
 
 **type**
 
-The data type.
+数据类型。
 
-Default is `'float'`.
+默认值为 `'float'`。
 
 ### .instancedBufferAttribute( array : BufferAttribute | InterleavedBuffer | TypedArray, type : string, stride : number, offset : number ) : BufferAttributeNode | Node
 
-TSL function for creating a buffer attribute node but with enabled instancing
+用于创建缓冲区属性节点并启用实例化的 TSL 函数。
 
 **array**
 
-The attribute data.
+属性数据。
 
 **type**
 
-The buffer type (e.g. `'vec3'`).
+缓冲区类型（例如 `'vec3'`）。
 
-Default is `null`.
+默认值为 `null`。
 
 **stride**
 
-The buffer stride.
+缓冲区步幅。
 
-Default is `0`.
+默认值为 `0`。
 
 **offset**
 
-The buffer offset.
+缓冲区偏移。
 
-Default is `0`.
+默认值为 `0`。
 
 ### .instancedDynamicBufferAttribute( array : BufferAttribute | InterleavedBuffer | TypedArray, type : string, stride : number, offset : number ) : BufferAttributeNode | Node
 
-TSL function for creating a buffer attribute node but with dynamic draw usage and enabled instancing
+用于创建缓冲区属性节点并启用动态绘制用法与实例化的 TSL 函数。
 
 **array**
 
-The attribute data.
+属性数据。
 
 **type**
 
-The buffer type (e.g. `'vec3'`).
+缓冲区类型（例如 `'vec3'`）。
 
-Default is `null`.
+默认值为 `null`。
 
 **stride**
 
-The buffer stride.
+缓冲区步幅。
 
-Default is `0`.
+默认值为 `0`。
 
 **offset**
 
-The buffer offset.
+缓冲区偏移。
 
-Default is `0`.
+默认值为 `0`。
 
 ### .instancedMesh( instancedMesh : InstancedMesh )
 
-TSL wrapper for applying instanced mesh rendering setup.
+用于应用实例化网格渲染设置的 TSL 包装器。
 
 **instancedMesh**
 
-The instanced mesh.
+实例化网格。
 
 ### .intBitsToFloat( value : Node.<int> ) : BitcastNode
 
-Bitcasts an integer or a vector of integers to a corresponding float type with the same element size.
+将整数或整数向量按位重解释为具有相同元素大小的对应浮点类型。
 
 **value**
 
-The integer or vector of integers to bitcast.
+要按位重解释的整数或整数向量。
 
 ### .interleavedGradientNoise( position : Node.<vec2> ) : Node.<float>
 
-Interleaved Gradient Noise (IGN) from Jimenez 2014.
+Jimenez 2014 提出的交错梯度噪声（Interleaved Gradient Noise，IGN）。
 
-IGN has "low discrepancy" resulting in evenly distributed samples. It's superior compared to default white noise, blue noise or Bayer.
+IGN 具有「低差异」特性，可产生均匀分布的采样。相比默认白噪声、蓝噪声或 Bayer 噪声更优。
 
-References:
+参考：
 
 *   [https://www.iryoku.com/next-generation-post-processing-in-call-of-duty-advanced-warfare/](https://www.iryoku.com/next-generation-post-processing-in-call-of-duty-advanced-warfare/)
 *   [https://blog.demofox.org/2022/01/01/interleaved-gradient-noise-a-different-kind-of-low-discrepancy-sequence/](https://blog.demofox.org/2022/01/01/interleaved-gradient-noise-a-different-kind-of-low-discrepancy-sequence/)
 
 **position**
 
-The input position, usually screen coordinates.
+输入位置，通常为屏幕坐标。
 
-**Returns:** The noise value.
+**返回值：** 噪声值。
 
 ### .inverse( x : Node.<(mat2|mat3|mat4)> ) : Node.<(mat2|mat3|mat4)>
 
-Returns the inverse of a matrix.
+返回矩阵的逆矩阵。
 
 **x**
 
-The parameter.
+参数。
 
 ### .inverseSqrt( x : Node | number ) : Node
 
-Returns the inverse of the square root of the parameter.
+返回参数平方根的倒数。
 
 **x**
 
-The parameter.
+参数。
 
 ### .isolate( node : Node ) : IsolateNode
 
-TSL function for creating a cache node.
+用于创建缓存节点的 TSL 函数。
 
 **node**
 
-The node that should be cached.
+应被缓存的节点。
 
 ### .js( src : string, includes : Array.<Node> ) : CodeNode
 
-TSL function for creating a JS code node.
+用于创建 JS 代码节点的 TSL 函数。
 
 **src**
 
-The native code.
+原生代码。
 
 **includes**
 
-An array of includes.
+include 数组。
 
 ### .label( node : Node, name : string ) : ContextNode
 
-TSL function for defining a label context value for a given node.
+用于为给定节点定义标签上下文值的 TSL 函数。
 
 **node**
 
-The node whose context should be modified.
+应修改其上下文的节点。
 
 **name**
 
-The name/label to set.
+要设置的名称/标签。
 
-**Deprecated:** Yes
+**已弃用：** 是
 
 ### .length( x : Node ) : Node.<float>
 
-Calculates the length of a vector.
+计算向量的长度。
 
 **x**
 
-The parameter.
+参数。
 
 ### .lengthSq( a : Node.<(vec2|vec3|vec4)> ) : Node.<float>
 
-Calculate the squared length of a vector.
+计算向量的平方长度。
 
 **a**
 
-The vector.
+向量。
 
 ### .lensflare( node : TextureNode, params : Object ) : LensflareNode
 
-TSL function for creating a bloom-based lens flare effect.
+用于创建基于 bloom 的镜头光晕效果的 TSL 函数。
 
 **node**
 
-The node that represents the scene's bloom.
+表示场景 bloom 的节点。
 
 **params**
 
-The parameter object for configuring the effect.
+用于配置效果的参数对象。
 
 **ghostTint**
 
-Defines the tint of the flare/ghosts.
+定义光晕/鬼影的色调。
 
-Default is `vec3(1, 1, 1)`.
+默认值为 `vec3(1, 1, 1)`。
 
 **threshold**
 
-Controls the size and strength of the effect. A higher threshold results in smaller flares.
+控制效果的大小和强度。阈值越高，光晕越小。
 
-Default is `float(0.5)`.
+默认值为 `float(0.5)`。
 
 **ghostSamples**
 
-Represents the number of flares/ghosts per bright spot which pivot around the center.
+表示每个亮点围绕中心旋转的光晕/鬼影数量。
 
-Default is `float(4)`.
+默认值为 `float(4)`。
 
 **ghostSpacing**
 
-Defines the spacing of the flares/ghosts.
+定义光晕/鬼影的间距。
 
-Default is `float(0.25)`.
+默认值为 `float(0.25)`。
 
 **ghostAttenuationFactor**
 
-Defines the attenuation factor of flares/ghosts.
+定义光晕/鬼影的衰减因子。
 
-Default is `float(25)`.
+默认值为 `float(25)`。
 
 **downSampleRatio**
 
-Defines how downsampling since the effect is usually not rendered at full resolution.
+定义降采样方式，因为该效果通常不在全分辨率下渲染。
 
-Default is `4`.
+默认值为 `4`。
 
 ### .lessThan( a : Node, b : Node ) : OperatorNode
 
-Checks if the first node is less than the second.
+检查第一个节点是否小于第二个节点。
 
 **a**
 
-The first input.
+第一个输入。
 
 **b**
 
-The second input.
+第二个输入。
 
 ### .lessThanEqual( a : Node, b : Node ) : OperatorNode
 
-Checks if the first node is less than or equal to the second.
+检查第一个节点是否小于或等于第二个节点。
 
 **a**
 
-The first input.
+第一个输入。
 
 **b**
 
-The second input.
+第二个输入。
 
 ### .lightPosition( light : Light ) : UniformNode.<vec3>
 
-TSL function for getting the position in world space for the given light.
+用于获取给定灯光在世界空间中位置的 TSL 函数。
 
 **light**
 
-The light source.
+光源。
 
-**Returns:** The light's position in world space.
+**返回值：** 灯光在世界空间中的位置。
 
 ### .lightProjectionUV( light : Light, position : Node.<vec3> ) : Node.<vec3>
 
