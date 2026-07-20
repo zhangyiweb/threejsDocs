@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>GroundedSkybox - Three.js Docs</title>
+	<title>GroundedSkybox - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,10 +13,10 @@
 	<h1 translate="no">GroundedSkybox</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A ground-projected skybox.</p>
-<p>By default the object is centered at the camera, so it is often helpful to set
-<code>skybox.position.y = height</code> to put the ground at the origin.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>一种地面投影天空盒。</p>
+<p>默认情况下该对象以相机为中心，因此通常建议设置
+<code>skybox.position.y = height</code>，以使地面位于原点。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const height = 15, radius = 100;
 const skybox = new GroundedSkybox( envMap, height, radius );
 skybox.position.y = height;
@@ -24,15 +24,15 @@ scene.add( skybox );
 </code></pre></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">GroundedSkybox</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">GroundedSkybox</span> 是一个附加组件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { GroundedSkybox } from 'three/addons/objects/GroundedSkybox.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="GroundedSkybox" translate="no">new <a href="#GroundedSkybox">GroundedSkybox</a><span class="signature">( map : <span class="param-type"><a href="Texture.html">Texture</a></span>, height : <span class="param-type">number</span>, radius : <span class="param-type">number</span>, resolution : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new ground-projected skybox.</p>
+							<p>构造一个新的地面投影天空盒。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -41,7 +41,7 @@ scene.add( skybox );
 										<strong translate="no">map</strong>
 									</td>
 									<td class="description last">
-										<p>The environment map to use.</p>
+										<p>要使用的环境贴图。</p>
 									</td>
 								</tr>
 								<tr>
@@ -49,8 +49,8 @@ scene.add( skybox );
 										<strong translate="no">height</strong>
 									</td>
 									<td class="description last">
-										<p>The height is how far the camera that took the photo was above the ground.
-A larger value will magnify the downward part of the image.</p>
+										<p>高度表示拍摄照片时相机距地面的距离。
+较大的值会放大图像的下方部分。</p>
 									</td>
 								</tr>
 								<tr>
@@ -58,7 +58,7 @@ A larger value will magnify the downward part of the image.</p>
 										<strong translate="no">radius</strong>
 									</td>
 									<td class="description last">
-										<p>The radius of the skybox. Must be large enough to ensure the scene's camera stays inside.</p>
+										<p>天空盒的半径。必须足够大，以确保场景中的相机始终位于其内部。</p>
 									</td>
 								</tr>
 								<tr>
@@ -66,15 +66,15 @@ A larger value will magnify the downward part of the image.</p>
 										<strong translate="no">resolution</strong>
 									</td>
 									<td class="description last">
-										<p>The geometry resolution of the skybox.</p>
-										<p>Default is <code>128</code>.</p>
+										<p>天空盒的几何分辨率。</p>
+										<p>默认值为 <code>128</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/objects/GroundedSkybox.js" translate="no" target="_blank" rel="noopener">examples/jsm/objects/GroundedSkybox.js</a>
 				</p>

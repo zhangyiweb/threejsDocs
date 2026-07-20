@@ -2,131 +2,131 @@
 
 # RenderPixelatedPass
 
-A special type of render pass that produces a pixelated beauty pass.
+一种特殊的渲染通道，用于生成像素化的最终画面（beauty pass）。
 
-## Code Example
+## 代码示例
 
 ```js
 const renderPixelatedPass = new RenderPixelatedPass( 6, scene, camera );
 composer.addPass( renderPixelatedPass );
 ```
 
-## Import
+## 导入
 
-RenderPixelatedPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+RenderPixelatedPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { RenderPixelatedPass } from 'three/addons/postprocessing/RenderPixelatedPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new RenderPixelatedPass( pixelSize : number, scene : Scene, camera : Camera, options : Object )
 
-Constructs a new render pixelated pass.
+构造一个新的像素化渲染通道。
 
 **pixelSize**
 
-The effect's pixel size.
+效果的像素大小。
 
 **scene**
 
-The scene to render.
+要渲染的场景。
 
 **camera**
 
-The camera.
+相机。
 
 **options**
 
-The pass options.
+通道选项。
 
-## Properties
+## 属性
 
 ### .camera : Camera
 
-The camera.
+相机。
 
 ### .depthEdgeStrength : number
 
-The normal edge strength.
+深度边缘强度。
 
-Default is `0.4`.
+默认值为 `0.4`。
 
 ### .normalEdgeStrength : number
 
-The normal edge strength.
+法线边缘强度。
 
-Default is `0.3`.
+默认值为 `0.3`。
 
 ### .pixelSize : number
 
-The effect's pixel size.
+效果的像素大小。
 
 ### .pixelatedMaterial : ShaderMaterial
 
-The pixelated material.
+像素化材质。
 
 ### .scene : Scene
 
-The scene to render.
+要渲染的场景。
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the pixelation pass.
+执行像素化通道。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
 ### .setPixelSize( pixelSize : number )
 
-Sets the effect's pixel size.
+设置效果的像素大小。
 
 **pixelSize**
 
-The pixel size to set.
+要设置的像素大小。
 
 ### .setSize( width : number, height : number )
 
-Sets the size of the pass.
+设置通道的尺寸。
 
 **width**
 
-The width to set.
+要设置的宽度。
 
 **height**
 
-The height to set.
+要设置的高度。
 
-**Overrides:** [Pass#setSize](Pass.html#setSize)
+**重写：** [Pass#setSize](Pass.html#setSize)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/RenderPixelatedPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/RenderPixelatedPass.js)

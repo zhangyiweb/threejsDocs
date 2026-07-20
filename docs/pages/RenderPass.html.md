@@ -2,139 +2,139 @@
 
 # RenderPass
 
-This class represents a render pass. It takes a camera and a scene and produces a beauty pass for subsequent post processing effects.
+此类表示一个渲染通道。它接收相机和场景，并为后续后处理效果生成美化通道。
 
-## Code Example
+## 代码示例
 
 ```js
 const renderPass = new RenderPass( scene, camera );
 composer.addPass( renderPass );
 ```
 
-## Import
+## 导入
 
-RenderPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+RenderPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new RenderPass( scene : Scene, camera : Camera, overrideMaterial : Material, clearColor : number | Color | string, clearAlpha : number )
 
-Constructs a new render pass.
+构造一个新的渲染通道。
 
 **scene**
 
-The scene to render.
+要渲染的场景。
 
 **camera**
 
-The camera.
+相机。
 
 **overrideMaterial**
 
-The override material. If set, this material is used for all objects in the scene.
+覆盖材质。若设置，场景中的所有对象都将使用该材质。
 
-Default is `null`.
+默认值为 `null`。
 
 **clearColor**
 
-The clear color of the render pass.
+渲染通道的清除颜色。
 
-Default is `null`.
+默认值为 `null`。
 
 **clearAlpha**
 
-The clear alpha of the render pass.
+渲染通道的清除透明度。
 
-Default is `null`.
+默认值为 `null`。
 
-## Properties
+## 属性
 
 ### .camera : Camera
 
-The camera.
+相机。
 
 ### .clear : boolean
 
-Overwritten to perform a clear operation by default.
+已重写，默认执行清除操作。
 
-Default is `true`.
+默认值为 `true`。
 
-**Overrides:** [Pass#clear](Pass.html#clear)
+**重写：** [Pass#clear](Pass.html#clear)
 
 ### .clearAlpha : number
 
-The clear alpha of the render pass.
+渲染通道的清除透明度。
 
-Default is `null`.
+默认值为 `null`。
 
 ### .clearColor : number | Color | string
 
-The clear color of the render pass.
+渲染通道的清除颜色。
 
-Default is `null`.
+默认值为 `null`。
 
 ### .clearDepth : boolean
 
-If set to `true`, only the depth can be cleared when `clear` is to `false`.
+若设为 `true`，则在 `clear` 为 `false` 时仅清除深度。
 
-Default is `false`.
+默认值为 `false`。
 
 ### .isRenderPass : boolean (readonly)
 
-This flag indicates that this pass renders the scene itself.
+此标志表示该通道会渲染场景本身。
 
-Default is `true`.
+默认值为 `true`。
 
 ### .needsSwap : boolean
 
-Overwritten to disable the swap.
+已重写，以禁用交换。
 
-Default is `false`.
+默认值为 `false`。
 
-**Overrides:** [Pass#needsSwap](Pass.html#needsSwap)
+**重写：** [Pass#needsSwap](Pass.html#needsSwap)
 
 ### .overrideMaterial : Material
 
-The override material. If set, this material is used for all objects in the scene.
+覆盖材质。若设置，场景中的所有对象都将使用该材质。
 
-Default is `null`.
+默认值为 `null`。
 
 ### .scene : Scene
 
-The scene to render.
+要渲染的场景。
 
-## Methods
+## 方法
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs a beauty pass with the configured scene and camera.
+使用已配置的场景和相机执行美化通道。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/RenderPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/RenderPass.js)

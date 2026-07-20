@@ -2,9 +2,9 @@
 
 # BokehPass
 
-Pass for creating depth of field (DOF) effect.
+用于创建景深（DOF）效果的通道。
 
-## Code Example
+## 代码示例
 
 ```js
 const bokehPass = new BokehPass( scene, camera, {
@@ -15,49 +15,49 @@ const bokehPass = new BokehPass( scene, camera, {
 composer.addPass( bokehPass );
 ```
 
-## Import
+## 导入
 
-BokehPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+BokehPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { BokehPass } from 'three/addons/postprocessing/BokehPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new BokehPass( scene : Scene, camera : Camera, params : BokehPass~Options )
 
-Constructs a new Bokeh pass.
+构造一个新的 Bokeh 通道。
 
 **scene**
 
-The scene to render the DOF for.
+要为其渲染景深效果的场景。
 
 **camera**
 
-The camera.
+相机。
 
 **params**
 
-The pass options.
+通道选项。
 
-## Properties
+## 属性
 
 ### .camera : Camera
 
-The camera.
+相机。
 
 ### .materialBokeh : ShaderMaterial
 
-The pass bokeh material.
+通道的散景材质。
 
 ### .scene : Scene
 
-The scene to render the DOF for.
+要为其渲染景深效果的场景。
 
 ### .uniforms : Object
 
-The pass uniforms. Use this object if you want to update the `focus`, `aperture` or `maxblur` values at runtime.
+通道的 uniform 对象。如需在运行时更新 `focus`、`aperture` 或 `maxblur` 值，可使用此对象。
 
 ```js
 pass.uniforms.focus.value = focus;
@@ -65,81 +65,81 @@ pass.uniforms.aperture.value = aperture;
 pass.uniforms.maxblur.value = maxblur;
 ```
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the Bokeh pass.
+执行 Bokeh 通道渲染。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
 ### .setSize( width : number, height : number )
 
-Sets the size of the pass.
+设置通道的尺寸。
 
 **width**
 
-The width to set.
+要设置的宽度。
 
 **height**
 
-The height to set.
+要设置的高度。
 
-**Overrides:** [Pass#setSize](Pass.html#setSize)
+**重写：** [Pass#setSize](Pass.html#setSize)
 
-## Type Definitions
+## 类型定义
 
 ### .Options
 
-Constructor options of `BokehPass`.
+`BokehPass` 的构造函数选项。
 
 **focus**  
 number
 
-Defines the effect's focus which is the distance along the camera's look direction in world units.
+定义效果的焦点，即沿相机观察方向的世界单位距离。
 
-Default is `1`.
+默认值为 `1`。
 
 **aperture**  
 number
 
-Defines the effect's aperture.
+定义效果的光圈。
 
-Default is `0.025`.
+默认值为 `0.025`。
 
 **maxblur**  
 number
 
-Defines the effect's maximum blur.
+定义效果的最大模糊程度。
 
-Default is `1`.
+默认值为 `1`。
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/BokehPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/BokehPass.js)

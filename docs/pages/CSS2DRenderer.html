@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>CSS2DRenderer - Three.js Docs</title>
+	<title>CSS2DRenderer - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -12,23 +12,22 @@
 	<h1 translate="no">CSS2DRenderer</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>This renderer is a simplified version of <a href="CSS3DRenderer.html">CSS3DRenderer</a>. The only transformation that is
-supported is translation.</p>
-<p>The renderer is very useful if you want to combine HTML based labels with 3D objects. Here too,
-the respective DOM elements are wrapped into an instance of <a href="CSS2DObject.html">CSS2DObject</a> and added to the
-scene graph. All other types of renderable 3D objects (like meshes or point clouds) are ignored.</p>
-<p><code>CSS2DRenderer</code> only supports 100% browser and display zoom.</p></div>
+				<div class="class-description"><p>此渲染器是 <a href="CSS3DRenderer.html">CSS3DRenderer</a> 的简化版本。仅支持平移变换。</p>
+<p>若希望将基于 HTML 的标签与 3D 对象结合使用，该渲染器非常有用。同样地，
+相应的 DOM 元素会被包装为 <a href="CSS2DObject.html">CSS2DObject</a> 实例并添加到
+场景图中。所有其他类型的可渲染 3D 对象（如网格或点云）都会被忽略。</p>
+<p><code>CSS2DRenderer</code> 仅支持 100% 的浏览器缩放和显示缩放。</p></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">CSS2DRenderer</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">CSS2DRenderer</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { CSS2DRenderer } from 'three/addons/renderers/CSS2DRenderer.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="CSS2DRenderer" translate="no">new <a href="#CSS2DRenderer">CSS2DRenderer</a><span class="signature">( parameters : <span class="param-type"><a href="CSS2DRenderer.html#~Parameters">CSS2DRenderer~Parameters</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new CSS2D renderer.</p>
+							<p>构造一个新的 CSS2D 渲染器。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -37,43 +36,43 @@ scene graph. All other types of renderable 3D objects (like meshes or point clou
 										<strong translate="no">parameters</strong>
 									</td>
 									<td class="description last">
-										<p>The parameters.</p>
+										<p>参数。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="domElement" translate="no">.<a href="#domElement">domElement</a><span class="type-signature"> : HTMLElement</span> </h3>
 					<div class="description">
-						<p>The DOM where the renderer appends its child-elements.</p>
+						<p>渲染器将其子元素追加到的 DOM。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="sortObjects" translate="no">.<a href="#sortObjects">sortObjects</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Controls whether the renderer assigns <code>z-index</code> values to CSS2DObject DOM elements.
-If set to <code>true</code>, z-index values are assigned first based on the <code>renderOrder</code>
-and secondly - the distance to the camera. If set to <code>false</code>, no z-index values are assigned.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>控制渲染器是否为 CSS2DObject 的 DOM 元素分配 <code>z-index</code> 值。
+若设为 <code>true</code>，则首先根据 <code>renderOrder</code> 分配 z-index，
+其次根据到相机的距离分配。若设为 <code>false</code>，则不分配 z-index 值。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="getSize" translate="no">.<a href="#getSize">getSize</a><span class="signature">()</span><span class="type-signature"> : Object</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns an object containing the width and height of the renderer.</p>
+							<p>返回包含渲染器宽度和高度的对象。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The size of the renderer.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 渲染器的尺寸。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="render" translate="no">.<a href="#render">render</a><span class="signature">( scene : <span class="param-type"><a href="Object3D.html">Object3D</a></span>, camera : <span class="param-type"><a href="Camera.html">Camera</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Renders the given scene using the given camera.</p>
+							<p>使用给定相机渲染给定场景。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -82,7 +81,7 @@ and secondly - the distance to the camera. If set to <code>false</code>, no z-in
 										<strong translate="no">scene</strong>
 									</td>
 									<td class="description last">
-										<p>A scene or any other type of 3D object.</p>
+										<p>场景或其他类型的 3D 对象。</p>
 									</td>
 								</tr>
 								<tr>
@@ -90,7 +89,7 @@ and secondly - the distance to the camera. If set to <code>false</code>, no z-in
 										<strong translate="no">camera</strong>
 									</td>
 									<td class="description last">
-										<p>The camera.</p>
+										<p>相机。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -99,7 +98,7 @@ and secondly - the distance to the camera. If set to <code>false</code>, no z-in
 					<h3 class="name name-method" id="setSize" translate="no">.<a href="#setSize">setSize</a><span class="signature">( width : <span class="param-type">number</span>, height : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Resizes the renderer to the given width and height.</p>
+							<p>将渲染器调整为给定的宽度和高度。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -108,7 +107,7 @@ and secondly - the distance to the camera. If set to <code>false</code>, no z-in
 										<strong translate="no">width</strong>
 									</td>
 									<td class="description last">
-										<p>The width of the renderer.</p>
+										<p>渲染器的宽度。</p>
 									</td>
 								</tr>
 								<tr>
@@ -116,17 +115,17 @@ and secondly - the distance to the camera. If set to <code>false</code>, no z-in
 										<strong translate="no">height</strong>
 									</td>
 									<td class="description last">
-										<p>The height of the renderer.</p>
+										<p>渲染器的高度。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-				<h2 class="subsection-title">Type Definitions</h2>
+				<h2 class="subsection-title">类型定义</h2>
 				<div class="member">
 					<h3 class="name" id="~Parameters" translate="no">.<a href="#~Parameters">Parameters</a> </h3>
 					<div class="description">
-						<p>Constructor parameters of <code>CSS2DRenderer</code>.</p>
+						<p><code>CSS2DRenderer</code> 的构造函数参数。</p>
 					</div>
 <table class="props">
 	<tbody>
@@ -137,14 +136,14 @@ and secondly - the distance to the camera. If set to <code>false</code>, no z-in
 <span class="param-type">HTMLElement</span>
 				</td>
 			<td class="description last">
-				<p>A DOM element where the renderer appends its child-elements.
-If not passed in here, a new div element will be created.</p>
+				<p>渲染器将其子元素追加到的 DOM 元素。
+若未在此处传入，将创建一个新的 div 元素。</p>
 			</td>
 		</tr>
 	</tbody>
 </table>
 				</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/renderers/CSS2DRenderer.js" translate="no" target="_blank" rel="noopener">examples/jsm/renderers/CSS2DRenderer.js</a>
 				</p>

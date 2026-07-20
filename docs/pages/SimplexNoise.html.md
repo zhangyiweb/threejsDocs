@@ -1,85 +1,85 @@
 # SimplexNoise
 
-A utility class providing noise functions.
+提供噪声函数的工具类。
 
-The code is based on [Simplex noise demystified](https://web.archive.org/web/20210210162332/http://staffwww.itn.liu.se/~stegu/simplexnoise/simplexnoise.pdf) by Stefan Gustavson, 2005.
+代码基于 Stefan Gustavson 于 2005 年撰写的 [Simplex noise demystified](https://web.archive.org/web/20210210162332/http://staffwww.itn.liu.se/~stegu/simplexnoise/simplexnoise.pdf)。
 
-## Import
+## 导入
 
-SimplexNoise is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+SimplexNoise 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { SimplexNoise } from 'three/addons/math/SimplexNoise.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new SimplexNoise( r : Object )
 
-Constructs a new simplex noise object.
+构造一个新的 simplex noise 对象。
 
 **r**
 
-A math utility class that holds a `random()` method. This makes it possible to pass in custom random number generator.
+持有 `random()` 方法的数学工具类。这使得可以传入自定义随机数生成器。
 
-Default is `Math`.
+默认值为 `Math`。
 
-## Methods
+## 方法
 
 ### .noise( xin : number, yin : number ) : number
 
-A 2D simplex noise method.
+二维 simplex 噪声方法。
 
 **xin**
 
-The x coordinate.
+x 坐标。
 
 **yin**
 
-The y coordinate.
+y 坐标。
 
-**Returns:** The noise value.
+**返回值：** 噪声值。
 
 ### .noise3d( xin : number, yin : number, zin : number ) : number
 
-A 3D simplex noise method.
+三维 simplex 噪声方法。
 
 **xin**
 
-The x coordinate.
+x 坐标。
 
 **yin**
 
-The y coordinate.
+y 坐标。
 
 **zin**
 
-The z coordinate.
+z 坐标。
 
-**Returns:** The noise value.
+**返回值：** 噪声值。
 
 ### .noise4d( x : number, y : number, z : number, w : number ) : number
 
-A 4D simplex noise method.
+四维 simplex 噪声方法。
 
 **x**
 
-The x coordinate.
+x 坐标。
 
 **y**
 
-The y coordinate.
+y 坐标。
 
 **z**
 
-The z coordinate.
+z 坐标。
 
 **w**
 
-The w coordinate.
+w 坐标。
 
-**Returns:** The noise value.
+**返回值：** 噪声值。
 
-## Source
+## 源码
 
 [examples/jsm/math/SimplexNoise.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/math/SimplexNoise.js)

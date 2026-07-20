@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>MDDLoader - Three.js Docs</title>
+	<title>MDDLoader - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,17 +13,17 @@
 	<h1 translate="no">MDDLoader</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A loader for the MDD format.</p>
-<p>MDD stores a position for every vertex in a model for every frame in an animation.
-Similar to BVH, it can be used to transfer animation data between different 3D applications or engines.</p>
-<p>MDD stores its data in binary format (big endian) in the following way:</p>
+				<div class="class-description"><p>MDD 格式的加载器。</p>
+<p>MDD 为模型中每个顶点的每一帧动画存储一个位置。
+与 BVH 类似，它可用于在不同 3D 应用程序或引擎之间传输动画数据。</p>
+<p>MDD 以二进制格式（大端序）存储数据，结构如下：</p>
 <ul>
-<li>number of frames (a single uint32)</li>
-<li>number of vertices (a single uint32)</li>
-<li>time values for each frame (sequence of float32)</li>
-<li>vertex data for each frame (sequence of float32)</li>
+<li>帧数（单个 uint32）</li>
+<li>顶点数（单个 uint32）</li>
+<li>每帧的时间值（float32 序列）</li>
+<li>每帧的顶点数据（float32 序列）</li>
 </ul></div>
-				<h2>Code Example</h2>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const loader = new MDDLoader();
 const result = await loader.loadAsync( 'models/mdd/cube.mdd' );
 const morphTargets = result.morphTargets;
@@ -39,15 +39,15 @@ mixer.clipAction( clip ).play();
 </code></pre></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">MDDLoader</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">MDDLoader</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { MDDLoader } from 'three/addons/loaders/MDDLoader.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="MDDLoader" translate="no">new <a href="#MDDLoader">MDDLoader</a><span class="signature">( manager : <span class="param-type"><a href="LoadingManager.html">LoadingManager</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new MDD loader.</p>
+							<p>构造一个新的 MDD 加载器。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -56,19 +56,19 @@ mixer.clipAction( clip ).play();
 										<strong translate="no">manager</strong>
 									</td>
 									<td class="description last">
-										<p>The loading manager.</p>
+										<p>加载管理器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="load" translate="no">.<a href="#load">load</a><span class="signature">( url : <span class="param-type">string</span>, onLoad : <span class="param-type">function</span>, onProgress : <span class="param-type"><a href="global.html#onProgressCallback">onProgressCallback</a></span>, onError : <span class="param-type"><a href="global.html#onErrorCallback">onErrorCallback</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Starts loading from the given URL and passes the loaded MDD asset
-to the <code>onLoad()</code> callback.</p>
+							<p>从指定 URL 开始加载，并将加载的 MDD 资源
+传递给 <code>onLoad()</code> 回调。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -77,7 +77,7 @@ to the <code>onLoad()</code> callback.</p>
 										<strong translate="no">url</strong>
 									</td>
 									<td class="description last">
-										<p>The path/URL of the file to be loaded. This can also be a data URI.</p>
+										<p>要加载的文件路径/URL，也可以是 data URI。</p>
 									</td>
 								</tr>
 								<tr>
@@ -85,7 +85,7 @@ to the <code>onLoad()</code> callback.</p>
 										<strong translate="no">onLoad</strong>
 									</td>
 									<td class="description last">
-										<p>Executed when the loading process has been finished.</p>
+										<p>加载完成时执行。</p>
 									</td>
 								</tr>
 								<tr>
@@ -93,7 +93,7 @@ to the <code>onLoad()</code> callback.</p>
 										<strong translate="no">onProgress</strong>
 									</td>
 									<td class="description last">
-										<p>Executed while the loading is in progress.</p>
+										<p>加载进行中时执行。</p>
 									</td>
 								</tr>
 								<tr>
@@ -101,20 +101,20 @@ to the <code>onLoad()</code> callback.</p>
 										<strong translate="no">onError</strong>
 									</td>
 									<td class="description last">
-										<p>Executed when errors occur.</p>
+										<p>发生错误时执行。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Loader.html#load">Loader#load</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Loader.html#load">Loader#load</a></dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="parse" translate="no">.<a href="#parse">parse</a><span class="signature">( data : <span class="param-type">ArrayBuffer</span> )</span><span class="type-signature"> : Object</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Parses the given MDD data and returns an object holding the animation clip and the respective
-morph targets.</p>
+							<p>解析给定的 MDD 数据并返回包含动画片段和相应
+变形目标的对象。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -123,19 +123,19 @@ morph targets.</p>
 										<strong translate="no">data</strong>
 									</td>
 									<td class="description last">
-										<p>The raw XYZ data as an array buffer.</p>
+										<p>作为 ArrayBuffer 的原始 XYZ 数据。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Loader.html#parse">Loader#parse</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Loader.html#parse">Loader#parse</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The result object.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 结果对象。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/loaders/MDDLoader.js" translate="no" target="_blank" rel="noopener">examples/jsm/loaders/MDDLoader.js</a>
 				</p>

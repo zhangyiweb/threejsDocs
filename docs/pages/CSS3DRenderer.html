@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>CSS3DRenderer - Three.js Docs</title>
+	<title>CSS3DRenderer - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -12,29 +12,29 @@
 	<h1 translate="no">CSS3DRenderer</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>This renderer can be used to apply hierarchical 3D transformations to DOM elements
-via the CSS3 <a href="https://www.w3schools.com/cssref/css3_pr_transform.asp" target="_blank" rel="noopener">transform</a> property.
-<code>CSS3DRenderer</code> is particularly interesting if you want to apply 3D effects to a website without
-canvas based rendering. It can also be used in order to combine DOM elements with WebGL content.</p>
-<p>There are, however, some important limitations:</p>
+				<div class="class-description"><p>此渲染器可通过 CSS3 <a href="https://www.w3schools.com/cssref/css3_pr_transform.asp" target="_blank" rel="noopener">transform</a> 属性
+对 DOM 元素应用分层 3D 变换。
+若希望在不使用基于 canvas 的渲染的情况下为网站应用 3D 效果，
+<code>CSS3DRenderer</code> 尤其有用。也可用于将 DOM 元素与 WebGL 内容结合。</p>
+<p>不过，存在一些重要限制：</p>
 <ul>
-<li>It's not possible to use the material system of <em>three.js</em>.</li>
-<li>It's also not possible to use geometries.</li>
-<li>The renderer only supports 100% browser and display zoom.</li>
+<li>无法使用 <em>three.js</em> 的材质系统。</li>
+<li>也无法使用几何体。</li>
+<li>该渲染器仅支持 100% 的浏览器缩放和显示缩放。</li>
 </ul>
-<p>So <code>CSS3DRenderer</code> is just focused on ordinary DOM elements. These elements are wrapped into special
-3D objects (<a href="CSS3DObject.html">CSS3DObject</a> or <a href="CSS3DSprite.html">CSS3DSprite</a>) and then added to the scene graph.</p></div>
+<p>因此 <code>CSS3DRenderer</code> 仅面向普通 DOM 元素。这些元素会被包装为特殊的
+3D 对象（<a href="CSS3DObject.html">CSS3DObject</a> 或 <a href="CSS3DSprite.html">CSS3DSprite</a>），然后添加到场景图中。</p></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">CSS3DRenderer</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">CSS3DRenderer</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { CSS3DRenderer } from 'three/addons/renderers/CSS3DRenderer.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="CSS3DRenderer" translate="no">new <a href="#CSS3DRenderer">CSS3DRenderer</a><span class="signature">( parameters : <span class="param-type"><a href="CSS3DRenderer.html#~Parameters">CSS3DRenderer~Parameters</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new CSS3D renderer.</p>
+							<p>构造一个新的 CSS3D 渲染器。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -43,34 +43,34 @@ canvas based rendering. It can also be used in order to combine DOM elements wit
 										<strong translate="no">parameters</strong>
 									</td>
 									<td class="description last">
-										<p>The parameters.</p>
+										<p>参数。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="domElement" translate="no">.<a href="#domElement">domElement</a><span class="type-signature"> : HTMLElement</span> </h3>
 					<div class="description">
-						<p>The DOM where the renderer appends its child-elements.</p>
+						<p>渲染器将其子元素追加到的 DOM。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="getSize" translate="no">.<a href="#getSize">getSize</a><span class="signature">()</span><span class="type-signature"> : Object</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns an object containing the width and height of the renderer.</p>
+							<p>返回包含渲染器宽度和高度的对象。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The size of the renderer.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 渲染器的尺寸。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="render" translate="no">.<a href="#render">render</a><span class="signature">( scene : <span class="param-type"><a href="Object3D.html">Object3D</a></span>, camera : <span class="param-type"><a href="Camera.html">Camera</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Renders the given scene using the given camera.</p>
+							<p>使用给定相机渲染给定场景。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -79,7 +79,7 @@ canvas based rendering. It can also be used in order to combine DOM elements wit
 										<strong translate="no">scene</strong>
 									</td>
 									<td class="description last">
-										<p>A scene or any other type of 3D object.</p>
+										<p>场景或其他类型的 3D 对象。</p>
 									</td>
 								</tr>
 								<tr>
@@ -87,7 +87,7 @@ canvas based rendering. It can also be used in order to combine DOM elements wit
 										<strong translate="no">camera</strong>
 									</td>
 									<td class="description last">
-										<p>The camera.</p>
+										<p>相机。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -96,7 +96,7 @@ canvas based rendering. It can also be used in order to combine DOM elements wit
 					<h3 class="name name-method" id="setSize" translate="no">.<a href="#setSize">setSize</a><span class="signature">( width : <span class="param-type">number</span>, height : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Resizes the renderer to the given width and height.</p>
+							<p>将渲染器调整为给定的宽度和高度。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -105,7 +105,7 @@ canvas based rendering. It can also be used in order to combine DOM elements wit
 										<strong translate="no">width</strong>
 									</td>
 									<td class="description last">
-										<p>The width of the renderer.</p>
+										<p>渲染器的宽度。</p>
 									</td>
 								</tr>
 								<tr>
@@ -113,17 +113,17 @@ canvas based rendering. It can also be used in order to combine DOM elements wit
 										<strong translate="no">height</strong>
 									</td>
 									<td class="description last">
-										<p>The height of the renderer.</p>
+										<p>渲染器的高度。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-				<h2 class="subsection-title">Type Definitions</h2>
+				<h2 class="subsection-title">类型定义</h2>
 				<div class="member">
 					<h3 class="name" id="~Parameters" translate="no">.<a href="#~Parameters">Parameters</a> </h3>
 					<div class="description">
-						<p>Constructor parameters of <code>CSS3DRenderer</code>.</p>
+						<p><code>CSS3DRenderer</code> 的构造函数参数。</p>
 					</div>
 <table class="props">
 	<tbody>
@@ -134,14 +134,14 @@ canvas based rendering. It can also be used in order to combine DOM elements wit
 <span class="param-type">HTMLElement</span>
 				</td>
 			<td class="description last">
-				<p>A DOM element where the renderer appends its child-elements.
-If not passed in here, a new div element will be created.</p>
+				<p>渲染器将其子元素追加到的 DOM 元素。
+若未在此处传入，将创建一个新的 div 元素。</p>
 			</td>
 		</tr>
 	</tbody>
 </table>
 				</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/renderers/CSS3DRenderer.js" translate="no" target="_blank" rel="noopener">examples/jsm/renderers/CSS3DRenderer.js</a>
 				</p>

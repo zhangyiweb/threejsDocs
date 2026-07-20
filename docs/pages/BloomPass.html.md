@@ -2,123 +2,123 @@
 
 # BloomPass
 
-A pass for a basic Bloom effect.
+用于实现基础泛光（Bloom）效果的通道。
 
-[UnrealBloomPass](UnrealBloomPass.html) produces a more advanced Bloom but is also more expensive.
+[UnrealBloomPass](UnrealBloomPass.html) 可产生更高级的泛光效果，但开销也更大。
 
-## Code Example
+## 代码示例
 
 ```js
 const effectBloom = new BloomPass( 0.75 );
 composer.addPass( effectBloom );
 ```
 
-## Import
+## 导入
 
-BloomPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+BloomPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { BloomPass } from 'three/addons/postprocessing/BloomPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new BloomPass( strength : number, kernelSize : number, sigma : number )
 
-Constructs a new Bloom pass.
+构造一个新的 Bloom 通道。
 
 **strength**
 
-The Bloom strength.
+泛光强度。
 
-Default is `1`.
+默认值为 `1`。
 
 **kernelSize**
 
-The kernel size.
+卷积核大小。
 
-Default is `25`.
+默认值为 `25`。
 
 **sigma**
 
-The sigma.
+标准差（sigma）。
 
-Default is `4`.
+默认值为 `4`。
 
-## Properties
+## 属性
 
 ### .combineUniforms : Object
 
-The combine pass uniforms.
+合成通道的 uniform 对象。
 
 ### .convolutionUniforms : Object
 
-The convolution pass uniforms.
+卷积通道的 uniform 对象。
 
 ### .materialCombine : ShaderMaterial
 
-The combine pass material.
+合成通道的材质。
 
 ### .materialConvolution : ShaderMaterial
 
-The convolution pass material.
+卷积通道的材质。
 
 ### .needsSwap : boolean
 
-Overwritten to disable the swap.
+重写以禁用交换。
 
-Default is `false`.
+默认值为 `false`。
 
-**Overrides:** [Pass#needsSwap](Pass.html#needsSwap)
+**重写：** [Pass#needsSwap](Pass.html#needsSwap)
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the Bloom pass.
+执行 Bloom 通道渲染。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
 ### .setSize( width : number, height : number )
 
-Sets the size of the pass.
+设置通道的尺寸。
 
 **width**
 
-The width to set.
+要设置的宽度。
 
 **height**
 
-The height to set.
+要设置的高度。
 
-**Overrides:** [Pass#setSize](Pass.html#setSize)
+**重写：** [Pass#setSize](Pass.html#setSize)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/BloomPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/BloomPass.js)

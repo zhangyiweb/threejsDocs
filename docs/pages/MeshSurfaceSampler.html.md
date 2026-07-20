@@ -1,15 +1,15 @@
 # MeshSurfaceSampler
 
-Utility class for sampling weighted random points on the surface of a mesh.
+用于在网格表面上采样加权随机点的工具类。
 
-Building the sampler is a one-time O(n) operation. Once built, any number of random samples may be selected in O(logn) time. Memory usage is O(n).
+构建采样器是一次性的 O(n) 操作。构建完成后，可在 O(logn) 时间内选取任意数量的随机样本。内存占用为 O(n)。
 
-References:
+参考：
 
 *   [http://www.joesfer.com/?p=84](http://www.joesfer.com/?p=84)
 *   [https://stackoverflow.com/a/4322940/1314762](https://stackoverflow.com/a/4322940/1314762)
 
-## Code Example
+## 代码示例
 
 ```js
 const sampler = new MeshSurfaceSampler( surfaceMesh )
@@ -27,76 +27,76 @@ for ( let i = 0; i < 100; i ++ ) {
 scene.add( mesh );
 ```
 
-## Import
+## 导入
 
-MeshSurfaceSampler is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+MeshSurfaceSampler 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { MeshSurfaceSampler } from 'three/addons/math/MeshSurfaceSampler.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new MeshSurfaceSampler( mesh : Mesh )
 
-Constructs a mesh surface sampler.
+构造一个网格表面采样器。
 
 **mesh**
 
-Surface mesh from which to sample.
+要从中采样的表面网格。
 
-## Methods
+## 方法
 
 ### .build() : MeshSurfaceSampler
 
-Processes the input geometry and prepares to return samples. Any configuration of the geometry or sampler must occur before this method is called. Time complexity is O(n) for a surface with n faces.
+处理输入几何体并准备返回样本。几何体或采样器的任何配置都必须在调用此方法之前完成。对于具有 n 个面的表面，时间复杂度为 O(n)。
 
-**Returns:** A reference to this sampler.
+**返回值：** 对此采样器的引用。
 
 ### .sample( targetPosition : Vector3, targetNormal : Vector3, targetColor : Color, targetUV : Vector2 ) : MeshSurfaceSampler
 
-Selects a random point on the surface of the input geometry, returning the position and optionally the normal vector, color and UV Coordinate at that point. Time complexity is O(log n) for a surface with n faces.
+在输入几何体表面上选择一个随机点，返回该点的位置，并可选择返回法线向量、颜色和 UV 坐标。对于具有 n 个面的表面，时间复杂度为 O(log n)。
 
 **targetPosition**
 
-The target object holding the sampled position.
+保存采样位置的目标对象。
 
 **targetNormal**
 
-The target object holding the sampled normal.
+保存采样法线的目标对象。
 
 **targetColor**
 
-The target object holding the sampled color.
+保存采样颜色的目标对象。
 
 **targetUV**
 
-The target object holding the sampled uv coordinates.
+保存采样 UV 坐标的目标对象。
 
-**Returns:** A reference to this sampler.
+**返回值：** 对此采样器的引用。
 
 ### .setRandomGenerator( randomFunction : function ) : MeshSurfaceSampler
 
-Allows to set a custom random number generator. Default is `Math.random()`.
+允许设置自定义随机数生成器。默认值为 `Math.random()`。
 
 **randomFunction**
 
-A random number generator.
+随机数生成器。
 
-**Returns:** A reference to this sampler.
+**返回值：** 对此采样器的引用。
 
 ### .setWeightAttribute( name : string ) : MeshSurfaceSampler
 
-Specifies a vertex attribute to be used as a weight when sampling from the surface. Faces with higher weights are more likely to be sampled, and those with weights of zero will not be sampled at all. For vector attributes, only .x is used in sampling.
+指定在从表面采样时用作权重的顶点属性。权重较高的面更有可能被采样，权重为零的面则完全不会被采样。对于向量属性，采样时仅使用 .x。
 
-If no weight attribute is selected, sampling is randomly distributed by area.
+如果未选择权重属性，则采样按面积随机分布。
 
 **name**
 
-The attribute name.
+属性名称。
 
-**Returns:** A reference to this sampler.
+**返回值：** 对此采样器的引用。
 
-## Source
+## 源码
 
 [examples/jsm/math/MeshSurfaceSampler.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/math/MeshSurfaceSampler.js)

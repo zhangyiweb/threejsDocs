@@ -1,80 +1,80 @@
 # ColorSpaces
 
-## Properties
+## 属性
 
 ### .DisplayP3ColorSpace : string (constant)
 
-Display-P3 color space.
+Display-P3 颜色空间。
 
 ### .DisplayP3ColorSpaceImpl : module:ColorSpaces~ColorSpaceImpl (constant)
 
-Implementation object for the Display-P3 color space.
+Display-P3 颜色空间的实现对象。
 
 ### .ExtendedSRGBColorSpace : string (constant)
 
-Extended-sRGB color space.
+Extended-sRGB 颜色空间。
 
 ### .ExtendedSRGBColorSpaceImpl : module:ColorSpaces~ColorSpaceImpl (constant)
 
-Implementation object for the Extended-sRGB color space.
+Extended-sRGB 颜色空间的实现对象。
 
 ### .LinearDisplayP3ColorSpace : string (constant)
 
-Display-P3-Linear color space.
+Display-P3-Linear 颜色空间。
 
 ### .LinearDisplayP3ColorSpaceImpl : module:ColorSpaces~ColorSpaceImpl (constant)
 
-Implementation object for the Display-P3-Linear color space.
+Display-P3-Linear 颜色空间的实现对象。
 
 ### .LinearRec2020ColorSpace : string (constant)
 
-Rec2020-Linear color space.
+Rec2020-Linear 颜色空间。
 
 ### .LinearRec2020ColorSpaceImpl : module:ColorSpaces~ColorSpaceImpl (constant)
 
-Implementation object for the Rec2020-Linear color space.
+Rec2020-Linear 颜色空间的实现对象。
 
-## Type Definitions
+## 类型定义
 
 ### .ColorSpaceImpl
 
-An object holding the color space implementation.
+包含颜色空间实现的对象。
 
 **primaries**  
 Array.<number>
 
-The primaries.
+基色。
 
 **whitePoint**  
 Array.<number>
 
-The white point.
+白点。
 
 **toXYZ**  
 [Matrix3](Matrix3.html)
 
-A color space conversion matrix, converting to CIE XYZ.
+转换到 CIE XYZ 的颜色空间转换矩阵。
 
 **fromXYZ**  
 [Matrix3](Matrix3.html)
 
-A color space conversion matrix, converting from CIE XYZ.
+从 CIE XYZ 转换的颜色空间转换矩阵。
 
 **luminanceCoefficients**  
 Array.<number>
 
-The luminance coefficients.
+亮度系数。
 
 **workingColorSpaceConfig**  
 Object
 
-The working color space config.
+工作颜色空间配置。
 
 **outputColorSpaceConfig**  
 Object
 
-The drawing buffer color space config.
+绘图缓冲区颜色空间配置。
 
-## Source
+## 源码
 
 [examples/jsm/math/ColorSpaces.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/math/ColorSpaces.js)

@@ -2,9 +2,9 @@
 
 # OutlinePass
 
-A pass for rendering outlines around selected objects.
+用于在选中对象周围渲染描边的通道。
 
-## Code Example
+## 代码示例
 
 ```js
 const resolution = new THREE.Vector2( window.innerWidth, window.innerHeight );
@@ -12,158 +12,158 @@ const outlinePass = new OutlinePass( resolution, scene, camera );
 composer.addPass( outlinePass );
 ```
 
-## Import
+## 导入
 
-OutlinePass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+OutlinePass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { OutlinePass } from 'three/addons/postprocessing/OutlinePass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new OutlinePass( resolution : Vector2, scene : Scene, camera : Camera, selectedObjects : Array.<Object3D> )
 
-Constructs a new outline pass.
+构造一个新的描边通道。
 
 **resolution**
 
-The effect's resolution.
+效果的分辨率。
 
 **scene**
 
-The scene to render.
+要渲染的场景。
 
 **camera**
 
-The camera.
+相机。
 
 **selectedObjects**
 
-The selected 3D objects that should receive an outline.
+应接收描边的已选中 3D 对象。
 
-## Properties
+## 属性
 
 ### .downSampleRatio : number
 
-The downsample ratio. The effect can be rendered in a much lower resolution than the beauty pass.
+下采样比率。该效果可以以远低于美化通道的分辨率进行渲染。
 
-Default is `2`.
+默认值为 `2`。
 
 ### .edgeGlow : number
 
-Can be used for an animated glow/pulse effect.
+可用于实现动画发光/脉冲效果。
 
-Default is `0`.
+默认值为 `0`。
 
 ### .edgeStrength : number
 
-The edge strength.
+边缘强度。
 
-Default is `3`.
+默认值为 `3`。
 
 ### .edgeThickness : number
 
-The edge thickness.
+边缘厚度。
 
-Default is `1`.
+默认值为 `1`。
 
 ### .hiddenEdgeColor : Color
 
-The hidden edge color.
+隐藏边缘的颜色。
 
-Default is `(0.1,0.04,0.02)`.
+默认值为 `(0.1,0.04,0.02)`。
 
 ### .patternTexture : Texture
 
-Can be used to highlight selected 3D objects. Requires to set [OutlinePass#usePatternTexture](OutlinePass.html#usePatternTexture) to `true`.
+可用于高亮已选中的 3D 对象。需要将 [OutlinePass#usePatternTexture](OutlinePass.html#usePatternTexture) 设为 `true`。
 
-Default is `null`.
+默认值为 `null`。
 
 ### .pulsePeriod : number
 
-The pulse period.
+脉冲周期。
 
-Default is `0`.
+默认值为 `0`。
 
 ### .renderCamera : Object
 
-The camera.
+相机。
 
 ### .renderScene : Object
 
-The scene to render.
+要渲染的场景。
 
 ### .resolution : Vector2
 
-The effect's resolution.
+效果的分辨率。
 
-Default is `(256,256)`.
+默认值为 `(256,256)`。
 
 ### .selectedObjects : Array.<Object3D>
 
-The selected 3D objects that should receive an outline.
+应接收描边的已选中 3D 对象。
 
 ### .usePatternTexture : boolean
 
-Whether to use a pattern texture for to highlight selected 3D objects or not.
+是否使用图案纹理来高亮已选中的 3D 对象。
 
-Default is `false`.
+默认值为 `false`。
 
 ### .visibleEdgeColor : Color
 
-The visible edge color.
+可见边缘的颜色。
 
-Default is `(1,1,1)`.
+默认值为 `(1,1,1)`。
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the Outline pass.
+执行描边通道。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
 ### .setSize( width : number, height : number )
 
-Sets the size of the pass.
+设置通道的尺寸。
 
 **width**
 
-The width to set.
+要设置的宽度。
 
 **height**
 
-The height to set.
+要设置的高度。
 
-**Overrides:** [Pass#setSize](Pass.html#setSize)
+**重写：** [Pass#setSize](Pass.html#setSize)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/OutlinePass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/OutlinePass.js)

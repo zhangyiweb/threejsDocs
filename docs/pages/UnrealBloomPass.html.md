@@ -2,15 +2,15 @@
 
 # UnrealBloomPass
 
-This pass is inspired by the bloom pass of Unreal Engine. It creates a mip map chain of bloom textures and blurs them with different radii. Because of the weighted combination of mips, and because larger blurs are done on higher mips, this effect provides good quality and performance.
+此通道受虚幻引擎 Bloom 通道启发。它会创建 Bloom 纹理的 mipmap 链，并以不同半径对其进行模糊。由于对各 mip 进行加权合成，且更大的模糊在更高层 mip 上完成，该效果在画质与性能方面表现良好。
 
-When using this pass, tone mapping must be enabled in the renderer settings.
+使用此通道时，必须在渲染器设置中启用色调映射。
 
-Reference:
+参考：
 
 *   [Bloom in Unreal Engine](https://docs.unrealengine.com/latest/INT/Engine/Rendering/PostProcessEffects/Bloom/)
 
-## Code Example
+## 代码示例
 
 ```js
 const resolution = new THREE.Vector2( window.innerWidth, window.innerHeight );
@@ -18,122 +18,122 @@ const bloomPass = new UnrealBloomPass( resolution, 1.5, 0.4, 0.85 );
 composer.addPass( bloomPass );
 ```
 
-## Import
+## 导入
 
-UnrealBloomPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+UnrealBloomPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new UnrealBloomPass( resolution : Vector2, strength : number, radius : number, threshold : number )
 
-Constructs a new Unreal Bloom pass.
+构造一个新的 Unreal Bloom 通道。
 
 **resolution**
 
-The effect's resolution.
+效果的分辨率。
 
 **strength**
 
-The Bloom strength.
+Bloom 强度。
 
-Default is `1`.
+默认值为 `1`。
 
 **radius**
 
-The Bloom radius.
+Bloom 半径。
 
 **threshold**
 
-The luminance threshold limits which bright areas contribute to the Bloom effect.
+亮度阈值，用于限制哪些明亮区域会对 Bloom 效果产生贡献。
 
-## Properties
+## 属性
 
 ### .clearColor : Color
 
-The effect's clear color
+效果的清除颜色。
 
-Default is `(0,0,0)`.
+默认值为 `(0,0,0)`。
 
 ### .needsSwap : boolean
 
-Overwritten to disable the swap.
+被重写以禁用交换。
 
-Default is `false`.
+默认值为 `false`。
 
-**Overrides:** [Pass#needsSwap](Pass.html#needsSwap)
+**重写：** [Pass#needsSwap](Pass.html#needsSwap)
 
 ### .radius : number
 
-The Bloom radius. Must be in the range `[0,1]`.
+Bloom 半径。必须在 `[0,1]` 范围内。
 
 ### .resolution : Vector2
 
-The effect's resolution.
+效果的分辨率。
 
-Default is `(256,256)`.
+默认值为 `(256,256)`。
 
 ### .strength : number
 
-The Bloom strength.
+Bloom 强度。
 
-Default is `1`.
+默认值为 `1`。
 
 ### .threshold : number
 
-The luminance threshold limits which bright areas contribute to the Bloom effect.
+亮度阈值，用于限制哪些明亮区域会对 Bloom 效果产生贡献。
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the Bloom pass.
+执行 Bloom 通道。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
 ### .setSize( width : number, height : number )
 
-Sets the size of the pass.
+设置通道的尺寸。
 
 **width**
 
-The width to set.
+要设置的宽度。
 
 **height**
 
-The height to set.
+要设置的高度。
 
-**Overrides:** [Pass#setSize](Pass.html#setSize)
+**重写：** [Pass#setSize](Pass.html#setSize)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/UnrealBloomPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/UnrealBloomPass.js)

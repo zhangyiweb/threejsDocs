@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>Raymarching - Three.js Docs</title>
+	<title>Raymarching - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -14,17 +14,16 @@
 			<header>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">Raymarching</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">Raymarching</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { RaymarchingBox } from 'three/addons/tsl/utils/Raymarching.js';</code></pre>
 				<div class="container-overview">
 				</div>
-				<h2 class="subsection-title">Static Methods</h2>
+				<h2 class="subsection-title">静态方法</h2>
 					<h3 class="name name-method" id=".RaymarchingBox" translate="no">.<a href="#.RaymarchingBox">RaymarchingBox</a><span class="signature">( steps : <span class="param-type">number | <a href="Node.html">Node</a></span>, callback : <span class="param-type">function | <a href="FunctionNode.html">FunctionNode</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>TSL function for performing raymarching in a box-area using the specified number of steps
-and a callback function.</p>
+							<p>用于在盒形区域内执行光线步进（raymarching）的 TSL 函数，使用指定的步数和回调函数。</p>
 <pre><code class="language-js">RaymarchingBox( count, ( { positionRay } ) => {
 } );
 </code></pre>
@@ -36,7 +35,7 @@ and a callback function.</p>
 										<strong translate="no">steps</strong>
 									</td>
 									<td class="description last">
-										<p>The number of steps for raymarching.</p>
+										<p>光线步进的步数。</p>
 									</td>
 								</tr>
 								<tr>
@@ -44,13 +43,13 @@ and a callback function.</p>
 										<strong translate="no">callback</strong>
 									</td>
 									<td class="description last">
-										<p>The callback function to execute at each step.</p>
+										<p>在每一步执行的回调函数。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/tsl/utils/Raymarching.js" translate="no" target="_blank" rel="noopener">examples/jsm/tsl/utils/Raymarching.js</a>
 				</p>

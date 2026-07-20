@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>LineSegmentsGeometry - Three.js Docs</title>
+	<title>LineSegmentsGeometry - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,35 +13,35 @@
 	<h1 translate="no">LineSegmentsGeometry</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A series of vertex pairs, forming line segments.</p>
-<p>This is used in <a href="LineSegments2.html">LineSegments2</a> to describe the shape.</p></div>
+				<div class="class-description"><p>由一系列顶点对组成的线段。</p>
+<p>在 <a href="LineSegments2.html">LineSegments2</a> 中用于描述形状。</p></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">LineSegmentsGeometry</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">LineSegmentsGeometry</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { LineSegmentsGeometry } from 'three/addons/lines/LineSegmentsGeometry.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="LineSegmentsGeometry" translate="no">new <a href="#LineSegmentsGeometry">LineSegmentsGeometry</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new line segments geometry.</p>
+							<p>构造一个新的线段几何体。</p>
 						</div>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="isLineSegmentsGeometry" translate="no">.<a href="#isLineSegmentsGeometry">isLineSegmentsGeometry</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="applyMatrix4" translate="no">.<a href="#applyMatrix4">applyMatrix4</a><span class="signature">( matrix : <span class="param-type"><a href="Matrix4.html">Matrix4</a></span> )</span><span class="type-signature"> : <a href="LineSegmentsGeometry.html">LineSegmentsGeometry</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Applies the given 4x4 transformation matrix to the geometry.</p>
+							<p>将给定的 4x4 变换矩阵应用到此几何体。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -50,19 +50,19 @@
 										<strong translate="no">matrix</strong>
 									</td>
 									<td class="description last">
-										<p>The matrix to apply.</p>
+										<p>要应用的矩阵。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this instance.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此实例的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="fromEdgesGeometry" translate="no">.<a href="#fromEdgesGeometry">fromEdgesGeometry</a><span class="signature">( geometry : <span class="param-type"><a href="EdgesGeometry.html">EdgesGeometry</a></span> )</span><span class="type-signature"> : <a href="LineSegmentsGeometry.html">LineSegmentsGeometry</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Setups this line segments geometry from the given edges geometry.</p>
+							<p>根据给定的边缘几何体设置此线段几何体。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -71,19 +71,19 @@
 										<strong translate="no">geometry</strong>
 									</td>
 									<td class="description last">
-										<p>The geometry that should be used as a data source for this geometry.</p>
+										<p>应作为此几何体数据源的几何体。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this geometry.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此几何体的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="fromLineSegments" translate="no">.<a href="#fromLineSegments">fromLineSegments</a><span class="signature">( lineSegments : <span class="param-type"><a href="LineSegments.html">LineSegments</a></span> )</span><span class="type-signature"> : <a href="LineSegmentsGeometry.html">LineSegmentsGeometry</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Setups this line segments geometry from the given line segments.</p>
+							<p>根据给定的线段设置此线段几何体。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -92,20 +92,20 @@
 										<strong translate="no">lineSegments</strong>
 									</td>
 									<td class="description last">
-										<p>The line segments that should be used as a data source for this geometry.
-Assumes the source geometry is not using indices.</p>
+										<p>应作为此几何体数据源的线段。
+假定源几何体未使用索引。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this geometry.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此几何体的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="fromMesh" translate="no">.<a href="#fromMesh">fromMesh</a><span class="signature">( mesh : <span class="param-type"><a href="Mesh.html">Mesh</a></span> )</span><span class="type-signature"> : <a href="LineSegmentsGeometry.html">LineSegmentsGeometry</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Setups this line segments geometry from the given mesh.</p>
+							<p>根据给定的网格设置此线段几何体。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -114,19 +114,19 @@ Assumes the source geometry is not using indices.</p>
 										<strong translate="no">mesh</strong>
 									</td>
 									<td class="description last">
-										<p>The mesh geometry that should be used as a data source for this geometry.</p>
+										<p>应作为此几何体数据源的网格几何体。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this geometry.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此几何体的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="fromWireframeGeometry" translate="no">.<a href="#fromWireframeGeometry">fromWireframeGeometry</a><span class="signature">( geometry : <span class="param-type"><a href="WireframeGeometry.html">WireframeGeometry</a></span> )</span><span class="type-signature"> : <a href="LineSegmentsGeometry.html">LineSegmentsGeometry</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Setups this line segments geometry from the given wireframe geometry.</p>
+							<p>根据给定的线框几何体设置此线段几何体。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -135,20 +135,20 @@ Assumes the source geometry is not using indices.</p>
 										<strong translate="no">geometry</strong>
 									</td>
 									<td class="description last">
-										<p>The geometry that should be used as a data source for this geometry.</p>
+										<p>应作为此几何体数据源的几何体。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this geometry.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此几何体的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setColors" translate="no">.<a href="#setColors">setColors</a><span class="signature">( array : <span class="param-type">Float32Array | Array.&lt;number></span> )</span><span class="type-signature"> : <a href="LineSegmentsGeometry.html">LineSegmentsGeometry</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the given line colors for this geometry. The length must be a multiple of six since
-each line segment is defined by a start end color in the pattern <code>(rgb rgb)</code>.</p>
+							<p>为此几何体设置给定的线颜色。长度必须是六的倍数，因为
+每条线段按 <code>(rgb rgb)</code> 模式由起点与终点颜色定义。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -157,20 +157,20 @@ each line segment is defined by a start end color in the pattern <code>(rgb rgb)
 										<strong translate="no">array</strong>
 									</td>
 									<td class="description last">
-										<p>The position data to set.</p>
+										<p>要设置的位置数据。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this geometry.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此几何体的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setPositions" translate="no">.<a href="#setPositions">setPositions</a><span class="signature">( array : <span class="param-type">Float32Array | Array.&lt;number></span> )</span><span class="type-signature"> : <a href="LineSegmentsGeometry.html">LineSegmentsGeometry</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the given line positions for this geometry. The length must be a multiple of six since
-each line segment is defined by a start end vertex in the pattern <code>(xyz xyz)</code>.</p>
+							<p>为此几何体设置给定的线位置。长度必须是六的倍数，因为
+每条线段按 <code>(xyz xyz)</code> 模式由起点与终点顶点定义。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -179,16 +179,16 @@ each line segment is defined by a start end vertex in the pattern <code>(xyz xyz
 										<strong translate="no">array</strong>
 									</td>
 									<td class="description last">
-										<p>The position data to set.</p>
+										<p>要设置的位置数据。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this geometry.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此几何体的引用。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/lines/LineSegmentsGeometry.js" translate="no" target="_blank" rel="noopener">examples/jsm/lines/LineSegmentsGeometry.js</a>
 				</p>

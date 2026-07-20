@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>Water - Three.js Docs</title>
+	<title>Water - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,10 +13,10 @@
 	<h1 translate="no">Water</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A basic flat, reflective water effect.</p>
-<p>Note that this class can only be used with <a href="WebGLRenderer.html">WebGLRenderer</a>.
-When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterMesh.html">WaterMesh</a>.</p>
-<p>References:</p>
+				<div class="class-description"><p>基础的平面反射水面效果。</p>
+<p>注意：该类只能与 <a href="WebGLRenderer.html">WebGLRenderer</a> 一起使用。
+使用 <a href="WebGPURenderer.html">WebGPURenderer</a> 时，请改用 <a href="WaterMesh.html">WaterMesh</a>。</p>
+<p>参考：</p>
 <ul>
 <li><a href="https://github.com/Slayvin" target="_blank" rel="noopener">Flat mirror for three.js</a></li>
 <li><a href="https://home.adelphi.edu/~stemkoski/" target="_blank" rel="noopener">An implementation of water shader based on the flat mirror</a></li>
@@ -24,15 +24,15 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 </ul></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">Water</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">Water</span> 是一个附加组件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { Water } from 'three/addons/objects/Water.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="Water" translate="no">new <a href="#Water">Water</a><span class="signature">( geometry : <span class="param-type"><a href="BufferGeometry.html">BufferGeometry</a></span>, options : <span class="param-type"><a href="Water.html#~Options">Water~Options</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new water instance.</p>
+							<p>构造一个新的水面实例。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -41,7 +41,7 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 										<strong translate="no">geometry</strong>
 									</td>
 									<td class="description last">
-										<p>The water's geometry.</p>
+										<p>水面的几何体。</p>
 									</td>
 								</tr>
 								<tr>
@@ -49,26 +49,26 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 										<strong translate="no">options</strong>
 									</td>
 									<td class="description last">
-										<p>The configuration options.</p>
+										<p>配置选项。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="isWater" translate="no">.<a href="#isWater">isWater</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Type Definitions</h2>
+				<h2 class="subsection-title">类型定义</h2>
 				<div class="member">
 					<h3 class="name" id="~Options" translate="no">.<a href="#~Options">Options</a> </h3>
 					<div class="description">
-						<p>Constructor options of <code>Water</code>.</p>
+						<p><code>Water</code> 的构造函数选项。</p>
 					</div>
 <table class="props">
 	<tbody>
@@ -79,8 +79,8 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The texture width. A higher value results in more clear reflections but is also more expensive.</p>
-						<p>Default is <code>512</code>.</p>
+				<p>纹理宽度。值越高反射越清晰，但开销也越大。</p>
+						<p>默认值为 <code>512</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -90,8 +90,8 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The texture height. A higher value results in more clear reflections but is also more expensive.</p>
-						<p>Default is <code>512</code>.</p>
+				<p>纹理高度。值越高反射越清晰，但开销也越大。</p>
+						<p>默认值为 <code>512</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -101,8 +101,8 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The clip bias.</p>
-						<p>Default is <code>0</code>.</p>
+				<p>裁剪偏置。</p>
+						<p>默认值为 <code>0</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -112,8 +112,8 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The alpha value.</p>
-						<p>Default is <code>1</code>.</p>
+				<p>透明度值。</p>
+						<p>默认值为 <code>1</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -123,8 +123,8 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The time value.</p>
-						<p>Default is <code>0</code>.</p>
+				<p>时间值。</p>
+						<p>默认值为 <code>0</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -134,8 +134,8 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 <span class="param-type"><a href="Texture.html">Texture</a></span>
 				</td>
 			<td class="description last">
-				<p>The water's normal map.</p>
-						<p>Default is <code>null</code>.</p>
+				<p>水面的法线贴图。</p>
+						<p>默认值为 <code>null</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -145,8 +145,8 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 <span class="param-type"><a href="Vector3.html">Vector3</a></span>
 				</td>
 			<td class="description last">
-				<p>The sun direction.</p>
-						<p>Default is <code>(0.70707,0.70707,0.0)</code>.</p>
+				<p>太阳方向。</p>
+						<p>默认值为 <code>(0.70707,0.70707,0.0)</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -160,8 +160,8 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 <span class="param-type">string</span>
 				</td>
 			<td class="description last">
-				<p>The sun color.</p>
-						<p>Default is <code>0xffffff</code>.</p>
+				<p>太阳颜色。</p>
+						<p>默认值为 <code>0xffffff</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -175,8 +175,8 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 <span class="param-type">string</span>
 				</td>
 			<td class="description last">
-				<p>The water color.</p>
-						<p>Default is <code>0x7F7F7F</code>.</p>
+				<p>水面颜色。</p>
+						<p>默认值为 <code>0x7F7F7F</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -186,7 +186,7 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 <span class="param-type"><a href="Vector3.html">Vector3</a></span>
 				</td>
 			<td class="description last">
-				<p>The eye vector.</p>
+				<p>视点向量。</p>
 			</td>
 		</tr>
 		<tr>
@@ -196,8 +196,8 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 <span class="param-type">number</span>
 				</td>
 			<td class="description last">
-				<p>The distortion scale.</p>
-						<p>Default is <code>20</code>.</p>
+				<p>扭曲缩放。</p>
+						<p>默认值为 <code>20</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -211,8 +211,8 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 <span class="param-type"><a href="global.html#DoubleSide">DoubleSide</a></span>
 				</td>
 			<td class="description last">
-				<p>The water material's <code>side</code> property.</p>
-						<p>Default is <code>FrontSide</code>.</p>
+				<p>水面材质的 <code>side</code> 属性。</p>
+						<p>默认值为 <code>FrontSide</code>。</p>
 			</td>
 		</tr>
 		<tr>
@@ -222,14 +222,14 @@ When using <a href="WebGPURenderer.html">WebGPURenderer</a>, use <a href="WaterM
 <span class="param-type">boolean</span>
 				</td>
 			<td class="description last">
-				<p>Whether the water should be affected by fog or not.</p>
-						<p>Default is <code>false</code>.</p>
+				<p>水面是否受雾影响。</p>
+						<p>默认值为 <code>false</code>。</p>
 			</td>
 		</tr>
 	</tbody>
 </table>
 				</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/objects/Water.js" translate="no" target="_blank" rel="noopener">examples/jsm/objects/Water.js</a>
 				</p>

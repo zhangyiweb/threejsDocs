@@ -1,119 +1,119 @@
 # Capsule
 
-A capsule is essentially a cylinder with hemispherical caps at both ends. It can be thought of as a swept sphere, where a sphere is moved along a line segment.
+胶囊体本质上是两端带有半球形盖的圆柱体。可以将其理解为扫掠球体，即将一个球体沿线段移动所形成的形状。
 
-Capsules are often used as bounding volumes (next to AABBs and bounding spheres).
+胶囊体常被用作包围体（与 AABB 和包围球并列）。
 
-## Import
+## 导入
 
-Capsule is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+Capsule 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { Capsule } from 'three/addons/math/Capsule.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new Capsule( start : Vector3, end : Vector3, radius : number )
 
-Constructs a new capsule.
+构造一个新的胶囊体。
 
 **start**
 
-The start vector.
+起点向量。
 
 **end**
 
-The end vector.
+终点向量。
 
 **radius**
 
-The capsule's radius.
+胶囊体的半径。
 
-Default is `1`.
+默认值为 `1`。
 
-## Properties
+## 属性
 
 ### .end : Vector3
 
-The end vector.
+终点向量。
 
 ### .radius : number
 
-The capsule's radius.
+胶囊体的半径。
 
-Default is `1`.
+默认值为 `1`。
 
 ### .start : Vector3
 
-The start vector.
+起点向量。
 
-## Methods
+## 方法
 
 ### .clone() : Capsule
 
-Returns a new capsule with copied values from this instance.
+返回一个新胶囊体，其值从本实例复制而来。
 
-**Returns:** A clone of this instance.
+**返回值：** 此实例的克隆。
 
 ### .copy( capsule : Capsule ) : Capsule
 
-Copies the values of the given capsule to this instance.
+将给定胶囊体的值复制到本实例。
 
 **capsule**
 
-The capsule to copy.
+要复制的胶囊体。
 
-**Returns:** A reference to this capsule.
+**返回值：** 对此胶囊体的引用。
 
 ### .getCenter( target : Vector3 ) : Vector3
 
-Returns the center point of this capsule.
+返回此胶囊体的中心点。
 
 **target**
 
-The target vector that is used to store the method's result.
+用于存储方法结果的目标向量。
 
-**Returns:** The center point.
+**返回值：** 中心点。
 
 ### .intersectsBox( box : Box3 ) : boolean
 
-Returns `true` if the given bounding box intersects with this capsule.
+若给定包围盒与此胶囊体相交，则返回 `true`。
 
 **box**
 
-The bounding box to test.
+要测试的包围盒。
 
-**Returns:** Whether the given bounding box intersects with this capsule.
+**返回值：** 给定包围盒是否与此胶囊体相交。
 
 ### .set( start : Vector3, end : Vector3, radius : number ) : Capsule
 
-Sets the capsule components to the given values. Please note that this method only copies the values from the given objects.
+将胶囊体的各分量设置为给定值。请注意，此方法仅从给定对象复制值。
 
 **start**
 
-The start vector.
+起点向量。
 
 **end**
 
-The end vector
+终点向量。
 
 **radius**
 
-The capsule's radius.
+胶囊体的半径。
 
-**Returns:** A reference to this capsule.
+**返回值：** 对此胶囊体的引用。
 
 ### .translate( v : Vector3 ) : Capsule
 
-Adds the given offset to this capsule, effectively moving it in 3D space.
+将给定偏移量加到此胶囊体上，从而在三维空间中移动它。
 
 **v**
 
-The offset that should be used to translate the capsule.
+用于平移胶囊体的偏移量。
 
-**Returns:** A reference to this capsule.
+**返回值：** 对此胶囊体的引用。
 
-## Source
+## 源码
 
 [examples/jsm/math/Capsule.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/math/Capsule.js)

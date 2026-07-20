@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>SSAAPassNode - Three.js Docs</title>
+	<title>SSAAPassNode - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,22 +13,22 @@
 	<h1 translate="no">SSAAPassNode</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A special render pass node that renders the scene with SSAA (Supersampling Anti-Aliasing).
-This manual SSAA approach re-renders the scene ones for each sample with camera jitter and accumulates the results.</p>
-<p>This node produces a high-quality anti-aliased output but is also extremely expensive because of
-its brute-force approach of re-rendering the entire scene multiple times.</p>
-<p>Reference: <a href="https://en.wikipedia.org/wiki/Supersampling" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Supersampling</a></p></div>
+				<div class="class-description"><p>使用 SSAA（超采样抗锯齿）渲染场景的特殊渲染通道节点。
+这种手动 SSAA 方法会对每个采样点在相机抖动下重新渲染一次场景，并累积结果。</p>
+<p>此节点可产生高质量的抗锯齿输出，但由于需要多次重新渲染整个场景，
+采用暴力方式，开销也极大。</p>
+<p>参考：<a href="https://en.wikipedia.org/wiki/Supersampling" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Supersampling</a></p></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">SSAAPassNode</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">SSAAPassNode</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { ssaaPass } from 'three/addons/tsl/display/SSAAPassNode.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="SSAAPassNode" translate="no">new <a href="#SSAAPassNode">SSAAPassNode</a><span class="signature">( scene : <span class="param-type"><a href="Scene.html">Scene</a></span>, camera : <span class="param-type"><a href="Camera.html">Camera</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new SSAA pass node.</p>
+							<p>构造一个新的 SSAA 通道节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -37,7 +37,7 @@ its brute-force approach of re-rendering the entire scene multiple times.</p>
 										<strong translate="no">scene</strong>
 									</td>
 									<td class="description last">
-										<p>The scene to render.</p>
+										<p>要渲染的场景。</p>
 									</td>
 								</tr>
 								<tr>
@@ -45,58 +45,57 @@ its brute-force approach of re-rendering the entire scene multiple times.</p>
 										<strong translate="no">camera</strong>
 									</td>
 									<td class="description last">
-										<p>The camera to render the scene with.</p>
+										<p>用于渲染场景的相机。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="isSSAAPassNode" translate="no">.<a href="#isSSAAPassNode">isSSAAPassNode</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="sampleLevel" translate="no">.<a href="#sampleLevel">sampleLevel</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The sample level specified  as n, where the number of samples is 2^n,
-so sampleLevel = 4, is 2^4 samples, 16.</p>
-						<p>Default is <code>4</code>.</p>
+						<p>采样级别。以 n 表示，采样数为 2^n，
+因此 sampleLevel = 4 表示 2^4 = 16 个采样。</p>
+						<p>默认值为 <code>4</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="sampleWeight" translate="no">.<a href="#sampleWeight">sampleWeight</a><span class="type-signature"> : <a href="UniformNode.html">UniformNode</a>.&lt;float></span> </h3>
 					<div class="description">
-						<p>A uniform node representing the sample weight.</p>
-						<p>Default is <code>1</code>.</p>
+						<p>表示采样权重的 uniform 节点。</p>
+						<p>默认值为 <code>1</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="unbiased" translate="no">.<a href="#unbiased">unbiased</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Whether rounding errors should be mitigated or not.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>是否应缓解舍入误差。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="dispose" translate="no">.<a href="#dispose">dispose</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Frees internal resources. This method should be called
-when the pass is no longer required.</p>
+							<p>释放内部资源。当通道不再使用时应调用此方法。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="PassNode.html#dispose">PassNode#dispose</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="PassNode.html#dispose">PassNode#dispose</a></dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setup" translate="no">.<a href="#setup">setup</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : <a href="PassTextureNode.html">PassTextureNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>This method is used to setup the effect's MRT configuration and quad mesh.</p>
+							<p>此方法用于设置效果的 MRT 配置和四边形网格。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -105,19 +104,19 @@ when the pass is no longer required.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前的节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="PassNode.html#setup">PassNode#setup</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="PassNode.html#setup">PassNode#setup</a></dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="updateBefore" translate="no">.<a href="#updateBefore">updateBefore</a><span class="signature">( frame : <span class="param-type"><a href="NodeFrame.html">NodeFrame</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>This method is used to render the SSAA effect once per frame.</p>
+							<p>此方法用于每帧渲染一次 SSAA 效果。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -126,16 +125,16 @@ when the pass is no longer required.</p>
 										<strong translate="no">frame</strong>
 									</td>
 									<td class="description last">
-										<p>The current node frame.</p>
+										<p>当前的节点帧。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="PassNode.html#updateBefore">PassNode#updateBefore</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="PassNode.html#updateBefore">PassNode#updateBefore</a></dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/tsl/display/SSAAPassNode.js" translate="no" target="_blank" rel="noopener">examples/jsm/tsl/display/SSAAPassNode.js</a>
 				</p>

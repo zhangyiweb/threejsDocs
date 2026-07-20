@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>RapierPhysics - Three.js Docs</title>
+	<title>RapierPhysics - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -12,27 +12,25 @@
 	<h1 translate="no">RapierPhysics</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>Can be used to include Rapier as a Physics engine into
-<code>three.js</code> apps. The API can be initialized via:</p>
-<p>The component automatically imports Rapier from a CDN so make sure
-to use the component with an active Internet connection.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>可将 Rapier 作为物理引擎集成到 <code>three.js</code> 应用中。可通过以下方式初始化 API：</p>
+<p>该组件会自动从 CDN 导入 Rapier，因此使用时需要保持网络连接。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const physics = await RapierPhysics();
 </code></pre></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">RapierPhysics</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">RapierPhysics</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { RapierPhysics } from 'three/addons/physics/RapierPhysics.js';</code></pre>
 				<div class="container-overview">
 					<div class="method">
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="addHeightfield" translate="no">.<a href="#addHeightfield">addHeightfield</a><span class="signature">( mesh : <span class="param-type"><a href="Mesh.html">Mesh</a></span>, width : <span class="param-type">number</span>, depth : <span class="param-type">number</span>, heights : <span class="param-type">Float32Array</span>, scale : <span class="param-type">Object</span> )</span><span class="type-signature"> : RigidBody</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Adds a heightfield terrain to the physics simulation.</p>
+							<p>向物理模拟添加高度场地形。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -41,7 +39,7 @@ to use the component with an active Internet connection.</p></div>
 										<strong translate="no">mesh</strong>
 									</td>
 									<td class="description last">
-										<p>The Three.js mesh representing the terrain.</p>
+										<p>表示地形的 Three.js 网格。</p>
 									</td>
 								</tr>
 								<tr>
@@ -49,7 +47,7 @@ to use the component with an active Internet connection.</p></div>
 										<strong translate="no">width</strong>
 									</td>
 									<td class="description last">
-										<p>The number of vertices along the width (x-axis) of the heightfield.</p>
+										<p>高度场沿宽度（x 轴）的顶点数。</p>
 									</td>
 								</tr>
 								<tr>
@@ -57,7 +55,7 @@ to use the component with an active Internet connection.</p></div>
 										<strong translate="no">depth</strong>
 									</td>
 									<td class="description last">
-										<p>The number of vertices along the depth (z-axis) of the heightfield.</p>
+										<p>高度场沿深度（z 轴）的顶点数。</p>
 									</td>
 								</tr>
 								<tr>
@@ -65,7 +63,7 @@ to use the component with an active Internet connection.</p></div>
 										<strong translate="no">heights</strong>
 									</td>
 									<td class="description last">
-										<p>Array of height values for each vertex in the heightfield.</p>
+										<p>高度场中每个顶点的高度值数组。</p>
 									</td>
 								</tr>
 								<tr>
@@ -73,7 +71,7 @@ to use the component with an active Internet connection.</p></div>
 										<strong translate="no">scale</strong>
 									</td>
 									<td class="description last">
-										<p>Scale factors for the heightfield dimensions.</p>
+										<p>高度场各维度的缩放因子。</p>
 						<table class="params">
 							<tbody>
 								<tr>
@@ -81,7 +79,7 @@ to use the component with an active Internet connection.</p></div>
 										<strong translate="no">x</strong>
 									</td>
 									<td class="description last">
-										<p>Scale factor for width.</p>
+										<p>宽度缩放因子。</p>
 									</td>
 								</tr>
 								<tr>
@@ -89,7 +87,7 @@ to use the component with an active Internet connection.</p></div>
 										<strong translate="no">y</strong>
 									</td>
 									<td class="description last">
-										<p>Scale factor for height.</p>
+										<p>高度缩放因子。</p>
 									</td>
 								</tr>
 								<tr>
@@ -97,7 +95,7 @@ to use the component with an active Internet connection.</p></div>
 										<strong translate="no">z</strong>
 									</td>
 									<td class="description last">
-										<p>Scale factor for depth.</p>
+										<p>深度缩放因子。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -107,13 +105,13 @@ to use the component with an active Internet connection.</p></div>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The created Rapier rigid body for the heightfield.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 为该高度场创建的 Rapier 刚体。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="addMesh" translate="no">.<a href="#addMesh">addMesh</a><span class="signature">( mesh : <span class="param-type"><a href="Mesh.html">Mesh</a></span>, mass : <span class="param-type">number</span>, restitution : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Adds the given mesh to this physics simulation.</p>
+							<p>将给定网格添加到物理模拟中。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -122,7 +120,7 @@ to use the component with an active Internet connection.</p></div>
 										<strong translate="no">mesh</strong>
 									</td>
 									<td class="description last">
-										<p>The mesh to add.</p>
+										<p>要添加的网格。</p>
 									</td>
 								</tr>
 								<tr>
@@ -130,8 +128,8 @@ to use the component with an active Internet connection.</p></div>
 										<strong translate="no">mass</strong>
 									</td>
 									<td class="description last">
-										<p>The mass in kg of the mesh.</p>
-										<p>Default is <code>0</code>.</p>
+										<p>网格的质量（千克）。</p>
+										<p>默认值为 <code>0</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -139,8 +137,8 @@ to use the component with an active Internet connection.</p></div>
 										<strong translate="no">restitution</strong>
 									</td>
 									<td class="description last">
-										<p>The restitution of the mesh, usually from 0 to 1. Represents how &quot;bouncy&quot; objects are when they collide with each other.</p>
-										<p>Default is <code>0</code>.</p>
+										<p>网格的恢复系数，通常取值范围为 0 到 1。表示物体碰撞时的弹性程度。</p>
+										<p>默认值为 <code>0</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -149,9 +147,8 @@ to use the component with an active Internet connection.</p></div>
 					<h3 class="name name-method" id="addScene" translate="no">.<a href="#addScene">addScene</a><span class="signature">( scene : <span class="param-type"><a href="Object3D.html">Object3D</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Adds the given scene to this physics simulation. Only meshes with a
-<code>physics</code> object in their <a href="Object3D.html#userData">Object3D#userData</a> field will be honored.
-The object can be used to store the mass and restitution of the mesh. E.g.:</p>
+							<p>将给定场景添加到物理模拟中。仅处理在 <a href="Object3D.html#userData">Object3D#userData</a> 字段中包含 <code>physics</code> 对象的网格。
+该对象可用于存储网格的质量和恢复系数，例如：</p>
 <pre><code class="language-js">box.userData.physics = { mass: 1, restitution: 0 };
 </code></pre>
 						</div>
@@ -162,7 +159,7 @@ The object can be used to store the mass and restitution of the mesh. E.g.:</p>
 										<strong translate="no">scene</strong>
 									</td>
 									<td class="description last">
-										<p>The scene or any type of 3D object to add.</p>
+										<p>要添加的场景或任意 3D 对象。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -171,7 +168,7 @@ The object can be used to store the mass and restitution of the mesh. E.g.:</p>
 					<h3 class="name name-method" id="applyImpulse" translate="no">.<a href="#applyImpulse">applyImpulse</a><span class="signature">( mesh : <span class="param-type"><a href="Mesh.html">Mesh</a></span>, impulse : <span class="param-type"><a href="Vector3.html">Vector3</a></span>, index : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Applies an impulse to the given mesh which is part of the physics simulation.</p>
+							<p>对参与物理模拟的给定网格施加冲量。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -180,7 +177,7 @@ The object can be used to store the mass and restitution of the mesh. E.g.:</p>
 										<strong translate="no">mesh</strong>
 									</td>
 									<td class="description last">
-										<p>The mesh to apply the impulse to.</p>
+										<p>要施加冲量的网格。</p>
 									</td>
 								</tr>
 								<tr>
@@ -188,7 +185,7 @@ The object can be used to store the mass and restitution of the mesh. E.g.:</p>
 										<strong translate="no">impulse</strong>
 									</td>
 									<td class="description last">
-										<p>The impulse to apply.</p>
+										<p>要施加的冲量。</p>
 									</td>
 								</tr>
 								<tr>
@@ -196,8 +193,8 @@ The object can be used to store the mass and restitution of the mesh. E.g.:</p>
 										<strong translate="no">index</strong>
 									</td>
 									<td class="description last">
-										<p>If the mesh is instanced, the index represents the instanced ID.</p>
-										<p>Default is <code>0</code>.</p>
+										<p>若网格为实例化网格，索引表示实例 ID。</p>
+										<p>默认值为 <code>0</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -206,7 +203,7 @@ The object can be used to store the mass and restitution of the mesh. E.g.:</p>
 					<h3 class="name name-method" id="removeMesh" translate="no">.<a href="#removeMesh">removeMesh</a><span class="signature">( mesh : <span class="param-type"><a href="Mesh.html">Mesh</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Removes the given mesh from this physics simulation.</p>
+							<p>从物理模拟中移除给定网格。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -215,7 +212,7 @@ The object can be used to store the mass and restitution of the mesh. E.g.:</p>
 										<strong translate="no">mesh</strong>
 									</td>
 									<td class="description last">
-										<p>The mesh to remove.</p>
+										<p>要移除的网格。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -224,8 +221,7 @@ The object can be used to store the mass and restitution of the mesh. E.g.:</p>
 					<h3 class="name name-method" id="setMeshPosition" translate="no">.<a href="#setMeshPosition">setMeshPosition</a><span class="signature">( mesh : <span class="param-type"><a href="Mesh.html">Mesh</a></span>, position : <span class="param-type"><a href="Vector3.html">Vector3</a></span>, index : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Set the position of the given mesh which is part of the physics simulation. Calling this
-method will reset the current simulated velocity of the mesh.</p>
+							<p>设置参与物理模拟的给定网格的位置。调用此方法会重置该网格当前模拟的速度。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -234,7 +230,7 @@ method will reset the current simulated velocity of the mesh.</p>
 										<strong translate="no">mesh</strong>
 									</td>
 									<td class="description last">
-										<p>The mesh to update the position for.</p>
+										<p>要更新位置的网格。</p>
 									</td>
 								</tr>
 								<tr>
@@ -242,7 +238,7 @@ method will reset the current simulated velocity of the mesh.</p>
 										<strong translate="no">position</strong>
 									</td>
 									<td class="description last">
-										<p>The new position.</p>
+										<p>新位置。</p>
 									</td>
 								</tr>
 								<tr>
@@ -250,8 +246,8 @@ method will reset the current simulated velocity of the mesh.</p>
 										<strong translate="no">index</strong>
 									</td>
 									<td class="description last">
-										<p>If the mesh is instanced, the index represents the instanced ID.</p>
-										<p>Default is <code>0</code>.</p>
+										<p>若网格为实例化网格，索引表示实例 ID。</p>
+										<p>默认值为 <code>0</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -260,7 +256,7 @@ method will reset the current simulated velocity of the mesh.</p>
 					<h3 class="name name-method" id="setMeshVelocity" translate="no">.<a href="#setMeshVelocity">setMeshVelocity</a><span class="signature">( mesh : <span class="param-type"><a href="Mesh.html">Mesh</a></span>, velocity : <span class="param-type"><a href="Vector3.html">Vector3</a></span>, index : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Set the velocity of the given mesh which is part of the physics simulation.</p>
+							<p>设置参与物理模拟的给定网格的速度。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -269,7 +265,7 @@ method will reset the current simulated velocity of the mesh.</p>
 										<strong translate="no">mesh</strong>
 									</td>
 									<td class="description last">
-										<p>The mesh to update the velocity for.</p>
+										<p>要更新速度的网格。</p>
 									</td>
 								</tr>
 								<tr>
@@ -277,7 +273,7 @@ method will reset the current simulated velocity of the mesh.</p>
 										<strong translate="no">velocity</strong>
 									</td>
 									<td class="description last">
-										<p>The new velocity.</p>
+										<p>新速度。</p>
 									</td>
 								</tr>
 								<tr>
@@ -285,14 +281,14 @@ method will reset the current simulated velocity of the mesh.</p>
 										<strong translate="no">index</strong>
 									</td>
 									<td class="description last">
-										<p>If the mesh is instanced, the index represents the instanced ID.</p>
-										<p>Default is <code>0</code>.</p>
+										<p>若网格为实例化网格，索引表示实例 ID。</p>
+										<p>默认值为 <code>0</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/physics/RapierPhysics.js" translate="no" target="_blank" rel="noopener">examples/jsm/physics/RapierPhysics.js</a>
 				</p>

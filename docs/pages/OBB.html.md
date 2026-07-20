@@ -1,227 +1,227 @@
 # OBB
 
-Represents an oriented bounding box (OBB) in 3D space.
+表示三维空间中的定向包围盒（Oriented Bounding Box，OBB）。
 
-## Import
+## 导入
 
-OBB is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+OBB 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { OBB } from 'three/addons/math/OBB.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new OBB( center : Vector3, halfSize : Vector3, rotation : Matrix3 )
 
-Constructs a new OBB.
+构造一个新的 OBB。
 
 **center**
 
-The center of the OBB.
+OBB 的中心。
 
 **halfSize**
 
-Positive halfwidth extents of the OBB along each axis.
+OBB 沿各轴的正半宽范围。
 
 **rotation**
 
-The rotation of the OBB.
+OBB 的旋转。
 
-## Properties
+## 属性
 
 ### .center : Vector3
 
-The center of the OBB.
+OBB 的中心。
 
 ### .halfSize : Vector3
 
-Positive halfwidth extents of the OBB along each axis.
+OBB 沿各轴的正半宽范围。
 
 ### .rotation : Matrix3
 
-The rotation of the OBB.
+OBB 的旋转。
 
-## Methods
+## 方法
 
 ### .applyMatrix4( matrix : Matrix4 ) : OBB
 
-Applies the given transformation matrix to this OBB. This method can be used to transform the bounding volume with the world matrix of a 3D object in order to keep both entities in sync.
+将给定的变换矩阵应用于此 OBB。此方法可用于使用 3D 对象的世界矩阵变换包围体，以使两者保持同步。
 
 **matrix**
 
-The matrix to apply.
+要应用的矩阵。
 
-**Returns:** A reference of this OBB.
+**返回值：** 对此 OBB 的引用。
 
 ### .clampPoint( point : Vector3, target : Vector3 ) : Vector3
 
-Clamps the given point within the bounds of this OBB.
+将给定点钳制在此 OBB 的边界内。
 
 **point**
 
-The point that should be clamped within the bounds of this OBB.
+应钳制在此 OBB 边界内的点。
 
 **target**
 
-The target vector that is used to store the method's result.
+用于存储方法结果的目标向量。
 
-**Returns:**
+**返回值：**
 
-*   The clamped point.
+*   钳制后的点。
 
 ### .clone() : OBB
 
-Returns a new OBB with copied values from this instance.
+返回一个新的 OBB，其值从此实例复制而来。
 
-**Returns:** A clone of this instance.
+**返回值：** 此实例的克隆。
 
 ### .containsPoint( point : Vector3 ) : boolean
 
-Returns `true` if the given point lies within this OBB.
+如果给定点位于此 OBB 内，则返回 `true`。
 
 **point**
 
-The point to test.
+要检测的点。
 
-**Returns:**
+**返回值：**
 
-*   Whether the given point lies within this OBB or not.
+*   给定点是否位于此 OBB 内。
 
 ### .copy( obb : OBB ) : OBB
 
-Copies the values of the given OBB to this instance.
+将给定 OBB 的值复制到此实例。
 
 **obb**
 
-The OBB to copy.
+要复制的 OBB。
 
-**Returns:** A reference to this OBB.
+**返回值：** 对此 OBB 的引用。
 
 ### .equals( obb : OBB ) : boolean
 
-Returns `true` if the given OBB is equal to this OBB.
+如果给定 OBB 与此 OBB 相等，则返回 `true`。
 
 **obb**
 
-The OBB to test.
+要检测的 OBB。
 
-**Returns:** Whether the given OBB is equal to this OBB or not.
+**返回值：** 给定 OBB 是否与此 OBB 相等。
 
 ### .fromBox3( box3 : Box3 ) : OBB
 
-Defines an OBB based on the given AABB.
+根据给定的 AABB 定义一个 OBB。
 
 **box3**
 
-The AABB to setup the OBB from.
+用于设置此 OBB 的 AABB。
 
-**Returns:** A reference of this OBB.
+**返回值：** 对此 OBB 的引用。
 
 ### .getSize( target : Vector3 ) : Vector3
 
-Returns the size of this OBB.
+返回此 OBB 的尺寸。
 
 **target**
 
-The target vector that is used to store the method's result.
+用于存储方法结果的目标向量。
 
-**Returns:** The size.
+**返回值：** 尺寸。
 
 ### .intersectRay( ray : Ray, target : Vector3 ) : Vector3
 
-Performs a ray/OBB intersection test and stores the intersection point in the given 3D vector.
+执行射线与 OBB 的相交检测，并将交点存储到给定的三维向量中。
 
 **ray**
 
-The ray to test.
+要检测的射线。
 
 **target**
 
-The target vector that is used to store the method's result.
+用于存储方法结果的目标向量。
 
-**Returns:** The intersection point. If no intersection is detected, `null` is returned.
+**返回值：** 交点。如果未检测到相交，则返回 `null`。
 
 ### .intersectsBox3( box3 : Box3 ) : boolean
 
-Returns `true` if the given AABB intersects this OBB.
+如果给定 AABB 与此 OBB 相交，则返回 `true`。
 
 **box3**
 
-The AABB to test.
+要检测的 AABB。
 
-**Returns:**
+**返回值：**
 
-*   Whether the given AABB intersects this OBB or not.
+*   给定 AABB 是否与此 OBB 相交。
 
 ### .intersectsOBB( obb : OBB, epsilon : number ) : boolean
 
-Returns `true` if the given OBB intersects this OBB.
+如果给定 OBB 与此 OBB 相交，则返回 `true`。
 
 **obb**
 
-The OBB to test.
+要检测的 OBB。
 
 **epsilon**
 
-A small value to prevent arithmetic errors.
+用于防止算术误差的小值。
 
-Default is `Number.EPSILON`.
+默认值为 `Number.EPSILON`。
 
-**Returns:**
+**返回值：**
 
-*   Whether the given OBB intersects this OBB or not.
+*   给定 OBB 是否与此 OBB 相交。
 
 ### .intersectsPlane( plane : Plane ) : boolean
 
-Returns `true` if the given plane intersects this OBB.
+如果给定平面与此 OBB 相交，则返回 `true`。
 
 **plane**
 
-The plane to test.
+要检测的平面。
 
-**Returns:** Whether the given plane intersects this OBB or not.
+**返回值：** 给定平面是否与此 OBB 相交。
 
 ### .intersectsRay( ray : Ray ) : boolean
 
-Returns `true` if the given ray intersects this OBB.
+如果给定射线与此 OBB 相交，则返回 `true`。
 
 **ray**
 
-The ray to test.
+要检测的射线。
 
-**Returns:** Whether the given ray intersects this OBB or not.
+**返回值：** 给定射线是否与此 OBB 相交。
 
 ### .intersectsSphere( sphere : Sphere ) : boolean
 
-Returns `true` if the given bounding sphere intersects this OBB.
+如果给定包围球与此 OBB 相交，则返回 `true`。
 
 **sphere**
 
-The bounding sphere to test.
+要检测的包围球。
 
-**Returns:**
+**返回值：**
 
-*   Whether the given bounding sphere intersects this OBB or not.
+*   给定包围球是否与此 OBB 相交。
 
 ### .set( center : Vector3, halfSize : Vector3, rotation : Matrix3 ) : OBB
 
-Sets the OBBs components to the given values.
+将 OBB 的各分量设置为给定值。
 
 **center**
 
-The center of the OBB.
+OBB 的中心。
 
 **halfSize**
 
-Positive halfwidth extents of the OBB along each axis.
+OBB 沿各轴的正半宽范围。
 
 **rotation**
 
-The rotation of the OBB.
+OBB 的旋转。
 
-**Returns:** A reference to this OBB.
+**返回值：** 对此 OBB 的引用。
 
-## Source
+## 源码
 
 [examples/jsm/math/OBB.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/math/OBB.js)

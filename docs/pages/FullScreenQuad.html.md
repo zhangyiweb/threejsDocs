@@ -2,52 +2,52 @@
 
 # FullScreenQuad
 
-This module is a helper for passes which need to render a full screen effect which is quite common in context of post processing.
+该模块是需要渲染全屏效果的通道的辅助工具，这在后处理场景中十分常见。
 
-The intended usage is to reuse a single full screen quad for rendering subsequent passes by just reassigning the `material` reference.
+预期用法是复用同一个全屏四边形来渲染后续通道，只需重新指定 `material` 引用即可。
 
-This module can only be used with [WebGLRenderer](WebGLRenderer.html).
+该模块只能与 [WebGLRenderer](WebGLRenderer.html) 一起使用。
 
-## Import
+## 导入
 
-FullScreenQuad is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+FullScreenQuad 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { FullScreenQuad } from 'three/addons/postprocessing/Pass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new FullScreenQuad( material : Material )
 
-Constructs a new full screen quad.
+构造一个新的全屏四边形。
 
 **material**
 
-The material to render te full screen quad with.
+用于渲染全屏四边形的材质。
 
-## Properties
+## 属性
 
 ### .material : Material
 
-The quad's material.
+四边形的材质。
 
-**Overrides:** [Mesh#material](Mesh.html#material)
+**重写：** [Mesh#material](Mesh.html#material)
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the instance is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再使用该实例时，应调用此方法。
 
 ### .render( renderer : WebGLRenderer )
 
-Renders the full screen quad.
+渲染全屏四边形。
 
 **renderer**
 
-The renderer.
+渲染器。
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/Pass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/Pass.js)

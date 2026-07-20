@@ -2,167 +2,167 @@
 
 # SSAOPass
 
-A pass for a basic SSAO effect.
+用于实现基础 SSAO 效果的通道。
 
-[SAOPass](SAOPass.html) and GTAPass produce a more advanced AO but are also more expensive.
+[SAOPass](SAOPass.html) 和 GTAPass 可产生更高级的 AO，但开销也更大。
 
-## Code Example
+## 代码示例
 
 ```js
 const ssaoPass = new SSAOPass( scene, camera, width, height );
 composer.addPass( ssaoPass );
 ```
 
-## Import
+## 导入
 
-SSAOPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+SSAOPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { SSAOPass } from 'three/addons/postprocessing/SSAOPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new SSAOPass( scene : Scene, camera : Camera, width : number, height : number, kernelSize : number )
 
-Constructs a new SSAO pass.
+构造一个新的 SSAO 通道。
 
 **scene**
 
-The scene to compute the AO for.
+要计算 AO 的场景。
 
 **camera**
 
-The camera.
+相机。
 
 **width**
 
-The width of the effect.
+效果的宽度。
 
-Default is `512`.
+默认值为 `512`。
 
 **height**
 
-The height of the effect.
+效果的高度。
 
-Default is `512`.
+默认值为 `512`。
 
 **kernelSize**
 
-The kernel size.
+核大小。
 
-Default is `32`.
+默认值为 `32`。
 
-## Properties
+## 属性
 
 ### .camera : Camera
 
-The camera.
+相机。
 
 ### .clear : boolean
 
-Overwritten to perform a clear operation by default.
+被重写为默认执行清除操作。
 
-Default is `true`.
+默认值为 `true`。
 
-**Overrides:** [Pass#clear](Pass.html#clear)
+**重写：** [Pass#clear](Pass.html#clear)
 
 ### .height : number
 
-The height of the effect.
+效果的高度。
 
-Default is `512`.
+默认值为 `512`。
 
 ### .kernelRadius : number
 
-The kernel radius controls how wide the AO spreads.
+核半径控制 AO 的扩散范围。
 
-Default is `8`.
+默认值为 `8`。
 
 ### .maxDistance : number
 
-Defines the maximum distance that should be affected by the AO.
+定义应受 AO 影响的最大距离。
 
-Default is `0.1`.
+默认值为 `0.1`。
 
 ### .minDistance : number
 
-Defines the minimum distance that should be affected by the AO.
+定义应受 AO 影响的最小距离。
 
-Default is `0.005`.
+默认值为 `0.005`。
 
 ### .needsSwap : boolean
 
-Overwritten to disable the swap.
+被重写为禁用交换。
 
-Default is `false`.
+默认值为 `false`。
 
-**Overrides:** [Pass#needsSwap](Pass.html#needsSwap)
+**重写：** [Pass#needsSwap](Pass.html#needsSwap)
 
 ### .output : number
 
-The output configuration.
+输出配置。
 
-Default is `0`.
+默认值为 `0`。
 
 ### .scene : Scene
 
-The scene to render the AO for.
+要渲染 AO 的场景。
 
 ### .width : number
 
-The width of the effect.
+效果的宽度。
 
-Default is `512`.
+默认值为 `512`。
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the SSAO pass.
+执行 SSAO 通道。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
 ### .setSize( width : number, height : number )
 
-Sets the size of the pass.
+设置通道的尺寸。
 
 **width**
 
-The width to set.
+要设置的宽度。
 
 **height**
 
-The height to set.
+要设置的高度。
 
-**Overrides:** [Pass#setSize](Pass.html#setSize)
+**重写：** [Pass#setSize](Pass.html#setSize)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/SSAOPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/SSAOPass.js)

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>RenderPixelatedPass - Three.js Docs</title>
+	<title>RenderPixelatedPass - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,22 +13,22 @@
 	<h1 translate="no">RenderPixelatedPass</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A special type of render pass that produces a pixelated beauty pass.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>一种特殊的渲染通道，用于生成像素化的最终画面（beauty pass）。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const renderPixelatedPass = new RenderPixelatedPass( 6, scene, camera );
 composer.addPass( renderPixelatedPass );
 </code></pre></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">RenderPixelatedPass</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">RenderPixelatedPass</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { RenderPixelatedPass } from 'three/addons/postprocessing/RenderPixelatedPass.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="RenderPixelatedPass" translate="no">new <a href="#RenderPixelatedPass">RenderPixelatedPass</a><span class="signature">( pixelSize : <span class="param-type">number</span>, scene : <span class="param-type"><a href="Scene.html">Scene</a></span>, camera : <span class="param-type"><a href="Camera.html">Camera</a></span>, options : <span class="param-type">Object</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new render pixelated pass.</p>
+							<p>构造一个新的像素化渲染通道。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -37,7 +37,7 @@ composer.addPass( renderPixelatedPass );
 										<strong translate="no">pixelSize</strong>
 									</td>
 									<td class="description last">
-										<p>The effect's pixel size.</p>
+										<p>效果的像素大小。</p>
 									</td>
 								</tr>
 								<tr>
@@ -45,7 +45,7 @@ composer.addPass( renderPixelatedPass );
 										<strong translate="no">scene</strong>
 									</td>
 									<td class="description last">
-										<p>The scene to render.</p>
+										<p>要渲染的场景。</p>
 									</td>
 								</tr>
 								<tr>
@@ -53,7 +53,7 @@ composer.addPass( renderPixelatedPass );
 										<strong translate="no">camera</strong>
 									</td>
 									<td class="description last">
-										<p>The camera.</p>
+										<p>相机。</p>
 									</td>
 								</tr>
 								<tr>
@@ -61,67 +61,66 @@ composer.addPass( renderPixelatedPass );
 										<strong translate="no">options</strong>
 									</td>
 									<td class="description last">
-										<p>The pass options.</p>
+										<p>通道选项。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="camera" translate="no">.<a href="#camera">camera</a><span class="type-signature"> : <a href="Camera.html">Camera</a></span> </h3>
 					<div class="description">
-						<p>The camera.</p>
+						<p>相机。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="depthEdgeStrength" translate="no">.<a href="#depthEdgeStrength">depthEdgeStrength</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The normal edge strength.</p>
-						<p>Default is <code>0.4</code>.</p>
+						<p>深度边缘强度。</p>
+						<p>默认值为 <code>0.4</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="normalEdgeStrength" translate="no">.<a href="#normalEdgeStrength">normalEdgeStrength</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The normal edge strength.</p>
-						<p>Default is <code>0.3</code>.</p>
+						<p>法线边缘强度。</p>
+						<p>默认值为 <code>0.3</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="pixelSize" translate="no">.<a href="#pixelSize">pixelSize</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The effect's pixel size.</p>
+						<p>效果的像素大小。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="pixelatedMaterial" translate="no">.<a href="#pixelatedMaterial">pixelatedMaterial</a><span class="type-signature"> : <a href="ShaderMaterial.html">ShaderMaterial</a></span> </h3>
 					<div class="description">
-						<p>The pixelated material.</p>
+						<p>像素化材质。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="scene" translate="no">.<a href="#scene">scene</a><span class="type-signature"> : <a href="Scene.html">Scene</a></span> </h3>
 					<div class="description">
-						<p>The scene to render.</p>
+						<p>要渲染的场景。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="dispose" translate="no">.<a href="#dispose">dispose</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Frees the GPU-related resources allocated by this instance. Call this
-method whenever the pass is no longer used in your app.</p>
+							<p>释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Pass.html#dispose">Pass#dispose</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Pass.html#dispose">Pass#dispose</a></dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="render" translate="no">.<a href="#render">render</a><span class="signature">( renderer : <span class="param-type"><a href="WebGLRenderer.html">WebGLRenderer</a></span>, writeBuffer : <span class="param-type"><a href="WebGLRenderTarget.html">WebGLRenderTarget</a></span>, readBuffer : <span class="param-type"><a href="WebGLRenderTarget.html">WebGLRenderTarget</a></span>, deltaTime : <span class="param-type">number</span>, maskActive : <span class="param-type">boolean</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Performs the pixelation pass.</p>
+							<p>执行像素化通道。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -130,7 +129,7 @@ method whenever the pass is no longer used in your app.</p>
 										<strong translate="no">renderer</strong>
 									</td>
 									<td class="description last">
-										<p>The renderer.</p>
+										<p>渲染器。</p>
 									</td>
 								</tr>
 								<tr>
@@ -138,8 +137,7 @@ method whenever the pass is no longer used in your app.</p>
 										<strong translate="no">writeBuffer</strong>
 									</td>
 									<td class="description last">
-										<p>The write buffer. This buffer is intended as the rendering
-destination for the pass.</p>
+										<p>写入缓冲区。该缓冲区作为通道的渲染目标。</p>
 									</td>
 								</tr>
 								<tr>
@@ -147,8 +145,7 @@ destination for the pass.</p>
 										<strong translate="no">readBuffer</strong>
 									</td>
 									<td class="description last">
-										<p>The read buffer. The pass can access the result from the
-previous pass from this buffer.</p>
+										<p>读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。</p>
 									</td>
 								</tr>
 								<tr>
@@ -156,7 +153,7 @@ previous pass from this buffer.</p>
 										<strong translate="no">deltaTime</strong>
 									</td>
 									<td class="description last">
-										<p>The delta time in seconds.</p>
+										<p>时间增量（秒）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -164,19 +161,19 @@ previous pass from this buffer.</p>
 										<strong translate="no">maskActive</strong>
 									</td>
 									<td class="description last">
-										<p>Whether masking is active or not.</p>
+										<p>遮罩是否处于激活状态。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Pass.html#render">Pass#render</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Pass.html#render">Pass#render</a></dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setPixelSize" translate="no">.<a href="#setPixelSize">setPixelSize</a><span class="signature">( pixelSize : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the effect's pixel size.</p>
+							<p>设置效果的像素大小。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -185,7 +182,7 @@ previous pass from this buffer.</p>
 										<strong translate="no">pixelSize</strong>
 									</td>
 									<td class="description last">
-										<p>The pixel size to set.</p>
+										<p>要设置的像素大小。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -194,7 +191,7 @@ previous pass from this buffer.</p>
 					<h3 class="name name-method" id="setSize" translate="no">.<a href="#setSize">setSize</a><span class="signature">( width : <span class="param-type">number</span>, height : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the size of the pass.</p>
+							<p>设置通道的尺寸。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -203,7 +200,7 @@ previous pass from this buffer.</p>
 										<strong translate="no">width</strong>
 									</td>
 									<td class="description last">
-										<p>The width to set.</p>
+										<p>要设置的宽度。</p>
 									</td>
 								</tr>
 								<tr>
@@ -211,16 +208,16 @@ previous pass from this buffer.</p>
 										<strong translate="no">height</strong>
 									</td>
 									<td class="description last">
-										<p>The height to set.</p>
+										<p>要设置的高度。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Pass.html#setSize">Pass#setSize</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Pass.html#setSize">Pass#setSize</a></dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/RenderPixelatedPass.js" translate="no" target="_blank" rel="noopener">examples/jsm/postprocessing/RenderPixelatedPass.js</a>
 				</p>

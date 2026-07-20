@@ -2,91 +2,91 @@
 
 # ClearPass
 
-This class can be used to force a clear operation for the current read or default framebuffer (when rendering to screen).
+此类可用于强制对当前读取缓冲或默认帧缓冲（渲染到屏幕时）执行清除操作。
 
-## Code Example
+## 代码示例
 
 ```js
 const clearPass = new ClearPass();
 composer.addPass( clearPass );
 ```
 
-## Import
+## 导入
 
-ClearPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+ClearPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { ClearPass } from 'three/addons/postprocessing/ClearPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new ClearPass( clearColor : number | Color | string, clearAlpha : number )
 
-Constructs a new clear pass.
+构造一个新的清除通道。
 
 **clearColor**
 
-The clear color.
+清除颜色。
 
-Default is `0x000000`.
+默认值为 `0x000000`。
 
 **clearAlpha**
 
-The clear alpha.
+清除的透明度。
 
-Default is `0`.
+默认值为 `0`。
 
-## Properties
+## 属性
 
 ### .clearAlpha : number
 
-The clear alpha.
+清除的透明度。
 
-Default is `0`.
+默认值为 `0`。
 
 ### .clearColor : number | Color | string
 
-The clear color.
+清除颜色。
 
-Default is `0x000000`.
+默认值为 `0x000000`。
 
 ### .needsSwap : boolean
 
-Overwritten to disable the swap.
+重写以禁用交换。
 
-Default is `false`.
+默认值为 `false`。
 
-**Overrides:** [Pass#needsSwap](Pass.html#needsSwap)
+**重写：** [Pass#needsSwap](Pass.html#needsSwap)
 
-## Methods
+## 方法
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the clear operation. This affects the current read or the default framebuffer.
+执行清除操作。这会影响当前读取缓冲或默认帧缓冲。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/ClearPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/ClearPass.js)

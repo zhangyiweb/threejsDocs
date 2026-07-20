@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>WireframeGeometry2 - Three.js Docs</title>
+	<title>WireframeGeometry2 - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,23 +13,23 @@
 	<h1 translate="no">WireframeGeometry2</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A special type of line segments geometry intended for wireframe rendering.</p>
-<p>This is used in <a href="Wireframe.html">Wireframe</a> to describe the shape.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>一种用于线框渲染的特殊线段几何体。</p>
+<p>在 <a href="Wireframe.html">Wireframe</a> 中用于描述形状。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const geometry = new THREE.IcosahedronGeometry();
 const wireframeGeometry = new WireframeGeometry2( geo );
 </code></pre></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">WireframeGeometry2</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">WireframeGeometry2</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { WireframeGeometry2 } from 'three/addons/lines/WireframeGeometry2.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="WireframeGeometry2" translate="no">new <a href="#WireframeGeometry2">WireframeGeometry2</a><span class="signature">( geometry : <span class="param-type"><a href="BufferGeometry.html">BufferGeometry</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new wireframe geometry.</p>
+							<p>构造一个新的线框几何体。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -38,22 +38,22 @@ const wireframeGeometry = new WireframeGeometry2( geo );
 										<strong translate="no">geometry</strong>
 									</td>
 									<td class="description last">
-										<p>The geometry to render the wireframe for.</p>
+										<p>要为其渲染线框的几何体。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="isWireframeGeometry2" translate="no">.<a href="#isWireframeGeometry2">isWireframeGeometry2</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/lines/WireframeGeometry2.js" translate="no" target="_blank" rel="noopener">examples/jsm/lines/WireframeGeometry2.js</a>
 				</p>

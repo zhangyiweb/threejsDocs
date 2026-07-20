@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>TIFFLoader - Three.js Docs</title>
+	<title>TIFFLoader - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,23 +13,23 @@
 	<h1 translate="no">TIFFLoader</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A loader for the TIFF texture format.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>TIFF 纹理格式加载器。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const loader = new TIFFLoader();
 const texture = await loader.loadAsync( 'textures/tiff/crate_lzw.tif' );
 texture.colorSpace = THREE.SRGBColorSpace;
 </code></pre></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">TIFFLoader</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">TIFFLoader</span> 是一个附加组件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { TIFFLoader } from 'three/addons/loaders/TIFFLoader.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="TIFFLoader" translate="no">new <a href="#TIFFLoader">TIFFLoader</a><span class="signature">( manager : <span class="param-type"><a href="LoadingManager.html">LoadingManager</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new TIFF loader.</p>
+							<p>构造一个新的 TIFF 加载器。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -38,18 +38,18 @@ texture.colorSpace = THREE.SRGBColorSpace;
 										<strong translate="no">manager</strong>
 									</td>
 									<td class="description last">
-										<p>The loading manager.</p>
+										<p>加载管理器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="parse" translate="no">.<a href="#parse">parse</a><span class="signature">( buffer : <span class="param-type">ArrayBuffer</span> )</span><span class="type-signature"> : <a href="DataTextureLoader.html#~TexData">DataTextureLoader~TexData</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Parses the given TIFF texture data.</p>
+							<p>解析给定的 TIFF 纹理数据。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -58,19 +58,19 @@ texture.colorSpace = THREE.SRGBColorSpace;
 										<strong translate="no">buffer</strong>
 									</td>
 									<td class="description last">
-										<p>The raw texture data.</p>
+										<p>原始纹理数据。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="DataTextureLoader.html#parse">DataTextureLoader#parse</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="DataTextureLoader.html#parse">DataTextureLoader#parse</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> An object representing the parsed texture data.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 表示已解析纹理数据的对象。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/loaders/TIFFLoader.js" translate="no" target="_blank" rel="noopener">examples/jsm/loaders/TIFFLoader.js</a>
 				</p>

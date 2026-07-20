@@ -2,97 +2,97 @@
 
 # MaskPass
 
-This pass can be used to define a mask during post processing. Meaning only areas of subsequent post processing are affected which lie in the masking area of this pass. Internally, the masking is implemented with the stencil buffer.
+此通道可用于在后处理过程中定义遮罩。这意味着后续后处理仅会影响位于本通道遮罩区域内的部分。内部通过模板缓冲区实现遮罩。
 
-## Code Example
+## 代码示例
 
 ```js
 const maskPass = new MaskPass( scene, camera );
 composer.addPass( maskPass );
 ```
 
-## Import
+## 导入
 
-MaskPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+MaskPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { MaskPass } from 'three/addons/postprocessing/MaskPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new MaskPass( scene : Scene, camera : Camera )
 
-Constructs a new mask pass.
+构造一个新的遮罩通道。
 
 **scene**
 
-The 3D objects in this scene will define the mask.
+该场景中的 3D 对象将定义遮罩。
 
 **camera**
 
-The camera.
+相机。
 
-## Properties
+## 属性
 
 ### .camera : Camera
 
-The camera.
+相机。
 
 ### .clear : boolean
 
-Overwritten to perform a clear operation by default.
+已重写，默认执行清除操作。
 
-Default is `true`.
+默认值为 `true`。
 
-**Overrides:** [Pass#clear](Pass.html#clear)
+**重写：** [Pass#clear](Pass.html#clear)
 
 ### .inverse : boolean
 
-Whether to inverse the mask or not.
+是否反转遮罩。
 
-Default is `false`.
+默认值为 `false`。
 
 ### .needsSwap : boolean
 
-Overwritten to disable the swap.
+已重写，以禁用交换。
 
-Default is `false`.
+默认值为 `false`。
 
-**Overrides:** [Pass#needsSwap](Pass.html#needsSwap)
+**重写：** [Pass#needsSwap](Pass.html#needsSwap)
 
 ### .scene : Scene
 
-The scene that defines the mask.
+定义遮罩的场景。
 
-## Methods
+## 方法
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs a mask pass with the configured scene and camera.
+使用已配置的场景和相机执行遮罩通道。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/MaskPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/MaskPass.js)

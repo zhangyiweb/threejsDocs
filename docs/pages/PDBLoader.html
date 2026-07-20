@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>PDBLoader - Three.js Docs</title>
+	<title>PDBLoader - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,10 +13,10 @@
 	<h1 translate="no">PDBLoader</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A loader for the PDB format.</p>
-<p>The <a href="https://en.wikipedia.org/wiki/Protein_Data_Bank_(file_format)" target="_blank" rel="noopener">Protein Data Bank</a>
-file format is a textual file describing the three-dimensional structures of molecules.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>用于加载 PDB 格式的加载器。</p>
+<p><a href="https://en.wikipedia.org/wiki/Protein_Data_Bank_(file_format)" target="_blank" rel="noopener">Protein Data Bank</a>
+文件格式是一种描述分子三维结构的文本文件。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const loader = new PDBLoader();
 const pdb = await loader.loadAsync( 'models/pdb/ethanol.pdb' );
 const geometryAtoms = pdb.geometryAtoms;
@@ -25,15 +25,15 @@ const json = pdb.json;
 </code></pre></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">PDBLoader</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">PDBLoader</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { PDBLoader } from 'three/addons/loaders/PDBLoader.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="PDBLoader" translate="no">new <a href="#PDBLoader">PDBLoader</a><span class="signature">( manager : <span class="param-type"><a href="LoadingManager.html">LoadingManager</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new PDB loader.</p>
+							<p>构造一个新的 PDB 加载器。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -42,19 +42,19 @@ const json = pdb.json;
 										<strong translate="no">manager</strong>
 									</td>
 									<td class="description last">
-										<p>The loading manager.</p>
+										<p>加载管理器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="load" translate="no">.<a href="#load">load</a><span class="signature">( url : <span class="param-type">string</span>, onLoad : <span class="param-type">function</span>, onProgress : <span class="param-type"><a href="global.html#onProgressCallback">onProgressCallback</a></span>, onError : <span class="param-type"><a href="global.html#onErrorCallback">onErrorCallback</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Starts loading from the given URL and passes the loaded PDB asset
-to the <code>onLoad()</code> callback.</p>
+							<p>从指定 URL 开始加载，并将加载完成的 PDB 资源
+传递给 <code>onLoad()</code> 回调。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -63,7 +63,7 @@ to the <code>onLoad()</code> callback.</p>
 										<strong translate="no">url</strong>
 									</td>
 									<td class="description last">
-										<p>The path/URL of the file to be loaded. This can also be a data URI.</p>
+										<p>要加载的文件路径/URL，也可以是 data URI。</p>
 									</td>
 								</tr>
 								<tr>
@@ -71,7 +71,7 @@ to the <code>onLoad()</code> callback.</p>
 										<strong translate="no">onLoad</strong>
 									</td>
 									<td class="description last">
-										<p>Executed when the loading process has been finished.</p>
+										<p>加载完成时执行。</p>
 									</td>
 								</tr>
 								<tr>
@@ -79,7 +79,7 @@ to the <code>onLoad()</code> callback.</p>
 										<strong translate="no">onProgress</strong>
 									</td>
 									<td class="description last">
-										<p>Executed while the loading is in progress.</p>
+										<p>加载进行中时执行。</p>
 									</td>
 								</tr>
 								<tr>
@@ -87,20 +87,20 @@ to the <code>onLoad()</code> callback.</p>
 										<strong translate="no">onError</strong>
 									</td>
 									<td class="description last">
-										<p>Executed when errors occur.</p>
+										<p>发生错误时执行。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Loader.html#load">Loader#load</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Loader.html#load">Loader#load</a></dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="parse" translate="no">.<a href="#parse">parse</a><span class="signature">( text : <span class="param-type">string</span> )</span><span class="type-signature"> : Object</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Parses the given PDB data and returns an object holding the atoms and
-bond geometries as well as the raw atom data as JSON.</p>
+							<p>解析给定的 PDB 数据并返回一个对象，其中包含原子与
+键的几何体以及原始原子数据的 JSON。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -109,19 +109,19 @@ bond geometries as well as the raw atom data as JSON.</p>
 										<strong translate="no">text</strong>
 									</td>
 									<td class="description last">
-										<p>The raw PDB data as a string.</p>
+										<p>原始 PDB 数据字符串。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Loader.html#parse">Loader#parse</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Loader.html#parse">Loader#parse</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The result object.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 结果对象。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/loaders/PDBLoader.js" translate="no" target="_blank" rel="noopener">examples/jsm/loaders/PDBLoader.js</a>
 				</p>

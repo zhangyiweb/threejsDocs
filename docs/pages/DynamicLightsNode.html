@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>DynamicLightsNode - Three.js Docs</title>
+	<title>DynamicLightsNode - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,21 +13,19 @@
 	<h1 translate="no">DynamicLightsNode</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A custom version of <code>LightsNode</code> that batches supported analytic lights into
-uniform arrays and loops.</p>
-<p>Unsupported lights, node lights, shadow-casting lights, and projected spot
-lights keep the default per-light path.</p></div>
+				<div class="class-description"><p><code>LightsNode</code> 的自定义版本，将受支持的解析光源批量写入 uniform 数组并通过循环处理。</p>
+<p>不受支持的光源、节点光源、投射阴影的光源以及投影聚光灯仍走默认的逐光源路径。</p></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">DynamicLightsNode</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">DynamicLightsNode</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { DynamicLightsNode } from 'three/addons/tsl/lighting/DynamicLightsNode.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="DynamicLightsNode" translate="no">new <a href="#DynamicLightsNode">DynamicLightsNode</a><span class="signature">( options : <span class="param-type">Object</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new dynamic lights node.</p>
+							<p>构造一个新的动态光源节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -36,8 +34,8 @@ lights keep the default per-light path.</p></div>
 										<strong translate="no">options</strong>
 									</td>
 									<td class="description last">
-										<p>Dynamic lighting configuration.</p>
-										<p>Default is <code>{}</code>.</p>
+										<p>动态光照配置。</p>
+										<p>默认值为 <code>{}</code>。</p>
 						<table class="params">
 							<tbody>
 								<tr>
@@ -45,8 +43,8 @@ lights keep the default per-light path.</p></div>
 										<strong translate="no">maxDirectionalLights</strong>
 									</td>
 									<td class="description last">
-										<p>Maximum number of batched directional lights.</p>
-										<p>Default is <code>8</code>.</p>
+										<p>批量方向光的最大数量。</p>
+										<p>默认值为 <code>8</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -54,8 +52,8 @@ lights keep the default per-light path.</p></div>
 										<strong translate="no">maxPointLights</strong>
 									</td>
 									<td class="description last">
-										<p>Maximum number of batched point lights.</p>
-										<p>Default is <code>16</code>.</p>
+										<p>批量点光源的最大数量。</p>
+										<p>默认值为 <code>16</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -63,8 +61,8 @@ lights keep the default per-light path.</p></div>
 										<strong translate="no">maxSpotLights</strong>
 									</td>
 									<td class="description last">
-										<p>Maximum number of batched spot lights.</p>
-										<p>Default is <code>16</code>.</p>
+										<p>批量聚光灯的最大数量。</p>
+										<p>默认值为 <code>16</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -72,8 +70,8 @@ lights keep the default per-light path.</p></div>
 										<strong translate="no">maxHemisphereLights</strong>
 									</td>
 									<td class="description last">
-										<p>Maximum number of batched hemisphere lights.</p>
-										<p>Default is <code>4</code>.</p>
+										<p>批量半球光的最大数量。</p>
+										<p>默认值为 <code>4</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -84,7 +82,7 @@ lights keep the default per-light path.</p></div>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/tsl/lighting/DynamicLightsNode.js" translate="no" target="_blank" rel="noopener">examples/jsm/tsl/lighting/DynamicLightsNode.js</a>
 				</p>

@@ -1,10 +1,10 @@
 # EffectComposer
 
-Used to implement post-processing effects in three.js. The class manages a chain of post-processing passes to produce the final visual result. Post-processing passes are executed in order of their addition/insertion. The last pass is automatically rendered to screen.
+用于在 three.js 中实现后期处理效果。该类管理一系列后期处理通道，以生成最终的视觉结果。后期处理通道按其添加/插入的顺序执行。最后一个通道会自动渲染到屏幕。
 
-This module can only be used with [WebGLRenderer](WebGLRenderer.html).
+此模块只能与 [WebGLRenderer](WebGLRenderer.html) 一起使用。
 
-## Code Example
+## 代码示例
 
 ```js
 const composer = new EffectComposer( renderer );
@@ -20,136 +20,136 @@ function animate() {
 }
 ```
 
-## Import
+## 导入
 
-EffectComposer is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+EffectComposer 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new EffectComposer( renderer : WebGLRenderer, renderTarget : WebGLRenderTarget )
 
-Constructs a new effect composer.
+构造一个新的效果合成器。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **renderTarget**
 
-This render target and a clone will be used as the internal read and write buffers. If not given, the composer creates the buffers automatically.
+此渲染目标及其克隆将用作内部的读取和写入缓冲区。若未提供，合成器会自动创建这些缓冲区。
 
-## Properties
+## 属性
 
 ### .passes : Array.<Pass>
 
-An array representing the (ordered) chain of post-processing passes.
+表示（有序）后期处理通道链的数组。
 
 ### .readBuffer : WebGLRenderTarget
 
-A reference to the internal read buffer. Passes usually read the previous render result from this buffer.
+内部读取缓冲区的引用。通道通常从此缓冲区读取上一通道的渲染结果。
 
 ### .renderToScreen : boolean
 
-Whether the final pass is rendered to the screen (default framebuffer) or not.
+最终通道是否渲染到屏幕（默认帧缓冲）。
 
-Default is `true`.
+默认值为 `true`。
 
 ### .renderer : WebGLRenderer
 
-The renderer.
+渲染器。
 
 ### .writeBuffer : WebGLRenderTarget
 
-A reference to the internal write buffer. Passes usually write their result into this buffer.
+内部写入缓冲区的引用。通道通常将其结果写入此缓冲区。
 
-## Methods
+## 方法
 
 ### .addPass( pass : Pass )
 
-Adds the given pass to the pass chain.
+将给定通道添加到通道链中。
 
 **pass**
 
-The pass to add.
+要添加的通道。
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the composer is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此合成器时，应调用此方法。
 
 ### .insertPass( pass : Pass, index : number )
 
-Inserts the given pass at a given index.
+在给定索引处插入通道。
 
 **pass**
 
-The pass to insert.
+要插入的通道。
 
 **index**
 
-The index into the pass chain.
+通道链中的索引。
 
 ### .isLastEnabledPass( passIndex : number ) : boolean
 
-Returns `true` if the pass for the given index is the last enabled pass in the pass chain.
+若给定索引处的通道是通道链中最后一个启用的通道，则返回 `true`。
 
 **passIndex**
 
-The pass index.
+通道索引。
 
-**Returns:** Whether the pass for the given index is the last pass in the pass chain.
+**返回值：** 给定索引处的通道是否为通道链中的最后一个通道。
 
 ### .removePass( pass : Pass )
 
-Removes the given pass from the pass chain.
+从通道链中移除给定通道。
 
 **pass**
 
-The pass to remove.
+要移除的通道。
 
 ### .render( deltaTime : number )
 
-Executes all enabled post-processing passes in order to produce the final frame.
+按顺序执行所有启用的后期处理通道，以生成最终帧。
 
 **deltaTime**
 
-The delta time in seconds. If not given, the composer computes its own time delta value.
+时间增量（秒）。若未提供，合成器将自行计算时间增量。
 
 ### .reset( renderTarget : WebGLRenderTarget )
 
-Resets the internal state of the EffectComposer.
+重置 EffectComposer 的内部状态。
 
 **renderTarget**
 
-This render target has the same purpose like the one from the constructor. If set, it is used to setup the read and write buffers.
+此渲染目标的用途与构造函数中的相同。若已设置，则用于配置读取和写入缓冲区。
 
 ### .setPixelRatio( pixelRatio : number )
 
-Sets device pixel ratio. This is usually used for HiDPI device to prevent blurring output. Setting the pixel ratio will automatically resize the composer.
+设置设备像素比。通常用于 HiDPI 设备，以避免输出模糊。设置像素比会自动调整合成器的尺寸。
 
 **pixelRatio**
 
-The pixel ratio to set.
+要设置的像素比。
 
 ### .setSize( width : number, height : number )
 
-Resizes the internal read and write buffers as well as all passes. Similar to [WebGLRenderer#setSize](WebGLRenderer.html#setSize), this method honors the current pixel ration.
+调整内部读取、写入缓冲区以及所有通道的尺寸。与 [WebGLRenderer#setSize](WebGLRenderer.html#setSize) 类似，此方法会遵循当前的像素比。
 
 **width**
 
-The width in logical pixels.
+逻辑像素宽度。
 
 **height**
 
-The height in logical pixels.
+逻辑像素高度。
 
 ### .swapBuffers()
 
-Swaps the internal read/write buffers.
+交换内部的读取/写入缓冲区。
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/EffectComposer.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/EffectComposer.js)

@@ -1,41 +1,41 @@
 # ImprovedNoise
 
-A utility class providing a 3D noise function.
+提供三维噪声函数的工具类。
 
-The code is based on [IMPROVED NOISE](https://cs.nyu.edu/~perlin/noise/) by Ken Perlin, 2002.
+代码基于 Ken Perlin 于 2002 年发布的 [IMPROVED NOISE](https://cs.nyu.edu/~perlin/noise/)。
 
-## Import
+## 导入
 
-ImprovedNoise is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+ImprovedNoise 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { ImprovedNoise } from 'three/addons/math/ImprovedNoise.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new ImprovedNoise()
 
-## Methods
+## 方法
 
 ### .noise( x : number, y : number, z : number ) : number
 
-Returns a noise value for the given parameters.
+根据给定参数返回噪声值。
 
 **x**
 
-The x coordinate.
+x 坐标。
 
 **y**
 
-The y coordinate.
+y 坐标。
 
 **z**
 
-The z coordinate.
+z 坐标。
 
-**Returns:** The noise value.
+**返回值：** 噪声值。
 
-## Source
+## 源码
 
 [examples/jsm/math/ImprovedNoise.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/math/ImprovedNoise.js)

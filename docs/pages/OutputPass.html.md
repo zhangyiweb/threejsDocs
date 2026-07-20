@@ -2,81 +2,81 @@
 
 # OutputPass
 
-This pass is responsible for including tone mapping and color space conversion into your pass chain. In most cases, this pass should be included at the end of each pass chain. If a pass requires sRGB input (e.g. like FXAA), the pass must follow `OutputPass` in the pass chain.
+此通道负责在通道链中加入色调映射和色彩空间转换。在大多数情况下，应将其放在每条通道链的末尾。如果某个通道需要 sRGB 输入（例如 FXAA），则该通道必须跟在 `OutputPass` 之后。
 
-The tone mapping and color space settings are extracted from the renderer.
+色调映射和色彩空间设置从渲染器中提取。
 
-## Code Example
+## 代码示例
 
 ```js
 const outputPass = new OutputPass();
 composer.addPass( outputPass );
 ```
 
-## Import
+## 导入
 
-OutputPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+OutputPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new OutputPass()
 
-Constructs a new output pass.
+构造一个新的输出通道。
 
-## Properties
+## 属性
 
 ### .isOutputPass : boolean (readonly)
 
-This flag indicates that this is an output pass.
+此标志表示这是一个输出通道。
 
-Default is `true`.
+默认值为 `true`。
 
 ### .material : RawShaderMaterial
 
-The pass material.
+通道材质。
 
 ### .uniforms : Object
 
-The pass uniforms.
+通道的 uniform 对象。
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the output pass.
+执行输出通道。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/OutputPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/OutputPass.js)

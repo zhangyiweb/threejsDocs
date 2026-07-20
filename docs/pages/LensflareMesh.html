@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>LensflareMesh - Three.js Docs</title>
+	<title>LensflareMesh - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,10 +13,10 @@
 	<h1 translate="no">LensflareMesh</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>Creates a simulated lens flare that tracks a light.</p>
-<p>Note that this class can only be used with <a href="WebGPURenderer.html">WebGPURenderer</a>.
-When using <a href="WebGLRenderer.html">WebGLRenderer</a>, use <a href="Lensflare.html">Lensflare</a>.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>创建一个跟随光源的模拟镜头光晕。</p>
+<p>注意：此类只能与 <a href="WebGPURenderer.html">WebGPURenderer</a> 一起使用。
+使用 <a href="WebGLRenderer.html">WebGLRenderer</a> 时，请使用 <a href="Lensflare.html">Lensflare</a>。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const light = new THREE.PointLight( 0xffffff, 1.5, 2000 );
 const lensflare = new LensflareMesh();
 lensflare.addElement( new LensflareElement( textureFlare0, 512, 0 ) );
@@ -26,51 +26,51 @@ light.add( lensflare );
 </code></pre></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">LensflareMesh</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">LensflareMesh</span> 是一个附加组件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { LensflareMesh } from 'three/addons/objects/LensflareMesh.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="LensflareMesh" translate="no">new <a href="#LensflareMesh">LensflareMesh</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new lensflare mesh.</p>
+							<p>构造一个新的镜头光晕网格。</p>
 						</div>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="frustumCulled" translate="no">.<a href="#frustumCulled">frustumCulled</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Overwritten to disable view-frustum culling by default.</p>
-						<p>Default is <code>false</code>.</p>
+						<p>已重写，默认禁用视锥体裁剪。</p>
+						<p>默认值为 <code>false</code>。</p>
 					</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Mesh.html#frustumCulled">Mesh#frustumCulled</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Mesh.html#frustumCulled">Mesh#frustumCulled</a></dt>
 						</dl>
 				</div>
 				<div class="member">
 					<h3 class="name" id="isLensflareMesh" translate="no">.<a href="#isLensflareMesh">isLensflareMesh</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="renderOrder" translate="no">.<a href="#renderOrder">renderOrder</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>Overwritten to make sure lensflares a rendered last.</p>
-						<p>Default is <code>Infinity</code>.</p>
+						<p>已重写，确保镜头光晕最后渲染。</p>
+						<p>默认值为 <code>Infinity</code>。</p>
 					</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Mesh.html#renderOrder">Mesh#renderOrder</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Mesh.html#renderOrder">Mesh#renderOrder</a></dt>
 						</dl>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="addElement" translate="no">.<a href="#addElement">addElement</a><span class="signature">( element : <span class="param-type"><a href="LensflareElement.html">LensflareElement</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Adds the given lensflare element to this instance.</p>
+							<p>将给定的镜头光晕元素添加到此实例。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -79,7 +79,7 @@ light.add( lensflare );
 										<strong translate="no">element</strong>
 									</td>
 									<td class="description last">
-										<p>The element to add.</p>
+										<p>要添加的元素。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -88,11 +88,11 @@ light.add( lensflare );
 					<h3 class="name name-method" id="dispose" translate="no">.<a href="#dispose">dispose</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Frees the GPU-related resources allocated by this instance. Call this
-method whenever this instance is no longer used in your app.</p>
+							<p>释放此实例分配的 GPU 相关资源。当此实例
+不再在应用中使用时，请调用此方法。</p>
 						</div>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/objects/LensflareMesh.js" translate="no" target="_blank" rel="noopener">examples/jsm/objects/LensflareMesh.js</a>
 				</p>

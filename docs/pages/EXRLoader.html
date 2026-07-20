@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>EXRLoader - Three.js Docs</title>
+	<title>EXRLoader - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,24 +13,24 @@
 	<h1 translate="no">EXRLoader</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A loader for the OpenEXR texture format.</p>
-<p><code>EXRLoader</code> currently supports uncompressed, ZIP(S), RLE, PIZ, B44/A and DWA/B compression.
-Supports reading as UnsignedByte, HalfFloat and Float type data texture.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>OpenEXR 纹理格式的加载器。</p>
+<p><code>EXRLoader</code> 目前支持未压缩、ZIP(S)、RLE、PIZ、B44/A 和 DWA/B 压缩。
+支持以 UnsignedByte、HalfFloat 和 Float 类型读取数据纹理。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const loader = new EXRLoader();
 const texture = await loader.loadAsync( 'textures/memorial.exr' );
 </code></pre></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">EXRLoader</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">EXRLoader</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { EXRLoader } from 'three/addons/loaders/EXRLoader.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="EXRLoader" translate="no">new <a href="#EXRLoader">EXRLoader</a><span class="signature">( manager : <span class="param-type"><a href="LoadingManager.html">LoadingManager</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new EXR loader.</p>
+							<p>构造一个新的 EXR 加载器。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -39,40 +39,40 @@ const texture = await loader.loadAsync( 'textures/memorial.exr' );
 										<strong translate="no">manager</strong>
 									</td>
 									<td class="description last">
-										<p>The loading manager.</p>
+										<p>加载管理器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="outputFormat" translate="no">.<a href="#outputFormat">outputFormat</a><span class="type-signature"> : <a href="global.html#RGBAFormat">RGBAFormat</a> | <a href="global.html#RGFormat">RGFormat</a> | <a href="global.html#RedFormat">RedFormat</a></span> </h3>
 					<div class="description">
-						<p>Texture output format.</p>
-						<p>Default is <code>RGBAFormat</code>.</p>
+						<p>纹理输出格式。</p>
+						<p>默认值为 <code>RGBAFormat</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="part" translate="no">.<a href="#part">part</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>For multi-part EXR files, the index of the part to load.</p>
-						<p>Default is <code>0</code>.</p>
+						<p>对于多部分 EXR 文件，要加载的部分索引。</p>
+						<p>默认值为 <code>0</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="type" translate="no">.<a href="#type">type</a><span class="type-signature"> : <a href="global.html#HalfFloatType">HalfFloatType</a> | <a href="global.html#FloatType">FloatType</a></span> </h3>
 					<div class="description">
-						<p>The texture type.</p>
-						<p>Default is <code>HalfFloatType</code>.</p>
+						<p>纹理类型。</p>
+						<p>默认值为 <code>HalfFloatType</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="parse" translate="no">.<a href="#parse">parse</a><span class="signature">( buffer : <span class="param-type">ArrayBuffer</span> )</span><span class="type-signature"> : <a href="DataTextureLoader.html#~TexData">DataTextureLoader~TexData</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Parses the given EXR texture data.</p>
+							<p>解析给定的 EXR 纹理数据。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -81,22 +81,22 @@ const texture = await loader.loadAsync( 'textures/memorial.exr' );
 										<strong translate="no">buffer</strong>
 									</td>
 									<td class="description last">
-										<p>The raw texture data.</p>
+										<p>原始纹理数据。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="DataTextureLoader.html#parse">DataTextureLoader#parse</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="DataTextureLoader.html#parse">DataTextureLoader#parse</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> An object representing the parsed texture data.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 表示已解析纹理数据的对象。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setDataType" translate="no">.<a href="#setDataType">setDataType</a><span class="signature">( value : <span class="param-type"><a href="global.html#HalfFloatType">HalfFloatType</a> | <a href="global.html#FloatType">FloatType</a></span> )</span><span class="type-signature"> : <a href="EXRLoader.html">EXRLoader</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the texture type.</p>
+							<p>设置纹理类型。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -105,19 +105,19 @@ const texture = await loader.loadAsync( 'textures/memorial.exr' );
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>The texture type to set.</p>
+										<p>要设置的纹理类型。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this loader.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此加载器的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setOutputFormat" translate="no">.<a href="#setOutputFormat">setOutputFormat</a><span class="signature">( value : <span class="param-type"><a href="global.html#RGBAFormat">RGBAFormat</a> | <a href="global.html#RGFormat">RGFormat</a> | <a href="global.html#RedFormat">RedFormat</a></span> )</span><span class="type-signature"> : <a href="EXRLoader.html">EXRLoader</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets texture output format. Defaults to <code>RGBAFormat</code>.</p>
+							<p>设置纹理输出格式。默认为 <code>RGBAFormat</code>。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -126,19 +126,19 @@ const texture = await loader.loadAsync( 'textures/memorial.exr' );
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>Texture output format.</p>
+										<p>纹理输出格式。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this loader.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此加载器的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setPart" translate="no">.<a href="#setPart">setPart</a><span class="signature">( value : <span class="param-type">number</span> )</span><span class="type-signature"> : <a href="EXRLoader.html">EXRLoader</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>For multi-part EXR files, sets which part to load.</p>
+							<p>对于多部分 EXR 文件，设置要加载的部分。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -147,16 +147,16 @@ const texture = await loader.loadAsync( 'textures/memorial.exr' );
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>The part index to load.</p>
+										<p>要加载的部分索引。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this loader.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此加载器的引用。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/loaders/EXRLoader.js" translate="no" target="_blank" rel="noopener">examples/jsm/loaders/EXRLoader.js</a>
 				</p>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>SAOPass - Three.js Docs</title>
+	<title>SAOPass - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,23 +13,23 @@
 	<h1 translate="no">SAOPass</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A SAO implementation inspired from @bhouston previous SAO work.</p>
-<p><code>SAOPass</code> provides better quality than <a href="SSAOPass.html">SSAOPass</a> but is also more expensive.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>受 @bhouston 先前 SAO 工作启发的 SAO 实现。</p>
+<p><code>SAOPass</code> 比 <a href="SSAOPass.html">SSAOPass</a> 质量更好，但开销也更大。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const saoPass = new SAOPass( scene, camera );
 composer.addPass( saoPass );
 </code></pre></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">SAOPass</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">SAOPass</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { SAOPass } from 'three/addons/postprocessing/SAOPass.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="SAOPass" translate="no">new <a href="#SAOPass">SAOPass</a><span class="signature">( scene : <span class="param-type"><a href="Scene.html">Scene</a></span>, camera : <span class="param-type"><a href="Camera.html">Camera</a></span>, resolution : <span class="param-type"><a href="Vector2.html">Vector2</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new SAO pass.</p>
+							<p>构造一个新的 SAO 通道。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -38,7 +38,7 @@ composer.addPass( saoPass );
 										<strong translate="no">scene</strong>
 									</td>
 									<td class="description last">
-										<p>The scene to compute the AO for.</p>
+										<p>要计算 AO 的场景。</p>
 									</td>
 								</tr>
 								<tr>
@@ -46,7 +46,7 @@ composer.addPass( saoPass );
 										<strong translate="no">camera</strong>
 									</td>
 									<td class="description last">
-										<p>The camera.</p>
+										<p>相机。</p>
 									</td>
 								</tr>
 								<tr>
@@ -54,74 +54,73 @@ composer.addPass( saoPass );
 										<strong translate="no">resolution</strong>
 									</td>
 									<td class="description last">
-										<p>The effect's resolution.</p>
+										<p>效果的分辨率。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="camera" translate="no">.<a href="#camera">camera</a><span class="type-signature"> : <a href="Camera.html">Camera</a></span> </h3>
 					<div class="description">
-						<p>The camera.</p>
+						<p>相机。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="clear" translate="no">.<a href="#clear">clear</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Overwritten to perform a clear operation by default.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>被重写为默认执行清除操作。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Pass.html#clear">Pass#clear</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Pass.html#clear">Pass#clear</a></dt>
 						</dl>
 				</div>
 				<div class="member">
 					<h3 class="name" id="needsSwap" translate="no">.<a href="#needsSwap">needsSwap</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Overwritten to disable the swap.</p>
-						<p>Default is <code>false</code>.</p>
+						<p>被重写为禁用交换。</p>
+						<p>默认值为 <code>false</code>。</p>
 					</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Pass.html#needsSwap">Pass#needsSwap</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Pass.html#needsSwap">Pass#needsSwap</a></dt>
 						</dl>
 				</div>
 				<div class="member">
 					<h3 class="name" id="params" translate="no">.<a href="#params">params</a><span class="type-signature"> : Object</span> </h3>
 					<div class="description">
-						<p>The SAO parameter.</p>
+						<p>SAO 参数。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="resolution" translate="no">.<a href="#resolution">resolution</a><span class="type-signature"> : <a href="Vector2.html">Vector2</a></span> </h3>
 					<div class="description">
-						<p>The effect's resolution.</p>
-						<p>Default is <code>(256,256)</code>.</p>
+						<p>效果的分辨率。</p>
+						<p>默认值为 <code>(256,256)</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="scene" translate="no">.<a href="#scene">scene</a><span class="type-signature"> : <a href="Scene.html">Scene</a></span> </h3>
 					<div class="description">
-						<p>The scene to render the AO for.</p>
+						<p>要渲染 AO 的场景。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="dispose" translate="no">.<a href="#dispose">dispose</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Frees the GPU-related resources allocated by this instance. Call this
-method whenever the pass is no longer used in your app.</p>
+							<p>释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Pass.html#dispose">Pass#dispose</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Pass.html#dispose">Pass#dispose</a></dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="render" translate="no">.<a href="#render">render</a><span class="signature">( renderer : <span class="param-type"><a href="WebGLRenderer.html">WebGLRenderer</a></span>, writeBuffer : <span class="param-type"><a href="WebGLRenderTarget.html">WebGLRenderTarget</a></span>, readBuffer : <span class="param-type"><a href="WebGLRenderTarget.html">WebGLRenderTarget</a></span>, deltaTime : <span class="param-type">number</span>, maskActive : <span class="param-type">boolean</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Performs the SAO pass.</p>
+							<p>执行 SAO 通道。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -130,7 +129,7 @@ method whenever the pass is no longer used in your app.</p>
 										<strong translate="no">renderer</strong>
 									</td>
 									<td class="description last">
-										<p>The renderer.</p>
+										<p>渲染器。</p>
 									</td>
 								</tr>
 								<tr>
@@ -138,8 +137,7 @@ method whenever the pass is no longer used in your app.</p>
 										<strong translate="no">writeBuffer</strong>
 									</td>
 									<td class="description last">
-										<p>The write buffer. This buffer is intended as the rendering
-destination for the pass.</p>
+										<p>写入缓冲区。该缓冲区作为通道的渲染目标。</p>
 									</td>
 								</tr>
 								<tr>
@@ -147,8 +145,7 @@ destination for the pass.</p>
 										<strong translate="no">readBuffer</strong>
 									</td>
 									<td class="description last">
-										<p>The read buffer. The pass can access the result from the
-previous pass from this buffer.</p>
+										<p>读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。</p>
 									</td>
 								</tr>
 								<tr>
@@ -156,7 +153,7 @@ previous pass from this buffer.</p>
 										<strong translate="no">deltaTime</strong>
 									</td>
 									<td class="description last">
-										<p>The delta time in seconds.</p>
+										<p>时间增量（秒）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -164,19 +161,19 @@ previous pass from this buffer.</p>
 										<strong translate="no">maskActive</strong>
 									</td>
 									<td class="description last">
-										<p>Whether masking is active or not.</p>
+										<p>遮罩是否处于激活状态。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Pass.html#render">Pass#render</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Pass.html#render">Pass#render</a></dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setSize" translate="no">.<a href="#setSize">setSize</a><span class="signature">( width : <span class="param-type">number</span>, height : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the size of the pass.</p>
+							<p>设置通道的尺寸。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -185,7 +182,7 @@ previous pass from this buffer.</p>
 										<strong translate="no">width</strong>
 									</td>
 									<td class="description last">
-										<p>The width to set.</p>
+										<p>要设置的宽度。</p>
 									</td>
 								</tr>
 								<tr>
@@ -193,16 +190,16 @@ previous pass from this buffer.</p>
 										<strong translate="no">height</strong>
 									</td>
 									<td class="description last">
-										<p>The height to set.</p>
+										<p>要设置的高度。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Pass.html#setSize">Pass#setSize</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Pass.html#setSize">Pass#setSize</a></dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/SAOPass.js" translate="no" target="_blank" rel="noopener">examples/jsm/postprocessing/SAOPass.js</a>
 				</p>

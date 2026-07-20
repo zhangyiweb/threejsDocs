@@ -2,9 +2,9 @@
 
 # RenderTransitionPass
 
-A special type of render pass for implementing transition effects. When active, the pass will transition from scene A to scene B.
+一种用于实现转场效果的特殊渲染通道。激活时，该通道将从场景 A 过渡到场景 B。
 
-## Code Example
+## 代码示例
 
 ```js
 const renderTransitionPass = new RenderTransitionPass( fxSceneA.scene, fxSceneA.camera, fxSceneB.scene, fxSceneB.camera );
@@ -12,138 +12,138 @@ renderTransitionPass.setTexture( textures[ 0 ] );
 composer.addPass( renderTransitionPass );
 ```
 
-## Import
+## 导入
 
-RenderTransitionPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+RenderTransitionPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { RenderTransitionPass } from 'three/addons/postprocessing/RenderTransitionPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new RenderTransitionPass( sceneA : Scene, cameraA : Camera, sceneB : Scene, cameraB : Camera )
 
-Constructs a render transition pass.
+构造一个渲染转场通道。
 
 **sceneA**
 
-The first scene.
+第一个场景。
 
 **cameraA**
 
-The camera of the first scene.
+第一个场景的相机。
 
 **sceneB**
 
-The second scene.
+第二个场景。
 
 **cameraB**
 
-The camera of the second scene.
+第二个场景的相机。
 
-## Properties
+## 属性
 
 ### .cameraA : Camera
 
-The camera of the first scene.
+第一个场景的相机。
 
 ### .cameraB : Camera
 
-The camera of the second scene.
+第二个场景的相机。
 
 ### .material : ShaderMaterial
 
-The pass material.
+通道材质。
 
 ### .sceneA : Scene
 
-The first scene.
+第一个场景。
 
 ### .sceneB : Scene
 
-The second scene.
+第二个场景。
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the transition pass.
+执行转场通道。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
 ### .setSize( width : number, height : number )
 
-Sets the size of the pass.
+设置通道的尺寸。
 
 **width**
 
-The width to set.
+要设置的宽度。
 
 **height**
 
-The height to set.
+要设置的高度。
 
-**Overrides:** [Pass#setSize](Pass.html#setSize)
+**重写：** [Pass#setSize](Pass.html#setSize)
 
 ### .setTexture( value : Texture )
 
-Sets the effect texture.
+设置效果纹理。
 
 **value**
 
-The effect texture.
+效果纹理。
 
 ### .setTextureThreshold( value : boolean | number )
 
-Sets the texture threshold. This value defines how strong the texture effects the transition. Must be in the range `[0,1]` (0 means full effect, 1 means no effect).
+设置纹理阈值。该值定义纹理对转场效果的影响强度。必须在 `[0,1]` 范围内（0 表示完全生效，1 表示无效果）。
 
 **value**
 
-The threshold value.
+阈值。
 
 ### .setTransition( value : boolean | number )
 
-Sets the transition factor. Must be in the range `[0,1]`. This value determines to what degree both scenes are mixed.
+设置转场因子。必须在 `[0,1]` 范围内。该值决定两个场景的混合程度。
 
 **value**
 
-The transition factor.
+转场因子。
 
 ### .useTexture( value : boolean )
 
-Toggles the usage of a texture for the effect.
+切换是否对效果使用纹理。
 
 **value**
 
-Whether to use a texture for the transition effect or not.
+是否对转场效果使用纹理。
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/RenderTransitionPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/RenderTransitionPass.js)

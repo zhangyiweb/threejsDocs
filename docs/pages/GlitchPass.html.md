@@ -2,85 +2,85 @@
 
 # GlitchPass
 
-Pass for creating a glitch effect.
+用于创建故障（glitch）效果的通道。
 
-## Code Example
+## 代码示例
 
 ```js
 const glitchPass = new GlitchPass();
 composer.addPass( glitchPass );
 ```
 
-## Import
+## 导入
 
-GlitchPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+GlitchPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { GlitchPass } from 'three/addons/postprocessing/GlitchPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new GlitchPass( dt_size : number )
 
-Constructs a new glitch pass.
+构造一个新的故障通道。
 
 **dt\_size**
 
-The size of the displacement texture for digital glitch squares.
+用于数字故障方块的位移纹理尺寸。
 
-Default is `64`.
+默认值为 `64`。
 
-## Properties
+## 属性
 
 ### .goWild : boolean
 
-Whether to noticeably increase the effect intensity or not.
+是否显著增强效果强度。
 
-Default is `false`.
+默认值为 `false`。
 
 ### .material : ShaderMaterial
 
-The pass material.
+通道材质。
 
 ### .uniforms : Object
 
-The pass uniforms.
+通道的 uniform 对象。
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the glitch pass.
+执行故障通道渲染。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/GlitchPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/GlitchPass.js)

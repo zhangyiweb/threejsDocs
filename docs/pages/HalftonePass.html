@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>HalftonePass - Three.js Docs</title>
+	<title>HalftonePass - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,8 +13,8 @@
 	<h1 translate="no">HalftonePass</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>Pass for creating a RGB halftone effect.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>用于创建 RGB 半色调效果的通道。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const params = {
 	shape: 1,
 	radius: 4,
@@ -32,15 +32,15 @@ composer.addPass( halftonePass );
 </code></pre></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">HalftonePass</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">HalftonePass</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { HalftonePass } from 'three/addons/postprocessing/HalftonePass.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="HalftonePass" translate="no">new <a href="#HalftonePass">HalftonePass</a><span class="signature">( params : <span class="param-type">Object</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new halftone pass.</p>
+							<p>构造一个新的半色调通道。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -49,41 +49,40 @@ composer.addPass( halftonePass );
 										<strong translate="no">params</strong>
 									</td>
 									<td class="description last">
-										<p>The halftone shader parameter.</p>
+										<p>半色调着色器参数。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="material" translate="no">.<a href="#material">material</a><span class="type-signature"> : <a href="ShaderMaterial.html">ShaderMaterial</a></span> </h3>
 					<div class="description">
-						<p>The pass material.</p>
+						<p>通道材质。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="uniforms" translate="no">.<a href="#uniforms">uniforms</a><span class="type-signature"> : Object</span> </h3>
 					<div class="description">
-						<p>The pass uniforms.</p>
+						<p>通道的 uniform 对象。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="dispose" translate="no">.<a href="#dispose">dispose</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Frees the GPU-related resources allocated by this instance. Call this
-method whenever the pass is no longer used in your app.</p>
+							<p>释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Pass.html#dispose">Pass#dispose</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Pass.html#dispose">Pass#dispose</a></dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="render" translate="no">.<a href="#render">render</a><span class="signature">( renderer : <span class="param-type"><a href="WebGLRenderer.html">WebGLRenderer</a></span>, writeBuffer : <span class="param-type"><a href="WebGLRenderTarget.html">WebGLRenderTarget</a></span>, readBuffer : <span class="param-type"><a href="WebGLRenderTarget.html">WebGLRenderTarget</a></span>, deltaTime : <span class="param-type">number</span>, maskActive : <span class="param-type">boolean</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Performs the halftone pass.</p>
+							<p>执行半色调通道渲染。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -92,7 +91,7 @@ method whenever the pass is no longer used in your app.</p>
 										<strong translate="no">renderer</strong>
 									</td>
 									<td class="description last">
-										<p>The renderer.</p>
+										<p>渲染器。</p>
 									</td>
 								</tr>
 								<tr>
@@ -100,8 +99,7 @@ method whenever the pass is no longer used in your app.</p>
 										<strong translate="no">writeBuffer</strong>
 									</td>
 									<td class="description last">
-										<p>The write buffer. This buffer is intended as the rendering
-destination for the pass.</p>
+										<p>写入缓冲区。该缓冲区作为通道的渲染目标。</p>
 									</td>
 								</tr>
 								<tr>
@@ -109,8 +107,7 @@ destination for the pass.</p>
 										<strong translate="no">readBuffer</strong>
 									</td>
 									<td class="description last">
-										<p>The read buffer. The pass can access the result from the
-previous pass from this buffer.</p>
+										<p>读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。</p>
 									</td>
 								</tr>
 								<tr>
@@ -118,7 +115,7 @@ previous pass from this buffer.</p>
 										<strong translate="no">deltaTime</strong>
 									</td>
 									<td class="description last">
-										<p>The delta time in seconds.</p>
+										<p>时间增量（秒）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -126,19 +123,19 @@ previous pass from this buffer.</p>
 										<strong translate="no">maskActive</strong>
 									</td>
 									<td class="description last">
-										<p>Whether masking is active or not.</p>
+										<p>遮罩是否处于激活状态。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Pass.html#render">Pass#render</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Pass.html#render">Pass#render</a></dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setSize" translate="no">.<a href="#setSize">setSize</a><span class="signature">( width : <span class="param-type">number</span>, height : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the size of the pass.</p>
+							<p>设置通道的尺寸。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -147,7 +144,7 @@ previous pass from this buffer.</p>
 										<strong translate="no">width</strong>
 									</td>
 									<td class="description last">
-										<p>The width to set.</p>
+										<p>要设置的宽度。</p>
 									</td>
 								</tr>
 								<tr>
@@ -155,16 +152,16 @@ previous pass from this buffer.</p>
 										<strong translate="no">height</strong>
 									</td>
 									<td class="description last">
-										<p>The height to set.</p>
+										<p>要设置的高度。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Pass.html#setSize">Pass#setSize</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Pass.html#setSize">Pass#setSize</a></dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/HalftonePass.js" translate="no" target="_blank" rel="noopener">examples/jsm/postprocessing/HalftonePass.js</a>
 				</p>

@@ -2,90 +2,90 @@
 
 # FilmPass
 
-This pass can be used to create a film grain effect.
+此通道可用于创建胶片颗粒效果。
 
-## Code Example
+## 代码示例
 
 ```js
 const filmPass = new FilmPass();
 composer.addPass( filmPass );
 ```
 
-## Import
+## 导入
 
-FilmPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+FilmPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { FilmPass } from 'three/addons/postprocessing/FilmPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new FilmPass( intensity : number, grayscale : boolean )
 
-Constructs a new film pass.
+构造一个新的胶片通道。
 
 **intensity**
 
-The grain intensity in the range `[0,1]` (0 = no effect, 1 = full effect).
+颗粒强度，取值范围为 `[0,1]`（0 = 无效果，1 = 完整效果）。
 
-Default is `0.5`.
+默认值为 `0.5`。
 
 **grayscale**
 
-Whether to apply a grayscale effect or not.
+是否应用灰度效果。
 
-Default is `false`.
+默认值为 `false`。
 
-## Properties
+## 属性
 
 ### .material : ShaderMaterial
 
-The pass material.
+通道材质。
 
 ### .uniforms : Object
 
-The pass uniforms. Use this object if you want to update the `intensity` or `grayscale` values at runtime.
+通道的 uniform 对象。如需在运行时更新 `intensity` 或 `grayscale` 值，可使用此对象。
 
 ```js
 pass.uniforms.intensity.value = 1;
 pass.uniforms.grayscale.value = true;
 ```
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the film pass.
+执行胶片通道渲染。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/FilmPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/FilmPass.js)

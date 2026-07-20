@@ -2,11 +2,11 @@
 
 # GTAOPass
 
-A pass for an GTAO effect.
+用于实现 GTAO 效果的通道。
 
-`GTAOPass` provides better quality than [SSAOPass](SSAOPass.html) but is also more expensive.
+`GTAOPass` 比 [SSAOPass](SSAOPass.html) 质量更高，但开销也更大。
 
-## Code Example
+## 代码示例
 
 ```js
 const gtaoPass = new GTAOPass( scene, camera, width, height );
@@ -14,200 +14,200 @@ gtaoPass.output = GTAOPass.OUTPUT.Denoise;
 composer.addPass( gtaoPass );
 ```
 
-## Import
+## 导入
 
-GTAOPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+GTAOPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { GTAOPass } from 'three/addons/postprocessing/GTAOPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new GTAOPass( scene : Scene, camera : Camera, width : number, height : number, parameters : Object, aoParameters : Object, pdParameters : Object )
 
-Constructs a new GTAO pass.
+构造一个新的 GTAO 通道。
 
 **scene**
 
-The scene to compute the AO for.
+要计算 AO 的场景。
 
 **camera**
 
-The camera.
+相机。
 
 **width**
 
-The width of the effect.
+效果的宽度。
 
-Default is `512`.
+默认值为 `512`。
 
 **height**
 
-The height of the effect.
+效果的高度。
 
-Default is `512`.
+默认值为 `512`。
 
 **parameters**
 
-The pass parameters.
+通道参数。
 
 **aoParameters**
 
-The AO parameters.
+AO 参数。
 
 **pdParameters**
 
-The denoise parameters.
+降噪参数。
 
-## Properties
+## 属性
 
 ### .blendIntensity : number
 
-The AO blend intensity.
+AO 混合强度。
 
-Default is `1`.
+默认值为 `1`。
 
 ### .camera : Camera
 
-The camera.
+相机。
 
 ### .clear : boolean
 
-Overwritten to perform a clear operation by default.
+已覆盖，默认执行清除操作。
 
-Default is `true`.
+默认值为 `true`。
 
-**Overrides:** [Pass#clear](Pass.html#clear)
+**重写：** [Pass#clear](Pass.html#clear)
 
 ### .gtaoMap : Texture (readonly)
 
-A texture holding the computed AO.
+保存已计算 AO 的纹理。
 
 ### .height : number
 
-The height of the effect.
+效果的高度。
 
-Default is `512`.
+默认值为 `512`。
 
 ### .output : number
 
-The output configuration.
+输出配置。
 
-Default is `0`.
+默认值为 `0`。
 
 ### .pdRadiusExponent : number
 
-The Poisson Denoise radius exponent.
+泊松降噪半径指数。
 
-Default is `2`.
+默认值为 `2`。
 
 ### .pdRings : number
 
-The number of Poisson Denoise rings.
+泊松降噪环数。
 
-Default is `2`.
+默认值为 `2`。
 
 ### .pdSamples : number
 
-The Poisson Denoise sample count.
+泊松降噪采样数。
 
-Default is `16`.
+默认值为 `16`。
 
 ### .scene : Scene
 
-The scene to render the AO for.
+要渲染 AO 的场景。
 
 ### .width : number
 
-The width of the effect.
+效果的宽度。
 
-Default is `512`.
+默认值为 `512`。
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the GTAO pass.
+执行 GTAO 通道渲染。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
 ### .setGBuffer( depthTexture : DepthTexture, normalTexture : DepthTexture )
 
-Configures the GBuffer of this pass. If no arguments are passed, the pass creates an internal render target for holding depth and normal data.
+配置此通道的 GBuffer。若未传入参数，通道将创建内部渲染目标以保存深度和法线数据。
 
 **depthTexture**
 
-The depth texture.
+深度纹理。
 
 **normalTexture**
 
-The normal texture.
+法线纹理。
 
 ### .setSceneClipBox( box : Box3 )
 
-Configures the clip box of the GTAO shader with the given AABB.
+使用给定的 AABB 配置 GTAO 着色器的裁剪盒。
 
 **box**
 
-The AABB enclosing the scene that should receive AO. When passing `null`, to clip box is used.
+包围应接收 AO 的场景的 AABB。传入 `null` 时不使用裁剪盒。
 
 ### .setSize( width : number, height : number )
 
-Sets the size of the pass.
+设置通道的尺寸。
 
 **width**
 
-The width to set.
+要设置的宽度。
 
 **height**
 
-The height to set.
+要设置的高度。
 
-**Overrides:** [Pass#setSize](Pass.html#setSize)
+**重写：** [Pass#setSize](Pass.html#setSize)
 
 ### .updateGtaoMaterial( parameters : Object )
 
-Updates the GTAO material from the given parameter object.
+根据给定的参数对象更新 GTAO 材质。
 
 **parameters**
 
-The GTAO material parameters.
+GTAO 材质参数。
 
 ### .updatePdMaterial( parameters : Object )
 
-Updates the Denoise material from the given parameter object.
+根据给定的参数对象更新降噪材质。
 
 **parameters**
 
-The denoise parameters.
+降噪参数。
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/GTAOPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/GTAOPass.js)

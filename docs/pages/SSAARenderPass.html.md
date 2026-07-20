@@ -2,11 +2,11 @@
 
 # SSAARenderPass
 
-Supersample Anti-Aliasing Render Pass.
+超采样抗锯齿（SSAA）渲染通道。
 
-This manual approach to SSAA re-renders the scene ones for each sample with camera jitter and accumulates the results.
+这种手动 SSAA 方法会对每个采样点在相机抖动下重新渲染一次场景，并累积结果。
 
-## Code Example
+## 代码示例
 
 ```js
 const ssaaRenderPass = new SSAARenderPass( scene, camera );
@@ -14,128 +14,128 @@ ssaaRenderPass.sampleLevel = 3;
 composer.addPass( ssaaRenderPass );
 ```
 
-## Import
+## 导入
 
-SSAARenderPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+SSAARenderPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { SSAARenderPass } from 'three/addons/postprocessing/SSAARenderPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new SSAARenderPass( scene : Scene, camera : Camera, clearColor : number | Color | string, clearAlpha : number )
 
-Constructs a new SSAA render pass.
+构造一个新的 SSAA 渲染通道。
 
 **scene**
 
-The scene to render.
+要渲染的场景。
 
 **camera**
 
-The camera.
+相机。
 
 **clearColor**
 
-The clear color of the render pass.
+渲染通道的清除颜色。
 
-Default is `0x000000`.
+默认值为 `0x000000`。
 
 **clearAlpha**
 
-The clear alpha of the render pass.
+渲染通道的清除透明度。
 
-Default is `0`.
+默认值为 `0`。
 
-## Properties
+## 属性
 
 ### .camera : Camera
 
-The camera.
+相机。
 
 ### .clearAlpha : number
 
-The clear alpha of the render pass.
+渲染通道的清除透明度。
 
-Default is `0`.
+默认值为 `0`。
 
 ### .clearColor : number | Color | string
 
-The clear color of the render pass.
+渲染通道的清除颜色。
 
-Default is `0x000000`.
+默认值为 `0x000000`。
 
 ### .sampleLevel : number
 
-The sample level. Specified as n, where the number of samples is 2^n, so sampleLevel = 4, is 2^4 samples, 16.
+采样级别。以 n 表示，采样数为 2^n，因此 sampleLevel = 4 表示 2^4 = 16 个采样。
 
-Default is `4`.
+默认值为 `4`。
 
 ### .scene : Scene
 
-The scene to render.
+要渲染的场景。
 
 ### .stencilBuffer : boolean
 
-Whether to use a stencil buffer or not. This property can't be changed after the first render.
+是否使用模板缓冲区。此属性在首次渲染后无法更改。
 
-Default is `false`.
+默认值为 `false`。
 
 ### .unbiased : boolean
 
-Whether the pass should be unbiased or not. This property has the most visible effect when rendering to a RGBA8 buffer because it mitigates rounding errors. By default RGBA16F is used.
+通道是否应无偏。在渲染到 RGBA8 缓冲区时，此属性的视觉效果最明显，因为它可减轻舍入误差。默认使用 RGBA16F。
 
-Default is `true`.
+默认值为 `true`。
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the SSAA render pass.
+执行 SSAA 渲染通道。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
 ### .setSize( width : number, height : number )
 
-Sets the size of the pass.
+设置通道的尺寸。
 
 **width**
 
-The width to set.
+要设置的宽度。
 
 **height**
 
-The height to set.
+要设置的高度。
 
-**Overrides:** [Pass#setSize](Pass.html#setSize)
+**重写：** [Pass#setSize](Pass.html#setSize)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/SSAARenderPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/SSAARenderPass.js)

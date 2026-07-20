@@ -2,13 +2,13 @@
 
 # TAARenderPass
 
-Temporal Anti-Aliasing Render Pass.
+时间抗锯齿渲染通道。
 
-When there is no motion in the scene, the TAA render pass accumulates jittered camera samples across frames to create a high quality anti-aliased result.
+当场景中没有运动时，TAA 渲染通道会跨帧累积经抖动的相机采样，以生成高质量的抗锯齿结果。
 
-Note: This effect uses no reprojection so it is no TRAA implementation.
+注意：此效果未使用重投影，因此并非 TRAA 实现。
 
-## Code Example
+## 代码示例
 
 ```js
 const taaRenderPass = new TAARenderPass( scene, camera );
@@ -16,96 +16,96 @@ taaRenderPass.unbiased = false;
 composer.addPass( taaRenderPass );
 ```
 
-## Import
+## 导入
 
-TAARenderPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+TAARenderPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { TAARenderPass } from 'three/addons/postprocessing/TAARenderPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new TAARenderPass( scene : Scene, camera : Camera, clearColor : number | Color | string, clearAlpha : number )
 
-Constructs a new TAA render pass.
+构造一个新的 TAA 渲染通道。
 
 **scene**
 
-The scene to render.
+要渲染的场景。
 
 **camera**
 
-The camera.
+相机。
 
 **clearColor**
 
-The clear color of the render pass.
+渲染通道的清除颜色。
 
-Default is `0x000000`.
+默认值为 `0x000000`。
 
 **clearAlpha**
 
-The clear alpha of the render pass.
+渲染通道的清除透明度。
 
-Default is `0`.
+默认值为 `0`。
 
-## Properties
+## 属性
 
 ### .accumulate : boolean
 
-Whether to accumulate frames or not. This enables the TAA.
+是否累积帧。启用后即开启 TAA。
 
-Default is `false`.
+默认值为 `false`。
 
 ### .accumulateIndex : number
 
-The accumulation index.
+累积索引。
 
-Default is `-1`.
+默认值为 `-1`。
 
 ### .sampleLevel : number
 
-Overwritten and set to 0 by default.
+被重写，默认设置为 0。
 
-Default is `0`.
+默认值为 `0`。
 
-**Overrides:** [SSAARenderPass#sampleLevel](SSAARenderPass.html#sampleLevel)
+**重写：** [SSAARenderPass#sampleLevel](SSAARenderPass.html#sampleLevel)
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [SSAARenderPass#dispose](SSAARenderPass.html#dispose)
+**重写：** [SSAARenderPass#dispose](SSAARenderPass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the TAA render pass.
+执行 TAA 渲染通道。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [SSAARenderPass#render](SSAARenderPass.html#render)
+**重写：** [SSAARenderPass#render](SSAARenderPass.html#render)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/TAARenderPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/TAARenderPass.js)

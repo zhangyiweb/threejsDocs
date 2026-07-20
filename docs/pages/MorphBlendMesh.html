@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>MorphBlendMesh - Three.js Docs</title>
+	<title>MorphBlendMesh - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,21 +13,20 @@
 	<h1 translate="no">MorphBlendMesh</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A special type of an animated mesh with a more advanced interface
-for animation playback. Unlike <a href="MorphAnimMesh.html">MorphAnimMesh</a>. It allows to
-playback more than one morph animation at the same time but without
-fading options.</p></div>
+				<div class="class-description"><p>一种特殊的动画网格，提供更高级的动画播放接口。
+与 <a href="MorphAnimMesh.html">MorphAnimMesh</a> 不同，它允许同时播放多个 morph 动画，
+但不提供淡入淡出选项。</p></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">MorphBlendMesh</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">MorphBlendMesh</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { MorphBlendMesh } from 'three/addons/misc/MorphBlendMesh.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="MorphBlendMesh" translate="no">new <a href="#MorphBlendMesh">MorphBlendMesh</a><span class="signature">( geometry : <span class="param-type"><a href="BufferGeometry.html">BufferGeometry</a></span>, material : <span class="param-type"><a href="Material.html">Material</a> | Array.&lt;<a href="Material.html">Material</a>></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new morph blend mesh.</p>
+							<p>构造一个新的 morph 混合网格。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -36,7 +35,7 @@ fading options.</p></div>
 										<strong translate="no">geometry</strong>
 									</td>
 									<td class="description last">
-										<p>The mesh geometry.</p>
+										<p>网格几何体。</p>
 									</td>
 								</tr>
 								<tr>
@@ -44,32 +43,31 @@ fading options.</p></div>
 										<strong translate="no">material</strong>
 									</td>
 									<td class="description last">
-										<p>The mesh material.</p>
+										<p>网格材质。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="animationsList" translate="no">.<a href="#animationsList">animationsList</a><span class="type-signature"> : Array.&lt;Object></span> </h3>
 					<div class="description">
-						<p>A list of animations.</p>
+						<p>动画列表。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="animationsMap" translate="no">.<a href="#animationsMap">animationsMap</a><span class="type-signature"> : Object.&lt;string, Object></span> </h3>
 					<div class="description">
-						<p>A dictionary of animations.</p>
+						<p>动画字典。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="autoCreateAnimations" translate="no">.<a href="#autoCreateAnimations">autoCreateAnimations</a><span class="signature">( fps : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Automatically creates animations based on the values in
-<a href="Mesh.html#morphTargetDictionary">Mesh#morphTargetDictionary</a>.</p>
+							<p>根据 <a href="Mesh.html#morphTargetDictionary">Mesh#morphTargetDictionary</a> 中的值自动创建动画。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -78,7 +76,7 @@ fading options.</p></div>
 										<strong translate="no">fps</strong>
 									</td>
 									<td class="description last">
-										<p>The FPS of all animations.</p>
+										<p>所有动画的 FPS。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -87,7 +85,7 @@ fading options.</p></div>
 					<h3 class="name name-method" id="createAnimation" translate="no">.<a href="#createAnimation">createAnimation</a><span class="signature">( name : <span class="param-type">string</span>, start : <span class="param-type">number</span>, end : <span class="param-type">number</span>, fps : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Creates a new animation.</p>
+							<p>创建新动画。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -96,7 +94,7 @@ fading options.</p></div>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The animation name.</p>
+										<p>动画名称。</p>
 									</td>
 								</tr>
 								<tr>
@@ -104,7 +102,7 @@ fading options.</p></div>
 										<strong translate="no">start</strong>
 									</td>
 									<td class="description last">
-										<p>The start time.</p>
+										<p>开始时间。</p>
 									</td>
 								</tr>
 								<tr>
@@ -112,7 +110,7 @@ fading options.</p></div>
 										<strong translate="no">end</strong>
 									</td>
 									<td class="description last">
-										<p>The end time.</p>
+										<p>结束时间。</p>
 									</td>
 								</tr>
 								<tr>
@@ -120,7 +118,7 @@ fading options.</p></div>
 										<strong translate="no">fps</strong>
 									</td>
 									<td class="description last">
-										<p>The FPS.</p>
+										<p>FPS。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -129,7 +127,7 @@ fading options.</p></div>
 					<h3 class="name name-method" id="getAnimationDuration" translate="no">.<a href="#getAnimationDuration">getAnimationDuration</a><span class="signature">( name : <span class="param-type">string</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the duration for the defined animation.</p>
+							<p>返回指定动画的持续时间。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -138,19 +136,19 @@ fading options.</p></div>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The animation name.</p>
+										<p>动画名称。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The duration.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 持续时间。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getAnimationTime" translate="no">.<a href="#getAnimationTime">getAnimationTime</a><span class="signature">( name : <span class="param-type">string</span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the time for the defined animation.</p>
+							<p>返回指定动画的时间。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -159,19 +157,19 @@ fading options.</p></div>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The animation name.</p>
+										<p>动画名称。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The time.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 时间。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="playAnimation" translate="no">.<a href="#playAnimation">playAnimation</a><span class="signature">( name : <span class="param-type">string</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Plays the defined animation.</p>
+							<p>播放指定动画。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -180,7 +178,7 @@ fading options.</p></div>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The animation name.</p>
+										<p>动画名称。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -189,8 +187,7 @@ fading options.</p></div>
 					<h3 class="name name-method" id="setAnimationDirectionBackward" translate="no">.<a href="#setAnimationDirectionBackward">setAnimationDirectionBackward</a><span class="signature">( name : <span class="param-type">string</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the animation playback direction to &quot;backward&quot; for the
-defined animation.</p>
+							<p>将指定动画的播放方向设置为「向后」。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -199,7 +196,7 @@ defined animation.</p>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The animation name.</p>
+										<p>动画名称。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -208,8 +205,7 @@ defined animation.</p>
 					<h3 class="name name-method" id="setAnimationDirectionForward" translate="no">.<a href="#setAnimationDirectionForward">setAnimationDirectionForward</a><span class="signature">( name : <span class="param-type">string</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the animation playback direction to &quot;forward&quot; for the
-defined animation.</p>
+							<p>将指定动画的播放方向设置为「向前」。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -218,7 +214,7 @@ defined animation.</p>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The animation name.</p>
+										<p>动画名称。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -227,7 +223,7 @@ defined animation.</p>
 					<h3 class="name name-method" id="setAnimationDuration" translate="no">.<a href="#setAnimationDuration">setAnimationDuration</a><span class="signature">( name : <span class="param-type">string</span>, duration : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the duration to the given value for the defined animation.</p>
+							<p>为指定动画设置持续时间。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -236,7 +232,7 @@ defined animation.</p>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The animation name.</p>
+										<p>动画名称。</p>
 									</td>
 								</tr>
 								<tr>
@@ -244,7 +240,7 @@ defined animation.</p>
 										<strong translate="no">duration</strong>
 									</td>
 									<td class="description last">
-										<p>The duration to set.</p>
+										<p>要设置的持续时间。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -253,7 +249,7 @@ defined animation.</p>
 					<h3 class="name name-method" id="setAnimationFPS" translate="no">.<a href="#setAnimationFPS">setAnimationFPS</a><span class="signature">( name : <span class="param-type">string</span>, fps : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the FPS to the given value for the defined animation.</p>
+							<p>为指定动画设置 FPS。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -262,7 +258,7 @@ defined animation.</p>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The animation name.</p>
+										<p>动画名称。</p>
 									</td>
 								</tr>
 								<tr>
@@ -270,7 +266,7 @@ defined animation.</p>
 										<strong translate="no">fps</strong>
 									</td>
 									<td class="description last">
-										<p>The FPS to set.</p>
+										<p>要设置的 FPS。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -279,7 +275,7 @@ defined animation.</p>
 					<h3 class="name name-method" id="setAnimationTime" translate="no">.<a href="#setAnimationTime">setAnimationTime</a><span class="signature">( name : <span class="param-type">string</span>, time : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the time to the given value for the defined animation.</p>
+							<p>为指定动画设置时间。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -288,7 +284,7 @@ defined animation.</p>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The animation name.</p>
+										<p>动画名称。</p>
 									</td>
 								</tr>
 								<tr>
@@ -296,7 +292,7 @@ defined animation.</p>
 										<strong translate="no">time</strong>
 									</td>
 									<td class="description last">
-										<p>The time to set.</p>
+										<p>要设置的时间。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -305,7 +301,7 @@ defined animation.</p>
 					<h3 class="name name-method" id="setAnimationWeight" translate="no">.<a href="#setAnimationWeight">setAnimationWeight</a><span class="signature">( name : <span class="param-type">string</span>, weight : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the weight to the given value for the defined animation.</p>
+							<p>为指定动画设置权重。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -314,7 +310,7 @@ defined animation.</p>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The animation name.</p>
+										<p>动画名称。</p>
 									</td>
 								</tr>
 								<tr>
@@ -322,7 +318,7 @@ defined animation.</p>
 										<strong translate="no">weight</strong>
 									</td>
 									<td class="description last">
-										<p>The weight to set.</p>
+										<p>要设置的权重。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -331,7 +327,7 @@ defined animation.</p>
 					<h3 class="name name-method" id="stopAnimation" translate="no">.<a href="#stopAnimation">stopAnimation</a><span class="signature">( name : <span class="param-type">string</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Stops the defined animation.</p>
+							<p>停止指定动画。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -340,7 +336,7 @@ defined animation.</p>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The animation name.</p>
+										<p>动画名称。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -349,7 +345,7 @@ defined animation.</p>
 					<h3 class="name name-method" id="update" translate="no">.<a href="#update">update</a><span class="signature">( delta : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Updates the animations of the mesh.</p>
+							<p>更新网格的动画。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -358,13 +354,13 @@ defined animation.</p>
 										<strong translate="no">delta</strong>
 									</td>
 									<td class="description last">
-										<p>The delta time in seconds.</p>
+										<p>增量时间（秒）。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/misc/MorphBlendMesh.js" translate="no" target="_blank" rel="noopener">examples/jsm/misc/MorphBlendMesh.js</a>
 				</p>

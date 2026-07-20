@@ -2,9 +2,9 @@
 
 # CubeTexturePass
 
-This pass can be used to render a cube texture over the entire screen.
+此通道可用于在整个屏幕上渲染立方体贴图。
 
-## Code Example
+## 代码示例
 
 ```js
 const cubeMap = new THREE.CubeTextureLoader().load( urls );
@@ -12,92 +12,92 @@ const cubeTexturePass = new CubeTexturePass( camera, cubemap );
 composer.addPass( cubeTexturePass );
 ```
 
-## Import
+## 导入
 
-CubeTexturePass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+CubeTexturePass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { CubeTexturePass } from 'three/addons/postprocessing/CubeTexturePass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new CubeTexturePass( camera : PerspectiveCamera, tCube : CubeTexture, opacity : number )
 
-Constructs a new cube texture pass.
+构造一个新的立方体贴图通道。
 
 **camera**
 
-The camera.
+相机。
 
 **tCube**
 
-The cube texture to render.
+要渲染的立方体贴图。
 
 **opacity**
 
-The opacity.
+不透明度。
 
-Default is `1`.
+默认值为 `1`。
 
-## Properties
+## 属性
 
 ### .camera : PerspectiveCamera
 
-The camera.
+相机。
 
 ### .needsSwap : boolean
 
-Overwritten to disable the swap.
+重写以禁用交换。
 
-Default is `false`.
+默认值为 `false`。
 
-**Overrides:** [Pass#needsSwap](Pass.html#needsSwap)
+**重写：** [Pass#needsSwap](Pass.html#needsSwap)
 
 ### .opacity : number
 
-The opacity.
+不透明度。
 
-Default is `1`.
+默认值为 `1`。
 
 ### .tCube : CubeTexture
 
-The cube texture to render.
+要渲染的立方体贴图。
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the cube texture pass.
+执行立方体贴图通道渲染。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/CubeTexturePass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/CubeTexturePass.js)

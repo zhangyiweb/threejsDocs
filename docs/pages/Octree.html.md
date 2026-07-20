@@ -1,242 +1,242 @@
 # Octree
 
-An octree is a hierarchical tree data structure used to partition a three-dimensional space by recursively subdividing it into eight octants.
+八叉树是一种层次化树形数据结构，用于通过对三维空间递归细分为八个卦限来进行空间划分。
 
-This particular implementation can have up to sixteen levels and stores up to eight triangles in leaf nodes.
+本实现最多可有十六层，叶节点最多可存储八个三角形。
 
-`Octree` can be used in games to compute collision between the game world and colliders from the player or other dynamic 3D objects.
+`Octree` 可用于游戏中计算游戏世界与玩家或其他动态 3D 对象的碰撞体之间的碰撞。
 
-## Code Example
+## 代码示例
 
 ```js
 const octree = new Octree().fromGraphNode( scene );
 const result = octree.capsuleIntersect( playerCollider ); // collision detection
 ```
 
-## Import
+## 导入
 
-Octree is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+Octree 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { Octree } from 'three/addons/math/Octree.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new Octree( box : Box3 )
 
-Constructs a new Octree.
+构造一个新的八叉树。
 
 **box**
 
-The base box with enclose the entire Octree.
+包围整个八叉树的基础盒子。
 
-## Properties
+## 属性
 
 ### .bounds : Box3
 
-The bounds of the Octree. Compared to [Octree#box](Octree.html#box), no margin is applied.
+八叉树的边界。与 [Octree#box](Octree.html#box) 相比，不应用边距。
 
 ### .box : Box3
 
-The base box with enclose the entire Octree.
+包围整个八叉树的基础盒子。
 
 ### .layers : Layers
 
-Can by used for layers configuration for refine testing.
+可用于图层配置，以便进行更精细的检测。
 
 ### .maxLevel : number
 
-The maximum level of the Octree. It defines the maximum hierarchical depth of the data structure.
+八叉树的最大层数。它定义了该数据结构的最大层次深度。
 
-Default is `16`.
+默认值为 `16`。
 
 ### .trianglesPerLeaf : number
 
-The number of triangles a leaf can store before it is split.
+叶节点在拆分前可存储的三角形数量。
 
-Default is `8`.
+默认值为 `8`。
 
-## Methods
+## 方法
 
 ### .addTriangle( triangle : Triangle ) : Octree
 
-Adds the given triangle to the Octree. The triangle vertices are clamped if they exceed the bounds of the Octree.
+将给定三角形添加到八叉树。若三角形顶点超出八叉树边界，则会被钳制。
 
 **triangle**
 
-The triangle to add.
+要添加的三角形。
 
-**Returns:** A reference to this Octree.
+**返回值：** 对此八叉树的引用。
 
 ### .boxIntersect( box : Box3 ) : Object | boolean
 
-Performs a bounding box intersection test with this Octree.
+对此八叉树执行包围盒相交检测。
 
 **box**
 
-The bounding box to test.
+要检测的包围盒。
 
-**Returns:** The intersection object. If no intersection is detected, the method returns `false`.
+**返回值：** 相交对象。如果未检测到相交，则方法返回 `false`。
 
 ### .build() : Octree
 
-Builds the Octree.
+构建八叉树。
 
-**Returns:** A reference to this Octree.
+**返回值：** 对此八叉树的引用。
 
 ### .calcBox() : Octree
 
-Prepares [Octree#box](Octree.html#box) for the build.
+为构建准备 [Octree#box](Octree.html#box)。
 
-**Returns:** A reference to this Octree.
+**返回值：** 对此八叉树的引用。
 
 ### .capsuleIntersect( capsule : Capsule ) : Object | boolean
 
-Performs a capsule intersection test with this Octree.
+对此八叉树执行胶囊体相交检测。
 
 **capsule**
 
-The capsule to test.
+要检测的胶囊体。
 
-**Returns:** The intersection object. If no intersection is detected, the method returns `false`.
+**返回值：** 相交对象。如果未检测到相交，则方法返回 `false`。
 
 ### .clear() : Octree
 
-Clears the Octree by making it empty.
+清空八叉树，使其为空。
 
-**Returns:** A reference to this Octree.
+**返回值：** 对此八叉树的引用。
 
 ### .fromGraphNode( group : Object3D ) : Octree
 
-Constructs the Octree from the given 3D object.
+根据给定的 3D 对象构建八叉树。
 
 **group**
 
-The scene graph node.
+场景图节点。
 
-**Returns:** A reference to this Octree.
+**返回值：** 对此八叉树的引用。
 
 ### .getBoxTriangles( box : Box3, triangles : Array.<Triangle> )
 
-Computes the triangles that potentially intersect with the given bounding box.
+计算可能与给定包围盒相交的三角形。
 
 **box**
 
-The bounding box.
+包围盒。
 
 **triangles**
 
-The target array that holds the triangles.
+用于存放三角形的目标数组。
 
 ### .getCapsuleTriangles( capsule : Capsule, triangles : Array.<Triangle> )
 
-Computes the triangles that potentially intersect with the given capsule.
+计算可能与给定胶囊体相交的三角形。
 
 **capsule**
 
-The capsule to test.
+要检测的胶囊体。
 
 **triangles**
 
-The target array that holds the triangles.
+用于存放三角形的目标数组。
 
 ### .getRayTriangles( ray : Ray, triangles : Array.<Triangle> )
 
-Computes the triangles that potentially intersect with the given ray.
+计算可能与给定射线相交的三角形。
 
 **ray**
 
-The ray to test.
+要检测的射线。
 
 **triangles**
 
-The target array that holds the triangles.
+用于存放三角形的目标数组。
 
 ### .getSphereTriangles( sphere : Sphere, triangles : Array.<Triangle> )
 
-Computes the triangles that potentially intersect with the given bounding sphere.
+计算可能与给定包围球相交的三角形。
 
 **sphere**
 
-The sphere to test.
+要检测的球体。
 
 **triangles**
 
-The target array that holds the triangles.
+用于存放三角形的目标数组。
 
 ### .rayIntersect( ray : Ray ) : Object | boolean
 
-Performs a ray intersection test with this Octree.
+对此八叉树执行射线相交检测。
 
 **ray**
 
-The ray to test.
+要检测的射线。
 
-**Returns:** The nearest intersection object. If no intersection is detected, the method returns `false`.
+**返回值：** 最近的相交对象。如果未检测到相交，则方法返回 `false`。
 
 ### .sphereIntersect( sphere : Sphere ) : Object | boolean
 
-Performs a bounding sphere intersection test with this Octree.
+对此八叉树执行包围球相交检测。
 
 **sphere**
 
-The bounding sphere to test.
+要检测的包围球。
 
-**Returns:** The intersection object. If no intersection is detected, the method returns `false`.
+**返回值：** 相交对象。如果未检测到相交，则方法返回 `false`。
 
 ### .split( level : number ) : Octree
 
-Splits the Octree. This method is used recursively when building the Octree.
+拆分八叉树。此方法在构建八叉树时被递归调用。
 
 **level**
 
-The current level.
+当前层数。
 
-**Returns:** A reference to this Octree.
+**返回值：** 对此八叉树的引用。
 
 ### .triangleBoxIntersect( box : Box3, triangle : Triangle ) : Object | false
 
-Computes the intersection between the given bounding box and triangle.
+计算给定包围盒与三角形之间的相交。
 
 **box**
 
-The bounding box to test.
+要检测的包围盒。
 
 **triangle**
 
-The triangle to test.
+要检测的三角形。
 
-**Returns:** The intersection object. If no intersection is detected, the method returns `false`.
+**返回值：** 相交对象。如果未检测到相交，则方法返回 `false`。
 
 ### .triangleCapsuleIntersect( capsule : Capsule, triangle : Triangle ) : Object | false
 
-Computes the intersection between the given capsule and triangle.
+计算给定胶囊体与三角形之间的相交。
 
 **capsule**
 
-The capsule to test.
+要检测的胶囊体。
 
 **triangle**
 
-The triangle to test.
+要检测的三角形。
 
-**Returns:** The intersection object. If no intersection is detected, the method returns `false`.
+**返回值：** 相交对象。如果未检测到相交，则方法返回 `false`。
 
 ### .triangleSphereIntersect( sphere : Sphere, triangle : Triangle ) : Object | false
 
-Computes the intersection between the given sphere and triangle.
+计算给定球体与三角形之间的相交。
 
 **sphere**
 
-The sphere to test.
+要检测的球体。
 
 **triangle**
 
-The triangle to test.
+要检测的三角形。
 
-**Returns:** The intersection object. If no intersection is detected, the method returns `false`.
+**返回值：** 相交对象。如果未检测到相交，则方法返回 `false`。
 
-## Source
+## 源码
 
 [examples/jsm/math/Octree.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/math/Octree.js)

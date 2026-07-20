@@ -1,85 +1,85 @@
 # ConvexHull
 
-Can be used to compute the convex hull in 3D space for a given set of points. It is primarily intended for [ConvexGeometry](ConvexGeometry.html).
+可用于计算给定点集在三维空间中的凸包。它主要用于 [ConvexGeometry](ConvexGeometry.html)。
 
-This Quickhull 3D implementation is a port of [quickhull3d](https://github.com/maurizzzio/quickhull3d/) by Mauricio Poppe.
+此 Quickhull 3D 实现移植自 Mauricio Poppe 的 [quickhull3d](https://github.com/maurizzzio/quickhull3d/)。
 
-## Import
+## 导入
 
-ConvexHull is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+ConvexHull 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { ConvexHull } from 'three/addons/math/ConvexHull.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new ConvexHull()
 
-Constructs a new convex hull.
+构造一个新的凸包。
 
-## Methods
+## 方法
 
 ### .containsPoint( point : Vector3 ) : boolean
 
-Returns `true` if the given point lies in the convex hull.
+若给定点位于凸包内，则返回 `true`。
 
 **point**
 
-The point to test.
+要测试的点。
 
-**Returns:** Whether the given point lies in the convex hull or not.
+**返回值：** 给定点是否位于凸包内。
 
 ### .intersectRay( ray : Ray, target : Vector3 ) : Vector3
 
-Computes the intersections point of the given ray and this convex hull.
+计算给定射线与此凸包的交点。
 
 **ray**
 
-The ray to test.
+要测试的射线。
 
 **target**
 
-The target vector that is used to store the method's result.
+用于存储方法结果的目标向量。
 
-**Returns:** The intersection point. Returns `null` if not intersection was detected.
+**返回值：** 交点。若未检测到相交则返回 `null`。
 
 ### .intersectsRay( ray : Ray ) : boolean
 
-Returns `true` if the given ray intersects with this convex hull.
+若给定射线与此凸包相交，则返回 `true`。
 
 **ray**
 
-The ray to test.
+要测试的射线。
 
-**Returns:** Whether the given ray intersects with this convex hull or not.
+**返回值：** 给定射线是否与此凸包相交。
 
 ### .makeEmpty() : ConvexHull
 
-Makes the convex hull empty.
+清空此凸包。
 
-**Returns:** A reference to this convex hull.
+**返回值：** 对此凸包的引用。
 
 ### .setFromObject( object : Object3D ) : ConvexHull
 
-Computes the convex hull of the given 3D object (including its descendants), accounting for the world transforms of both the 3D object and its descendants.
+计算给定 3D 对象（包括其子对象）的凸包，并考虑对象及其子对象的世界变换。
 
 **object**
 
-The 3D object to compute the convex hull for.
+要计算凸包的 3D 对象。
 
-**Returns:** A reference to this convex hull.
+**返回值：** 对此凸包的引用。
 
 ### .setFromPoints( points : Array.<Vector3> ) : ConvexHull
 
-Computes to convex hull for the given array of points.
+根据给定点数组计算凸包。
 
 **points**
 
-The array of points in 3D space.
+三维空间中的点数组。
 
-**Returns:** A reference to this convex hull.
+**返回值：** 对此凸包的引用。
 
-## Source
+## 源码
 
 [examples/jsm/math/ConvexHull.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/math/ConvexHull.js)

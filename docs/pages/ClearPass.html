@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>ClearPass - Three.js Docs</title>
+	<title>ClearPass - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,23 +13,22 @@
 	<h1 translate="no">ClearPass</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>This class can be used to force a clear operation for the current read or
-default framebuffer (when rendering to screen).</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>此类可用于强制对当前读取缓冲或默认帧缓冲（渲染到屏幕时）执行清除操作。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const clearPass = new ClearPass();
 composer.addPass( clearPass );
 </code></pre></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">ClearPass</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">ClearPass</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { ClearPass } from 'three/addons/postprocessing/ClearPass.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="ClearPass" translate="no">new <a href="#ClearPass">ClearPass</a><span class="signature">( clearColor : <span class="param-type">number | <a href="Color.html">Color</a> | string</span>, clearAlpha : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new clear pass.</p>
+							<p>构造一个新的清除通道。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -38,8 +37,8 @@ composer.addPass( clearPass );
 										<strong translate="no">clearColor</strong>
 									</td>
 									<td class="description last">
-										<p>The clear color.</p>
-										<p>Default is <code>0x000000</code>.</p>
+										<p>清除颜色。</p>
+										<p>默认值为 <code>0x000000</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -47,44 +46,44 @@ composer.addPass( clearPass );
 										<strong translate="no">clearAlpha</strong>
 									</td>
 									<td class="description last">
-										<p>The clear alpha.</p>
-										<p>Default is <code>0</code>.</p>
+										<p>清除的透明度。</p>
+										<p>默认值为 <code>0</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="clearAlpha" translate="no">.<a href="#clearAlpha">clearAlpha</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The clear alpha.</p>
-						<p>Default is <code>0</code>.</p>
+						<p>清除的透明度。</p>
+						<p>默认值为 <code>0</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="clearColor" translate="no">.<a href="#clearColor">clearColor</a><span class="type-signature"> : number | <a href="Color.html">Color</a> | string</span> </h3>
 					<div class="description">
-						<p>The clear color.</p>
-						<p>Default is <code>0x000000</code>.</p>
+						<p>清除颜色。</p>
+						<p>默认值为 <code>0x000000</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="needsSwap" translate="no">.<a href="#needsSwap">needsSwap</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Overwritten to disable the swap.</p>
-						<p>Default is <code>false</code>.</p>
+						<p>重写以禁用交换。</p>
+						<p>默认值为 <code>false</code>。</p>
 					</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Pass.html#needsSwap">Pass#needsSwap</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Pass.html#needsSwap">Pass#needsSwap</a></dt>
 						</dl>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="render" translate="no">.<a href="#render">render</a><span class="signature">( renderer : <span class="param-type"><a href="WebGLRenderer.html">WebGLRenderer</a></span>, writeBuffer : <span class="param-type"><a href="WebGLRenderTarget.html">WebGLRenderTarget</a></span>, readBuffer : <span class="param-type"><a href="WebGLRenderTarget.html">WebGLRenderTarget</a></span>, deltaTime : <span class="param-type">number</span>, maskActive : <span class="param-type">boolean</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Performs the clear operation. This affects the current read or the default framebuffer.</p>
+							<p>执行清除操作。这会影响当前读取缓冲或默认帧缓冲。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -93,7 +92,7 @@ composer.addPass( clearPass );
 										<strong translate="no">renderer</strong>
 									</td>
 									<td class="description last">
-										<p>The renderer.</p>
+										<p>渲染器。</p>
 									</td>
 								</tr>
 								<tr>
@@ -101,8 +100,7 @@ composer.addPass( clearPass );
 										<strong translate="no">writeBuffer</strong>
 									</td>
 									<td class="description last">
-										<p>The write buffer. This buffer is intended as the rendering
-destination for the pass.</p>
+										<p>写入缓冲区。该缓冲区作为通道的渲染目标。</p>
 									</td>
 								</tr>
 								<tr>
@@ -110,8 +108,7 @@ destination for the pass.</p>
 										<strong translate="no">readBuffer</strong>
 									</td>
 									<td class="description last">
-										<p>The read buffer. The pass can access the result from the
-previous pass from this buffer.</p>
+										<p>读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。</p>
 									</td>
 								</tr>
 								<tr>
@@ -119,7 +116,7 @@ previous pass from this buffer.</p>
 										<strong translate="no">deltaTime</strong>
 									</td>
 									<td class="description last">
-										<p>The delta time in seconds.</p>
+										<p>时间增量（秒）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -127,16 +124,16 @@ previous pass from this buffer.</p>
 										<strong translate="no">maskActive</strong>
 									</td>
 									<td class="description last">
-										<p>Whether masking is active or not.</p>
+										<p>遮罩是否处于激活状态。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Pass.html#render">Pass#render</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Pass.html#render">Pass#render</a></dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/ClearPass.js" translate="no" target="_blank" rel="noopener">examples/jsm/postprocessing/ClearPass.js</a>
 				</p>

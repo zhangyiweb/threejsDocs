@@ -2,45 +2,45 @@
 
 # FXAAPass
 
-A pass for applying FXAA.
+用于应用 FXAA 的通道。
 
-## Code Example
+## 代码示例
 
 ```js
 const fxaaPass = new FXAAPass();
 composer.addPass( fxaaPass );
 ```
 
-## Import
+## 导入
 
-FXAAPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+FXAAPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { FXAAPass } from 'three/addons/postprocessing/FXAAPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new FXAAPass()
 
-Constructs a new FXAA pass.
+构造一个新的 FXAA 通道。
 
-## Methods
+## 方法
 
 ### .setSize( width : number, height : number )
 
-Sets the size of the pass.
+设置通道的尺寸。
 
 **width**
 
-The width to set.
+要设置的宽度。
 
 **height**
 
-The height to set.
+要设置的高度。
 
-**Overrides:** [ShaderPass#setSize](ShaderPass.html#setSize)
+**重写：** [ShaderPass#setSize](ShaderPass.html#setSize)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/FXAAPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/FXAAPass.js)

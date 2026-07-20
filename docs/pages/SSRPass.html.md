@@ -2,9 +2,9 @@
 
 # SSRPass
 
-A pass for a basic SSR effect.
+用于实现基础 SSR 效果的通道。
 
-## Code Example
+## 代码示例
 
 ```js
 const ssrPass = new SSRPass( {
@@ -17,240 +17,240 @@ const ssrPass = new SSRPass( {
 composer.addPass( ssrPass );
 ```
 
-## Import
+## 导入
 
-SSRPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+SSRPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { SSRPass } from 'three/addons/postprocessing/SSRPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new SSRPass( options : SSRPass~Options )
 
-Constructs a new SSR pass.
+构造一个新的 SSR 通道。
 
 **options**
 
-The pass options.
+通道选项。
 
-## Properties
+## 属性
 
 ### .blur : boolean
 
-Whether to blur reflections or not.
+是否对反射进行模糊。
 
-Default is `true`.
+默认值为 `true`。
 
 ### .bouncing : boolean
 
-Whether bouncing is enabled or not.
+是否启用弹跳反射。
 
-Default is `false`.
+默认值为 `false`。
 
 ### .camera : Camera
 
-The camera.
+相机。
 
 ### .clear : boolean
 
-Overwritten to perform a clear operation by default.
+被重写为默认执行清除操作。
 
-Default is `true`.
+默认值为 `true`。
 
-**Overrides:** [Pass#clear](Pass.html#clear)
+**重写：** [Pass#clear](Pass.html#clear)
 
 ### .distanceAttenuation : boolean
 
-Whether to use distance attenuation or not.
+是否使用距离衰减。
 
-Default is `true`.
+默认值为 `true`。
 
 ### .fresnel : boolean
 
-Whether to use fresnel or not.
+是否使用菲涅尔效果。
 
-Default is `true`.
+默认值为 `true`。
 
 ### .groundReflector : ReflectorForSSRPass
 
-The ground reflector.
+地面反射器。
 
-Default is `0`.
+默认值为 `0`。
 
 ### .height : number
 
-The height of the effect.
+效果的高度。
 
-Default is `512`.
+默认值为 `512`。
 
 ### .infiniteThick : boolean
 
-Whether to use infinite thickness or not.
+是否使用无限厚度。
 
-Default is `false`.
+默认值为 `false`。
 
 ### .maxDistance : number
 
-Controls how far a fragment can reflect.
+控制片元可反射的最远距离。
 
-Default is `180`.
+默认值为 `180`。
 
 ### .opacity : number
 
-The opacity.
+不透明度。
 
-Default is `0.5`.
+默认值为 `0.5`。
 
 ### .output : number
 
-The output configuration.
+输出配置。
 
-Default is `0`.
+默认值为 `0`。
 
 ### .renderer : WebGLRenderer
 
-The renderer.
+渲染器。
 
 ### .resolutionScale : number
 
-The resolution scale. Valid values are in the range `[0,1]`. `1` means best quality but also results in more computational overhead. Setting to `0.5` means the effect is computed in half-resolution.
+分辨率缩放。有效值范围为 `[0,1]`。`1` 表示最佳质量，但计算开销也更大。设为 `0.5` 表示以半分辨率计算效果。
 
-Default is `1`.
+默认值为 `1`。
 
 ### .scene : Scene
 
-The scene to render.
+要渲染的场景。
 
 ### .selective : boolean
 
-Whether the pass is selective or not.
+通道是否为选择性模式。
 
-Default is `false`.
+默认值为 `false`。
 
 ### .selects : Array.<Object3D>
 
-Which 3D objects should be affected by SSR. If not set, the entire scene is affected.
+应受 SSR 影响的 3D 对象。若未设置，则影响整个场景。
 
-Default is `null`.
+默认值为 `null`。
 
 ### .thickness : number
 
-Controls the cutoff between what counts as a possible reflection hit and what does not.
+控制判定为可能反射命中与否的截止阈值。
 
-Default is `.018`.
+默认值为 `.018`。
 
 ### .width : number
 
-The width of the effect.
+效果的宽度。
 
-Default is `512`.
+默认值为 `512`。
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the SSR pass.
+执行 SSR 通道。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
 ### .setSize( width : number, height : number )
 
-Sets the size of the pass.
+设置通道的尺寸。
 
 **width**
 
-The width to set.
+要设置的宽度。
 
 **height**
 
-The height to set.
+要设置的高度。
 
-**Overrides:** [Pass#setSize](Pass.html#setSize)
+**重写：** [Pass#setSize](Pass.html#setSize)
 
-## Type Definitions
+## 类型定义
 
 ### .Options
 
-Constructor options of `SSRPass`.
+`SSRPass` 的构造函数选项。
 
 **renderer**  
 [WebGLRenderer](WebGLRenderer.html)
 
-The renderer.
+渲染器。
 
 **scene**  
 [Scene](Scene.html)
 
-The scene to render.
+要渲染的场景。
 
 **camera**  
 [Camera](Camera.html)
 
-The camera.
+相机。
 
 **width**  
 number
 
-The width of the effect.
+效果的宽度。
 
-Default is `512`.
+默认值为 `512`。
 
 **height**  
 number
 
-The width of the effect.
+效果的高度。
 
-Default is `512`.
+默认值为 `512`。
 
 **selects**  
 Array.<[Object3D](Object3D.html)\>
 
-Which 3D objects should be affected by SSR. If not set, the entire scene is affected.
+应受 SSR 影响的 3D 对象。若未设置，则影响整个场景。
 
-Default is `null`.
+默认值为 `null`。
 
 **bouncing**  
 boolean
 
-Whether bouncing is enabled or not.
+是否启用弹跳反射。
 
-Default is `false`.
+默认值为 `false`。
 
 **groundReflector**  
 [ReflectorForSSRPass](ReflectorForSSRPass.html)
 
-A ground reflector.
+地面反射器。
 
-Default is `null`.
+默认值为 `null`。
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/SSRPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/SSRPass.js)

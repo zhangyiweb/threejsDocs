@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>RetroPassNode - Three.js Docs</title>
+	<title>RetroPassNode - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,22 +13,22 @@
 	<h1 translate="no">RetroPassNode</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A post-processing pass that applies a retro PS1-style effect to the scene.</p>
-<p>This node renders the scene with classic PlayStation 1 visual characteristics:</p>
+				<div class="class-description"><p>对场景应用复古 PS1 风格效果的后处理通道。</p>
+<p>此节点以经典 PlayStation 1 视觉特征渲染场景：</p>
 <ul>
-<li><strong>Vertex snapping</strong>: Vertices are snapped to screen pixels, creating the iconic &quot;wobbly&quot; geometry</li>
-<li><strong>Affine texture mapping</strong>: Textures are sampled without perspective correction, resulting in distortion effects</li>
-<li><strong>Low resolution</strong>: Default 0.25 scale (typical 320x240 equivalent)</li>
-<li><strong>Nearest-neighbor filtering</strong>: Sharp pixelated textures without smoothing</li>
+<li><strong>顶点吸附</strong>：顶点被吸附到屏幕像素，产生标志性的"抖动"几何体</li>
+<li><strong>仿射纹理映射</strong>：纹理在不进行透视校正的情况下采样，产生扭曲效果</li>
+<li><strong>低分辨率</strong>：默认 0.25 缩放（相当于典型的 320x240）</li>
+<li><strong>最近邻过滤</strong>：清晰像素化纹理，无平滑处理</li>
 </ul></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="RetroPassNode" translate="no">new <a href="#RetroPassNode">RetroPassNode</a><span class="signature">( scene : <span class="param-type"><a href="Scene.html">Scene</a></span>, camera : <span class="param-type"><a href="Camera.html">Camera</a></span>, options : <span class="param-type">Object</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Creates a new RetroPassNode instance.</p>
+							<p>创建一个新的 RetroPassNode 实例。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -37,7 +37,7 @@
 										<strong translate="no">scene</strong>
 									</td>
 									<td class="description last">
-										<p>The scene to render.</p>
+										<p>要渲染的场景。</p>
 									</td>
 								</tr>
 								<tr>
@@ -45,7 +45,7 @@
 										<strong translate="no">camera</strong>
 									</td>
 									<td class="description last">
-										<p>The camera to render from.</p>
+										<p>用于渲染的相机。</p>
 									</td>
 								</tr>
 								<tr>
@@ -53,8 +53,8 @@
 										<strong translate="no">options</strong>
 									</td>
 									<td class="description last">
-										<p>Additional options for the retro pass.</p>
-										<p>Default is <code>{}</code>.</p>
+										<p>复古通道的附加选项。</p>
+										<p>默认值为 <code>{}</code>。</p>
 						<table class="params">
 							<tbody>
 								<tr>
@@ -62,8 +62,8 @@
 										<strong translate="no">affineDistortion</strong>
 									</td>
 									<td class="description last">
-										<p>An optional node to apply affine distortion to UVs.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>可选节点，用于对 UV 应用仿射扭曲。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -74,7 +74,7 @@
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/tsl/display/RetroPassNode.js" translate="no" target="_blank" rel="noopener">examples/jsm/tsl/display/RetroPassNode.js</a>
 				</p>

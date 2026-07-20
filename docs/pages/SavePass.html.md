@@ -2,103 +2,103 @@
 
 # SavePass
 
-A pass that saves the contents of the current read buffer in a render target.
+将当前读取缓冲区的内容保存到渲染目标中的通道。
 
-## Code Example
+## 代码示例
 
 ```js
 const savePass = new SavePass( customRenderTarget );
 composer.addPass( savePass );
 ```
 
-## Import
+## 导入
 
-SavePass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+SavePass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { SavePass } from 'three/addons/postprocessing/SavePass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new SavePass( renderTarget : WebGLRenderTarget )
 
-Constructs a new save pass.
+构造一个新的保存通道。
 
 **renderTarget**
 
-The render target for saving the read buffer. If not provided, the pass automatically creates a render target.
+用于保存读取缓冲区的渲染目标。若未提供，通道会自动创建一个渲染目标。
 
-## Properties
+## 属性
 
 ### .material : ShaderMaterial
 
-The pass material.
+通道材质。
 
 ### .needsSwap : boolean
 
-Overwritten to disable the swap.
+被重写以禁用交换。
 
-Default is `false`.
+默认值为 `false`。
 
-**Overrides:** [Pass#needsSwap](Pass.html#needsSwap)
+**重写：** [Pass#needsSwap](Pass.html#needsSwap)
 
 ### .renderTarget : WebGLRenderTarget
 
-The render target which is used to save the read buffer.
+用于保存读取缓冲区的渲染目标。
 
 ### .uniforms : Object
 
-The pass uniforms.
+通道的 uniform。
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the save pass.
+执行保存通道。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
 ### .setSize( width : number, height : number )
 
-Sets the size of the pass.
+设置通道的尺寸。
 
 **width**
 
-The width to set.
+要设置的宽度。
 
 **height**
 
-The height to set.
+要设置的高度。
 
-**Overrides:** [Pass#setSize](Pass.html#setSize)
+**重写：** [Pass#setSize](Pass.html#setSize)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/SavePass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/SavePass.js)

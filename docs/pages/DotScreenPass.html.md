@@ -2,50 +2,50 @@
 
 # DotScreenPass
 
-Pass for creating a dot-screen effect.
+用于创建网点屏效果的通道。
 
-## Code Example
+## 代码示例
 
 ```js
 const pass = new DotScreenPass( new THREE.Vector2( 0, 0 ), 0.5, 0.8 );
 composer.addPass( pass );
 ```
 
-## Import
+## 导入
 
-DotScreenPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+DotScreenPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { DotScreenPass } from 'three/addons/postprocessing/DotScreenPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new DotScreenPass( center : Vector2, angle : number, scale : number )
 
-Constructs a new dot screen pass.
+构造一个新的网点屏通道。
 
 **center**
 
-The center point.
+中心点。
 
 **angle**
 
-The rotation of the effect in radians.
+效果的旋转角度（弧度）。
 
 **scale**
 
-The scale of the effect. A higher value means smaller dots.
+效果的缩放。数值越高，网点越小。
 
-## Properties
+## 属性
 
 ### .material : ShaderMaterial
 
-The pass material.
+通道材质。
 
 ### .uniforms : Object
 
-The pass uniforms. Use this object if you want to update the `center`, `angle` or `scale` values at runtime.
+通道的 uniform 对象。如需在运行时更新 `center`、`angle` 或 `scale` 值，可使用此对象。
 
 ```js
 pass.uniforms.center.value.copy( center );
@@ -53,40 +53,40 @@ pass.uniforms.angle.value = 0;
 pass.uniforms.scale.value = 0.5;
 ```
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Frees the GPU-related resources allocated by this instance. Call this method whenever the pass is no longer used in your app.
+释放该实例分配的 GPU 相关资源。当应用中不再需要此通道时，应调用此方法。
 
-**Overrides:** [Pass#dispose](Pass.html#dispose)
+**重写：** [Pass#dispose](Pass.html#dispose)
 
 ### .render( renderer : WebGLRenderer, writeBuffer : WebGLRenderTarget, readBuffer : WebGLRenderTarget, deltaTime : number, maskActive : boolean )
 
-Performs the dot screen pass.
+执行网点屏通道渲染。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **writeBuffer**
 
-The write buffer. This buffer is intended as the rendering destination for the pass.
+写入缓冲区。该缓冲区作为通道的渲染目标。
 
 **readBuffer**
 
-The read buffer. The pass can access the result from the previous pass from this buffer.
+读取缓冲区。通道可从此缓冲区获取上一通道的渲染结果。
 
 **deltaTime**
 
-The delta time in seconds.
+时间增量（秒）。
 
 **maskActive**
 
-Whether masking is active or not.
+遮罩是否处于激活状态。
 
-**Overrides:** [Pass#render](Pass.html#render)
+**重写：** [Pass#render](Pass.html#render)
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/DotScreenPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/DotScreenPass.js)

@@ -2,49 +2,49 @@
 
 # LUTPass
 
-Pass for color grading via lookup tables.
+通过查找表进行色彩分级的通道。
 
-## Code Example
+## 代码示例
 
 ```js
 const lutPass = new LUTPass( { lut: lut.texture3D } );
 composer.addPass( lutPass );
 ```
 
-## Import
+## 导入
 
-LUTPass is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+LUTPass 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { LUTPass } from 'three/addons/postprocessing/LUTPass.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new LUTPass( options : Object )
 
-Constructs a LUT pass.
+构造一个 LUT 通道。
 
 **options**
 
-The pass options.
+通道选项。
 
-Default is `{}`.
+默认值为 `{}`。
 
-## Properties
+## 属性
 
 ### .intensity : number
 
-The intensity.
+强度。
 
-Default is `1`.
+默认值为 `1`。
 
 ### .lut : Data3DTexture
 
-The LUT as a 3D texture.
+作为 3D 纹理的 LUT。
 
-Default is `null`.
+默认值为 `null`。
 
-## Source
+## 源码
 
 [examples/jsm/postprocessing/LUTPass.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/postprocessing/LUTPass.js)

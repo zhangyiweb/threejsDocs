@@ -1,172 +1,172 @@
 # Lut
 
-Represents a lookup table for colormaps. It is used to determine the color values from a range of data values.
+表示颜色映射的查找表。用于从一段数据值范围中确定颜色值。
 
-## Code Example
+## 代码示例
 
 ```js
 const lut = new Lut( 'rainbow', 512 );
 const color = lut.getColor( 0.5 );
 ```
 
-## Import
+## 导入
 
-Lut is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+Lut 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { Lut } from 'three/addons/math/Lut.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new Lut( colormap : 'rainbow' | 'cooltowarm' | 'blackbody' | 'grayscale', count : number )
 
-Constructs a new Lut.
+构造一个新的 Lut。
 
 **colormap**
 
-Sets a colormap from predefined list of colormaps.
+从预定义的颜色映射列表中设置颜色映射。
 
-Default is `'rainbow'`.
+默认值为 `'rainbow'`。
 
 **count**
 
-Sets the number of colors used to represent the data array.
+设置用于表示数据数组的颜色数量。
 
-Default is `32`.
+默认值为 `32`。
 
-## Properties
+## 属性
 
 ### .isLut : boolean (readonly)
 
-This flag can be used for type testing.
+此标志可用于类型检测。
 
-Default is `true`.
+默认值为 `true`。
 
 ### .lut : Array.<Color>
 
-The lookup table for the selected color map
+所选颜色映射的查找表。
 
 ### .map : Array.<Array.<number>>
 
-The currently selected color map.
+当前所选的颜色映射。
 
 ### .maxV : number
 
-The maximum value to be represented with the lookup table.
+查找表所表示的最大值。
 
-Default is `1`.
+默认值为 `1`。
 
 ### .minV : number
 
-The minimum value to be represented with the lookup table.
+查找表所表示的最小值。
 
-Default is `0`.
+默认值为 `0`。
 
 ### .n : number
 
-The number of colors of the current selected color map.
+当前所选颜色映射的颜色数量。
 
-Default is `32`.
+默认值为 `32`。
 
-## Methods
+## 方法
 
 ### .addColorMap( name : string, arrayOfColors : Array.<Array.<number>> ) : Lut
 
-Adds a color map to this Lut instance.
+向此 Lut 实例添加颜色映射。
 
 **name**
 
-The name of the color map.
+颜色映射的名称。
 
 **arrayOfColors**
 
-An array of color values. Each value is an array holding a threshold and the actual color value as a hexadecimal number.
+颜色值数组。每个值是一个数组，包含阈值和以十六进制数表示的实际颜色值。
 
-**Returns:** A reference to this LUT.
+**返回值：** 对此 LUT 的引用。
 
 ### .copy( lut : Lut ) : Lut
 
-Copies the given lut.
+复制给定的 lut。
 
 **lut**
 
-The LUT to copy.
+要复制的 LUT。
 
-**Returns:** A reference to this LUT.
+**返回值：** 对此 LUT 的引用。
 
 ### .createCanvas() : HTMLCanvasElement
 
-Creates a canvas in order to visualize the lookup table as a texture.
+创建一个画布，以便将查找表可视化为纹理。
 
-**Returns:** The created canvas.
+**返回值：** 创建的画布。
 
 ### .getColor( alpha : number ) : Color
 
-Returns an instance of Color for the given data value.
+返回给定数据值对应的 Color 实例。
 
 **alpha**
 
-The value to lookup.
+要查找的值。
 
-**Returns:** The color from the LUT.
+**返回值：** 来自 LUT 的颜色。
 
 ### .set( value : Lut ) : Lut
 
-Sets the given LUT.
+设置给定的 LUT。
 
 **value**
 
-The LUT to set.
+要设置的 LUT。
 
-**Returns:** A reference to this LUT.
+**返回值：** 对此 LUT 的引用。
 
 ### .setColorMap( colormap : string, count : number ) : Lut
 
-Configure the lookup table for the given color map and number of colors.
+为给定的颜色映射和颜色数量配置查找表。
 
 **colormap**
 
-The name of the color map.
+颜色映射的名称。
 
 **count**
 
-The number of colors.
+颜色数量。
 
-Default is `32`.
+默认值为 `32`。
 
-**Returns:** A reference to this LUT.
+**返回值：** 对此 LUT 的引用。
 
 ### .setMax( max : number ) : Lut
 
-Sets the maximum value to be represented with this LUT.
+设置此 LUT 所表示的最大值。
 
 **max**
 
-The maximum value to be represented with the lookup table.
+查找表所表示的最大值。
 
-**Returns:** A reference to this LUT.
+**返回值：** 对此 LUT 的引用。
 
 ### .setMin( min : number ) : Lut
 
-Sets the minimum value to be represented with this LUT.
+设置此 LUT 所表示的最小值。
 
 **min**
 
-The minimum value to be represented with the lookup table.
+查找表所表示的最小值。
 
-**Returns:** A reference to this LUT.
+**返回值：** 对此 LUT 的引用。
 
 ### .updateCanvas( canvas : HTMLCanvasElement ) : HTMLCanvasElement
 
-Updates the given canvas with the Lut's data.
+用 Lut 的数据更新给定画布。
 
 **canvas**
 
-The canvas to update.
+要更新的画布。
 
-**Returns:** The updated canvas.
+**返回值：** 更新后的画布。
 
-## Source
+## 源码
 
 [examples/jsm/math/Lut.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/math/Lut.js)
