@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>WebGLCubeRenderTarget - Three.js Docs</title>
+	<title>WebGLCubeRenderTarget - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,15 +13,15 @@
 	<h1 translate="no">WebGLCubeRenderTarget</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A cube render target used in context of <a href="WebGLRenderer.html">WebGLRenderer</a>.</p></div>
+				<div class="class-description"><p>在 <a href="WebGLRenderer.html">WebGLRenderer</a> 上下文中使用的立方体渲染目标。</p></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="WebGLCubeRenderTarget" translate="no">new <a href="#WebGLCubeRenderTarget">WebGLCubeRenderTarget</a><span class="signature">( size : <span class="param-type">number</span>, options : <span class="param-type"><a href="RenderTarget.html#~Options">RenderTarget~Options</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new cube render target.</p>
+							<p>构造一个新的立方体渲染目标。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -30,8 +30,8 @@
 										<strong translate="no">size</strong>
 									</td>
 									<td class="description last">
-										<p>The size of the render target.</p>
-										<p>Default is <code>1</code>.</p>
+										<p>渲染目标的尺寸。</p>
+										<p>默认值为 <code>1</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -39,35 +39,35 @@
 										<strong translate="no">options</strong>
 									</td>
 									<td class="description last">
-										<p>The configuration object.</p>
+										<p>配置对象。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="isWebGLCubeRenderTarget" translate="no">.<a href="#isWebGLCubeRenderTarget">isWebGLCubeRenderTarget</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="texture" translate="no">.<a href="#texture">texture</a><span class="type-signature"> : <a href="DataArrayTexture.html">DataArrayTexture</a></span> </h3>
 					<div class="description">
-						<p>Overwritten with a different texture type.</p>
+						<p>使用不同纹理类型覆盖。</p>
 					</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="WebGLRenderTarget.html#texture">WebGLRenderTarget#texture</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="WebGLRenderTarget.html#texture">WebGLRenderTarget#texture</a></dt>
 						</dl>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="clear" translate="no">.<a href="#clear">clear</a><span class="signature">( renderer : <span class="param-type"><a href="WebGLRenderer.html">WebGLRenderer</a></span>, color : <span class="param-type">boolean</span>, depth : <span class="param-type">boolean</span>, stencil : <span class="param-type">boolean</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Clears this cube render target.</p>
+							<p>清除此立方体渲染目标。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -76,7 +76,7 @@
 										<strong translate="no">renderer</strong>
 									</td>
 									<td class="description last">
-										<p>The renderer.</p>
+										<p>渲染器。</p>
 									</td>
 								</tr>
 								<tr>
@@ -84,8 +84,8 @@
 										<strong translate="no">color</strong>
 									</td>
 									<td class="description last">
-										<p>Whether the color buffer should be cleared or not.</p>
-										<p>Default is <code>true</code>.</p>
+										<p>是否清除颜色缓冲。</p>
+										<p>默认值为 <code>true</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -93,8 +93,8 @@
 										<strong translate="no">depth</strong>
 									</td>
 									<td class="description last">
-										<p>Whether the depth buffer should be cleared or not.</p>
-										<p>Default is <code>true</code>.</p>
+										<p>是否清除深度缓冲。</p>
+										<p>默认值为 <code>true</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -102,8 +102,8 @@
 										<strong translate="no">stencil</strong>
 									</td>
 									<td class="description last">
-										<p>Whether the stencil buffer should be cleared or not.</p>
-										<p>Default is <code>true</code>.</p>
+										<p>是否清除模板缓冲。</p>
+										<p>默认值为 <code>true</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -112,7 +112,7 @@
 					<h3 class="name name-method" id="fromEquirectangularTexture" translate="no">.<a href="#fromEquirectangularTexture">fromEquirectangularTexture</a><span class="signature">( renderer : <span class="param-type"><a href="WebGLRenderer.html">WebGLRenderer</a></span>, texture : <span class="param-type"><a href="Texture.html">Texture</a></span> )</span><span class="type-signature"> : <a href="WebGLCubeRenderTarget.html">WebGLCubeRenderTarget</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Converts the given equirectangular texture to a cube map.</p>
+							<p>将给定的等距柱状投影纹理转换为立方体贴图。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -121,7 +121,7 @@
 										<strong translate="no">renderer</strong>
 									</td>
 									<td class="description last">
-										<p>The renderer.</p>
+										<p>渲染器。</p>
 									</td>
 								</tr>
 								<tr>
@@ -129,16 +129,16 @@
 										<strong translate="no">texture</strong>
 									</td>
 									<td class="description last">
-										<p>The equirectangular texture.</p>
+										<p>等距柱状投影纹理。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this cube render target.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此立方体渲染目标的引用。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/renderers/WebGLCubeRenderTarget.js" translate="no" target="_blank" rel="noopener">src/renderers/WebGLCubeRenderTarget.js</a>
 				</p>

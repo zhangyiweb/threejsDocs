@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>BundleGroup - Three.js Docs</title>
+	<title>BundleGroup - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,73 +13,72 @@
 	<h1 translate="no">BundleGroup</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A specialized group which enables applications access to the
-Render Bundle API of WebGPU. The group with all its descendant nodes
-are considered as one render bundle and processed as such by
-the renderer.</p>
-<p>This module is only fully supported by <code>WebGPURenderer</code> with a WebGPU backend.
-With a WebGL backend, the group can technically be rendered but without
-any performance improvements.</p></div>
+				<div class="class-description"><p>一个专用组，使应用能够访问 WebGPU 的
+Render Bundle API。该组及其所有后代节点
+被视为一个渲染包，并由渲染器按此方式处理。</p>
+<p>此模块仅在使用 WebGPU 后端的 <code>WebGPURenderer</code> 中得到完整支持。
+在 WebGL 后端下，该组在技术上仍可渲染，但不会获得
+任何性能提升。</p></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="BundleGroup" translate="no">new <a href="#BundleGroup">BundleGroup</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new bundle group.</p>
+							<p>构造一个新的 bundle 组。</p>
 						</div>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="isBundleGroup" translate="no">.<a href="#isBundleGroup">isBundleGroup</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="needsUpdate" translate="no">.<a href="#needsUpdate">needsUpdate</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Set this property to <code>true</code> when the bundle group has changed.</p>
-						<p>Default is <code>false</code>.</p>
+						<p>当 bundle 组发生变化时，将此属性设为 <code>true</code>。</p>
+						<p>默认值为 <code>false</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="static" translate="no">.<a href="#static">static</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Whether the bundle is static or not. When set to <code>true</code>, the structure
-is assumed to be static and does not change. E.g. no new objects are
-added to the group.</p>
-<p>If a change is required, an update can still be forced by setting the
-<code>needsUpdate</code> flag to <code>true</code>.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>bundle 是否为静态。设为 <code>true</code> 时，假定结构
+是静态的且不会改变。例如，不会向组中
+添加新对象。</p>
+<p>若仍需更改，可通过将
+<code>needsUpdate</code> 标志设为 <code>true</code> 来强制更新。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Group.html#static">Group#static</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Group.html#static">Group#static</a></dt>
 						</dl>
 				</div>
 				<div class="member">
 					<h3 class="name" id="type" translate="no">.<a href="#type">type</a><span class="type-signature"> : string</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This property is only relevant for detecting types
-during serialization/deserialization. It should always
-match the class name.</p>
-						<p>Default is <code>'BundleGroup'</code>.</p>
+						<p>此属性仅用于在序列化/反序列化期间
+检测类型。它应始终
+与类名匹配。</p>
+						<p>默认值为 <code>'BundleGroup'</code>。</p>
 					</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Group.html#type">Group#type</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Group.html#type">Group#type</a></dt>
 						</dl>
 				</div>
 				<div class="member">
 					<h3 class="name" id="version" translate="no">.<a href="#version">version</a><span class="type-signature"> : number</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>The bundle group's version.</p>
-						<p>Default is <code>0</code>.</p>
+						<p>bundle 组的版本。</p>
+						<p>默认值为 <code>0</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/renderers/common/BundleGroup.js" translate="no" target="_blank" rel="noopener">src/renderers/common/BundleGroup.js</a>
 				</p>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>CanvasTarget - Three.js Docs</title>
+	<title>CanvasTarget - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,15 +13,15 @@
 	<h1 translate="no">CanvasTarget</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>CanvasTarget is a class that represents the final output destination of the renderer.</p></div>
+				<div class="class-description"><p>CanvasTarget 是表示渲染器最终输出目标的类。</p></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="CanvasTarget" translate="no">new <a href="#CanvasTarget">CanvasTarget</a><span class="signature">( domElement : <span class="param-type">HTMLCanvasElement | OffscreenCanvas</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new CanvasTarget.</p>
+							<p>构造一个新的 CanvasTarget。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -30,42 +30,41 @@
 										<strong translate="no">domElement</strong>
 									</td>
 									<td class="description last">
-										<p>The canvas element to render to.</p>
+										<p>要渲染到的画布元素。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="colorTexture" translate="no">.<a href="#colorTexture">colorTexture</a><span class="type-signature"> : <a href="FramebufferTexture.html">FramebufferTexture</a></span> </h3>
 					<div class="description">
-						<p>The color texture of the default framebuffer.</p>
+						<p>默认帧缓冲的颜色纹理。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="depthTexture" translate="no">.<a href="#depthTexture">depthTexture</a><span class="type-signature"> : <a href="DepthTexture.html">DepthTexture</a></span> </h3>
 					<div class="description">
-						<p>The depth texture of the default framebuffer.</p>
+						<p>默认帧缓冲的深度纹理。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="domElement" translate="no">.<a href="#domElement">domElement</a><span class="type-signature"> : HTMLCanvasElement | OffscreenCanvas</span> </h3>
 					<div class="description">
-						<p>A reference to the canvas element the renderer is drawing to.
-This value of this property will automatically be created by
-the renderer.</p>
+						<p>渲染器正在绘制到的画布元素的引用。
+此属性的值将由渲染器自动创建。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="dispose" translate="no">.<a href="#dispose">dispose</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Frees the GPU-related resources allocated by this instance. Call this
-method whenever this instance is no longer used in your app.</p>
+							<p>释放此实例分配的 GPU 相关资源。当应用中
+不再使用此实例时，请调用此方法。</p>
 						</div>
-						<h5>Fires:</h5>
+						<h5>触发：</h5>
 						<ul>
 							<li>RenderTarget#event:dispose</li>
 						</ul>
@@ -73,7 +72,7 @@ method whenever this instance is no longer used in your app.</p>
 					<h3 class="name name-method" id="getDrawingBufferSize" translate="no">.<a href="#getDrawingBufferSize">getDrawingBufferSize</a><span class="signature">( target : <span class="param-type"><a href="Vector2.html">Vector2</a></span> )</span><span class="type-signature"> : <a href="Vector2.html">Vector2</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the drawing buffer size in physical pixels. This method honors the pixel ratio.</p>
+							<p>返回以物理像素为单位的绘图缓冲尺寸。此方法会考虑像素比。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -82,28 +81,28 @@ method whenever this instance is no longer used in your app.</p>
 										<strong translate="no">target</strong>
 									</td>
 									<td class="description last">
-										<p>The method writes the result in this target object.</p>
+										<p>方法将结果写入此目标对象。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The drawing buffer size.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 绘图缓冲尺寸。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getPixelRatio" translate="no">.<a href="#getPixelRatio">getPixelRatio</a><span class="signature">()</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the pixel ratio.</p>
+							<p>返回像素比。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The pixel ratio.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 像素比。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getScissor" translate="no">.<a href="#getScissor">getScissor</a><span class="signature">( target : <span class="param-type"><a href="Vector4.html">Vector4</a></span> )</span><span class="type-signature"> : <a href="Vector4.html">Vector4</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the scissor rectangle.</p>
+							<p>返回裁剪矩形。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -112,28 +111,28 @@ method whenever this instance is no longer used in your app.</p>
 										<strong translate="no">target</strong>
 									</td>
 									<td class="description last">
-										<p>The method writes the result in this target object.</p>
+										<p>方法将结果写入此目标对象。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The scissor rectangle.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 裁剪矩形。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getScissorTest" translate="no">.<a href="#getScissorTest">getScissorTest</a><span class="signature">()</span><span class="type-signature"> : boolean</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the scissor test value.</p>
+							<p>返回裁剪测试的值。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> Whether the scissor test should be enabled or not.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 是否应启用裁剪测试。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getSize" translate="no">.<a href="#getSize">getSize</a><span class="signature">( target : <span class="param-type"><a href="Vector2.html">Vector2</a></span> )</span><span class="type-signature"> : <a href="Vector2.html">Vector2</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the renderer's size in logical pixels. This method does not honor the pixel ratio.</p>
+							<p>返回以逻辑像素为单位的渲染器尺寸。此方法不考虑像素比。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -142,19 +141,19 @@ method whenever this instance is no longer used in your app.</p>
 										<strong translate="no">target</strong>
 									</td>
 									<td class="description last">
-										<p>The method writes the result in this target object.</p>
+										<p>方法将结果写入此目标对象。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The renderer's size in logical pixels.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 以逻辑像素为单位的渲染器尺寸。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getViewport" translate="no">.<a href="#getViewport">getViewport</a><span class="signature">( target : <span class="param-type"><a href="Vector4.html">Vector4</a></span> )</span><span class="type-signature"> : <a href="Vector4.html">Vector4</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the viewport definition.</p>
+							<p>返回视口定义。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -163,21 +162,21 @@ method whenever this instance is no longer used in your app.</p>
 										<strong translate="no">target</strong>
 									</td>
 									<td class="description last">
-										<p>The method writes the result in this target object.</p>
+										<p>方法将结果写入此目标对象。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The viewport definition.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 视口定义。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setDrawingBufferSize" translate="no">.<a href="#setDrawingBufferSize">setDrawingBufferSize</a><span class="signature">( width : <span class="param-type">number</span>, height : <span class="param-type">number</span>, pixelRatio : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>This method allows to define the drawing buffer size by specifying
-width, height and pixel ratio all at once. The size of the drawing
-buffer is computed with this formula:</p>
+							<p>此方法允许一次性指定宽度、高度和像素比
+来定义绘图缓冲尺寸。绘图缓冲的尺寸
+按以下公式计算：</p>
 <pre><code class="language-js">size.x = width * pixelRatio;
 size.y = height * pixelRatio;
 </code></pre>
@@ -189,7 +188,7 @@ size.y = height * pixelRatio;
 										<strong translate="no">width</strong>
 									</td>
 									<td class="description last">
-										<p>The width in logical pixels.</p>
+										<p>以逻辑像素为单位的宽度。</p>
 									</td>
 								</tr>
 								<tr>
@@ -197,7 +196,7 @@ size.y = height * pixelRatio;
 										<strong translate="no">height</strong>
 									</td>
 									<td class="description last">
-										<p>The height in logical pixels.</p>
+										<p>以逻辑像素为单位的高度。</p>
 									</td>
 								</tr>
 								<tr>
@@ -205,7 +204,7 @@ size.y = height * pixelRatio;
 										<strong translate="no">pixelRatio</strong>
 									</td>
 									<td class="description last">
-										<p>The pixel ratio.</p>
+										<p>像素比。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -214,7 +213,7 @@ size.y = height * pixelRatio;
 					<h3 class="name name-method" id="setPixelRatio" translate="no">.<a href="#setPixelRatio">setPixelRatio</a><span class="signature">( value : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the given pixel ratio and resizes the canvas if necessary.</p>
+							<p>设置给定的像素比，并在必要时调整画布大小。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -223,8 +222,8 @@ size.y = height * pixelRatio;
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>The pixel ratio.</p>
-										<p>Default is <code>1</code>.</p>
+										<p>像素比。</p>
+										<p>默认值为 <code>1</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -233,7 +232,7 @@ size.y = height * pixelRatio;
 					<h3 class="name name-method" id="setScissor" translate="no">.<a href="#setScissor">setScissor</a><span class="signature">( x : <span class="param-type">number | <a href="Vector4.html">Vector4</a></span>, y : <span class="param-type">number</span>, width : <span class="param-type">number</span>, height : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Defines the scissor rectangle.</p>
+							<p>定义裁剪矩形。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -242,8 +241,8 @@ size.y = height * pixelRatio;
 										<strong translate="no">x</strong>
 									</td>
 									<td class="description last">
-										<p>The horizontal coordinate for the lower left corner of the box in logical pixel unit.
-Instead of passing four arguments, the method also works with a single four-dimensional vector.</p>
+										<p>以逻辑像素为单位，盒子左下角的水平坐标。
+除传入四个参数外，该方法也可接受单个四维向量。</p>
 									</td>
 								</tr>
 								<tr>
@@ -251,7 +250,7 @@ Instead of passing four arguments, the method also works with a single four-dime
 										<strong translate="no">y</strong>
 									</td>
 									<td class="description last">
-										<p>The vertical coordinate for the lower left corner of the box in logical pixel unit.</p>
+										<p>以逻辑像素为单位，盒子左下角的垂直坐标。</p>
 									</td>
 								</tr>
 								<tr>
@@ -259,7 +258,7 @@ Instead of passing four arguments, the method also works with a single four-dime
 										<strong translate="no">width</strong>
 									</td>
 									<td class="description last">
-										<p>The width of the scissor box in logical pixel unit.</p>
+										<p>以逻辑像素为单位的裁剪框宽度。</p>
 									</td>
 								</tr>
 								<tr>
@@ -267,7 +266,7 @@ Instead of passing four arguments, the method also works with a single four-dime
 										<strong translate="no">height</strong>
 									</td>
 									<td class="description last">
-										<p>The height of the scissor box in logical pixel unit.</p>
+										<p>以逻辑像素为单位的裁剪框高度。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -276,7 +275,7 @@ Instead of passing four arguments, the method also works with a single four-dime
 					<h3 class="name name-method" id="setScissorTest" translate="no">.<a href="#setScissorTest">setScissorTest</a><span class="signature">( boolean : <span class="param-type">boolean</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Defines the scissor test.</p>
+							<p>定义裁剪测试。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -285,7 +284,7 @@ Instead of passing four arguments, the method also works with a single four-dime
 										<strong translate="no">boolean</strong>
 									</td>
 									<td class="description last">
-										<p>Whether the scissor test should be enabled or not.</p>
+										<p>是否应启用裁剪测试。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -294,7 +293,7 @@ Instead of passing four arguments, the method also works with a single four-dime
 					<h3 class="name name-method" id="setSize" translate="no">.<a href="#setSize">setSize</a><span class="signature">( width : <span class="param-type">number</span>, height : <span class="param-type">number</span>, updateStyle : <span class="param-type">boolean</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the size of the renderer.</p>
+							<p>设置渲染器的尺寸。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -303,7 +302,7 @@ Instead of passing four arguments, the method also works with a single four-dime
 										<strong translate="no">width</strong>
 									</td>
 									<td class="description last">
-										<p>The width in logical pixels.</p>
+										<p>以逻辑像素为单位的宽度。</p>
 									</td>
 								</tr>
 								<tr>
@@ -311,7 +310,7 @@ Instead of passing four arguments, the method also works with a single four-dime
 										<strong translate="no">height</strong>
 									</td>
 									<td class="description last">
-										<p>The height in logical pixels.</p>
+										<p>以逻辑像素为单位的高度。</p>
 									</td>
 								</tr>
 								<tr>
@@ -319,8 +318,8 @@ Instead of passing four arguments, the method also works with a single four-dime
 										<strong translate="no">updateStyle</strong>
 									</td>
 									<td class="description last">
-										<p>Whether to update the <code>style</code> attribute of the canvas or not.</p>
-										<p>Default is <code>true</code>.</p>
+										<p>是否更新画布的 <code>style</code> 属性。</p>
+										<p>默认值为 <code>true</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -329,7 +328,7 @@ Instead of passing four arguments, the method also works with a single four-dime
 					<h3 class="name name-method" id="setViewport" translate="no">.<a href="#setViewport">setViewport</a><span class="signature">( x : <span class="param-type">number | <a href="Vector4.html">Vector4</a></span>, y : <span class="param-type">number</span>, width : <span class="param-type">number</span>, height : <span class="param-type">number</span>, minDepth : <span class="param-type">number</span>, maxDepth : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Defines the viewport.</p>
+							<p>定义视口。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -338,7 +337,7 @@ Instead of passing four arguments, the method also works with a single four-dime
 										<strong translate="no">x</strong>
 									</td>
 									<td class="description last">
-										<p>The horizontal coordinate for the lower left corner of the viewport origin in logical pixel unit.</p>
+										<p>以逻辑像素为单位，视口原点左下角的水平坐标。</p>
 									</td>
 								</tr>
 								<tr>
@@ -346,7 +345,7 @@ Instead of passing four arguments, the method also works with a single four-dime
 										<strong translate="no">y</strong>
 									</td>
 									<td class="description last">
-										<p>The vertical coordinate for the lower left corner of the viewport origin  in logical pixel unit.</p>
+										<p>以逻辑像素为单位，视口原点左下角的垂直坐标。</p>
 									</td>
 								</tr>
 								<tr>
@@ -354,7 +353,7 @@ Instead of passing four arguments, the method also works with a single four-dime
 										<strong translate="no">width</strong>
 									</td>
 									<td class="description last">
-										<p>The width of the viewport in logical pixel unit.</p>
+										<p>以逻辑像素为单位的视口宽度。</p>
 									</td>
 								</tr>
 								<tr>
@@ -362,7 +361,7 @@ Instead of passing four arguments, the method also works with a single four-dime
 										<strong translate="no">height</strong>
 									</td>
 									<td class="description last">
-										<p>The height of the viewport in logical pixel unit.</p>
+										<p>以逻辑像素为单位的视口高度。</p>
 									</td>
 								</tr>
 								<tr>
@@ -370,8 +369,8 @@ Instead of passing four arguments, the method also works with a single four-dime
 										<strong translate="no">minDepth</strong>
 									</td>
 									<td class="description last">
-										<p>The minimum depth value of the viewport. WebGPU only.</p>
-										<p>Default is <code>0</code>.</p>
+										<p>视口的最小深度值。仅 WebGPU。</p>
+										<p>默认值为 <code>0</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -379,14 +378,14 @@ Instead of passing four arguments, the method also works with a single four-dime
 										<strong translate="no">maxDepth</strong>
 									</td>
 									<td class="description last">
-										<p>The maximum depth value of the viewport. WebGPU only.</p>
-										<p>Default is <code>1</code>.</p>
+										<p>视口的最大深度值。仅 WebGPU。</p>
+										<p>默认值为 <code>1</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/renderers/common/CanvasTarget.js" translate="no" target="_blank" rel="noopener">src/renderers/common/CanvasTarget.js</a>
 				</p>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>ReadbackBuffer - Three.js Docs</title>
+	<title>ReadbackBuffer - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,16 +13,16 @@
 	<h1 translate="no">ReadbackBuffer</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A readback buffer is used to transfer data from the GPU to the CPU.
-It is primarily used to read back compute shader results.</p></div>
+				<div class="class-description"><p>回读缓冲用于将数据从 GPU 传输到 CPU。
+主要用于回读计算着色器的结果。</p></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="ReadbackBuffer" translate="no">new <a href="#ReadbackBuffer">ReadbackBuffer</a><span class="signature">( maxByteLength : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new readback buffer.</p>
+							<p>构造一个新的回读缓冲。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -31,56 +31,56 @@ It is primarily used to read back compute shader results.</p></div>
 										<strong translate="no">maxByteLength</strong>
 									</td>
 									<td class="description last">
-										<p>The maximum size of the buffer to be read back.</p>
+										<p>要回读的缓冲的最大大小。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="buffer" translate="no">.<a href="#buffer">buffer</a><span class="type-signature"> : ArrayBuffer | null</span> </h3>
 					<div class="description">
-						<p>The mapped, read back array buffer.</p>
+						<p>已映射的回读数组缓冲。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="isReadbackBuffer" translate="no">.<a href="#isReadbackBuffer">isReadbackBuffer</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="maxByteLength" translate="no">.<a href="#maxByteLength">maxByteLength</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The maximum size of the buffer to be read back.</p>
+						<p>要回读的缓冲的最大大小。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="name" translate="no">.<a href="#name">name</a><span class="type-signature"> : string</span> </h3>
 					<div class="description">
-						<p>Name used for debugging purposes.</p>
+						<p>用于调试的名称。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="dispose" translate="no">.<a href="#dispose">dispose</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Frees internal resources.</p>
+							<p>释放内部资源。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="release" translate="no">.<a href="#release">release</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Releases the mapped buffer data so the GPU buffer can be
-used by the GPU again.</p>
-<p>Note: Any <code>ArrayBuffer</code> data associated with this readback buffer
-are removed and no longer accessible after calling this method.</p>
+							<p>释放已映射的缓冲数据，以便 GPU 缓冲
+可再次被 GPU 使用。</p>
+<p>注意：调用此方法后，与此回读缓冲关联的任何
+<code>ArrayBuffer</code> 数据都将被移除且不再可访问。</p>
 						</div>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/renderers/common/ReadbackBuffer.js" translate="no" target="_blank" rel="noopener">src/renderers/common/ReadbackBuffer.js</a>
 				</p>

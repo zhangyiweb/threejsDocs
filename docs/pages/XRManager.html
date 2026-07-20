@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>XRManager - Three.js Docs</title>
+	<title>XRManager - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,16 +13,16 @@
 	<h1 translate="no">XRManager</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>The XR manager is built on top of the WebXR Device API to
-manage XR sessions with renderer backends.</p></div>
+				<div class="class-description"><p>XR 管理器基于 WebXR Device API 构建，
+用于通过渲染器后端管理 XR 会话。</p></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="XRManager" translate="no">new <a href="#XRManager">XRManager</a><span class="signature">( renderer : <span class="param-type"><a href="Renderer.html">Renderer</a></span>, multiview : <span class="param-type">boolean</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new XR manager.</p>
+							<p>构造一个新的 XR 管理器。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -31,7 +31,7 @@ manage XR sessions with renderer backends.</p></div>
 										<strong translate="no">renderer</strong>
 									</td>
 									<td class="description last">
-										<p>The renderer.</p>
+										<p>渲染器。</p>
 									</td>
 								</tr>
 								<tr>
@@ -39,42 +39,42 @@ manage XR sessions with renderer backends.</p></div>
 										<strong translate="no">multiview</strong>
 									</td>
 									<td class="description last">
-										<p>Enables multiview if the device supports it.</p>
-										<p>Default is <code>false</code>.</p>
+										<p>若设备支持，则启用多视图（multiview）。</p>
+										<p>默认值为 <code>false</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="cameraAutoUpdate" translate="no">.<a href="#cameraAutoUpdate">cameraAutoUpdate</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Whether the XR camera should automatically be updated or not.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>XR 相机是否应自动更新。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="enabled" translate="no">.<a href="#enabled">enabled</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>This flag globally enables XR rendering.</p>
-						<p>Default is <code>false</code>.</p>
+						<p>此标志全局启用 XR 渲染。</p>
+						<p>默认值为 <code>false</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="isPresenting" translate="no">.<a href="#isPresenting">isPresenting</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>Whether the XR device is currently presenting or not.</p>
-						<p>Default is <code>false</code>.</p>
+						<p>XR 设备当前是否正在呈现。</p>
+						<p>默认值为 <code>false</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="createCylinderLayer" translate="no">.<a href="#createCylinderLayer">createCylinderLayer</a><span class="signature">( radius : <span class="param-type">number</span>, centralAngle : <span class="param-type">number</span>, aspectratio : <span class="param-type">number</span>, translation : <span class="param-type"><a href="Vector3.html">Vector3</a></span>, quaternion : <span class="param-type"><a href="Quaternion.html">Quaternion</a></span>, pixelwidth : <span class="param-type">number</span>, pixelheight : <span class="param-type">number</span>, rendercall : <span class="param-type">function</span>, attributes : <span class="param-type">Object</span> )</span><span class="type-signature"> : <a href="Mesh.html">Mesh</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>This method can be used in XR applications to create a cylindrical layer that presents a separate
-rendered scene.</p>
+							<p>此方法可在 XR 应用中用于创建柱面层，以呈现单独的
+渲染场景。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -83,7 +83,7 @@ rendered scene.</p>
 										<strong translate="no">radius</strong>
 									</td>
 									<td class="description last">
-										<p>The radius of the cylinder in world units.</p>
+										<p>圆柱半径（世界单位）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -91,7 +91,7 @@ rendered scene.</p>
 										<strong translate="no">centralAngle</strong>
 									</td>
 									<td class="description last">
-										<p>The central angle of the cylinder in radians.</p>
+										<p>圆柱中心角（弧度）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -99,7 +99,7 @@ rendered scene.</p>
 										<strong translate="no">aspectratio</strong>
 									</td>
 									<td class="description last">
-										<p>The aspect ratio.</p>
+										<p>宽高比。</p>
 									</td>
 								</tr>
 								<tr>
@@ -107,7 +107,7 @@ rendered scene.</p>
 										<strong translate="no">translation</strong>
 									</td>
 									<td class="description last">
-										<p>The position/translation of the layer plane in world units.</p>
+										<p>层平面的位置/平移（世界单位）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -115,7 +115,7 @@ rendered scene.</p>
 										<strong translate="no">quaternion</strong>
 									</td>
 									<td class="description last">
-										<p>The orientation of the layer plane expressed as a quaternion.</p>
+										<p>层平面的朝向，以四元数表示。</p>
 									</td>
 								</tr>
 								<tr>
@@ -123,7 +123,7 @@ rendered scene.</p>
 										<strong translate="no">pixelwidth</strong>
 									</td>
 									<td class="description last">
-										<p>The width of the layer's render target in pixels.</p>
+										<p>层渲染目标的宽度（像素）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -131,7 +131,7 @@ rendered scene.</p>
 										<strong translate="no">pixelheight</strong>
 									</td>
 									<td class="description last">
-										<p>The height of the layer's render target in pixels.</p>
+										<p>层渲染目标的高度（像素）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -139,8 +139,8 @@ rendered scene.</p>
 										<strong translate="no">rendercall</strong>
 									</td>
 									<td class="description last">
-										<p>A callback function that renders the layer. Similar to code in
-the default animation loop, this method can be used to update/transform 3D object in the layer's scene.</p>
+										<p>渲染该层的回调函数。与默认动画循环中的代码类似，
+此方法可用于更新/变换层场景中的 3D 对象。</p>
 									</td>
 								</tr>
 								<tr>
@@ -148,21 +148,21 @@ the default animation loop, this method can be used to update/transform 3D objec
 										<strong translate="no">attributes</strong>
 									</td>
 									<td class="description last">
-										<p>Allows to configure the layer's render target.</p>
-										<p>Default is <code>{}</code>.</p>
+										<p>用于配置层的渲染目标。</p>
+										<p>默认值为 <code>{}</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A mesh representing the cylindrical XR layer. This mesh should be added to the XR scene.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 表示柱面 XR 层的网格。此网格应添加到 XR 场景中。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="createQuadLayer" translate="no">.<a href="#createQuadLayer">createQuadLayer</a><span class="signature">( width : <span class="param-type">number</span>, height : <span class="param-type">number</span>, translation : <span class="param-type"><a href="Vector3.html">Vector3</a></span>, quaternion : <span class="param-type"><a href="Quaternion.html">Quaternion</a></span>, pixelwidth : <span class="param-type">number</span>, pixelheight : <span class="param-type">number</span>, rendercall : <span class="param-type">function</span>, attributes : <span class="param-type">Object</span> )</span><span class="type-signature"> : <a href="Mesh.html">Mesh</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>This method can be used in XR applications to create a quadratic layer that presents a separate
-rendered scene.</p>
+							<p>此方法可在 XR 应用中用于创建四边形层，以呈现单独的
+渲染场景。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -171,7 +171,7 @@ rendered scene.</p>
 										<strong translate="no">width</strong>
 									</td>
 									<td class="description last">
-										<p>The width of the layer plane in world units.</p>
+										<p>层平面的宽度（世界单位）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -179,7 +179,7 @@ rendered scene.</p>
 										<strong translate="no">height</strong>
 									</td>
 									<td class="description last">
-										<p>The height of the layer plane in world units.</p>
+										<p>层平面的高度（世界单位）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -187,7 +187,7 @@ rendered scene.</p>
 										<strong translate="no">translation</strong>
 									</td>
 									<td class="description last">
-										<p>The position/translation of the layer plane in world units.</p>
+										<p>层平面的位置/平移（世界单位）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -195,7 +195,7 @@ rendered scene.</p>
 										<strong translate="no">quaternion</strong>
 									</td>
 									<td class="description last">
-										<p>The orientation of the layer plane expressed as a quaternion.</p>
+										<p>层平面的朝向，以四元数表示。</p>
 									</td>
 								</tr>
 								<tr>
@@ -203,7 +203,7 @@ rendered scene.</p>
 										<strong translate="no">pixelwidth</strong>
 									</td>
 									<td class="description last">
-										<p>The width of the layer's render target in pixels.</p>
+										<p>层渲染目标的宽度（像素）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -211,7 +211,7 @@ rendered scene.</p>
 										<strong translate="no">pixelheight</strong>
 									</td>
 									<td class="description last">
-										<p>The height of the layer's render target in pixels.</p>
+										<p>层渲染目标的高度（像素）。</p>
 									</td>
 								</tr>
 								<tr>
@@ -219,8 +219,8 @@ rendered scene.</p>
 										<strong translate="no">rendercall</strong>
 									</td>
 									<td class="description last">
-										<p>A callback function that renders the layer. Similar to code in
-the default animation loop, this method can be used to update/transform 3D object in the layer's scene.</p>
+										<p>渲染该层的回调函数。与默认动画循环中的代码类似，
+此方法可用于更新/变换层场景中的 3D 对象。</p>
 									</td>
 								</tr>
 								<tr>
@@ -228,23 +228,23 @@ the default animation loop, this method can be used to update/transform 3D objec
 										<strong translate="no">attributes</strong>
 									</td>
 									<td class="description last">
-										<p>Allows to configure the layer's render target.</p>
-										<p>Default is <code>{}</code>.</p>
+										<p>用于配置层的渲染目标。</p>
+										<p>默认值为 <code>{}</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A mesh representing the quadratic XR layer. This mesh should be added to the XR scene.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 表示四边形 XR 层的网格。此网格应添加到 XR 场景中。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="foveateBoundTexture" translate="no">.<a href="#foveateBoundTexture">foveateBoundTexture</a><span class="signature">( renderTarget : <span class="param-type"><a href="RenderTarget.html">RenderTarget</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Applies WebXR fixed foveation to the internal post-processing render target
-used by the first XR render pass before compositing into a projection layer.</p>
-<p>Browser-side <code>XRWebGLBinding.foveateBoundTexture()</code> failures are treated as
-non-fatal so they do not interrupt rendering.</p>
+							<p>对第一个 XR 渲染通道在合成到投影层之前所使用的
+内部后处理渲染目标应用 WebXR 固定注视点渲染（fixed foveation）。</p>
+<p>浏览器端 <code>XRWebGLBinding.foveateBoundTexture()</code> 的失败视为
+非致命错误，以免中断渲染。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -253,7 +253,7 @@ non-fatal so they do not interrupt rendering.</p>
 										<strong translate="no">renderTarget</strong>
 									</td>
 									<td class="description last">
-										<p>The internal render target.</p>
+										<p>内部渲染目标。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -262,40 +262,38 @@ non-fatal so they do not interrupt rendering.</p>
 					<h3 class="name name-method" id="getBaseLayer" translate="no">.<a href="#getBaseLayer">getBaseLayer</a><span class="signature">()</span><span class="type-signature"> : XRWebGLLayer | XRProjectionLayer</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the current base layer.</p>
-<p>This is an <code>XRProjectionLayer</code> when the targeted XR device supports the
-WebXR Layers API, or an <code>XRWebGLLayer</code> otherwise.</p>
+							<p>返回当前的基础层。</p>
+<p>当目标 XR 设备支持 WebXR Layers API 时，这是一个 <code>XRProjectionLayer</code>，
+否则为 <code>XRWebGLLayer</code>。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The XR base layer.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> XR 基础层。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getBinding" translate="no">.<a href="#getBinding">getBinding</a><span class="signature">()</span><span class="type-signature"> : XRWebGLBinding</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the current XR binding.</p>
-<p>Creates a new binding if needed and the browser is
-capable of doing so.</p>
+							<p>返回当前的 XR 绑定。</p>
+<p>如有需要且浏览器支持，会创建新的绑定。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The XR binding. Returns <code>null</code> if one cannot be created.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> XR 绑定。若无法创建则返回 <code>null</code>。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getCamera" translate="no">.<a href="#getCamera">getCamera</a><span class="signature">()</span><span class="type-signature"> : <a href="ArrayCamera.html">ArrayCamera</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the XR camera.</p>
+							<p>返回 XR 相机。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The XR camera.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> XR 相机。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getController" translate="no">.<a href="#getController">getController</a><span class="signature">( index : <span class="param-type">number</span> )</span><span class="type-signature"> : <a href="Group.html">Group</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns an instance of <code>THREE.Group</code> that represents the transformation
-of a XR controller in target ray space. The requested controller is defined
-by the given index.</p>
+							<p>返回一个表示 XR 控制器在目标射线空间（target ray space）中
+变换的 <code>THREE.Group</code> 实例。所请求的控制器由给定索引定义。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -304,21 +302,20 @@ by the given index.</p>
 										<strong translate="no">index</strong>
 									</td>
 									<td class="description last">
-										<p>The index of the XR controller.</p>
+										<p>XR 控制器的索引。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A group that represents the controller's transformation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 表示控制器变换的组。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getControllerGrip" translate="no">.<a href="#getControllerGrip">getControllerGrip</a><span class="signature">( index : <span class="param-type">number</span> )</span><span class="type-signature"> : <a href="Group.html">Group</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns an instance of <code>THREE.Group</code> that represents the transformation
-of a XR controller in grip space. The requested controller is defined
-by the given index.</p>
+							<p>返回一个表示 XR 控制器在握持空间（grip space）中
+变换的 <code>THREE.Group</code> 实例。所请求的控制器由给定索引定义。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -327,57 +324,56 @@ by the given index.</p>
 										<strong translate="no">index</strong>
 									</td>
 									<td class="description last">
-										<p>The index of the XR controller.</p>
+										<p>XR 控制器的索引。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A group that represents the controller's transformation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 表示控制器变换的组。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getEnvironmentBlendMode" translate="no">.<a href="#getEnvironmentBlendMode">getEnvironmentBlendMode</a><span class="signature">()</span><span class="type-signature"> : 'opaque' | 'additive' | 'alpha-blend' | undefined</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the environment blend mode from the current XR session.</p>
+							<p>从当前 XR 会话返回环境混合模式。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The environment blend mode. Returns <code>undefined</code> when used outside of a XR session.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 环境混合模式。在 XR 会话外使用时返回 <code>undefined</code>。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getFoveation" translate="no">.<a href="#getFoveation">getFoveation</a><span class="signature">()</span><span class="type-signature"> : number | undefined</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the foveation value.</p>
+							<p>返回注视点渲染（foveation）值。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The foveation value.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 注视点渲染值。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getFrame" translate="no">.<a href="#getFrame">getFrame</a><span class="signature">()</span><span class="type-signature"> : XRFrame</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the current XR frame.</p>
+							<p>返回当前的 XR 帧。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The XR frame. Returns <code>null</code> when used outside a XR session.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> XR 帧。在 XR 会话外使用时返回 <code>null</code>。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getFramebufferScaleFactor" translate="no">.<a href="#getFramebufferScaleFactor">getFramebufferScaleFactor</a><span class="signature">()</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the framebuffer scale factor.</p>
+							<p>返回帧缓冲缩放因子。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The framebuffer scale factor.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 帧缓冲缩放因子。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getHand" translate="no">.<a href="#getHand">getHand</a><span class="signature">( index : <span class="param-type">number</span> )</span><span class="type-signature"> : <a href="Group.html">Group</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns an instance of <code>THREE.Group</code> that represents the transformation
-of a XR controller in hand space. The requested controller is defined
-by the given index.</p>
+							<p>返回一个表示 XR 控制器在手部空间（hand space）中
+变换的 <code>THREE.Group</code> 实例。所请求的控制器由给定索引定义。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -386,65 +382,64 @@ by the given index.</p>
 										<strong translate="no">index</strong>
 									</td>
 									<td class="description last">
-										<p>The index of the XR controller.</p>
+										<p>XR 控制器的索引。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A group that represents the controller's transformation.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 表示控制器变换的组。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getReferenceSpace" translate="no">.<a href="#getReferenceSpace">getReferenceSpace</a><span class="signature">()</span><span class="type-signature"> : XRReferenceSpace</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the XR reference space.</p>
+							<p>返回 XR 参考空间。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The XR reference space.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> XR 参考空间。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getReferenceSpaceType" translate="no">.<a href="#getReferenceSpaceType">getReferenceSpaceType</a><span class="signature">()</span><span class="type-signature"> : XRReferenceSpaceType</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the reference space type.</p>
+							<p>返回参考空间类型。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The reference space type.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 参考空间类型。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getSession" translate="no">.<a href="#getSession">getSession</a><span class="signature">()</span><span class="type-signature"> : XRSession</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the current XR session.</p>
+							<p>返回当前的 XR 会话。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The XR session. Returns <code>null</code> when used outside a XR session.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> XR 会话。在 XR 会话外使用时返回 <code>null</code>。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getWebGPUBinding" translate="no">.<a href="#getWebGPUBinding">getWebGPUBinding</a><span class="signature">()</span><span class="type-signature"> : XRGPUBinding</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the current XR WebGPU binding.</p>
-<p>Creates a new binding if needed and the browser is
-capable of doing so.</p>
+							<p>返回当前的 XR WebGPU 绑定。</p>
+<p>如有需要且浏览器支持，会创建新的绑定。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The XR WebGPU binding. Returns <code>null</code> if one cannot be created.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> XR WebGPU 绑定。若无法创建则返回 <code>null</code>。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="renderLayers" translate="no">.<a href="#renderLayers">renderLayers</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Renders the XR layers that have been previously added to the scene.</p>
-<p>This method is usually called in your animation loop before rendering
-the actual scene via <code>renderer.render( scene, camera );</code>.</p>
+							<p>渲染先前已添加到场景中的 XR 层。</p>
+<p>此方法通常在动画循环中、通过 <code>renderer.render( scene, camera );</code>
+渲染实际场景之前调用。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="setFoveation" translate="no">.<a href="#setFoveation">setFoveation</a><span class="signature">( foveation : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the foveation value.</p>
+							<p>设置注视点渲染（foveation）值。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -453,8 +448,8 @@ the actual scene via <code>renderer.render( scene, camera );</code>.</p>
 										<strong translate="no">foveation</strong>
 									</td>
 									<td class="description last">
-										<p>A number in the range <code>[0,1]</code> where <code>0</code> means no foveation (full resolution)
-and <code>1</code> means maximum foveation (the edges render at lower resolution).</p>
+										<p><code>[0,1]</code> 范围内的数值，其中 <code>0</code> 表示无注视点渲染（全分辨率），
+<code>1</code> 表示最大注视点渲染（边缘以较低分辨率渲染）。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -463,8 +458,8 @@ and <code>1</code> means maximum foveation (the edges render at lower resolution
 					<h3 class="name name-method" id="setFramebufferScaleFactor" translate="no">.<a href="#setFramebufferScaleFactor">setFramebufferScaleFactor</a><span class="signature">( factor : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the framebuffer scale factor.</p>
-<p>This method can not be used during a XR session.</p>
+							<p>设置帧缓冲缩放因子。</p>
+<p>此方法不能在 XR 会话期间使用。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -473,7 +468,7 @@ and <code>1</code> means maximum foveation (the edges render at lower resolution
 										<strong translate="no">factor</strong>
 									</td>
 									<td class="description last">
-										<p>The framebuffer scale factor.</p>
+										<p>帧缓冲缩放因子。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -482,7 +477,7 @@ and <code>1</code> means maximum foveation (the edges render at lower resolution
 					<h3 class="name name-method" id="setReferenceSpace" translate="no">.<a href="#setReferenceSpace">setReferenceSpace</a><span class="signature">( space : <span class="param-type">XRReferenceSpace</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets a custom XR reference space.</p>
+							<p>设置自定义 XR 参考空间。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -491,7 +486,7 @@ and <code>1</code> means maximum foveation (the edges render at lower resolution
 										<strong translate="no">space</strong>
 									</td>
 									<td class="description last">
-										<p>The XR reference space.</p>
+										<p>XR 参考空间。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -500,8 +495,8 @@ and <code>1</code> means maximum foveation (the edges render at lower resolution
 					<h3 class="name name-method" id="setReferenceSpaceType" translate="no">.<a href="#setReferenceSpaceType">setReferenceSpaceType</a><span class="signature">( type : <span class="param-type">XRReferenceSpaceType</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the reference space type.</p>
-<p>This method can not be used during a XR session.</p>
+							<p>设置参考空间类型。</p>
+<p>此方法不能在 XR 会话期间使用。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -510,7 +505,7 @@ and <code>1</code> means maximum foveation (the edges render at lower resolution
 										<strong translate="no">type</strong>
 									</td>
 									<td class="description last">
-										<p>The reference space type.</p>
+										<p>参考空间类型。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -519,9 +514,8 @@ and <code>1</code> means maximum foveation (the edges render at lower resolution
 					<h3 class="name name-method" id="setSession" translate="no">.<a href="#setSession">setSession</a><span class="signature">( session : <span class="param-type">XRSession</span> )</span><span class="type-signature"> : Promise</span> <span class="type-signature">(async) </span></h3>
 					<div class="method">
 						<div class="description">
-							<p>After a XR session has been requested usually with one of the <code>*Button</code> modules, it
-is injected into the renderer with this method. This method triggers the start of
-the actual XR rendering.</p>
+							<p>在通常通过某个 <code>*Button</code> 模块请求 XR 会话之后，
+使用此方法将其注入渲染器。此方法会触发实际 XR 渲染的开始。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -530,21 +524,21 @@ the actual XR rendering.</p>
 										<strong translate="no">session</strong>
 									</td>
 									<td class="description last">
-										<p>The XR session to set.</p>
+										<p>要设置的 XR 会话。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A Promise that resolves when the session has been set.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 在会话设置完成时解析的 Promise。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="updateCamera" translate="no">.<a href="#updateCamera">updateCamera</a><span class="signature">( camera : <span class="param-type"><a href="PerspectiveCamera.html">PerspectiveCamera</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>This method is called by the renderer per frame and updates the XR camera
-and it sub cameras based on the given camera. The given camera is the &quot;user&quot;
-camera created on application level and used for non-XR rendering.</p>
+							<p>此方法由渲染器每帧调用，并根据给定相机更新 XR 相机
+及其子相机。给定的相机是在应用层创建、用于非 XR 渲染的
+“用户”相机。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -553,7 +547,7 @@ camera created on application level and used for non-XR rendering.</p>
 										<strong translate="no">camera</strong>
 									</td>
 									<td class="description last">
-										<p>The camera.</p>
+										<p>相机。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -562,13 +556,13 @@ camera created on application level and used for non-XR rendering.</p>
 					<h3 class="name name-method" id="useMultiview" translate="no">.<a href="#useMultiview">useMultiview</a><span class="signature">()</span><span class="type-signature"> : boolean</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns <code>true</code> if the engine renders to a multiview target.</p>
+							<p>若引擎渲染到多视图目标，则返回 <code>true</code>。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> Whether the engine renders to a multiview render target or not.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 引擎是否渲染到多视图渲染目标。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/renderers/common/XRManager.js" translate="no" target="_blank" rel="noopener">src/renderers/common/XRManager.js</a>
 				</p>
