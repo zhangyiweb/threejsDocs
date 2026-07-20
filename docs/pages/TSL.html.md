@@ -581,41 +581,41 @@ TSL object that represents a uniform group node which is updated once per object
 
 ### .output : PropertyNode.<vec4> (constant)
 
-TSL object that represents the shader variable `Output`.
+表示着色器变量 `Output` 的 TSL 对象。
 
 ### .parallaxDirection : Node.<mat3> (constant)
 
-TSL object that represents the parallax direction.
+表示视差方向的 TSL 对象。
 
 ### .planeDistance (constant)
 
-View-space plane distance between two surface points (edge-stopping geometry term).
+两个表面点之间的视图空间平面距离（边缘停止几何项）。
 
 ### .pointUV : PointUVNode (constant)
 
-TSL object that represents the uv coordinates of points.
+表示点的 uv 坐标的 TSL 对象。
 
 ### .pointWidth : PropertyNode.<float> (constant)
 
-TSL object that represents the shader variable `pointWidth`.
+表示着色器变量 `pointWidth` 的 TSL 对象。
 
 ### .positionGeometry : AttributeNode.<vec3> (constant)
 
-TSL object that represents the position attribute of the current rendered object.
+表示当前渲染对象的位置属性的 TSL 对象。
 
 ### .positionLocal : AttributeNode.<vec3> (constant)
 
-TSL object that represents the transformed vertex position in local space of the current rendered object.
+表示当前渲染对象在局部空间中变换后的顶点位置的 TSL 对象。
 
-The term "transformed" indicates that an object or material's properties, such as skinning, batch, instancing, or displacement mapping, will change the vertex position of the node when present. To use the pre-transformed local space position of the object, use [positionGeometry](TSL.html#positionGeometry).
+术语 "transformed"（变换后）表示对象或材质的属性（如蒙皮、批次、实例化或置换贴图）在存在时会改变节点的顶点位置。若要使用对象变换前的局部空间位置，请使用 [positionGeometry](TSL.html#positionGeometry)。
 
 ### .positionPrevious : AttributeNode.<vec3> (constant)
 
-TSL object that represents the previous vertex position in local space of the current rendered object. Used in context of [VelocityNode](VelocityNode.html) for rendering motion vectors.
+表示当前渲染对象在局部空间中的上一帧顶点位置的 TSL 对象。在 [VelocityNode](VelocityNode.html) 的上下文中用于渲染运动向量。
 
 ### .positionView : VaryingNode.<vec3> (constant)
 
-TSL object that represents the vertex position in view space of the current rendered object.
+表示当前渲染对象在视图空间中的顶点位置的 TSL 对象。
 
 ### .positionViewDirection : VaryingNode.<vec3> (constant)
 
@@ -3773,125 +3773,125 @@ The parameter.
 
 ### .or( …nodes : Node ) : OperatorNode
 
-Performs a logical OR operation on multiple nodes.
+对多个节点执行逻辑 OR 运算。
 
 **nodes**
 
-The input nodes to be combined using OR.
+使用 OR 组合的输入节点。
 
 ### .orthographicDepthToViewZ( depth : Node.<float>, near : Node.<float>, far : Node.<float> ) : Node.<float>
 
-TSL function for converting an orthographic depth value to a viewZ value.
+用于将正交深度值转换为 viewZ 值的 TSL 函数。
 
 **depth**
 
-The orthographic depth.
+正交深度。
 
 **near**
 
-The camera's near value.
+相机的 `near` 值。
 
 **far**
 
-The camera's far value.
+相机的 `far` 值。
 
 ### .oscSawtooth( t : Node.<float> ) : Node.<float>
 
-Generates a sawtooth wave oscillation based on a timer.
+基于计时器生成锯齿波振荡。
 
 **t**
 
-The timer to generate the oscillation with.
+用于生成振荡的计时器。
 
-**Returns:** The oscillation node.
+**返回值：** 振荡节点。
 
 ### .oscSine( t : Node.<float> ) : Node.<float>
 
-Generates a sine wave oscillation based on a timer.
+基于计时器生成正弦波振荡。
 
 **t**
 
-The timer to generate the oscillation with.
+用于生成振荡的计时器。
 
-**Returns:** The oscillation node.
+**返回值：** 振荡节点。
 
 ### .oscSquare( t : Node.<float> ) : Node.<float>
 
-Generates a square wave oscillation based on a timer.
+基于计时器生成方波振荡。
 
 **t**
 
-The timer to generate the oscillation with.
+用于生成振荡的计时器。
 
-**Returns:** The oscillation node.
+**返回值：** 振荡节点。
 
 ### .oscTriangle( t : Node.<float> ) : Node.<float>
 
-Generates a triangle wave oscillation based on a timer.
+基于计时器生成三角波振荡。
 
 **t**
 
-The timer to generate the oscillation with.
+用于生成振荡的计时器。
 
-**Returns:** The oscillation node.
+**返回值：** 振荡节点。
 
 ### .outline( scene : Scene, camera : Camera, params : Object ) : OutlineNode
 
-TSL function for creating an outline effect around selected objects.
+用于创建选中对象轮廓效果的 TSL 函数。
 
 **scene**
 
-A reference to the scene.
+场景引用。
 
 **camera**
 
-The camera the scene is rendered with.
+用于渲染场景的相机。
 
 **params**
 
-The configuration parameters.
+配置参数。
 
 **selectedObjects**
 
-An array of selected objects.
+选中对象的数组。
 
 **edgeThickness**
 
-The thickness of the edges.
+边缘粗细。
 
-Default is `float(1)`.
+默认值为 `float(1)`。
 
 **edgeGlow**
 
-Can be used for animated glow/pulse effects.
+可用于实现动画发光/脉冲效果。
 
-Default is `float(0)`.
+默认值为 `float(0)`。
 
 **downSampleRatio**
 
-The downsample ratio.
+降采样比率。
 
-Default is `2`.
+默认值为 `2`。
 
 ### .outputStruct( …members : Node ) : OutputStructNode
 
-TSL function for creating an output struct node.
+用于创建输出结构体节点的 TSL 函数。
 
 **members**
 
-A parameter list of nodes.
+节点参数列表。
 
 ### .overloadingFn( functionNodes : Array.<function()> ) : FunctionOverloadingNode
 
-TSL function for creating a function overloading node.
+用于创建函数重载节点的 TSL 函数。
 
 **functionNodes**
 
-Array of `Fn` function definitions.
+`Fn` 函数定义数组。
 
 ### .overrideNode( targetNode : Node, callback : function | Node | null, flowNode : Node | null ) : OverrideContextNode
 
-TSL function for creating an `OverrideContextNode` to override a single target node.
+用于创建 `OverrideContextNode` 以覆盖单个目标节点的 TSL 函数。
 
 ```js
 material.contextNode = overrideNode( positionLocal, ( builder ) => positionLocal.add( vec3( 1, 0, 0 ) ) );
@@ -3899,25 +3899,25 @@ material.contextNode = overrideNode( positionLocal, ( builder ) => positionLocal
 
 **targetNode**
 
-The target node that should be overridden.
+应被覆盖的目标节点。
 
 **callback**
 
-A callback function returning the overriding node (which receives the builder as its argument), or the overriding node itself.
+返回覆盖节点的回调函数（接收 builder 作为参数），或覆盖节点本身。
 
-Default is `null`.
+默认值为 `null`。
 
 **flowNode**
 
-The node whose context should be modified.
+应修改其上下文的节点。
 
-Default is `null`.
+默认值为 `null`。
 
-**Returns:** The created override context node.
+**返回值：** 创建的覆盖上下文节点。
 
 ### .overrideNodes( overrides : Map.<Node, (function()|Node)> | Array.<Array.<(Node|function()|Node)>>, flowNode : Node | null ) : OverrideContextNode
 
-TSL function for creating an `OverrideContextNode` to override multiple target nodes.
+用于创建 `OverrideContextNode` 以覆盖多个目标节点的 TSL 函数。
 
 ```js
 material.contextNode = overrideNodes( [
@@ -3928,239 +3928,239 @@ material.contextNode = overrideNodes( [
 
 **overrides**
 
-The overrides mapping target nodes to callback functions or overriding nodes.
+将目标节点映射到回调函数或覆盖节点的覆盖配置。
 
 **flowNode**
 
-The node whose context should be modified.
+应修改其上下文的节点。
 
-Default is `null`.
+默认值为 `null`。
 
-**Returns:** The created override context node.
+**返回值：** 创建的覆盖上下文节点。
 
 ### .packHalf2x16( value : Node.<vec2> ) : Node
 
-Converts each component of the vec2 to 16-bit floating-point values. The results are packed into a single unsigned integer.
+将 vec2 的每个分量转换为 16 位浮点值，并将结果打包到单个无符号整数中。
 
 **value**
 
-The 2-component vector to be packed
+要打包的 2 分量向量。
 
 ### .packNormalToRGB( node : Node.<vec3> ) : Node.<vec3>
 
-Packs a normal vector into a color value.
+将法线向量打包为颜色值。
 
 **node**
 
-The direction to pack.
+要打包的方向。
 
-**Returns:** The color.
+**返回值：** 颜色。
 
 ### .packSnorm2x16( value : Node.<vec2> ) : Node
 
-Converts each component of the normalized float to 16-bit integer values. The results are packed into a single unsigned integer. round(clamp(c, -1, +1) \* 32767.0)
+将归一化浮点的每个分量转换为 16 位整数值，并将结果打包到单个无符号整数中。 round(clamp(c, -1, +1) \* 32767.0)
 
 **value**
 
-The 2-component vector to be packed
+要打包的 2 分量向量。
 
 ### .packUnorm2x16( value : Node.<vec2> ) : Node
 
-Converts each component of the normalized float to 16-bit integer values. The results are packed into a single unsigned integer. round(clamp(c, 0, +1) \* 65535.0)
+将归一化浮点的每个分量转换为 16 位整数值，并将结果打包到单个无符号整数中。 round(clamp(c, 0, +1) \* 65535.0)
 
 **value**
 
-The 2-component vector to be packed
+要打包的 2 分量向量。
 
 ### .parabola( x : Node.<float>, k : Node.<float> ) : Node.<float>
 
-A function that remaps the `[0,1]` interval into the `[0,1]` interval. The corners are mapped to `0` and the center to `1`. Reference: [https://iquilezles.org/articles/functions/](https://iquilezles.org/articles/functions/).
+将 `[0,1]` 区间重映射到 `[0,1]` 区间的函数。拐角映射为 `0`，中心映射为 `1`。参考：[https://iquilezles.org/articles/functions/](https://iquilezles.org/articles/functions/)。
 
 **x**
 
-The value to remap.
+要重映射的值。
 
 **k**
 
-Allows to control the remapping functions shape by rising the parabola to a power `k`.
+通过将抛物线提升到 `k` 次幂来控制重映射函数的形状。
 
-**Returns:** The remapped value.
+**返回值：** 重映射后的值。
 
 ### .parallaxBarrierPass( scene : Scene, camera : Camera ) : ParallaxBarrierPassNode
 
-TSL function for creating an parallax barrier pass node.
+用于创建视差屏障通道节点的 TSL 函数。
 
 **scene**
 
-The scene to render.
+要渲染的场景。
 
 **camera**
 
-The camera to render the scene with.
+用于渲染场景的相机。
 
 ### .parallaxUV( uv : Node.<vec2>, scale : Node.<vec2> ) : Node.<vec2>
 
-TSL function for computing parallax uv coordinates.
+用于计算视差 uv 坐标的 TSL 函数。
 
 **uv**
 
-A uv node.
+uv 节点。
 
 **scale**
 
-A scale node.
+缩放节点。
 
-**Returns:** Parallax uv coordinates.
+**返回值：** 视差 uv 坐标。
 
 ### .parameter( type : string, name : string ) : ParameterNode
 
-TSL function for creating a parameter node.
+用于创建参数节点的 TSL 函数。
 
 **type**
 
-The type of the node.
+节点的类型。
 
 **name**
 
-The name of the parameter in the shader.
+着色器中参数的名称。
 
 ### .pass( scene : Scene, camera : Camera, options : Object ) : PassNode
 
-TSL function for creating a pass node.
+用于创建 pass 节点的 TSL 函数。
 
 **scene**
 
-A reference to the scene.
+场景引用。
 
 **camera**
 
-A reference to the camera.
+相机引用。
 
 **options**
 
-Options for the internal render target.
+内部渲染目标的选项。
 
 ### .passTexture( pass : PassNode, texture : Texture ) : PassTextureNode
 
-TSL function for creating a pass texture node.
+用于创建 pass 纹理节点的 TSL 函数。
 
 **pass**
 
-The pass node.
+pass 节点。
 
 **texture**
 
-The output texture.
+输出纹理。
 
 ### .pcurve( x : Node.<float>, a : Node.<float>, b : Node.<float> ) : Node.<float>
 
-A function that remaps the `[0,1]` interval into the `[0,1]` interval. A generalization of the `parabola()`. Keeps the corners mapped to 0 but allows the control of the shape one either side of the curve. Reference: [https://iquilezles.org/articles/functions/](https://iquilezles.org/articles/functions/).
+将 `[0,1]` 区间重映射到 `[0,1]` 区间的函数。是 `parabola()` 的泛化。保持拐角映射为 0，但允许控制曲线两侧的形态。参考：[https://iquilezles.org/articles/functions/](https://iquilezles.org/articles/functions/)。
 
 **x**
 
-The value to remap.
+要重映射的值。
 
 **a**
 
-First control parameter.
+第一个控制参数。
 
 **b**
 
-Second control parameter.
+第二个控制参数。
 
-**Returns:** The remapped value.
+**返回值：** 重映射后的值。
 
 ### .permute( x : Node.<vec4> ) : Node.<vec4>
 
-Permutation polynomial for noise generation.
+用于噪声生成的置换多项式。
 
 **x**
 
-Input vector.
+输入向量。
 
-**Returns:** Permuted vector.
+**返回值：** 置换后的向量。
 
 ### .perspectiveDepthToViewZ( depth : Node.<float>, near : Node.<float>, far : Node.<float> ) : Node.<float>
 
-TSL function for converting a perspective depth value to a viewZ value.
+用于将透视深度值转换为 viewZ 值的 TSL 函数。
 
 **depth**
 
-The perspective depth.
+透视深度。
 
 **near**
 
-The camera's near value.
+相机的 `near` 值。
 
 **far**
 
-The camera's far value.
+相机的 `far` 值。
 
 ### .pixelationPass( scene : Scene, camera : Camera, pixelSize : Node.<float> | number, normalEdgeStrength : Node.<float> | number, depthEdgeStrength : Node.<float> | number ) : PixelationPassNode
 
-TSL function for creating a pixelation render pass node for post processing.
+用于创建后期处理像素化渲染 pass 节点的 TSL 函数。
 
 **scene**
 
-The scene to render.
+要渲染的场景。
 
 **camera**
 
-The camera to render the scene with.
+用于渲染场景的相机。
 
 **pixelSize**
 
-The pixel size.
+像素大小。
 
-Default is `6`.
+默认值为 `6`。
 
 **normalEdgeStrength**
 
-The normal edge strength.
+法线边缘强度。
 
-Default is `0.3`.
+默认值为 `0.3`。
 
 **depthEdgeStrength**
 
-The depth edge strength.
+深度边缘强度。
 
-Default is `0.4`.
+默认值为 `0.4`。
 
 ### .pmremTexture( value : Texture, uvNode : Node.<vec2>, levelNode : Node.<float> ) : PMREMNode
 
-TSL function for creating a PMREM node.
+用于创建 PMREM 节点的 TSL 函数。
 
 **value**
 
-The input texture.
+输入纹理。
 
 **uvNode**
 
-The uv node.
+uv 节点。
 
-Default is `null`.
+默认值为 `null`。
 
 **levelNode**
 
-The level node.
+级别节点。
 
-Default is `null`.
+默认值为 `null`。
 
 ### .pointShadow( light : PointLight, shadow : PointLightShadow ) : PointShadowNode
 
-TSL function for creating an instance of `PointShadowNode`.
+用于创建 `PointShadowNode` 实例的 TSL 函数。
 
 **light**
 
-The shadow casting point light.
+投射阴影的点光源。
 
 **shadow**
 
-An optional point light shadow.
+可选的点光源阴影。
 
-Default is `null`.
+默认值为 `null`。
 
-**Returns:** The created point shadow node.
+**返回值：** 创建的点阴影节点。
 
 ### .posterize( sourceNode : Node, stepsNode : Node ) : Node
 
