@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>ViewHelper - Three.js Docs</title>
+	<title>ViewHelper - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,22 +13,22 @@
 	<h1 translate="no">ViewHelper</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A special type of helper that visualizes the camera's transformation
-in a small viewport area as an axes helper. Such a helper is often wanted
-in 3D modeling tools or scene editors like the <a href="https://threejs.org/editor" target="_blank" rel="noopener">three.js editor</a>.</p>
-<p>The helper allows to click on the X, Y and Z axes which animates the camera
-so it looks along the selected axis.</p></div>
+				<div class="class-description"><p>一种特殊的辅助对象，在视口的小区域中以坐标轴辅助的形式
+可视化相机的变换。此类辅助对象在 3D 建模工具或场景编辑器中
+（例如 <a href="https://threejs.org/editor" target="_blank" rel="noopener">three.js editor</a>）经常需要。</p>
+<p>该辅助对象允许点击 X、Y 和 Z 轴，从而动画化相机，
+使其沿所选轴方向观察。</p></div>
 			</header>
 			<article>
-				<h2 class="subsection-title">Import</h2>
-				<p><span translate="no">ViewHelper</span> is an addon, and must be imported explicitly, see <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>.</p>
+				<h2 class="subsection-title">导入</h2>
+				<p><span translate="no">ViewHelper</span> 是一个插件，必须显式导入，参见 <a href="https://threejs.org/manual/#en/installation" target="_blank" rel="noopener">Installation#Addons</a>。</p>
 				<pre><code class="language-js">import { ViewHelper } from 'three/addons/helpers/ViewHelper.js';</code></pre>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="ViewHelper" translate="no">new <a href="#ViewHelper">ViewHelper</a><span class="signature">( camera : <span class="param-type"><a href="Camera.html">Camera</a></span>, domElement : <span class="param-type">HTMLElement</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new view helper.</p>
+							<p>构造一个新的视图辅助对象。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -37,7 +37,7 @@ so it looks along the selected axis.</p></div>
 										<strong translate="no">camera</strong>
 									</td>
 									<td class="description last">
-										<p>The camera whose transformation should be visualized.</p>
+										<p>要可视化其变换的相机。</p>
 									</td>
 								</tr>
 								<tr>
@@ -45,62 +45,61 @@ so it looks along the selected axis.</p></div>
 										<strong translate="no">domElement</strong>
 									</td>
 									<td class="description last">
-										<p>The DOM element that is used to render the view.</p>
+										<p>用于渲染视图的 DOM 元素。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="animating" translate="no">.<a href="#animating">animating</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>Whether the helper is currently animating or not.</p>
-						<p>Default is <code>false</code>.</p>
+						<p>辅助对象当前是否正在执行动画。</p>
+						<p>默认值为 <code>false</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="camera" translate="no">.<a href="#camera">camera</a><span class="type-signature"> : <a href="Camera.html">Camera</a></span> </h3>
 					<div class="description">
-						<p>The camera whose transformation is visualized. It can be reassigned at
-any time to rebind the helper to a different camera.</p>
+						<p>正在可视化其变换的相机。可随时重新赋值，
+以将辅助对象绑定到另一台相机。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="center" translate="no">.<a href="#center">center</a><span class="type-signature"> : <a href="Vector3.html">Vector3</a></span> </h3>
 					<div class="description">
-						<p>The helper's center point.</p>
+						<p>辅助对象的中心点。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="isViewHelper" translate="no">.<a href="#isViewHelper">isViewHelper</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="location" translate="no">.<a href="#location">location</a><span class="type-signature"> : Object</span> </h3>
 					<div class="description">
-						<p>Controls the position of the helper in the viewport.
-Use <code>top</code>/<code>bottom</code> for vertical positioning and <code>left</code>/<code>right</code> for horizontal.
-If <code>left</code> is <code>null</code>, <code>right</code> is used. If <code>top</code> is <code>null</code>, <code>bottom</code> is used.</p>
+						<p>控制辅助对象在视口中的位置。
+使用 <code>top</code>/<code>bottom</code> 进行垂直定位，使用 <code>left</code>/<code>right</code> 进行水平定位。
+若 <code>left</code> 为 <code>null</code>，则使用 <code>right</code>。若 <code>top</code> 为 <code>null</code>，则使用 <code>bottom</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="dispose" translate="no">.<a href="#dispose">dispose</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Frees the GPU-related resources allocated by this instance. Call this
-method whenever this instance is no longer used in your app.</p>
+							<p>释放此实例分配的 GPU 相关资源。
+当应用中不再使用此实例时，请调用此方法。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="handleClick" translate="no">.<a href="#handleClick">handleClick</a><span class="signature">( event : <span class="param-type">PointerEvent</span> )</span><span class="type-signature"> : boolean</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>This method should be called when a click or pointer event
-has happened in the app.</p>
+							<p>当应用中发生点击或指针事件时，应调用此方法。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -109,20 +108,20 @@ has happened in the app.</p>
 										<strong translate="no">event</strong>
 									</td>
 									<td class="description last">
-										<p>The event to process.</p>
+										<p>要处理的事件。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> Whether an intersection with the helper has been detected or not.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 是否检测到与辅助对象的相交。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="render" translate="no">.<a href="#render">render</a><span class="signature">( renderer : <span class="param-type"><a href="WebGLRenderer.html">WebGLRenderer</a> | <a href="WebGPURenderer.html">WebGPURenderer</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Renders the helper in a separate view in the viewport.
-Position is controlled by the <code>location</code> property.</p>
+							<p>在视口中的独立视图内渲染辅助对象。
+位置由 <code>location</code> 属性控制。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -131,7 +130,7 @@ Position is controlled by the <code>location</code> property.</p>
 										<strong translate="no">renderer</strong>
 									</td>
 									<td class="description last">
-										<p>The renderer.</p>
+										<p>渲染器。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -140,7 +139,7 @@ Position is controlled by the <code>location</code> property.</p>
 					<h3 class="name name-method" id="setLabelStyle" translate="no">.<a href="#setLabelStyle">setLabelStyle</a><span class="signature">( font : <span class="param-type">string</span>, color : <span class="param-type">string</span>, radius : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the label style. Has no effect when the axes are unlabeled.</p>
+							<p>设置标签样式。当坐标轴未标注时无效。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -149,8 +148,8 @@ Position is controlled by the <code>location</code> property.</p>
 										<strong translate="no">font</strong>
 									</td>
 									<td class="description last">
-										<p>The label font.</p>
-										<p>Default is <code>'24px Arial'</code>.</p>
+										<p>标签字体。</p>
+										<p>默认值为 <code>'24px Arial'</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -158,8 +157,8 @@ Position is controlled by the <code>location</code> property.</p>
 										<strong translate="no">color</strong>
 									</td>
 									<td class="description last">
-										<p>The label color.</p>
-										<p>Default is <code>'#000000'</code>.</p>
+										<p>标签颜色。</p>
+										<p>默认值为 <code>'#000000'</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -167,8 +166,8 @@ Position is controlled by the <code>location</code> property.</p>
 										<strong translate="no">radius</strong>
 									</td>
 									<td class="description last">
-										<p>The label radius.</p>
-										<p>Default is <code>14</code>.</p>
+										<p>标签半径。</p>
+										<p>默认值为 <code>14</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -177,7 +176,7 @@ Position is controlled by the <code>location</code> property.</p>
 					<h3 class="name name-method" id="setLabels" translate="no">.<a href="#setLabels">setLabels</a><span class="signature">( labelX : <span class="param-type">string | undefined</span>, labelY : <span class="param-type">string | undefined</span>, labelZ : <span class="param-type">string | undefined</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets labels for each axis. By default, they are unlabeled.</p>
+							<p>为各坐标轴设置标签。默认情况下无标签。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -186,7 +185,7 @@ Position is controlled by the <code>location</code> property.</p>
 										<strong translate="no">labelX</strong>
 									</td>
 									<td class="description last">
-										<p>The label for the x-axis.</p>
+										<p>X 轴的标签。</p>
 									</td>
 								</tr>
 								<tr>
@@ -194,7 +193,7 @@ Position is controlled by the <code>location</code> property.</p>
 										<strong translate="no">labelY</strong>
 									</td>
 									<td class="description last">
-										<p>The label for the y-axis.</p>
+										<p>Y 轴的标签。</p>
 									</td>
 								</tr>
 								<tr>
@@ -202,7 +201,7 @@ Position is controlled by the <code>location</code> property.</p>
 										<strong translate="no">labelZ</strong>
 									</td>
 									<td class="description last">
-										<p>The label for the z-axis.</p>
+										<p>Z 轴的标签。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -211,8 +210,7 @@ Position is controlled by the <code>location</code> property.</p>
 					<h3 class="name name-method" id="update" translate="no">.<a href="#update">update</a><span class="signature">( delta : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Updates the helper. This method should be called in the app's animation
-loop.</p>
+							<p>更新辅助对象。应在应用的动画循环中调用此方法。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -221,13 +219,13 @@ loop.</p>
 										<strong translate="no">delta</strong>
 									</td>
 									<td class="description last">
-										<p>The delta time in seconds.</p>
+										<p>以秒为单位的时间增量。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/examples/jsm/helpers/ViewHelper.js" translate="no" target="_blank" rel="noopener">examples/jsm/helpers/ViewHelper.js</a>
 				</p>

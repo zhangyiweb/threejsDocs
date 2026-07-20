@@ -1,59 +1,59 @@
 # SelectionHelper
 
-A helper for [SelectionBox](SelectionBox.html).
+[SelectionBox](SelectionBox.html) 的辅助对象。
 
-It visualizes the current selection box with a `div` container element.
+使用 `div` 容器元素可视化当前选择框。
 
-## Import
+## 导入
 
-SelectionHelper is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+SelectionHelper 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { SelectionHelper } from 'three/addons/interactive/SelectionHelper.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new SelectionHelper( renderer : WebGPURenderer | WebGLRenderer, cssClassName : string )
 
-Constructs a new selection helper.
+构造一个新的选择辅助对象。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **cssClassName**
 
-The CSS class name of the `div`.
+`div` 的 CSS 类名。
 
-## Properties
+## 属性
 
 ### .element : HTMLDivElement
 
-The visualization of the selection box.
+选择框的可视化元素。
 
 ### .enabled : boolean
 
-Whether helper is enabled or not.
+辅助对象是否启用。
 
-Default is `true`.
+默认值为 `true`。
 
 ### .isDown : boolean
 
-Whether the mouse or pointer is pressed down.
+鼠标或指针是否处于按下状态。
 
-Default is `false`.
+默认值为 `false`。
 
 ### .renderer : WebGPURenderer | WebGLRenderer
 
-A reference to the renderer.
+渲染器的引用。
 
-## Methods
+## 方法
 
 ### .dispose()
 
-Call this method if you no longer want use to the controls. It frees all internal resources and removes all event listeners.
+若不再需要使用该控件，请调用此方法。它会释放所有内部资源并移除所有事件监听器。
 
-## Source
+## 源码
 
 [examples/jsm/interactive/SelectionHelper.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/interactive/SelectionHelper.js)

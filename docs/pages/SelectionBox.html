@@ -12,8 +12,7 @@
 	<h1 translate="no">SelectionBox</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>该类可用选择框在场景中选取 3D 对象。
-建议借助 <a href="SelectionHelper.html">SelectionHelper</a> 可视化选中区域。</p></div>
+				<div class="class-description"><p>此类可用选择框在场景中选择 3D 对象。建议借助 <a href="SelectionHelper.html">SelectionHelper</a> 可视化选中区域。</p></div>
 				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const selectionBox = new SelectionBox( camera, scene );
 const selectedObjects = selectionBox.select( startPoint, endPoint );
@@ -37,7 +36,7 @@ const selectedObjects = selectionBox.select( startPoint, endPoint );
 										<strong translate="no">camera</strong>
 									</td>
 									<td class="description last">
-										<p>用于渲染场景的相机。</p>
+										<p>渲染场景所使用的相机。</p>
 									</td>
 								</tr>
 								<tr>
@@ -53,7 +52,7 @@ const selectedObjects = selectionBox.select( startPoint, endPoint );
 										<strong translate="no">deep</strong>
 									</td>
 									<td class="description last">
-										<p>透视相机选择视锥体应延伸的深度。</p>
+										<p>透视相机的选择视锥体应延伸多深。</p>
 										<p>默认值为 <code>Number.MAX_VALUE</code>。</p>
 									</td>
 								</tr>
@@ -65,25 +64,25 @@ const selectedObjects = selectionBox.select( startPoint, endPoint );
 				<div class="member">
 					<h3 class="name" id="batches" translate="no">.<a href="#batches">batches</a><span class="type-signature"> : Object</span> </h3>
 					<div class="description">
-						<p>已选中的批处理网格批次。</p>
+						<p>批处理网格中被选中的批次。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="camera" translate="no">.<a href="#camera">camera</a><span class="type-signature"> : <a href="Camera.html">Camera</a></span> </h3>
 					<div class="description">
-						<p>用于渲染场景的相机。</p>
+						<p>渲染场景所使用的相机。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="collection" translate="no">.<a href="#collection">collection</a><span class="type-signature"> : Array.&lt;<a href="Object3D.html">Object3D</a>></span> </h3>
 					<div class="description">
-						<p>已选中的 3D 对象。</p>
+						<p>被选中的 3D 对象。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="deep" translate="no">.<a href="#deep">deep</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>透视相机选择视锥体应延伸的深度。</p>
+						<p>透视相机的选择视锥体应延伸多深。</p>
 						<p>默认值为 <code>Number.MAX_VALUE</code>。</p>
 					</div>
 				</div>
@@ -96,7 +95,7 @@ const selectedObjects = selectionBox.select( startPoint, endPoint );
 				<div class="member">
 					<h3 class="name" id="instances" translate="no">.<a href="#instances">instances</a><span class="type-signature"> : Object</span> </h3>
 					<div class="description">
-						<p>已选中的实例化网格实例 ID。</p>
+						<p>实例化网格中被选中的实例 ID。</p>
 					</div>
 				</div>
 				<div class="member">
@@ -115,8 +114,7 @@ const selectedObjects = selectionBox.select( startPoint, endPoint );
 					<h3 class="name name-method" id="select" translate="no">.<a href="#select">select</a><span class="signature">( startPoint : <span class="param-type"><a href="Vector3.html">Vector3</a></span>, endPoint : <span class="param-type"><a href="Vector3.html">Vector3</a></span> )</span><span class="type-signature"> : Array.&lt;<a href="Object3D.html">Object3D</a>></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>根据给定的起点和终点在场景中选取 3D 对象。
-若未提供参数，则使用对应成员的起点和终点值。</p>
+							<p>此方法根据给定的起点和终点在场景中选择 3D 对象。若未提供参数，则使用相应成员属性的起点和终点值。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -139,7 +137,7 @@ const selectedObjects = selectionBox.select( startPoint, endPoint );
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>返回值：</strong> 已选中的 3D 对象。</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 被选中的 3D 对象。</dt>
 						</dl>
 					</div>
 				<h2 class="subsection-title">源码</h2>

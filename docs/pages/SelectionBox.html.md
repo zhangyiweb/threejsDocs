@@ -1,94 +1,94 @@
 # SelectionBox
 
-This class can be used to select 3D objects in a scene with a selection box. It is recommended to visualize the selected area with the help of [SelectionHelper](SelectionHelper.html).
+该类可用选择框在场景中选取 3D 对象。建议借助 [SelectionHelper](SelectionHelper.html) 可视化选中区域。
 
-## Code Example
+## 代码示例
 
 ```js
 const selectionBox = new SelectionBox( camera, scene );
 const selectedObjects = selectionBox.select( startPoint, endPoint );
 ```
 
-## Import
+## 导入
 
-SelectionBox is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+SelectionBox 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { SelectionBox } from 'three/addons/interactive/SelectionBox.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new SelectionBox( camera : Camera, scene : Scene, deep : number )
 
-Constructs a new selection box.
+构造一个新的选择框。
 
 **camera**
 
-The camera the scene is rendered with.
+用于渲染场景的相机。
 
 **scene**
 
-The scene.
+场景。
 
 **deep**
 
-How deep the selection frustum of perspective cameras should extend.
+透视相机选择视锥体应延伸的深度。
 
-Default is `Number.MAX_VALUE`.
+默认值为 `Number.MAX_VALUE`。
 
-## Properties
+## 属性
 
 ### .batches : Object
 
-The selected batches of batched meshes.
+已选中的批处理网格批次。
 
 ### .camera : Camera
 
-The camera the scene is rendered with.
+用于渲染场景的相机。
 
 ### .collection : Array.<Object3D>
 
-The selected 3D objects.
+已选中的 3D 对象。
 
 ### .deep : number
 
-How deep the selection frustum of perspective cameras should extend.
+透视相机选择视锥体应延伸的深度。
 
-Default is `Number.MAX_VALUE`.
+默认值为 `Number.MAX_VALUE`。
 
 ### .endPoint : Vector3
 
-The end point of the selection.
+选择的终点。
 
 ### .instances : Object
 
-The selected instance IDs of instanced meshes.
+已选中的实例化网格实例 ID。
 
 ### .scene : Scene
 
-The camera the scene is rendered with.
+场景。
 
 ### .startPoint : Vector3
 
-The start point of the selection.
+选择的起点。
 
-## Methods
+## 方法
 
 ### .select( startPoint : Vector3, endPoint : Vector3 ) : Array.<Object3D>
 
-This method selects 3D objects in the scene based on the given start and end point. If no parameters are provided, the method uses the start and end values of the respective members.
+根据给定的起点和终点在场景中选取 3D 对象。若未提供参数，则使用对应成员的起点和终点值。
 
 **startPoint**
 
-The start point.
+起点。
 
 **endPoint**
 
-The end point.
+终点。
 
-**Returns:** The selected 3D objects.
+**返回值：** 已选中的 3D 对象。
 
-## Source
+## 源码
 
 [examples/jsm/interactive/SelectionBox.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/interactive/SelectionBox.js)

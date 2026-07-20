@@ -2,9 +2,9 @@
 
 # InteractiveGroup
 
-This class can be used to group 3D objects in an interactive group. The group itself can listen to Pointer, Mouse or XR controller events to detect selections of descendant 3D objects. If a 3D object is selected, the respective event is going to dispatched to it.
+该类可用于将 3D 对象归入一个交互组。组本身可监听 Pointer、Mouse 或 XR 控制器事件，以检测其子级 3D 对象的选中。若某个 3D 对象被选中，相应事件会派发给该对象。
 
-## Code Example
+## 代码示例
 
 ```js
 const group = new InteractiveGroup();
@@ -16,74 +16,74 @@ scene.add( group );
 group.add( mesh1, mesh2, mesh3 );
 ```
 
-## Import
+## 导入
 
-InteractiveGroup is an addon, and must be imported explicitly, see [Installation#Addons](https://threejs.org/manual/#en/installation).
+InteractiveGroup 是一个插件，必须显式导入，参见 [Installation#Addons](https://threejs.org/manual/#en/installation)。
 
 ```js
 import { InteractiveGroup } from 'three/addons/interactive/InteractiveGroup.js';
 ```
 
-## Constructor
+## 构造函数
 
 ### new InteractiveGroup()
 
-## Properties
+## 属性
 
 ### .camera : Camera
 
-The camera used for raycasting.
+用于光线投射的相机。
 
-Default is `null`.
+默认值为 `null`。
 
 ### .controllers : Array.<Group>
 
-An array of XR controllers.
+XR 控制器数组。
 
 ### .element : HTMLElement
 
-The internal raycaster.
+内部光线投射器。
 
-Default is `null`.
+默认值为 `null`。
 
 ### .raycaster : Raycaster
 
-The internal raycaster.
+内部光线投射器。
 
-## Methods
+## 方法
 
 ### .disconnect()
 
-Disconnects this interactive group from the DOM and all XR controllers.
+断开该交互组与 DOM 及所有 XR 控制器的连接。
 
 ### .disconnectXrControllerEvents()
 
-Disconnects this interactive group from all XR controllers.
+断开该交互组与所有 XR 控制器的连接。
 
 ### .disconnectionPointerEvents()
 
-Disconnects this interactive group from all Pointer and Mouse Events.
+断开该交互组与所有 Pointer 和 Mouse 事件的连接。
 
 ### .listenToPointerEvents( renderer : WebGPURenderer | WebGLRenderer, camera : Camera )
 
-Calling this method makes sure the interactive group listens to Pointer and Mouse events. The target is the `domElement` of the given renderer. The camera is required for the internal raycasting so 3D objects can be detected based on the events.
+调用此方法可使交互组监听 Pointer 和 Mouse 事件。目标为给定渲染器的 `domElement`。相机用于内部光线投射，以便根据事件检测 3D 对象。
 
 **renderer**
 
-The renderer.
+渲染器。
 
 **camera**
 
-The camera.
+相机。
 
 ### .listenToXRControllerEvents( controller : Group )
 
-Calling this method makes sure the interactive group listens to events of the given XR controller.
+调用此方法可使交互组监听给定 XR 控制器的事件。
 
 **controller**
 
-The XR controller.
+XR 控制器。
 
-## Source
+## 源码
 
 [examples/jsm/interactive/InteractiveGroup.js](https://github.com/mrdoob/three.js/blob/master/examples/jsm/interactive/InteractiveGroup.js)

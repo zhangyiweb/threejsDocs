@@ -13,10 +13,7 @@
 	<h1 translate="no">InteractiveGroup</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>该类可用于将 3D 对象归入一个交互组。
-组本身可监听 Pointer、Mouse 或 XR 控制器事件，
-以检测其子级 3D 对象的选中。若某个 3D 对象被选中，
-相应事件会派发给该对象。</p></div>
+				<div class="class-description"><p>此类可用于将 3D 对象组织到一个交互组中。组本身可监听 Pointer、Mouse 或 XR 控制器事件，以检测对子孙 3D 对象的选择。若某个 3D 对象被选中，相应事件将派发给该对象。</p></div>
 				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const group = new InteractiveGroup();
 group.listenToPointerEvents( renderer, camera );
@@ -41,7 +38,7 @@ group.add( mesh1, mesh2, mesh3 );
 				<div class="member">
 					<h3 class="name" id="camera" translate="no">.<a href="#camera">camera</a><span class="type-signature"> : <a href="Camera.html">Camera</a></span> </h3>
 					<div class="description">
-						<p>用于光线投射的相机。</p>
+						<p>用于射线投射的相机。</p>
 						<p>默认值为 <code>null</code>。</p>
 					</div>
 				</div>
@@ -54,41 +51,39 @@ group.add( mesh1, mesh2, mesh3 );
 				<div class="member">
 					<h3 class="name" id="element" translate="no">.<a href="#element">element</a><span class="type-signature"> : HTMLElement</span> </h3>
 					<div class="description">
-						<p>内部光线投射器。</p>
+						<p>内部使用的 DOM 元素。</p>
 						<p>默认值为 <code>null</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="raycaster" translate="no">.<a href="#raycaster">raycaster</a><span class="type-signature"> : <a href="Raycaster.html">Raycaster</a></span> </h3>
 					<div class="description">
-						<p>内部光线投射器。</p>
+						<p>内部射线投射器。</p>
 					</div>
 				</div>
 				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="disconnect" translate="no">.<a href="#disconnect">disconnect</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>断开该交互组与 DOM 及所有 XR 控制器的连接。</p>
+							<p>将此交互组从 DOM 以及所有 XR 控制器断开连接。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="disconnectXrControllerEvents" translate="no">.<a href="#disconnectXrControllerEvents">disconnectXrControllerEvents</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>断开该交互组与所有 XR 控制器的连接。</p>
+							<p>将此交互组从所有 XR 控制器断开连接。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="disconnectionPointerEvents" translate="no">.<a href="#disconnectionPointerEvents">disconnectionPointerEvents</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>断开该交互组与所有 Pointer 和 Mouse 事件的连接。</p>
+							<p>将此交互组从所有 Pointer 和 Mouse 事件断开连接。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="listenToPointerEvents" translate="no">.<a href="#listenToPointerEvents">listenToPointerEvents</a><span class="signature">( renderer : <span class="param-type"><a href="WebGPURenderer.html">WebGPURenderer</a> | <a href="WebGLRenderer.html">WebGLRenderer</a></span>, camera : <span class="param-type"><a href="Camera.html">Camera</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>调用此方法可使交互组监听 Pointer 和 Mouse 事件。
-目标为给定渲染器的 <code>domElement</code>。相机用于内部光线投射，
-以便根据事件检测 3D 对象。</p>
+							<p>调用此方法可确保交互组监听 Pointer 和 Mouse 事件。目标为给定渲染器的 <code>domElement</code>。相机用于内部射线投射，以便根据事件检测 3D 对象。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -114,7 +109,7 @@ group.add( mesh1, mesh2, mesh3 );
 					<h3 class="name name-method" id="listenToXRControllerEvents" translate="no">.<a href="#listenToXRControllerEvents">listenToXRControllerEvents</a><span class="signature">( controller : <span class="param-type"><a href="Group.html">Group</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>调用此方法可使交互组监听给定 XR 控制器的事件。</p>
+							<p>调用此方法可确保交互组监听给定 XR 控制器的事件。</p>
 						</div>
 						<table class="params">
 							<tbody>
