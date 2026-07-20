@@ -1,4 +1,10 @@
-# three.js
+# three.js（r185 中文文档）
+
+基于 [three.js](https://github.com/mrdoob/three.js) r185 的简体中文 API 文档。
+
+**在线文档：** [https://zhangyiweb.github.io/threejsDocs/](https://zhangyiweb.github.io/threejsDocs/)
+
+---
 
 [![NPM Package][npm]][npm-url]
 [![Build Size][build-size]][build-size-url]
@@ -11,7 +17,8 @@
 The aim of the project is to create an easy-to-use, lightweight, cross-browser, general-purpose 3D library. The current builds only include WebGL and WebGPU renderers but SVG and CSS3D renderers are also available as addons.
 
 [Examples](https://threejs.org/examples/) &mdash;
-[Docs](https://threejs.org/docs/) &mdash;
+[Docs（中文）](https://zhangyiweb.github.io/threejsDocs/) &mdash;
+[Docs（官方）](https://threejs.org/docs/) &mdash;
 [Manual](https://threejs.org/manual/) &mdash;
 [Wiki](https://github.com/mrdoob/three.js/wiki) &mdash;
 [Migrating](https://github.com/mrdoob/three.js/wiki/Migration-Guide) &mdash;
