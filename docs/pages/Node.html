@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>Node - Three.js Docs</title>
+	<title>Node - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,15 +13,15 @@
 	<h1 translate="no">Node</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>Base class for all nodes.</p></div>
+				<div class="class-description"><p>所有节点的基类。</p></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="Node" translate="no">new <a href="#Node">Node</a><span class="signature">( nodeType : <span class="param-type">string</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new node.</p>
+							<p>构造一个新节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -30,125 +30,125 @@
 										<strong translate="no">nodeType</strong>
 									</td>
 									<td class="description last">
-										<p>The node type.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>节点类型。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="global" translate="no">.<a href="#global">global</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Whether this node is global or not. This property is relevant for the internal
-node caching system. All nodes which should be declared just once should
-set this flag to <code>true</code> (a typical example is <a href="AttributeNode.html">AttributeNode</a>).</p>
-						<p>Default is <code>false</code>.</p>
+						<p>此节点是否为全局节点。该属性与内部节点缓存系统相关。
+所有应只声明一次的节点应将此标志设为 <code>true</code>
+（典型示例为 <a href="AttributeNode.html">AttributeNode</a>）。</p>
+						<p>默认值为 <code>false</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="id" translate="no">.<a href="#id">id</a><span class="type-signature"> : number</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>The unique ID of the node.</p>
+						<p>节点的唯一 ID。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="isNode" translate="no">.<a href="#isNode">isNode</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="name" translate="no">.<a href="#name">name</a><span class="type-signature"> : string</span> </h3>
 					<div class="description">
-						<p>The name of the node.</p>
-						<p>Default is <code>''</code>.</p>
+						<p>节点的名称。</p>
+						<p>默认值为 <code>''</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="needsUpdate" translate="no">.<a href="#needsUpdate">needsUpdate</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Set this property to <code>true</code> when the node should be regenerated.</p>
-						<p>Default is <code>false</code>.</p>
+						<p>当需要重新生成节点时，将此属性设为 <code>true</code>。</p>
+						<p>默认值为 <code>false</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="nodeType" translate="no">.<a href="#nodeType">nodeType</a><span class="type-signature"> : string</span> </h3>
 					<div class="description">
-						<p>The node type. This represents the result type of the node (e.g. <code>float</code> or <code>vec3</code>).</p>
-						<p>Default is <code>null</code>.</p>
+						<p>节点类型。表示该节点的结果类型（例如 <code>float</code> 或 <code>vec3</code>）。</p>
+						<p>默认值为 <code>null</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="parents" translate="no">.<a href="#parents">parents</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Create a list of parents for this node during the build process.</p>
-						<p>Default is <code>false</code>.</p>
+						<p>在构建过程中为此节点创建父节点列表。</p>
+						<p>默认值为 <code>false</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="stackTrace" translate="no">.<a href="#stackTrace">stackTrace</a><span class="type-signature"> : string</span> </h3>
 					<div class="description">
-						<p>The stack trace of the node for debugging purposes.</p>
-						<p>Default is <code>null</code>.</p>
+						<p>用于调试的节点堆栈跟踪。</p>
+						<p>默认值为 <code>null</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="type" translate="no">.<a href="#type">type</a><span class="type-signature"> : string</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>The type of the class. The value is usually the constructor name.</p>
+						<p>类的类型。该值通常为构造函数名称。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="updateAfterType" translate="no">.<a href="#updateAfterType">updateAfterType</a><span class="type-signature"> : string</span> </h3>
 					<div class="description">
-						<p>The update type of the node's <a href="Node.html#updateAfter">Node#updateAfter</a> method. Possible values are listed in <a href="global.html#NodeUpdateType">NodeUpdateType</a>.</p>
-						<p>Default is <code>'none'</code>.</p>
+						<p>节点 <a href="Node.html#updateAfter">Node#updateAfter</a> 方法的更新类型。可能的取值列于 <a href="global.html#NodeUpdateType">NodeUpdateType</a>。</p>
+						<p>默认值为 <code>'none'</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="updateBeforeType" translate="no">.<a href="#updateBeforeType">updateBeforeType</a><span class="type-signature"> : string</span> </h3>
 					<div class="description">
-						<p>The update type of the node's <a href="Node.html#updateBefore">Node#updateBefore</a> method. Possible values are listed in <a href="global.html#NodeUpdateType">NodeUpdateType</a>.</p>
-						<p>Default is <code>'none'</code>.</p>
+						<p>节点 <a href="Node.html#updateBefore">Node#updateBefore</a> 方法的更新类型。可能的取值列于 <a href="global.html#NodeUpdateType">NodeUpdateType</a>。</p>
+						<p>默认值为 <code>'none'</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="updateType" translate="no">.<a href="#updateType">updateType</a><span class="type-signature"> : string</span> </h3>
 					<div class="description">
-						<p>The update type of the node's <a href="Node.html#update">Node#update</a> method. Possible values are listed in <a href="global.html#NodeUpdateType">NodeUpdateType</a>.</p>
-						<p>Default is <code>'none'</code>.</p>
+						<p>节点 <a href="Node.html#update">Node#update</a> 方法的更新类型。可能的取值列于 <a href="global.html#NodeUpdateType">NodeUpdateType</a>。</p>
+						<p>默认值为 <code>'none'</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="uuid" translate="no">.<a href="#uuid">uuid</a><span class="type-signature"> : string</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>The UUID of the node.</p>
+						<p>节点的 UUID。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="version" translate="no">.<a href="#version">version</a><span class="type-signature"> : number</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>The version of the node. The version automatically is increased when <a href="Node.html#needsUpdate">Node#needsUpdate</a> is set to <code>true</code>.</p>
-						<p>Default is <code>0</code>.</p>
+						<p>节点的版本。当 <a href="Node.html#needsUpdate">Node#needsUpdate</a> 设为 <code>true</code> 时，版本会自动递增。</p>
+						<p>默认值为 <code>0</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id=".captureStackTrace" translate="no">.<a href="#.captureStackTrace">captureStackTrace</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Enables or disables the automatic capturing of stack traces for nodes.</p>
-						<p>Default is <code>false</code>.</p>
+						<p>启用或禁用节点堆栈跟踪的自动捕获。</p>
+						<p>默认值为 <code>false</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="analyze" translate="no">.<a href="#analyze">analyze</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span>, output : <span class="param-type"><a href="Node.html">Node</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Represents the analyze stage which is the second step of the build process, see <a href="Node.html#build">Node#build</a> method.
-This stage analyzes the node hierarchy and ensures descendent nodes are built.</p>
+							<p>表示分析阶段，这是构建过程的第二步，参见 <a href="Node.html#build">Node#build</a> 方法。
+此阶段分析节点层次结构并确保后代节点被构建。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -157,7 +157,7 @@ This stage analyzes the node hierarchy and ensures descendent nodes are built.</
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 								<tr>
@@ -165,8 +165,8 @@ This stage analyzes the node hierarchy and ensures descendent nodes are built.</
 										<strong translate="no">output</strong>
 									</td>
 									<td class="description last">
-										<p>The target output node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>目标输出节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -175,11 +175,11 @@ This stage analyzes the node hierarchy and ensures descendent nodes are built.</
 					<h3 class="name name-method" id="build" translate="no">.<a href="#build">build</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span>, output : <span class="param-type">string | <a href="Node.html">Node</a></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a> | string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>This method performs the build of a node. The behavior and return value depend on the current build stage:</p>
+							<p>此方法执行节点的构建。行为和返回值取决于当前构建阶段：</p>
 <ul>
-<li><strong>setup</strong>: Prepares the node and its children for the build process. This process can also create new nodes. Returns the node itself or a variant.</li>
-<li><strong>analyze</strong>: Analyzes the node hierarchy for optimizations in the code generation stage. Returns <code>null</code>.</li>
-<li><strong>generate</strong>: Generates the shader code for the node. Returns the generated shader string.</li>
+<li><strong>setup</strong>：准备节点及其子节点以进行构建过程。此过程也可以创建新节点。返回节点本身或其变体。</li>
+<li><strong>analyze</strong>：分析节点层次结构以便在代码生成阶段进行优化。返回 <code>null</code>。</li>
+<li><strong>generate</strong>：为节点生成着色器代码。返回生成的着色器字符串。</li>
 </ul>
 						</div>
 						<table class="params">
@@ -189,7 +189,7 @@ This stage analyzes the node hierarchy and ensures descendent nodes are built.</
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 								<tr>
@@ -197,29 +197,29 @@ This stage analyzes the node hierarchy and ensures descendent nodes are built.</
 										<strong translate="no">output</strong>
 									</td>
 									<td class="description last">
-										<p>Can be used to define the output type.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>可用于定义输出类型。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The result of the build process, depending on the build stage.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 构建过程的结果，取决于构建阶段。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="customCacheKey" translate="no">.<a href="#customCacheKey">customCacheKey</a><span class="signature">()</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Generate a custom cache key for this node.</p>
+							<p>为此节点生成自定义缓存键。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The cache key of the node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 节点的缓存键。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="deserialize" translate="no">.<a href="#deserialize">deserialize</a><span class="signature">( json : <span class="param-type">Object</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Deserializes the node from the given JSON.</p>
+							<p>从给定的 JSON 反序列化节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -228,7 +228,7 @@ This stage analyzes the node hierarchy and ensures descendent nodes are built.</
 										<strong translate="no">json</strong>
 									</td>
 									<td class="description last">
-										<p>The JSON object.</p>
+										<p>JSON 对象。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -237,15 +237,15 @@ This stage analyzes the node hierarchy and ensures descendent nodes are built.</
 					<h3 class="name name-method" id="dispose" translate="no">.<a href="#dispose">dispose</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Calling this method dispatches the <code>dispose</code> event. This event can be used
-to register event listeners for clean up tasks.</p>
+							<p>调用此方法会派发 <code>dispose</code> 事件。该事件可用于
+注册用于清理任务的事件监听器。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="generate" translate="no">.<a href="#generate">generate</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span>, output : <span class="param-type">string</span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Represents the generate stage which is the third step of the build process, see <a href="Node.html#build">Node#build</a> method.
-This state builds the output node and returns the resulting shader string.</p>
+							<p>表示生成阶段，这是构建过程的第三步，参见 <a href="Node.html#build">Node#build</a> 方法。
+此阶段构建输出节点并返回生成的着色器字符串。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -254,7 +254,7 @@ This state builds the output node and returns the resulting shader string.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 								<tr>
@@ -262,19 +262,19 @@ This state builds the output node and returns the resulting shader string.</p>
 										<strong translate="no">output</strong>
 									</td>
 									<td class="description last">
-										<p>Can be used to define the output type.</p>
+										<p>可用于定义输出类型。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The generated shader string.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 生成的着色器字符串。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="generateNodeType" translate="no">.<a href="#generateNodeType">generateNodeType</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span>, output : <span class="param-type">string</span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the node's type.</p>
+							<p>返回节点的类型。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -283,7 +283,7 @@ This state builds the output node and returns the resulting shader string.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 								<tr>
@@ -291,20 +291,20 @@ This state builds the output node and returns the resulting shader string.</p>
 										<strong translate="no">output</strong>
 									</td>
 									<td class="description last">
-										<p>The output of the node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>节点的输出。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The type of the node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 节点的类型。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getArrayCount" translate="no">.<a href="#getArrayCount">getArrayCount</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the number of elements in the node array.</p>
+							<p>返回节点数组中的元素数量。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -313,19 +313,19 @@ This state builds the output node and returns the resulting shader string.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The number of elements in the node array.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 节点数组中的元素数量。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getCacheKey" translate="no">.<a href="#getCacheKey">getCacheKey</a><span class="signature">( force : <span class="param-type">boolean</span>, ignores : <span class="param-type">Set.&lt;<a href="Node.html">Node</a>></span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the cache key for this node.</p>
+							<p>返回此节点的缓存键。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -334,8 +334,8 @@ This state builds the output node and returns the resulting shader string.</p>
 										<strong translate="no">force</strong>
 									</td>
 									<td class="description last">
-										<p>When set to <code>true</code>, a recomputation of the cache key is forced.</p>
-										<p>Default is <code>false</code>.</p>
+										<p>设为 <code>true</code> 时，强制重新计算缓存键。</p>
+										<p>默认值为 <code>false</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -343,30 +343,29 @@ This state builds the output node and returns the resulting shader string.</p>
 										<strong translate="no">ignores</strong>
 									</td>
 									<td class="description last">
-										<p>A set of nodes to ignore during the computation of the cache key.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>在计算缓存键时应忽略的节点集合。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The cache key of the node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 节点的缓存键。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getChildren" translate="no">.<a href="#getChildren">getChildren</a><span class="signature">()</span><span class="type-signature"> : <a href="Node.html">Node</a></span> <span class="type-signature">(generator) </span></h3>
 					<div class="method">
 						<div class="description">
-							<p>Generator function that can be used to iterate over the child nodes.</p>
+							<p>可用于遍历子节点的生成器函数。</p>
 						</div>
-						<h5>Yields:</h5>
-							A child node.
+						<h5>产出：</h5>
+							一个子节点。
 					</div>
 					<h3 class="name name-method" id="getElementType" translate="no">.<a href="#getElementType">getElementType</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Certain types are composed of multiple elements. For example a <code>vec3</code>
-is composed of three <code>float</code> values. This method returns the type of
-these elements.</p>
+							<p>某些类型由多个元素组成。例如 <code>vec3</code>
+由三个 <code>float</code> 值组成。此方法返回这些元素的类型。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -375,21 +374,20 @@ these elements.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The type of the node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 节点的类型。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getHash" translate="no">.<a href="#getHash">getHash</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the hash of the node which is used to identify the node. By default it's
-the <a href="Node.html#uuid">Node#uuid</a> however derived node classes might have to overwrite this method
-depending on their implementation.</p>
+							<p>返回用于标识节点的哈希。默认情况下它是
+<a href="Node.html#uuid">Node#uuid</a>，但派生节点类可能需要根据其实现覆盖此方法。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -398,19 +396,19 @@ depending on their implementation.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The hash.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 哈希值。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getMemberType" translate="no">.<a href="#getMemberType">getMemberType</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span>, name : <span class="param-type">string</span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the node member type for the given name.</p>
+							<p>返回给定名称的节点成员类型。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -419,7 +417,7 @@ depending on their implementation.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 								<tr>
@@ -427,19 +425,19 @@ depending on their implementation.</p>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The name of the member.</p>
+										<p>成员的名称。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The type of the node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 节点的类型。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getNodeType" translate="no">.<a href="#getNodeType">getNodeType</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span>, output : <span class="param-type">string</span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the node's type.</p>
+							<p>返回节点的类型。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -448,7 +446,7 @@ depending on their implementation.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 								<tr>
@@ -456,42 +454,41 @@ depending on their implementation.</p>
 										<strong translate="no">output</strong>
 									</td>
 									<td class="description last">
-										<p>The output of the node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>节点的输出。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The type of the node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 节点的类型。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getScope" translate="no">.<a href="#getScope">getScope</a><span class="signature">()</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the references to this node which is by default <code>this</code>.</p>
+							<p>返回对此节点的引用，默认为 <code>this</code>。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此节点的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getSerializeChildren" translate="no">.<a href="#getSerializeChildren">getSerializeChildren</a><span class="signature">()</span><span class="type-signature"> : Generator.&lt;Object></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the child nodes as a JSON object.</p>
+							<p>以 JSON 对象形式返回子节点。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> An iterable list of serialized child objects as JSON.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 可迭代的已序列化子对象 JSON 列表。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getShared" translate="no">.<a href="#getShared">getShared</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>This method is used during the build process of a node and ensures
-equal nodes are not built multiple times but just once. For example if
-<code>attribute( 'uv' )</code> is used multiple times by the user, the build
-process makes sure to process just the first node. It also handles
-node overrides if an override context is set.</p>
+							<p>此方法在节点构建过程中使用，用于确保
+相等的节点不会被多次构建，而只构建一次。例如，如果用户多次使用
+<code>attribute( 'uv' )</code>，构建过程会确保只处理第一个节点。如果设置了覆盖上下文，
+它还会处理节点覆盖。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -500,48 +497,48 @@ node overrides if an override context is set.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The shared node if possible. Otherwise <code>this</code> is returned.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 如果可能，返回共享节点；否则返回 <code>this</code>。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getUpdateAfterType" translate="no">.<a href="#getUpdateAfterType">getUpdateAfterType</a><span class="signature">()</span><span class="type-signature"> : <a href="global.html#NodeUpdateType">NodeUpdateType</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the update type of <a href="Node.html#updateAfter">Node#updateAfter</a>.</p>
+							<p>返回 <a href="Node.html#updateAfter">Node#updateAfter</a> 的更新类型。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The update type.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 更新类型。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getUpdateBeforeType" translate="no">.<a href="#getUpdateBeforeType">getUpdateBeforeType</a><span class="signature">()</span><span class="type-signature"> : <a href="global.html#NodeUpdateType">NodeUpdateType</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the update type of <a href="Node.html#updateBefore">Node#updateBefore</a>.</p>
+							<p>返回 <a href="Node.html#updateBefore">Node#updateBefore</a> 的更新类型。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The update type.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 更新类型。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getUpdateType" translate="no">.<a href="#getUpdateType">getUpdateType</a><span class="signature">()</span><span class="type-signature"> : <a href="global.html#NodeUpdateType">NodeUpdateType</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the update type of <a href="Node.html#update">Node#update</a>.</p>
+							<p>返回 <a href="Node.html#update">Node#update</a> 的更新类型。</p>
 						</div>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The update type.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 更新类型。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="isGlobal" translate="no">.<a href="#isGlobal">isGlobal</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : boolean</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>By default this method returns the value of the <a href="Node.html#global">Node#global</a> flag. This method
-can be overwritten in derived classes if an analytical way is required to determine the
-global cache referring to the current shader-stage.</p>
+							<p>默认情况下，此方法返回 <a href="Node.html#global">Node#global</a> 标志的值。
+如果需要以分析方式确定与当前着色器阶段相关的全局缓存，
+可在派生类中覆盖此方法。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -550,20 +547,20 @@ global cache referring to the current shader-stage.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> Whether this node is global or not.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 此节点是否为全局节点。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="onFrameUpdate" translate="no">.<a href="#onFrameUpdate">onFrameUpdate</a><span class="signature">( callback : <span class="param-type">function</span> )</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Convenient method for defining <a href="Node.html#update">Node#update</a>. Similar to <a href="Node.html#onUpdate">Node#onUpdate</a>, but
-this method automatically sets the update type to <code>FRAME</code>.</p>
+							<p>用于定义 <a href="Node.html#update">Node#update</a> 的便捷方法。与 <a href="Node.html#onUpdate">Node#onUpdate</a> 类似，
+但此方法会自动将更新类型设为 <code>FRAME</code>。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -572,20 +569,20 @@ this method automatically sets the update type to <code>FRAME</code>.</p>
 										<strong translate="no">callback</strong>
 									</td>
 									<td class="description last">
-										<p>The update method.</p>
+										<p>更新方法。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此节点的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="onObjectUpdate" translate="no">.<a href="#onObjectUpdate">onObjectUpdate</a><span class="signature">( callback : <span class="param-type">function</span> )</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Convenient method for defining <a href="Node.html#update">Node#update</a>. Similar to <a href="Node.html#onUpdate">Node#onUpdate</a>, but
-this method automatically sets the update type to <code>OBJECT</code>.</p>
+							<p>用于定义 <a href="Node.html#update">Node#update</a> 的便捷方法。与 <a href="Node.html#onUpdate">Node#onUpdate</a> 类似，
+但此方法会自动将更新类型设为 <code>OBJECT</code>。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -594,19 +591,19 @@ this method automatically sets the update type to <code>OBJECT</code>.</p>
 										<strong translate="no">callback</strong>
 									</td>
 									<td class="description last">
-										<p>The update method.</p>
+										<p>更新方法。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此节点的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="onReference" translate="no">.<a href="#onReference">onReference</a><span class="signature">( callback : <span class="param-type">function</span> )</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Convenient method for defining <a href="Node.html#updateReference">Node#updateReference</a>.</p>
+							<p>用于定义 <a href="Node.html#updateReference">Node#updateReference</a> 的便捷方法。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -615,20 +612,20 @@ this method automatically sets the update type to <code>OBJECT</code>.</p>
 										<strong translate="no">callback</strong>
 									</td>
 									<td class="description last">
-										<p>The update method.</p>
+										<p>更新方法。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此节点的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="onRenderUpdate" translate="no">.<a href="#onRenderUpdate">onRenderUpdate</a><span class="signature">( callback : <span class="param-type">function</span> )</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Convenient method for defining <a href="Node.html#update">Node#update</a>. Similar to <a href="Node.html#onUpdate">Node#onUpdate</a>, but
-this method automatically sets the update type to <code>RENDER</code>.</p>
+							<p>用于定义 <a href="Node.html#update">Node#update</a> 的便捷方法。与 <a href="Node.html#onUpdate">Node#onUpdate</a> 类似，
+但此方法会自动将更新类型设为 <code>RENDER</code>。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -637,19 +634,19 @@ this method automatically sets the update type to <code>RENDER</code>.</p>
 										<strong translate="no">callback</strong>
 									</td>
 									<td class="description last">
-										<p>The update method.</p>
+										<p>更新方法。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此节点的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="onUpdate" translate="no">.<a href="#onUpdate">onUpdate</a><span class="signature">( callback : <span class="param-type">function</span>, updateType : <span class="param-type">string</span> )</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Convenient method for defining <a href="Node.html#update">Node#update</a>.</p>
+							<p>用于定义 <a href="Node.html#update">Node#update</a> 的便捷方法。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -658,7 +655,7 @@ this method automatically sets the update type to <code>RENDER</code>.</p>
 										<strong translate="no">callback</strong>
 									</td>
 									<td class="description last">
-										<p>The update method.</p>
+										<p>更新方法。</p>
 									</td>
 								</tr>
 								<tr>
@@ -666,19 +663,19 @@ this method automatically sets the update type to <code>RENDER</code>.</p>
 										<strong translate="no">updateType</strong>
 									</td>
 									<td class="description last">
-										<p>The update type.</p>
+										<p>更新类型。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此节点的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="serialize" translate="no">.<a href="#serialize">serialize</a><span class="signature">( json : <span class="param-type">Object</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Serializes the node to JSON.</p>
+							<p>将节点序列化为 JSON。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -687,7 +684,7 @@ this method automatically sets the update type to <code>RENDER</code>.</p>
 										<strong translate="no">json</strong>
 									</td>
 									<td class="description last">
-										<p>The output JSON object.</p>
+										<p>输出的 JSON 对象。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -696,9 +693,9 @@ this method automatically sets the update type to <code>RENDER</code>.</p>
 					<h3 class="name name-method" id="setup" translate="no">.<a href="#setup">setup</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Represents the setup stage which is the first step of the build process, see <a href="Node.html#build">Node#build</a> method.
-This method is often overwritten in derived modules to prepare the node which is used as a node's output/result.
-If an output node is prepared, then it must be returned in the <code>return</code> statement of the derived module's setup function.</p>
+							<p>表示设置阶段，这是构建过程的第一步，参见 <a href="Node.html#build">Node#build</a> 方法。
+派生模块通常会覆盖此方法，以准备用作节点输出/结果的节点。
+如果准备了输出节点，则必须在派生模块 setup 函数的 <code>return</code> 语句中返回它。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -707,19 +704,19 @@ If an output node is prepared, then it must be returned in the <code>return</cod
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The output node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 输出节点。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="toJSON" translate="no">.<a href="#toJSON">toJSON</a><span class="signature">( meta : <span class="param-type">Object</span> )</span><span class="type-signature"> : Object</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Serializes the node into the three.js JSON Object/Scene format.</p>
+							<p>将节点序列化为 three.js JSON Object/Scene 格式。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -728,19 +725,19 @@ If an output node is prepared, then it must be returned in the <code>return</cod
 										<strong translate="no">meta</strong>
 									</td>
 									<td class="description last">
-										<p>An optional JSON object that already holds serialized data from other scene objects.</p>
+										<p>可选的 JSON 对象，可能已包含其他场景对象的序列化数据。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The serialized node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 已序列化的节点。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="traverse" translate="no">.<a href="#traverse">traverse</a><span class="signature">( callback : <span class="param-type"><a href="global.html#traverseCallback">traverseCallback</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Can be used to traverse through the node's hierarchy.</p>
+							<p>可用于遍历节点的层次结构。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -749,7 +746,7 @@ If an output node is prepared, then it must be returned in the <code>return</cod
 										<strong translate="no">callback</strong>
 									</td>
 									<td class="description last">
-										<p>A callback that is executed per node.</p>
+										<p>对每个节点执行的回调。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -758,8 +755,8 @@ If an output node is prepared, then it must be returned in the <code>return</cod
 					<h3 class="name name-method" id="update" translate="no">.<a href="#update">update</a><span class="signature">( frame : <span class="param-type"><a href="NodeFrame.html">NodeFrame</a></span> )</span><span class="type-signature"> : boolean</span> <span class="type-signature">(abstract) </span></h3>
 					<div class="method">
 						<div class="description">
-							<p>The method can be implemented to update the node's internal state when it is used to render an object.
-The <a href="Node.html#updateType">Node#updateType</a> property defines how often the update is executed.</p>
+							<p>可实现此方法，以便在节点用于渲染对象时更新其内部状态。
+<a href="Node.html#updateType">Node#updateType</a> 属性定义更新的执行频率。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -768,20 +765,20 @@ The <a href="Node.html#updateType">Node#updateType</a> property defines how ofte
 										<strong translate="no">frame</strong>
 									</td>
 									<td class="description last">
-										<p>A reference to the current node frame.</p>
+										<p>对当前节点帧的引用。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> An optional bool that indicates whether the implementation actually performed an update or not (e.g. due to caching).</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 可选的布尔值，指示实现是否实际执行了更新（例如由于缓存而未更新）。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="updateAfter" translate="no">.<a href="#updateAfter">updateAfter</a><span class="signature">( frame : <span class="param-type"><a href="NodeFrame.html">NodeFrame</a></span> )</span><span class="type-signature"> : boolean</span> <span class="type-signature">(abstract) </span></h3>
 					<div class="method">
 						<div class="description">
-							<p>The method can be implemented to update the node's internal state after it was used to render an object.
-The <a href="Node.html#updateAfterType">Node#updateAfterType</a> property defines how often the update is executed.</p>
+							<p>可实现此方法，以便在节点用于渲染对象之后更新其内部状态。
+<a href="Node.html#updateAfterType">Node#updateAfterType</a> 属性定义更新的执行频率。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -790,20 +787,20 @@ The <a href="Node.html#updateAfterType">Node#updateAfterType</a> property define
 										<strong translate="no">frame</strong>
 									</td>
 									<td class="description last">
-										<p>A reference to the current node frame.</p>
+										<p>对当前节点帧的引用。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> An optional bool that indicates whether the implementation actually performed an update or not (e.g. due to caching).</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 可选的布尔值，指示实现是否实际执行了更新（例如由于缓存而未更新）。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="updateBefore" translate="no">.<a href="#updateBefore">updateBefore</a><span class="signature">( frame : <span class="param-type"><a href="NodeFrame.html">NodeFrame</a></span> )</span><span class="type-signature"> : boolean</span> <span class="type-signature">(abstract) </span></h3>
 					<div class="method">
 						<div class="description">
-							<p>The method can be implemented to update the node's internal state before it is used to render an object.
-The <a href="Node.html#updateBeforeType">Node#updateBeforeType</a> property defines how often the update is executed.</p>
+							<p>可实现此方法，以便在节点用于渲染对象之前更新其内部状态。
+<a href="Node.html#updateBeforeType">Node#updateBeforeType</a> 属性定义更新的执行频率。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -812,20 +809,20 @@ The <a href="Node.html#updateBeforeType">Node#updateBeforeType</a> property defi
 										<strong translate="no">frame</strong>
 									</td>
 									<td class="description last">
-										<p>A reference to the current node frame.</p>
+										<p>对当前节点帧的引用。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> An optional bool that indicates whether the implementation actually performed an update or not (e.g. due to caching).</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 可选的布尔值，指示实现是否实际执行了更新（例如由于缓存而未更新）。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="updateReference" translate="no">.<a href="#updateReference">updateReference</a><span class="signature">( state : <span class="param-type"><a href="global.html#any">any</a></span> )</span><span class="type-signature"> : <a href="global.html#any">any</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Nodes might refer to other objects like materials. This method allows to dynamically update the reference
-to such objects based on a given state (e.g. the current node frame or builder).</p>
+							<p>节点可能引用其他对象（如材质）。此方法允许根据给定状态
+（例如当前节点帧或构建器）动态更新对此类对象的引用。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -834,16 +831,16 @@ to such objects based on a given state (e.g. the current node frame or builder).
 										<strong translate="no">state</strong>
 									</td>
 									<td class="description last">
-										<p>This method can be invocated in different contexts so <code>state</code> can refer to any object type.</p>
+										<p>此方法可在不同上下文中调用，因此 <code>state</code> 可以指代任何对象类型。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The updated reference.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 更新后的引用。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/nodes/core/Node.js" translate="no" target="_blank" rel="noopener">src/nodes/core/Node.js</a>
 				</p>

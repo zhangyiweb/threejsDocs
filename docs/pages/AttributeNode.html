@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>AttributeNode - Three.js Docs</title>
+	<title>AttributeNode - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,15 +13,15 @@
 	<h1 translate="no">AttributeNode</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>Base class for representing shader attributes as nodes.</p></div>
+				<div class="class-description"><p>将着色器属性表示为节点的基类。</p></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="AttributeNode" translate="no">new <a href="#AttributeNode">AttributeNode</a><span class="signature">( attributeName : <span class="param-type">string</span>, nodeType : <span class="param-type">string</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new attribute node.</p>
+							<p>构造一个新的属性节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -30,7 +30,7 @@
 										<strong translate="no">attributeName</strong>
 									</td>
 									<td class="description last">
-										<p>The name of the attribute.</p>
+										<p>属性的名称。</p>
 									</td>
 								</tr>
 								<tr>
@@ -38,32 +38,31 @@
 										<strong translate="no">nodeType</strong>
 									</td>
 									<td class="description last">
-										<p>The node type.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>节点类型。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="global" translate="no">.<a href="#global">global</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p><code>AttributeNode</code> sets this property to <code>true</code> by default.</p>
-						<p>Default is <code>true</code>.</p>
+						<p><code>AttributeNode</code> 默认将此属性设为 <code>true</code>。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Node.html#global">Node#global</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Node.html#global">Node#global</a></dt>
 						</dl>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="getAttributeName" translate="no">.<a href="#getAttributeName">getAttributeName</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the attribute name of this node. The method can be
-overwritten in derived classes if the final name must be computed
-analytically.</p>
+							<p>返回此节点的属性名称。如果最终名称必须通过分析计算得出，
+可在派生类中覆盖此方法。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -72,21 +71,20 @@ analytically.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前的节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The attribute name.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 属性名称。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setAttributeName" translate="no">.<a href="#setAttributeName">setAttributeName</a><span class="signature">( attributeName : <span class="param-type">string</span> )</span><span class="type-signature"> : <a href="AttributeNode.html">AttributeNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the attribute name to the given value. The method can be
-overwritten in derived classes if the final name must be computed
-analytically.</p>
+							<p>将属性名称设置为给定值。如果最终名称必须通过分析计算得出，
+可在派生类中覆盖此方法。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -95,16 +93,16 @@ analytically.</p>
 										<strong translate="no">attributeName</strong>
 									</td>
 									<td class="description last">
-										<p>The name of the attribute.</p>
+										<p>属性的名称。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此节点的引用。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/nodes/core/AttributeNode.js" translate="no" target="_blank" rel="noopener">src/nodes/core/AttributeNode.js</a>
 				</p>

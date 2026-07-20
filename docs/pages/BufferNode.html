@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>BufferNode - Three.js Docs</title>
+	<title>BufferNode - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,23 +13,23 @@
 	<h1 translate="no">BufferNode</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A special type of uniform node which represents array-like data
-as uniform buffers. The access usually happens via <code>element()</code>
-which returns an instance of <a href="ArrayElementNode.html">ArrayElementNode</a>. For example:</p>
-<p>In general, it is recommended to use the more managed <a href="UniformArrayNode.html">UniformArrayNode</a>
-since it handles more input types and automatically cares about buffer paddings.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>一种特殊类型的 uniform 节点，将类数组数据表示为
+uniform 缓冲区。访问通常通过 <code>element()</code> 完成，
+它会返回 <a href="ArrayElementNode.html">ArrayElementNode</a> 的实例。例如：</p>
+<p>一般建议使用管理更完善的 <a href="UniformArrayNode.html">UniformArrayNode</a>，
+因为它能处理更多输入类型，并自动处理缓冲区填充。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const bufferNode = buffer( array, 'mat4', count );
 const matrixNode = bufferNode.element( index ); // access a matrix from the buffer
 </code></pre></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="BufferNode" translate="no">new <a href="#BufferNode">BufferNode</a><span class="signature">( value : <span class="param-type">Array.&lt;number></span>, bufferType : <span class="param-type">string</span>, bufferCount : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new buffer node.</p>
+							<p>构造一个新的缓冲区节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -38,7 +38,7 @@ const matrixNode = bufferNode.element( index ); // access a matrix from the buff
 										<strong translate="no">value</strong>
 									</td>
 									<td class="description last">
-										<p>Array-like buffer data.</p>
+										<p>类数组的缓冲区数据。</p>
 									</td>
 								</tr>
 								<tr>
@@ -46,7 +46,7 @@ const matrixNode = bufferNode.element( index ); // access a matrix from the buff
 										<strong translate="no">bufferType</strong>
 									</td>
 									<td class="description last">
-										<p>The data type of the buffer.</p>
+										<p>缓冲区的数据类型。</p>
 									</td>
 								</tr>
 								<tr>
@@ -54,46 +54,46 @@ const matrixNode = bufferNode.element( index ); // access a matrix from the buff
 										<strong translate="no">bufferCount</strong>
 									</td>
 									<td class="description last">
-										<p>The count of buffer elements.</p>
-										<p>Default is <code>0</code>.</p>
+										<p>缓冲区元素的数量。</p>
+										<p>默认值为 <code>0</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="bufferCount" translate="no">.<a href="#bufferCount">bufferCount</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The uniform node that holds the value of the reference node.</p>
-						<p>Default is <code>0</code>.</p>
+						<p>保存引用节点值的 uniform 节点。</p>
+						<p>默认值为 <code>0</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="bufferType" translate="no">.<a href="#bufferType">bufferType</a><span class="type-signature"> : string</span> </h3>
 					<div class="description">
-						<p>The data type of the buffer.</p>
+						<p>缓冲区的数据类型。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="isBufferNode" translate="no">.<a href="#isBufferNode">isBufferNode</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>该标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="updateRanges" translate="no">.<a href="#updateRanges">updateRanges</a><span class="type-signature"> : Array.&lt;{start: number, count: number}></span> </h3>
 					<div class="description">
-						<p>An array of update ranges.</p>
+						<p>更新范围的数组。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="addUpdateRange" translate="no">.<a href="#addUpdateRange">addUpdateRange</a><span class="signature">( start : <span class="param-type">number</span>, count : <span class="param-type">number</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Adds a range of data in the data array to be updated on the GPU.</p>
+							<p>添加数据数组中需要在 GPU 上更新的一段数据范围。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -102,7 +102,7 @@ const matrixNode = bufferNode.element( index ); // access a matrix from the buff
 										<strong translate="no">start</strong>
 									</td>
 									<td class="description last">
-										<p>Position at which to start update.</p>
+										<p>开始更新的位置。</p>
 									</td>
 								</tr>
 								<tr>
@@ -110,7 +110,7 @@ const matrixNode = bufferNode.element( index ); // access a matrix from the buff
 										<strong translate="no">count</strong>
 									</td>
 									<td class="description last">
-										<p>The number of components to update.</p>
+										<p>要更新的组件数量。</p>
 									</td>
 								</tr>
 							</tbody>
@@ -119,13 +119,13 @@ const matrixNode = bufferNode.element( index ); // access a matrix from the buff
 					<h3 class="name name-method" id="clearUpdateRanges" translate="no">.<a href="#clearUpdateRanges">clearUpdateRanges</a><span class="signature">()</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Clears the update ranges.</p>
+							<p>清除更新范围。</p>
 						</div>
 					</div>
 					<h3 class="name name-method" id="getElementType" translate="no">.<a href="#getElementType">getElementType</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>The data type of the buffer elements.</p>
+							<p>缓冲区元素的数据类型。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -134,22 +134,22 @@ const matrixNode = bufferNode.element( index ); // access a matrix from the buff
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前的节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="UniformNode.html#getElementType">UniformNode#getElementType</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="UniformNode.html#getElementType">UniformNode#getElementType</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The element type.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 元素类型。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getInputType" translate="no">.<a href="#getInputType">getInputType</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Overwrites the default implementation to return a fixed value <code>'buffer'</code>.</p>
+							<p>重写默认实现，返回固定值 <code>'buffer'</code>。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -158,19 +158,19 @@ const matrixNode = bufferNode.element( index ); // access a matrix from the buff
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前的节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="UniformNode.html#getInputType">UniformNode#getInputType</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="UniformNode.html#getInputType">UniformNode#getInputType</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The input type.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 输入类型。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/nodes/accessors/BufferNode.js" translate="no" target="_blank" rel="noopener">src/nodes/accessors/BufferNode.js</a>
 				</p>

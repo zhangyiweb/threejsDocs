@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>NodeCache - Three.js Docs</title>
+	<title>NodeCache - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -12,16 +12,16 @@
 	<h1 translate="no">NodeCache</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>This utility class is used in <a href="NodeBuilder.html">NodeBuilder</a> as an internal
-cache data structure for node data.</p></div>
+				<div class="class-description"><p>此工具类在 <a href="NodeBuilder.html">NodeBuilder</a> 中用作节点数据的内部
+缓存数据结构。</p></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="NodeCache" translate="no">new <a href="#NodeCache">NodeCache</a><span class="signature">( parent : <span class="param-type"><a href="NodeCache.html">NodeCache</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new node cache.</p>
+							<p>构造一个新的节点缓存。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -30,39 +30,39 @@ cache data structure for node data.</p></div>
 										<strong translate="no">parent</strong>
 									</td>
 									<td class="description last">
-										<p>A reference to a parent cache.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>对父缓存的引用。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="id" translate="no">.<a href="#id">id</a><span class="type-signature"> : number</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>The id of the cache.</p>
+						<p>缓存的 id。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="nodesData" translate="no">.<a href="#nodesData">nodesData</a><span class="type-signature"> : WeakMap.&lt;<a href="Node.html">Node</a>, Object></span> </h3>
 					<div class="description">
-						<p>A weak map for managing node data.</p>
+						<p>用于管理节点数据的弱映射。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="parent" translate="no">.<a href="#parent">parent</a><span class="type-signature"> : <a href="NodeCache.html">NodeCache</a></span> </h3>
 					<div class="description">
-						<p>Reference to a parent node cache.</p>
-						<p>Default is <code>null</code>.</p>
+						<p>对父节点缓存的引用。</p>
+						<p>默认值为 <code>null</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="getData" translate="no">.<a href="#getData">getData</a><span class="signature">( node : <span class="param-type"><a href="Node.html">Node</a></span> )</span><span class="type-signature"> : Object</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the data for the given node.</p>
+							<p>返回给定节点的数据。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -71,19 +71,19 @@ cache data structure for node data.</p></div>
 										<strong translate="no">node</strong>
 									</td>
 									<td class="description last">
-										<p>The node.</p>
+										<p>节点。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The data for the node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 该节点的数据。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setData" translate="no">.<a href="#setData">setData</a><span class="signature">( node : <span class="param-type"><a href="Node.html">Node</a></span>, data : <span class="param-type">Object</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the data for a given node.</p>
+							<p>为给定节点设置数据。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -92,7 +92,7 @@ cache data structure for node data.</p></div>
 										<strong translate="no">node</strong>
 									</td>
 									<td class="description last">
-										<p>The node.</p>
+										<p>节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -100,13 +100,13 @@ cache data structure for node data.</p></div>
 										<strong translate="no">data</strong>
 									</td>
 									<td class="description last">
-										<p>The data that should be cached.</p>
+										<p>应被缓存的数据。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/nodes/core/NodeCache.js" translate="no" target="_blank" rel="noopener">src/nodes/core/NodeCache.js</a>
 				</p>

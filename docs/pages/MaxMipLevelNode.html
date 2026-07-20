@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>MaxMipLevelNode - Three.js Docs</title>
+	<title>MaxMipLevelNode - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,19 +13,18 @@
 	<h1 translate="no">MaxMipLevelNode</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A special type of uniform node that computes the
-maximum mipmap level for a given texture node.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>一种特殊类型的 uniform 节点，用于计算给定纹理节点的最大 mipmap 级别。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const level = maxMipLevel( textureNode );
 </code></pre></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="MaxMipLevelNode" translate="no">new <a href="#MaxMipLevelNode">MaxMipLevelNode</a><span class="signature">( textureNode : <span class="param-type"><a href="TextureNode.html">TextureNode</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new max mip level node.</p>
+							<p>构造一个新的最大 mip 级别节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -34,38 +33,38 @@ maximum mipmap level for a given texture node.</p></div>
 										<strong translate="no">textureNode</strong>
 									</td>
 									<td class="description last">
-										<p>The texture node to compute the max mip level for.</p>
+										<p>要计算最大 mip 级别的纹理节点。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="texture" translate="no">.<a href="#texture">texture</a><span class="type-signature"> : <a href="Texture.html">Texture</a></span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>The texture.</p>
+						<p>纹理。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="textureNode" translate="no">.<a href="#textureNode">textureNode</a><span class="type-signature"> : <a href="TextureNode.html">TextureNode</a></span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>The texture node to compute the max mip level for.</p>
+						<p>要计算最大 mip 级别的纹理节点。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="updateType" translate="no">.<a href="#updateType">updateType</a><span class="type-signature"> : string</span> </h3>
 					<div class="description">
-						<p>The <code>updateType</code> is set to <code>NodeUpdateType.FRAME</code> since the node updates
-the texture once per frame in its <a href="MaxMipLevelNode.html#update">MaxMipLevelNode#update</a> method.</p>
-						<p>Default is <code>'frame'</code>.</p>
+						<p><code>updateType</code> 设置为 <code>NodeUpdateType.FRAME</code>，因为该节点在其
+<a href="MaxMipLevelNode.html#update">MaxMipLevelNode#update</a> 方法中每帧更新一次纹理。</p>
+						<p>默认值为 <code>'frame'</code>。</p>
 					</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="UniformNode.html#updateType">UniformNode#updateType</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="UniformNode.html#updateType">UniformNode#updateType</a></dt>
 						</dl>
 				</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/nodes/utils/MaxMipLevelNode.js" translate="no" target="_blank" rel="noopener">src/nodes/utils/MaxMipLevelNode.js</a>
 				</p>

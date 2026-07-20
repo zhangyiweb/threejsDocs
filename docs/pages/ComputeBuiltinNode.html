@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>ComputeBuiltinNode - Three.js Docs</title>
+	<title>ComputeBuiltinNode - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,17 +13,17 @@
 	<h1 translate="no">ComputeBuiltinNode</h1>
 		<section>
 			<header>
-				<div class="class-description"><p><code>ComputeBuiltinNode</code> represents a compute-scope builtin value that expose information
-about the currently running dispatch and/or the device it is running on.</p>
-<p>This node can only be used with a WebGPU backend.</p></div>
+				<div class="class-description"><p><code>ComputeBuiltinNode</code> 表示计算作用域中的内置值，用于暴露当前正在运行的
+调度以及/或者运行设备的相关信息。</p>
+<p>此节点只能与 WebGPU 后端一起使用。</p></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="ComputeBuiltinNode" translate="no">new <a href="#ComputeBuiltinNode">ComputeBuiltinNode</a><span class="signature">( builtinName : <span class="param-type">string</span>, nodeType : <span class="param-type">string</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new compute builtin node.</p>
+							<p>构造一个新的计算内置节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -32,7 +32,7 @@ about the currently running dispatch and/or the device it is running on.</p>
 										<strong translate="no">builtinName</strong>
 									</td>
 									<td class="description last">
-										<p>The built-in name.</p>
+										<p>内置名称。</p>
 									</td>
 								</tr>
 								<tr>
@@ -40,18 +40,18 @@ about the currently running dispatch and/or the device it is running on.</p>
 										<strong translate="no">nodeType</strong>
 									</td>
 									<td class="description last">
-										<p>The node type.</p>
+										<p>节点类型。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="generateNodeType" translate="no">.<a href="#generateNodeType">generateNodeType</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>This method is overwritten since the node type is simply derived from <code>nodeType</code>..</p>
+							<p>此方法被重写，因为节点类型直接由 <code>nodeType</code> 推导。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -60,22 +60,22 @@ about the currently running dispatch and/or the device it is running on.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前的节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Node.html#generateNodeType">Node#generateNodeType</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Node.html#generateNodeType">Node#generateNodeType</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The node type.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 节点类型。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getBuiltinName" translate="no">.<a href="#getBuiltinName">getBuiltinName</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the builtin name.</p>
+							<p>返回内置名称。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -84,19 +84,19 @@ about the currently running dispatch and/or the device it is running on.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前的节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The builtin name.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 内置名称。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getHash" translate="no">.<a href="#getHash">getHash</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>This method is overwritten since hash is derived from the built-in name.</p>
+							<p>此方法被重写，因为哈希值由内置名称推导。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -105,22 +105,22 @@ about the currently running dispatch and/or the device it is running on.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前的节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="Node.html#getHash">Node#getHash</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="Node.html#getHash">Node#getHash</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The hash.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 哈希值。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="hasBuiltin" translate="no">.<a href="#hasBuiltin">hasBuiltin</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : boolean</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Whether the current node builder has the builtin or not.</p>
+							<p>当前节点构建器是否具有该内置项。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -129,19 +129,19 @@ about the currently running dispatch and/or the device it is running on.</p>
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前的节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> Whether the builder has the builtin or not.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 构建器是否具有该内置项。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="setBuiltinName" translate="no">.<a href="#setBuiltinName">setBuiltinName</a><span class="signature">( builtinName : <span class="param-type">string</span> )</span><span class="type-signature"> : <a href="ComputeBuiltinNode.html">ComputeBuiltinNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Sets the builtin name.</p>
+							<p>设置内置名称。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -150,16 +150,16 @@ about the currently running dispatch and/or the device it is running on.</p>
 										<strong translate="no">builtinName</strong>
 									</td>
 									<td class="description last">
-										<p>The built-in name.</p>
+										<p>内置名称。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此节点的引用。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/nodes/gpgpu/ComputeBuiltinNode.js" translate="no" target="_blank" rel="noopener">src/nodes/gpgpu/ComputeBuiltinNode.js</a>
 				</p>

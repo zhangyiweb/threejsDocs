@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>ArrayNode - Three.js Docs</title>
+	<title>ArrayNode - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,8 +13,8 @@
 	<h1 translate="no">ArrayNode</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>ArrayNode represents a collection of nodes, typically created using the <a href="TSL.html#array">array</a> function.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>ArrayNode 表示一组节点的集合，通常通过 <a href="TSL.html#array">array</a> 函数创建。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const colors = array( [
 	vec3( 1, 0, 0 ),
 	vec3( 0, 1, 0 ),
@@ -25,11 +25,11 @@ const redColor = tintColors.element( 0 );
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="ArrayNode" translate="no">new <a href="#ArrayNode">ArrayNode</a><span class="signature">( nodeType : <span class="param-type">string</span>, count : <span class="param-type">number</span>, values : <span class="param-type">Array.&lt;<a href="Node.html">Node</a>></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new array node.</p>
+							<p>构造一个新的数组节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -38,7 +38,7 @@ const redColor = tintColors.element( 0 );
 										<strong translate="no">nodeType</strong>
 									</td>
 									<td class="description last">
-										<p>The data type of the elements.</p>
+										<p>元素的数据类型。</p>
 									</td>
 								</tr>
 								<tr>
@@ -46,7 +46,7 @@ const redColor = tintColors.element( 0 );
 										<strong translate="no">count</strong>
 									</td>
 									<td class="description last">
-										<p>Size of the array.</p>
+										<p>数组大小。</p>
 									</td>
 								</tr>
 								<tr>
@@ -54,39 +54,39 @@ const redColor = tintColors.element( 0 );
 										<strong translate="no">values</strong>
 									</td>
 									<td class="description last">
-										<p>Array default values.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>数组的默认值。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="count" translate="no">.<a href="#count">count</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>Array size.</p>
+						<p>数组大小。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="isArrayNode" translate="no">.<a href="#isArrayNode">isArrayNode</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="values" translate="no">.<a href="#values">values</a><span class="type-signature"> : Array.&lt;<a href="Node.html">Node</a>></span> </h3>
 					<div class="description">
-						<p>Array default values.</p>
+						<p>数组的默认值。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="generate" translate="no">.<a href="#generate">generate</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>This method builds the output node and returns the resulting array as a shader string.</p>
+							<p>此方法构建输出节点，并将结果数组作为着色器字符串返回。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -95,22 +95,22 @@ const redColor = tintColors.element( 0 );
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前的节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="TempNode.html#generate">TempNode#generate</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="TempNode.html#generate">TempNode#generate</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The generated shader string.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 生成的着色器字符串。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="generateNodeType" translate="no">.<a href="#generateNodeType">generateNodeType</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the node's type.</p>
+							<p>返回节点的类型。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -119,22 +119,22 @@ const redColor = tintColors.element( 0 );
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前的节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="TempNode.html#generateNodeType">TempNode#generateNodeType</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="TempNode.html#generateNodeType">TempNode#generateNodeType</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The type of the node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 节点的类型。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getArrayCount" translate="no">.<a href="#getArrayCount">getArrayCount</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : number</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the number of elements in the node array.</p>
+							<p>返回节点数组中的元素数量。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -143,22 +143,22 @@ const redColor = tintColors.element( 0 );
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前的节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="TempNode.html#getArrayCount">TempNode#getArrayCount</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="TempNode.html#getArrayCount">TempNode#getArrayCount</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The number of elements in the node array.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 节点数组中的元素数量。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getElementType" translate="no">.<a href="#getElementType">getElementType</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the node's type.</p>
+							<p>返回节点的类型。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -167,22 +167,22 @@ const redColor = tintColors.element( 0 );
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前的节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="TempNode.html#getElementType">TempNode#getElementType</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="TempNode.html#getElementType">TempNode#getElementType</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The type of the node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 节点的类型。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getMemberType" translate="no">.<a href="#getMemberType">getMemberType</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span>, name : <span class="param-type">string</span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the type of a member variable.</p>
+							<p>返回成员变量的类型。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -191,7 +191,7 @@ const redColor = tintColors.element( 0 );
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前的节点构建器。</p>
 									</td>
 								</tr>
 								<tr>
@@ -199,19 +199,19 @@ const redColor = tintColors.element( 0 );
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The name of the member variable.</p>
+										<p>成员变量的名称。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="TempNode.html#getMemberType">TempNode#getMemberType</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="TempNode.html#getMemberType">TempNode#getMemberType</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The type of the member variable.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 成员变量的类型。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/nodes/core/ArrayNode.js" translate="no" target="_blank" rel="noopener">src/nodes/core/ArrayNode.js</a>
 				</p>

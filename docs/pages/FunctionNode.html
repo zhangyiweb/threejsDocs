@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>FunctionNode - Three.js Docs</title>
+	<title>FunctionNode - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,15 +13,15 @@
 	<h1 translate="no">FunctionNode</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>This class represents a native shader function. It can be used to implement
-certain aspects of a node material with native shader code. There are two predefined
-TSL functions for easier usage.</p>
+				<div class="class-description"><p>此类表示原生着色器函数。可用于通过原生着色器代码实现
+节点材质的某些方面。有两个预定义的
+TSL 函数以便于使用。</p>
 <ul>
-<li><code>wgslFn</code>: Creates a WGSL function node.</li>
-<li><code>glslFn</code>: Creates a GLSL function node.</li>
+<li><code>wgslFn</code>：创建 WGSL 函数节点。</li>
+<li><code>glslFn</code>：创建 GLSL 函数节点。</li>
 </ul>
-<p>A basic example with one include looks like so:</p></div>
-				<h2>Code Example</h2>
+<p>一个带有单个 include 的基本示例如下：</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">const desaturateWGSLFn = wgslFn( `
 	fn desaturate( color:vec3&lt;f32> ) -> vec3&lt;f32> {
 		let lum = vec3&lt;f32>( 0.299, 0.587, 0.114 );
@@ -38,11 +38,11 @@ material.colorNode = someWGSLFn( { color: texture( map ) } );
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="FunctionNode" translate="no">new <a href="#FunctionNode">FunctionNode</a><span class="signature">( code : <span class="param-type">string</span>, includes : <span class="param-type">Array.&lt;<a href="Node.html">Node</a>></span>, language : <span class="param-type">'js' | 'wgsl' | 'glsl'</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new function node.</p>
+							<p>构造一个新的函数节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -51,8 +51,8 @@ material.colorNode = someWGSLFn( { color: texture( map ) } );
 										<strong translate="no">code</strong>
 									</td>
 									<td class="description last">
-										<p>The native code.</p>
-										<p>Default is <code>''</code>.</p>
+										<p>原生代码。</p>
+										<p>默认值为 <code>''</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -60,8 +60,8 @@ material.colorNode = someWGSLFn( { color: texture( map ) } );
 										<strong translate="no">includes</strong>
 									</td>
 									<td class="description last">
-										<p>An array of includes.</p>
-										<p>Default is <code>[]</code>.</p>
+										<p>include 数组。</p>
+										<p>默认值为 <code>[]</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -69,19 +69,19 @@ material.colorNode = someWGSLFn( { color: texture( map ) } );
 										<strong translate="no">language</strong>
 									</td>
 									<td class="description last">
-										<p>The used language.</p>
-										<p>Default is <code>''</code>.</p>
+										<p>所使用的语言。</p>
+										<p>默认值为 <code>''</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="generateNodeType" translate="no">.<a href="#generateNodeType">generateNodeType</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the type of this function node.</p>
+							<p>返回此函数节点的类型。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -90,22 +90,22 @@ material.colorNode = someWGSLFn( { color: texture( map ) } );
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="CodeNode.html#generateNodeType">CodeNode#generateNodeType</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="CodeNode.html#generateNodeType">CodeNode#generateNodeType</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The type.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 类型。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getInputs" translate="no">.<a href="#getInputs">getInputs</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : Array.&lt;<a href="NodeFunctionInput.html">NodeFunctionInput</a>></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the inputs of this function node.</p>
+							<p>返回此函数节点的输入。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -114,19 +114,19 @@ material.colorNode = someWGSLFn( { color: texture( map ) } );
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The inputs.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 输入。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getMemberType" translate="no">.<a href="#getMemberType">getMemberType</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span>, name : <span class="param-type">string</span> )</span><span class="type-signature"> : string</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the type of a member of this function node.</p>
+							<p>返回此函数节点某个成员的类型。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -135,7 +135,7 @@ material.colorNode = someWGSLFn( { color: texture( map ) } );
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 								<tr>
@@ -143,22 +143,22 @@ material.colorNode = someWGSLFn( { color: texture( map ) } );
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The name of the member.</p>
+										<p>成员名称。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="CodeNode.html#getMemberType">CodeNode#getMemberType</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="CodeNode.html#getMemberType">CodeNode#getMemberType</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The type of the member.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 成员的类型。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="getNodeFunction" translate="no">.<a href="#getNodeFunction">getNodeFunction</a><span class="signature">( builder : <span class="param-type"><a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : <a href="NodeFunction.html">NodeFunction</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Returns the node function for this function node.</p>
+							<p>返回此函数节点的节点函数。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -167,16 +167,16 @@ material.colorNode = someWGSLFn( { color: texture( map ) } );
 										<strong translate="no">builder</strong>
 									</td>
 									<td class="description last">
-										<p>The current node builder.</p>
+										<p>当前节点构建器。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> The node function.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 节点函数。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/nodes/code/FunctionNode.js" translate="no" target="_blank" rel="noopener">src/nodes/code/FunctionNode.js</a>
 				</p>
