@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>NodeVarying - Three.js Docs</title>
+	<title>NodeVarying - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,18 +13,17 @@
 	<h1 translate="no">NodeVarying</h1>
 		<section>
 			<header>
-				<div class="class-description"><p><a href="NodeBuilder.html">NodeBuilder</a> is going to create instances of this class during the build process
-of nodes. They represent the final shader varyings that are going to be generated
-by the builder. An array of node varyings is maintained in <a href="NodeBuilder.html#varyings">NodeBuilder#varyings</a> for
-this purpose.</p></div>
+				<div class="class-description"><p><a href="NodeBuilder.html">NodeBuilder</a> 在构建节点的过程中会创建此类的实例。
+它们表示构建器最终将生成的着色器 varying。为此，节点 varying 数组维护在
+<a href="NodeBuilder.html#varyings">NodeBuilder#varyings</a> 中。</p></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="NodeVarying" translate="no">new <a href="#NodeVarying">NodeVarying</a><span class="signature">( name : <span class="param-type">string</span>, type : <span class="param-type">string</span>, interpolationType : <span class="param-type">string</span>, interpolationSampling : <span class="param-type">string</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new node varying.</p>
+							<p>构造一个新的节点 varying。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -33,7 +32,7 @@ this purpose.</p></div>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The name of the varying.</p>
+										<p>varying 的名称。</p>
 									</td>
 								</tr>
 								<tr>
@@ -41,7 +40,7 @@ this purpose.</p></div>
 										<strong translate="no">type</strong>
 									</td>
 									<td class="description last">
-										<p>The type of the varying.</p>
+										<p>varying 的类型。</p>
 									</td>
 								</tr>
 								<tr>
@@ -49,8 +48,8 @@ this purpose.</p></div>
 										<strong translate="no">interpolationType</strong>
 									</td>
 									<td class="description last">
-										<p>The interpolation type of the varying.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>varying 的插值类型。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 								<tr>
@@ -58,45 +57,45 @@ this purpose.</p></div>
 										<strong translate="no">interpolationSampling</strong>
 									</td>
 									<td class="description last">
-										<p>The interpolation sampling type of the varying.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>varying 的插值采样类型。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="interpolationSampling" translate="no">.<a href="#interpolationSampling">interpolationSampling</a><span class="type-signature"> : string</span> </h3>
 					<div class="description">
-						<p>The interpolation sampling type of varying data.</p>
-						<p>Default is <code>null</code>.</p>
+						<p>varying 数据的插值采样类型。</p>
+						<p>默认值为 <code>null</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="interpolationType" translate="no">.<a href="#interpolationType">interpolationType</a><span class="type-signature"> : string</span> </h3>
 					<div class="description">
-						<p>The interpolation type of the varying data.</p>
-						<p>Default is <code>null</code>.</p>
+						<p>varying 数据的插值类型。</p>
+						<p>默认值为 <code>null</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="isNodeVarying" translate="no">.<a href="#isNodeVarying">isNodeVarying</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="needsInterpolation" translate="no">.<a href="#needsInterpolation">needsInterpolation</a><span class="type-signature"> : boolean</span> </h3>
 					<div class="description">
-						<p>Whether this varying requires interpolation or not. This property can be used
-to check if the varying can be optimized for a variable.</p>
-						<p>Default is <code>false</code>.</p>
+						<p>此 varying 是否需要插值。此属性可用于检查该 varying
+是否可优化为 variable。</p>
+						<p>默认值为 <code>false</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/nodes/core/NodeVarying.js" translate="no" target="_blank" rel="noopener">src/nodes/core/NodeVarying.js</a>
 				</p>

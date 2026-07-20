@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>RectAreaLightNode - Three.js Docs</title>
+	<title>RectAreaLightNode - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,15 +13,15 @@
 	<h1 translate="no">RectAreaLightNode</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>Module for representing rect area lights as nodes.</p></div>
+				<div class="class-description"><p>将矩形区域光表示为节点的模块。</p></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="RectAreaLightNode" translate="no">new <a href="#RectAreaLightNode">RectAreaLightNode</a><span class="signature">( light : <span class="param-type"><a href="RectAreaLight.html">RectAreaLight</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new rect area light node.</p>
+							<p>构造一个新的矩形区域光节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -30,43 +30,43 @@
 										<strong translate="no">light</strong>
 									</td>
 									<td class="description last">
-										<p>The rect area light source.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>矩形区域光源。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="halfHeight" translate="no">.<a href="#halfHeight">halfHeight</a><span class="type-signature"> : <a href="UniformNode.html">UniformNode</a>.&lt;vec3></span> </h3>
 					<div class="description">
-						<p>Uniform node representing the half height of the are light.</p>
+						<p>表示区域光半高的 uniform 节点。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="halfWidth" translate="no">.<a href="#halfWidth">halfWidth</a><span class="type-signature"> : <a href="UniformNode.html">UniformNode</a>.&lt;vec3></span> </h3>
 					<div class="description">
-						<p>Uniform node representing the half width of the are light.</p>
+						<p>表示区域光半宽的 uniform 节点。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="updateType" translate="no">.<a href="#updateType">updateType</a><span class="type-signature"> : string</span> </h3>
 					<div class="description">
-						<p>The <code>updateType</code> is set to <code>NodeUpdateType.RENDER</code> since the light
-relies on <code>viewMatrix</code> which might vary per render call.</p>
-						<p>Default is <code>'render'</code>.</p>
+						<p><code>updateType</code> 设置为 <code>NodeUpdateType.RENDER</code>，因为该光源
+依赖 <code>viewMatrix</code>，而它在每次渲染调用时可能不同。</p>
+						<p>默认值为 <code>'render'</code>。</p>
 					</div>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="AnalyticLightNode.html#updateType">AnalyticLightNode#updateType</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="AnalyticLightNode.html#updateType">AnalyticLightNode#updateType</a></dt>
 						</dl>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="update" translate="no">.<a href="#update">update</a><span class="signature">( frame : <span class="param-type"><a href="NodeFrame.html">NodeFrame</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Overwritten to updated rect area light specific uniforms.</p>
+							<p>重写此方法以更新矩形区域光专用的 uniform。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -75,20 +75,20 @@ relies on <code>viewMatrix</code> which might vary per render call.</p>
 										<strong translate="no">frame</strong>
 									</td>
 									<td class="description last">
-										<p>A reference to the current node frame.</p>
+										<p>对当前节点帧的引用。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="AnalyticLightNode.html#update">AnalyticLightNode#update</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="AnalyticLightNode.html#update">AnalyticLightNode#update</a></dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Static Methods</h2>
+				<h2 class="subsection-title">静态方法</h2>
 					<h3 class="name name-method" id=".setLTC" translate="no">.<a href="#.setLTC">setLTC</a><span class="signature">( ltc : <span class="param-type"><a href="RectAreaLightTexturesLib.html">RectAreaLightTexturesLib</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Used to configure the internal BRDF approximation texture data.</p>
+							<p>用于配置内部 BRDF 近似纹理数据。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -97,13 +97,13 @@ relies on <code>viewMatrix</code> which might vary per render call.</p>
 										<strong translate="no">ltc</strong>
 									</td>
 									<td class="description last">
-										<p>The BRDF approximation texture data.</p>
+										<p>BRDF 近似纹理数据。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/nodes/lighting/RectAreaLightNode.js" translate="no" target="_blank" rel="noopener">src/nodes/lighting/RectAreaLightNode.js</a>
 				</p>

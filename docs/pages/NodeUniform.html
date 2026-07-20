@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>NodeUniform - Three.js Docs</title>
+	<title>NodeUniform - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -12,18 +12,17 @@
 	<h1 translate="no">NodeUniform</h1>
 		<section>
 			<header>
-				<div class="class-description"><p><a href="NodeBuilder.html">NodeBuilder</a> is going to create instances of this class during the build process
-of nodes. They represent the final shader uniforms that are going to be generated
-by the builder. A dictionary of node uniforms is maintained in <a href="NodeBuilder.html#uniforms">NodeBuilder#uniforms</a>
-for this purpose.</p></div>
+				<div class="class-description"><p><a href="NodeBuilder.html">NodeBuilder</a> 在构建节点的过程中会创建此类的实例。
+它们表示构建器最终将生成的着色器 uniform。为此，节点 uniform 字典维护在
+<a href="NodeBuilder.html#uniforms">NodeBuilder#uniforms</a> 中。</p></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="NodeUniform" translate="no">new <a href="#NodeUniform">NodeUniform</a><span class="signature">( name : <span class="param-type">string</span>, type : <span class="param-type">string</span>, node : <span class="param-type"><a href="UniformNode.html">UniformNode</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new node uniform.</p>
+							<p>构造一个新的节点 uniform。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -32,7 +31,7 @@ for this purpose.</p></div>
 										<strong translate="no">name</strong>
 									</td>
 									<td class="description last">
-										<p>The name of the uniform.</p>
+										<p>uniform 的名称。</p>
 									</td>
 								</tr>
 								<tr>
@@ -40,7 +39,7 @@ for this purpose.</p></div>
 										<strong translate="no">type</strong>
 									</td>
 									<td class="description last">
-										<p>The type of the uniform.</p>
+										<p>uniform 的类型。</p>
 									</td>
 								</tr>
 								<tr>
@@ -48,58 +47,58 @@ for this purpose.</p></div>
 										<strong translate="no">node</strong>
 									</td>
 									<td class="description last">
-										<p>An reference to the node.</p>
+										<p>对节点的引用。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="groupNode" translate="no">.<a href="#groupNode">groupNode</a><span class="type-signature"> : <a href="UniformGroupNode.html">UniformGroupNode</a></span> </h3>
 					<div class="description">
-						<p>The uniform node's group.</p>
+						<p>uniform 节点的组。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="id" translate="no">.<a href="#id">id</a><span class="type-signature"> : number</span> </h3>
 					<div class="description">
-						<p>The id of the uniform node.</p>
+						<p>uniform 节点的 ID。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="isNodeUniform" translate="no">.<a href="#isNodeUniform">isNodeUniform</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="name" translate="no">.<a href="#name">name</a><span class="type-signature"> : string</span> </h3>
 					<div class="description">
-						<p>The name of the uniform.</p>
+						<p>uniform 的名称。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="node" translate="no">.<a href="#node">node</a><span class="type-signature"> : <a href="UniformNode.html">UniformNode</a></span> </h3>
 					<div class="description">
-						<p>An reference to the node.</p>
+						<p>对节点的引用。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="type" translate="no">.<a href="#type">type</a><span class="type-signature"> : string</span> </h3>
 					<div class="description">
-						<p>The type of the uniform.</p>
+						<p>uniform 的类型。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="value" translate="no">.<a href="#value">value</a><span class="type-signature"> : <a href="global.html#any">any</a></span> </h3>
 					<div class="description">
-						<p>The value of the uniform node.</p>
+						<p>uniform 节点的值。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/nodes/core/NodeUniform.js" translate="no" target="_blank" rel="noopener">src/nodes/core/NodeUniform.js</a>
 				</p>
