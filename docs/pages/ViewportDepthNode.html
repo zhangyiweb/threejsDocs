@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>ViewportDepthNode - Three.js Docs</title>
+	<title>ViewportDepthNode - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,17 +13,17 @@
 	<h1 translate="no">ViewportDepthNode</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>This node offers a collection of features in context of the depth logic in the fragment shader.
-Depending on <a href="ViewportDepthNode.html#scope">ViewportDepthNode#scope</a>, it can be used to define a depth value for the current
-fragment or for depth evaluation purposes.</p></div>
+				<div class="class-description"><p>此节点提供片元着色器中深度逻辑相关的一组功能。
+根据 <a href="ViewportDepthNode.html#scope">ViewportDepthNode#scope</a>，可用于为当前片元定义深度值，
+或用于深度评估。</p></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="ViewportDepthNode" translate="no">new <a href="#ViewportDepthNode">ViewportDepthNode</a><span class="signature">( scope : <span class="param-type">'depth' | 'depthBase' | 'linearDepth'</span>, valueNode : <span class="param-type"><a href="Node.html">Node</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new viewport depth node.</p>
+							<p>构造一个新的视口深度节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -32,7 +32,7 @@ fragment or for depth evaluation purposes.</p></div>
 										<strong translate="no">scope</strong>
 									</td>
 									<td class="description last">
-										<p>The node's scope.</p>
+										<p>节点的作用域。</p>
 									</td>
 								</tr>
 								<tr>
@@ -40,43 +40,43 @@ fragment or for depth evaluation purposes.</p></div>
 										<strong translate="no">valueNode</strong>
 									</td>
 									<td class="description last">
-										<p>The value node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>值节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="isViewportDepthNode" translate="no">.<a href="#isViewportDepthNode">isViewportDepthNode</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型测试。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="scope" translate="no">.<a href="#scope">scope</a><span class="type-signature"> : 'depth' | 'depthBase' | 'linearDepth'</span> </h3>
 					<div class="description">
-						<p>The node behaves differently depending on which scope is selected.</p>
+						<p>节点的行为会根据所选作用域而有所不同。</p>
 <ul>
-<li><code>ViewportDepthNode.DEPTH_BASE</code>: Allows to define a value for the current fragment's depth.</li>
-<li><code>ViewportDepthNode.DEPTH</code>: Represents the depth value for the current fragment (<code>valueNode</code> is ignored).</li>
-<li><code>ViewportDepthNode.LINEAR_DEPTH</code>: Represents the linear (orthographic) depth value of the current fragment.
-If a <code>valueNode</code> is set, the scope can be used to convert perspective depth data to linear data.</li>
+<li><code>ViewportDepthNode.DEPTH_BASE</code>：允许为当前片元的深度定义一个值。</li>
+<li><code>ViewportDepthNode.DEPTH</code>：表示当前片元的深度值（忽略 <code>valueNode</code>）。</li>
+<li><code>ViewportDepthNode.LINEAR_DEPTH</code>：表示当前片元的线性（正交）深度值。
+若设置了 <code>valueNode</code>，该作用域可用于将透视深度数据转换为线性数据。</li>
 </ul>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="valueNode" translate="no">.<a href="#valueNode">valueNode</a><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="description">
-						<p>Can be used to define a custom depth value.
-The property is ignored in the <code>ViewportDepthNode.DEPTH</code> scope.</p>
-						<p>Default is <code>null</code>.</p>
+						<p>可用于定义自定义深度值。
+在 <code>ViewportDepthNode.DEPTH</code> 作用域中会忽略此属性。</p>
+						<p>默认值为 <code>null</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/nodes/display/ViewportDepthNode.js" translate="no" target="_blank" rel="noopener">src/nodes/display/ViewportDepthNode.js</a>
 				</p>

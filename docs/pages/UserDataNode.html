@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>UserDataNode - Three.js Docs</title>
+	<title>UserDataNode - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,11 +13,11 @@
 	<h1 translate="no">UserDataNode</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>A special type of reference node that allows to link values in
-<code>userData</code> fields to node objects.</p>
-<p>Since <code>UserDataNode</code> is extended from <a href="ReferenceNode.html">ReferenceNode</a>, the node value
-will automatically be updated when the <code>rotation</code> user data field changes.</p></div>
-				<h2>Code Example</h2>
+				<div class="class-description"><p>一种特殊的引用节点，可将
+<code>userData</code> 字段中的值链接到节点对象。</p>
+<p>由于 <code>UserDataNode</code> 继承自 <a href="ReferenceNode.html">ReferenceNode</a>，当
+<code>rotation</code> 用户数据字段发生变化时，节点值会自动更新。</p></div>
+				<h2>代码示例</h2>
 				<div translate="no"><pre><code class="language-js">sprite.userData.rotation = 1; // stores individual rotation per sprite
 const material = new THREE.SpriteNodeMaterial();
 material.rotationNode = userData( 'rotation', 'float' );
@@ -25,11 +25,11 @@ material.rotationNode = userData( 'rotation', 'float' );
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="UserDataNode" translate="no">new <a href="#UserDataNode">UserDataNode</a><span class="signature">( property : <span class="param-type">string</span>, inputType : <span class="param-type">string</span>, userData : <span class="param-type">Object</span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new user data node.</p>
+							<p>构造一个新的用户数据节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -38,7 +38,7 @@ material.rotationNode = userData( 'rotation', 'float' );
 										<strong translate="no">property</strong>
 									</td>
 									<td class="description last">
-										<p>The property name that should be referenced by the node.</p>
+										<p>应由该节点引用的属性名称。</p>
 									</td>
 								</tr>
 								<tr>
@@ -46,7 +46,7 @@ material.rotationNode = userData( 'rotation', 'float' );
 										<strong translate="no">inputType</strong>
 									</td>
 									<td class="description last">
-										<p>The node data type of the reference.</p>
+										<p>引用的节点数据类型。</p>
 									</td>
 								</tr>
 								<tr>
@@ -54,29 +54,29 @@ material.rotationNode = userData( 'rotation', 'float' );
 										<strong translate="no">userData</strong>
 									</td>
 									<td class="description last">
-										<p>A reference to the <code>userData</code> object. If not provided, the <code>userData</code> property of the 3D object that uses the node material is evaluated.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>对 <code>userData</code> 对象的引用。若未提供，则使用采用该节点材质的 3D 对象上的 <code>userData</code> 属性。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="userData" translate="no">.<a href="#userData">userData</a><span class="type-signature"> : Object</span> </h3>
 					<div class="description">
-						<p>A reference to the <code>userData</code> object. If not provided, the <code>userData</code>
-property of the 3D object that uses the node material is evaluated.</p>
-						<p>Default is <code>null</code>.</p>
+						<p>对 <code>userData</code> 对象的引用。若未提供，则使用
+采用该节点材质的 3D 对象上的 <code>userData</code> 属性。</p>
+						<p>默认值为 <code>null</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="updateReference" translate="no">.<a href="#updateReference">updateReference</a><span class="signature">( state : <span class="param-type"><a href="NodeFrame.html">NodeFrame</a> | <a href="NodeBuilder.html">NodeBuilder</a></span> )</span><span class="type-signature"> : Object</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Overwritten to make sure <a href="ReferenceNode.html#reference">ReferenceNode#reference</a> points to the correct
-<code>userData</code> field.</p>
+							<p>重写以确保 <a href="ReferenceNode.html#reference">ReferenceNode#reference</a> 指向正确的
+<code>userData</code> 字段。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -85,19 +85,19 @@ property of the 3D object that uses the node material is evaluated.</p>
 										<strong translate="no">state</strong>
 									</td>
 									<td class="description last">
-										<p>The current state to evaluate.</p>
+										<p>当前要评估的状态。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-overrides"><strong>Overrides:</strong> <a href="ReferenceNode.html#updateReference">ReferenceNode#updateReference</a></dt>
+							<dt class="tag-overrides"><strong>重写：</strong> <a href="ReferenceNode.html#updateReference">ReferenceNode#updateReference</a></dt>
 						</dl>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to the <code>userData</code> field.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对 <code>userData</code> 字段的引用。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/nodes/accessors/UserDataNode.js" translate="no" target="_blank" rel="noopener">src/nodes/accessors/UserDataNode.js</a>
 				</p>

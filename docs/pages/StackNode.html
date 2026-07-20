@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
-	<title>StackNode - Three.js Docs</title>
+	<title>StackNode - Three.js 文档</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<script src="../scripts/highlight.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="../styles/highlight-three.css">
@@ -13,16 +13,16 @@
 	<h1 translate="no">StackNode</h1>
 		<section>
 			<header>
-				<div class="class-description"><p>Stack is a helper for Nodes that need to produce stack-based code instead of continuous flow.
-They are usually needed in cases like <code>If</code>, <code>Else</code>.</p></div>
+				<div class="class-description"><p>Stack 是为需要生成基于栈的代码（而非连续流）的节点提供的辅助工具。
+通常在诸如 <code>If</code>、<code>Else</code> 这类场景中需要使用。</p></div>
 			</header>
 			<article>
 				<div class="container-overview">
-					<h2>Constructor</h2>
+					<h2>构造函数</h2>
 					<h3 class="name name-method" id="StackNode" translate="no">new <a href="#StackNode">StackNode</a><span class="signature">( parent : <span class="param-type"><a href="StackNode.html">StackNode</a></span> )</span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Constructs a new stack node.</p>
+							<p>构造一个新的栈节点。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -31,48 +31,48 @@ They are usually needed in cases like <code>If</code>, <code>Else</code>.</p></d
 										<strong translate="no">parent</strong>
 									</td>
 									<td class="description last">
-										<p>The parent stack node.</p>
-										<p>Default is <code>null</code>.</p>
+										<p>父栈节点。</p>
+										<p>默认值为 <code>null</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<h2 class="subsection-title">Properties</h2>
+				<h2 class="subsection-title">属性</h2>
 				<div class="member">
 					<h3 class="name" id="isStackNode" translate="no">.<a href="#isStackNode">isStackNode</a><span class="type-signature"> : boolean</span> <span class="type-signature">(readonly) </span></h3>
 					<div class="description">
-						<p>This flag can be used for type testing.</p>
-						<p>Default is <code>true</code>.</p>
+						<p>此标志可用于类型检测。</p>
+						<p>默认值为 <code>true</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="nodes" translate="no">.<a href="#nodes">nodes</a><span class="type-signature"> : Array.&lt;<a href="Node.html">Node</a>></span> </h3>
 					<div class="description">
-						<p>List of nodes.</p>
+						<p>节点列表。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="outputNode" translate="no">.<a href="#outputNode">outputNode</a><span class="type-signature"> : <a href="Node.html">Node</a></span> </h3>
 					<div class="description">
-						<p>The output node.</p>
-						<p>Default is <code>null</code>.</p>
+						<p>输出节点。</p>
+						<p>默认值为 <code>null</code>。</p>
 					</div>
 				</div>
 				<div class="member">
 					<h3 class="name" id="parent" translate="no">.<a href="#parent">parent</a><span class="type-signature"> : <a href="StackNode.html">StackNode</a></span> </h3>
 					<div class="description">
-						<p>The parent stack node.</p>
-						<p>Default is <code>null</code>.</p>
+						<p>父栈节点。</p>
+						<p>默认值为 <code>null</code>。</p>
 					</div>
 				</div>
-				<h2 class="subsection-title">Methods</h2>
+				<h2 class="subsection-title">方法</h2>
 					<h3 class="name name-method" id="Case" translate="no">.<a href="#Case">Case</a><span class="signature">( &hellip;params : <span class="param-type"><a href="global.html#any">any</a></span> )</span><span class="type-signature"> : <a href="StackNode.html">StackNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Represents a <code>case</code> statement in TSL. The TSL version accepts an arbitrary numbers of values.
-The last parameter must be the callback method that should be executed in the <code>true</code> case.</p>
+							<p>表示 TSL 中的 <code>case</code> 语句。TSL 版本接受任意数量的值。
+最后一个参数必须是在 <code>true</code> 情况下应执行的回调方法。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -81,19 +81,19 @@ The last parameter must be the callback method that should be executed in the <c
 										<strong translate="no">params</strong>
 									</td>
 									<td class="description last">
-										<p>The values of the <code>Case()</code> statement as well as the callback method.</p>
+										<p><code>Case()</code> 语句的值以及回调方法。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this stack node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此栈节点的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="Default" translate="no">.<a href="#Default">Default</a><span class="signature">( method : <span class="param-type">function</span> )</span><span class="type-signature"> : <a href="StackNode.html">StackNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Represents the default code block of a Switch/Case statement.</p>
+							<p>表示 Switch/Case 语句的默认代码块。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -102,19 +102,19 @@ The last parameter must be the callback method that should be executed in the <c
 										<strong translate="no">method</strong>
 									</td>
 									<td class="description last">
-										<p>TSL code which is executed in the <code>else</code> case.</p>
+										<p>在 <code>else</code> 情况下执行的 TSL 代码。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this stack node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此栈节点的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="Else" translate="no">.<a href="#Else">Else</a><span class="signature">( method : <span class="param-type">function</span> )</span><span class="type-signature"> : <a href="StackNode.html">StackNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Represent an <code>else</code> statement in TSL.</p>
+							<p>表示 TSL 中的 <code>else</code> 语句。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -123,19 +123,19 @@ The last parameter must be the callback method that should be executed in the <c
 										<strong translate="no">method</strong>
 									</td>
 									<td class="description last">
-										<p>TSL code which is executed in the <code>else</code> case.</p>
+										<p>在 <code>else</code> 情况下执行的 TSL 代码。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this stack node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此栈节点的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="ElseIf" translate="no">.<a href="#ElseIf">ElseIf</a><span class="signature">( boolNode : <span class="param-type"><a href="Node.html">Node</a></span>, method : <span class="param-type">function</span> )</span><span class="type-signature"> : <a href="StackNode.html">StackNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Represent an <code>elseif</code> statement in TSL.</p>
+							<p>表示 TSL 中的 <code>elseif</code> 语句。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -144,7 +144,7 @@ The last parameter must be the callback method that should be executed in the <c
 										<strong translate="no">boolNode</strong>
 									</td>
 									<td class="description last">
-										<p>Represents the condition.</p>
+										<p>表示条件。</p>
 									</td>
 								</tr>
 								<tr>
@@ -152,19 +152,19 @@ The last parameter must be the callback method that should be executed in the <c
 										<strong translate="no">method</strong>
 									</td>
 									<td class="description last">
-										<p>TSL code which is executed if the condition evaluates to <code>true</code>.</p>
+										<p>当条件求值为 <code>true</code> 时执行的 TSL 代码。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this stack node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此栈节点的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="If" translate="no">.<a href="#If">If</a><span class="signature">( boolNode : <span class="param-type"><a href="Node.html">Node</a></span>, method : <span class="param-type">function</span> )</span><span class="type-signature"> : <a href="StackNode.html">StackNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Represent an <code>if</code> statement in TSL.</p>
+							<p>表示 TSL 中的 <code>if</code> 语句。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -173,7 +173,7 @@ The last parameter must be the callback method that should be executed in the <c
 										<strong translate="no">boolNode</strong>
 									</td>
 									<td class="description last">
-										<p>Represents the condition.</p>
+										<p>表示条件。</p>
 									</td>
 								</tr>
 								<tr>
@@ -181,19 +181,19 @@ The last parameter must be the callback method that should be executed in the <c
 										<strong translate="no">method</strong>
 									</td>
 									<td class="description last">
-										<p>TSL code which is executed if the condition evaluates to <code>true</code>.</p>
+										<p>当条件求值为 <code>true</code> 时执行的 TSL 代码。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this stack node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此栈节点的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="Switch" translate="no">.<a href="#Switch">Switch</a><span class="signature">( expression : <span class="param-type"><a href="global.html#any">any</a></span>, method : <span class="param-type">function</span> )</span><span class="type-signature"> : <a href="StackNode.html">StackNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Represents a <code>switch</code> statement in TSL.</p>
+							<p>表示 TSL 中的 <code>switch</code> 语句。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -202,7 +202,7 @@ The last parameter must be the callback method that should be executed in the <c
 										<strong translate="no">expression</strong>
 									</td>
 									<td class="description last">
-										<p>Represents the expression.</p>
+										<p>表示表达式。</p>
 									</td>
 								</tr>
 								<tr>
@@ -210,19 +210,19 @@ The last parameter must be the callback method that should be executed in the <c
 										<strong translate="no">method</strong>
 									</td>
 									<td class="description last">
-										<p>TSL code which is executed if the condition evaluates to <code>true</code>.</p>
+										<p>当条件求值为 <code>true</code> 时执行的 TSL 代码。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this stack node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此栈节点的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="addToStack" translate="no">.<a href="#addToStack">addToStack</a><span class="signature">( node : <span class="param-type"><a href="Node.html">Node</a></span>, index : <span class="param-type">number</span> )</span><span class="type-signature"> : <a href="StackNode.html">StackNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Adds a node to this stack.</p>
+							<p>将节点添加到此栈中。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -231,7 +231,7 @@ The last parameter must be the callback method that should be executed in the <c
 										<strong translate="no">node</strong>
 									</td>
 									<td class="description last">
-										<p>The node to add.</p>
+										<p>要添加的节点。</p>
 									</td>
 								</tr>
 								<tr>
@@ -239,20 +239,20 @@ The last parameter must be the callback method that should be executed in the <c
 										<strong translate="no">index</strong>
 									</td>
 									<td class="description last">
-										<p>The index of the node. If not specified, the node will be added to the end of the stack.</p>
-										<p>Default is <code>-1</code>.</p>
+										<p>节点的索引。若未指定，节点将被添加到栈的末尾。</p>
+										<p>默认值为 <code>-1</code>。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this stack node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此栈节点的引用。</dt>
 						</dl>
 					</div>
 					<h3 class="name name-method" id="addToStackBefore" translate="no">.<a href="#addToStackBefore">addToStackBefore</a><span class="signature">( node : <span class="param-type"><a href="Node.html">Node</a></span> )</span><span class="type-signature"> : <a href="StackNode.html">StackNode</a></span> </h3>
 					<div class="method">
 						<div class="description">
-							<p>Adds a node to the stack before the current node.</p>
+							<p>在当前节点之前将节点添加到栈中。</p>
 						</div>
 						<table class="params">
 							<tbody>
@@ -261,16 +261,16 @@ The last parameter must be the callback method that should be executed in the <c
 										<strong translate="no">node</strong>
 									</td>
 									<td class="description last">
-										<p>The node to add.</p>
+										<p>要添加的节点。</p>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<dl class="details">
-							<dt class="tag-returns"><strong>Returns:</strong> A reference to this stack node.</dt>
+							<dt class="tag-returns"><strong>返回值：</strong> 对此栈节点的引用。</dt>
 						</dl>
 					</div>
-				<h2 class="subsection-title">Source</h2>
+				<h2 class="subsection-title">源码</h2>
 				<p>
 					<a href="https://github.com/mrdoob/three.js/blob/master/src/nodes/core/StackNode.js" translate="no" target="_blank" rel="noopener">src/nodes/core/StackNode.js</a>
 				</p>
